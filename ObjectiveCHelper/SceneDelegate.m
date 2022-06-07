@@ -2,7 +2,7 @@
 //  SceneDelegate.m
 //  ObjectiveCHelper
 //
-//  Created by qfdev on 2022/6/7.
+//  Created by teenloong on 2022/6/7.
 //
 
 #import "SceneDelegate.h"
