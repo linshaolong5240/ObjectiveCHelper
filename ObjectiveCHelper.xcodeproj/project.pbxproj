@@ -11,6 +11,7 @@
 		1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */; };
 		1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3528E452A100DA0387 /* OCHCollectionViewDemoController.m */; };
 		1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3928E464E500DA0387 /* OCHSection.m */; };
+		1876AD4728E4730400DA0387 /* UIColor+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD4628E4730400DA0387 /* UIColor+OCH.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174628E44E720035BDA7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174528E44E720035BDA7 /* SceneDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
@@ -47,6 +48,9 @@
 		1876AD3528E452A100DA0387 /* OCHCollectionViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHCollectionViewDemoController.m; sourceTree = "<group>"; };
 		1876AD3828E464E500DA0387 /* OCHSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHSection.h; sourceTree = "<group>"; };
 		1876AD3928E464E500DA0387 /* OCHSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHSection.m; sourceTree = "<group>"; };
+		1876AD4528E4730400DA0387 /* UIColor+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+OCH.h"; sourceTree = "<group>"; };
+		1876AD4628E4730400DA0387 /* UIColor+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OCH.m"; sourceTree = "<group>"; };
+		1876AD4828E4748A00DA0387 /* OCHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHPrefixHeader.pch; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -127,6 +131,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1876AD4128E472A200DA0387 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1876AD4528E4730400DA0387 /* UIColor+OCH.h */,
+				1876AD4628E4730400DA0387 /* UIColor+OCH.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		18E4173528E44E720035BDA7 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +165,7 @@
 		18E4174028E44E720035BDA7 /* ObjectiveCHelper */ = {
 			isa = PBXGroup;
 			children = (
+				1876AD4128E472A200DA0387 /* Category */,
 				1876AD3728E464AE00DA0387 /* Model */,
 				1876AD3328E4527A00DA0387 /* Controll */,
 				1876AD2F28E450A200DA0387 /* Base */,
@@ -163,6 +177,7 @@
 				18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */,
 				18E4175228E44E740035BDA7 /* Info.plist */,
 				18E4175328E44E740035BDA7 /* main.m */,
+				1876AD4828E4748A00DA0387 /* OCHPrefixHeader.pch */,
 			);
 			path = ObjectiveCHelper;
 			sourceTree = "<group>";
@@ -446,6 +461,7 @@
 			files = (
 				1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */,
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
+				1876AD4728E4730400DA0387 /* UIColor+OCH.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
@@ -615,6 +631,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ObjectiveCHelper/OCHPrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectiveCHelper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -641,6 +659,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ObjectiveCHelper/OCHPrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectiveCHelper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

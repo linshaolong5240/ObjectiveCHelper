@@ -1,0 +1,16 @@
+//
+//  OCHPrefixHeader.pch
+//  ObjectiveCHelper
+//
+//  Created by Apple on 2022/9/28.
+//
+
+#ifndef OCHPrefixHeader_pch
+#define OCHPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//Category
+#import "UIColor+OCH.h"
+#endif /* OCHPrefixHeader_pch */

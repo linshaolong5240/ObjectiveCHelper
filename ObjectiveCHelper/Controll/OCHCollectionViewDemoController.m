@@ -60,7 +60,7 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
 
-    cell.backgroundColor = self.sections[indexPath.row];
+    cell.backgroundColor = UIColor.mainText;//self.sections[indexPath.row];
     return cell;
 }
 
