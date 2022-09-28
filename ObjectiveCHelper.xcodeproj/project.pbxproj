@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0E50B35EF309D9DD368ECEEA /* Pods_ObjectiveCHelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6688CD4700FD6598AE22AFDC /* Pods_ObjectiveCHelperTests.framework */; };
+		1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */; };
+		1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3528E452A100DA0387 /* OCHCollectionViewDemoController.m */; };
+		1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3928E464E500DA0387 /* OCHSection.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174628E44E720035BDA7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174528E44E720035BDA7 /* SceneDelegate.m */; };
-		18E4174928E44E720035BDA7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174828E44E720035BDA7 /* ViewController.m */; };
-		18E4174C28E44E720035BDA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174A28E44E720035BDA7 /* Main.storyboard */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
 		18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */; };
 		18E4175428E44E740035BDA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4175328E44E740035BDA7 /* main.m */; };
@@ -40,14 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHTabbarViewController.h; sourceTree = "<group>"; };
+		1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTabbarViewController.m; sourceTree = "<group>"; };
+		1876AD3428E452A100DA0387 /* OCHCollectionViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHCollectionViewDemoController.h; sourceTree = "<group>"; };
+		1876AD3528E452A100DA0387 /* OCHCollectionViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHCollectionViewDemoController.m; sourceTree = "<group>"; };
+		1876AD3828E464E500DA0387 /* OCHSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHSection.h; sourceTree = "<group>"; };
+		1876AD3928E464E500DA0387 /* OCHSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHSection.m; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		18E4174428E44E720035BDA7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		18E4174528E44E720035BDA7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		18E4174728E44E720035BDA7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18E4174828E44E720035BDA7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		18E4174B28E44E720035BDA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18E4174D28E44E740035BDA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E4175028E44E740035BDA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E4175228E44E740035BDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +100,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1876AD2F28E450A200DA0387 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */,
+				1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1876AD3328E4527A00DA0387 /* Controll */ = {
+			isa = PBXGroup;
+			children = (
+				1876AD3428E452A100DA0387 /* OCHCollectionViewDemoController.h */,
+				1876AD3528E452A100DA0387 /* OCHCollectionViewDemoController.m */,
+			);
+			path = Controll;
+			sourceTree = "<group>";
+		};
+		1876AD3728E464AE00DA0387 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1876AD3828E464E500DA0387 /* OCHSection.h */,
+				1876AD3928E464E500DA0387 /* OCHSection.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		18E4173528E44E720035BDA7 = {
 			isa = PBXGroup;
 			children = (
@@ -121,13 +152,13 @@
 		18E4174028E44E720035BDA7 /* ObjectiveCHelper */ = {
 			isa = PBXGroup;
 			children = (
+				1876AD3728E464AE00DA0387 /* Model */,
+				1876AD3328E4527A00DA0387 /* Controll */,
+				1876AD2F28E450A200DA0387 /* Base */,
 				18E4174128E44E720035BDA7 /* AppDelegate.h */,
 				18E4174228E44E720035BDA7 /* AppDelegate.m */,
 				18E4174428E44E720035BDA7 /* SceneDelegate.h */,
 				18E4174528E44E720035BDA7 /* SceneDelegate.m */,
-				18E4174728E44E720035BDA7 /* ViewController.h */,
-				18E4174828E44E720035BDA7 /* ViewController.m */,
-				18E4174A28E44E720035BDA7 /* Main.storyboard */,
 				18E4174D28E44E740035BDA7 /* Assets.xcassets */,
 				18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */,
 				18E4175228E44E740035BDA7 /* Info.plist */,
@@ -163,7 +194,6 @@
 				365375EE3E48A83C249D7C5C /* Pods-ObjectiveCHelperTests.debug.xcconfig */,
 				F9D80E1F8D900288F2A696FE /* Pods-ObjectiveCHelperTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -188,6 +218,7 @@
 				18E4173A28E44E720035BDA7 /* Sources */,
 				18E4173B28E44E720035BDA7 /* Frameworks */,
 				18E4173C28E44E720035BDA7 /* Resources */,
+				700C0499FAB83BCBE009FFDA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,6 +256,7 @@
 				18E4175F28E44E740035BDA7 /* Sources */,
 				18E4176028E44E740035BDA7 /* Frameworks */,
 				18E4176128E44E740035BDA7 /* Resources */,
+				E7C993F03AD7E61ACB44E18E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,7 +317,6 @@
 			files = (
 				18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */,
 				18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */,
-				18E4174C28E44E720035BDA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +381,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		700C0499FAB83BCBE009FFDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper/Pods-ObjectiveCHelper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper/Pods-ObjectiveCHelper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper/Pods-ObjectiveCHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7C993F03AD7E61ACB44E18E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper-ObjectiveCHelperUITests/Pods-ObjectiveCHelper-ObjectiveCHelperUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper-ObjectiveCHelperUITests/Pods-ObjectiveCHelper-ObjectiveCHelperUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper-ObjectiveCHelperUITests/Pods-ObjectiveCHelper-ObjectiveCHelperUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FB5CD7D1040917A88EE349E2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,8 +444,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E4174928E44E720035BDA7 /* ViewController.m in Sources */,
+				1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */,
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
+				1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */,
+				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
 				18E4174628E44E720035BDA7 /* SceneDelegate.m in Sources */,
 			);
@@ -419,14 +486,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		18E4174A28E44E720035BDA7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18E4174B28E44E720035BDA7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -560,7 +619,6 @@
 				INFOPLIST_FILE = ObjectiveCHelper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -587,7 +645,6 @@
 				INFOPLIST_FILE = ObjectiveCHelper/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

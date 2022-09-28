@@ -6,6 +6,7 @@ target 'ObjectiveCHelper' do
   use_frameworks!
 
   # Pods for ObjectiveCHelper
+  pod 'Masonry', '~> 1.1.0'
 
   target 'ObjectiveCHelperTests' do
     inherit! :search_paths
