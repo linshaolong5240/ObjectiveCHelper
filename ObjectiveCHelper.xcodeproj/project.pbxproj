@@ -12,6 +12,11 @@
 		1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3528E452A100DA0387 /* OCHCollectionViewDemoController.m */; };
 		1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3928E464E500DA0387 /* OCHSection.m */; };
 		1876AD4728E4730400DA0387 /* UIColor+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD4628E4730400DA0387 /* UIColor+OCH.m */; };
+		1876AD4B28E539D500DA0387 /* UIView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD4A28E539D500DA0387 /* UIView+OCH.m */; };
+		1876AD5628E6B97600DA0387 /* OCHUIPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5528E6B97600DA0387 /* OCHUIPreview.swift */; };
+		1876AD5D28E6BEF500DA0387 /* OCHTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5C28E6BEF500DA0387 /* OCHTestView.m */; };
+		1876AD6028E6C27D00DA0387 /* OCHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5F28E6C27D00DA0387 /* OCHTestViewController.m */; };
+		1876AD6628E6E2E300DA0387 /* OCHUIScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD6528E6E2E300DA0387 /* OCHUIScrollViewController.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174628E44E720035BDA7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174528E44E720035BDA7 /* SceneDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
@@ -51,6 +56,16 @@
 		1876AD4528E4730400DA0387 /* UIColor+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+OCH.h"; sourceTree = "<group>"; };
 		1876AD4628E4730400DA0387 /* UIColor+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OCH.m"; sourceTree = "<group>"; };
 		1876AD4828E4748A00DA0387 /* OCHPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHPrefixHeader.pch; sourceTree = "<group>"; };
+		1876AD4928E539D500DA0387 /* UIView+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+OCH.h"; sourceTree = "<group>"; };
+		1876AD4A28E539D500DA0387 /* UIView+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+OCH.m"; sourceTree = "<group>"; };
+		1876AD5428E6B97500DA0387 /* ObjectiveCHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveCHelper-Bridging-Header.h"; sourceTree = "<group>"; };
+		1876AD5528E6B97600DA0387 /* OCHUIPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCHUIPreview.swift; sourceTree = "<group>"; };
+		1876AD5B28E6BEF500DA0387 /* OCHTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHTestView.h; sourceTree = "<group>"; };
+		1876AD5C28E6BEF500DA0387 /* OCHTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTestView.m; sourceTree = "<group>"; };
+		1876AD5E28E6C27D00DA0387 /* OCHTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHTestViewController.h; sourceTree = "<group>"; };
+		1876AD5F28E6C27D00DA0387 /* OCHTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTestViewController.m; sourceTree = "<group>"; };
+		1876AD6428E6E2E300DA0387 /* OCHUIScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHUIScrollViewController.h; sourceTree = "<group>"; };
+		1876AD6528E6E2E300DA0387 /* OCHUIScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHUIScrollViewController.m; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -118,6 +133,10 @@
 			children = (
 				1876AD3428E452A100DA0387 /* OCHCollectionViewDemoController.h */,
 				1876AD3528E452A100DA0387 /* OCHCollectionViewDemoController.m */,
+				1876AD5E28E6C27D00DA0387 /* OCHTestViewController.h */,
+				1876AD5F28E6C27D00DA0387 /* OCHTestViewController.m */,
+				1876AD6428E6E2E300DA0387 /* OCHUIScrollViewController.h */,
+				1876AD6528E6E2E300DA0387 /* OCHUIScrollViewController.m */,
 			);
 			path = Controll;
 			sourceTree = "<group>";
@@ -136,8 +155,19 @@
 			children = (
 				1876AD4528E4730400DA0387 /* UIColor+OCH.h */,
 				1876AD4628E4730400DA0387 /* UIColor+OCH.m */,
+				1876AD4928E539D500DA0387 /* UIView+OCH.h */,
+				1876AD4A28E539D500DA0387 /* UIView+OCH.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		1876AD5A28E6BEAA00DA0387 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1876AD5B28E6BEF500DA0387 /* OCHTestView.h */,
+				1876AD5C28E6BEF500DA0387 /* OCHTestView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		18E4173528E44E720035BDA7 = {
@@ -165,19 +195,22 @@
 		18E4174028E44E720035BDA7 /* ObjectiveCHelper */ = {
 			isa = PBXGroup;
 			children = (
-				1876AD4128E472A200DA0387 /* Category */,
-				1876AD3728E464AE00DA0387 /* Model */,
-				1876AD3328E4527A00DA0387 /* Controll */,
-				1876AD2F28E450A200DA0387 /* Base */,
 				18E4174128E44E720035BDA7 /* AppDelegate.h */,
 				18E4174228E44E720035BDA7 /* AppDelegate.m */,
+				18E4174D28E44E740035BDA7 /* Assets.xcassets */,
+				1876AD2F28E450A200DA0387 /* Base */,
+				1876AD4128E472A200DA0387 /* Category */,
+				1876AD3328E4527A00DA0387 /* Controll */,
+				18E4175228E44E740035BDA7 /* Info.plist */,
+				18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */,
+				18E4175328E44E740035BDA7 /* main.m */,
+				1876AD3728E464AE00DA0387 /* Model */,
+				1876AD5428E6B97500DA0387 /* ObjectiveCHelper-Bridging-Header.h */,
+				1876AD4828E4748A00DA0387 /* OCHPrefixHeader.pch */,
+				1876AD5528E6B97600DA0387 /* OCHUIPreview.swift */,
 				18E4174428E44E720035BDA7 /* SceneDelegate.h */,
 				18E4174528E44E720035BDA7 /* SceneDelegate.m */,
-				18E4174D28E44E740035BDA7 /* Assets.xcassets */,
-				18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */,
-				18E4175228E44E740035BDA7 /* Info.plist */,
-				18E4175328E44E740035BDA7 /* main.m */,
-				1876AD4828E4748A00DA0387 /* OCHPrefixHeader.pch */,
+				1876AD5A28E6BEAA00DA0387 /* View */,
 			);
 			path = ObjectiveCHelper;
 			sourceTree = "<group>";
@@ -294,6 +327,7 @@
 				TargetAttributes = {
 					18E4173D28E44E720035BDA7 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					18E4175828E44E740035BDA7 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -461,10 +495,15 @@
 			files = (
 				1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */,
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
+				1876AD6028E6C27D00DA0387 /* OCHTestViewController.m in Sources */,
 				1876AD4728E4730400DA0387 /* UIColor+OCH.m in Sources */,
+				1876AD6628E6E2E300DA0387 /* OCHUIScrollViewController.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
+				1876AD5D28E6BEF500DA0387 /* OCHTestView.m in Sources */,
+				1876AD4B28E539D500DA0387 /* UIView+OCH.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
+				1876AD5628E6B97600DA0387 /* OCHUIPreview.swift in Sources */,
 				18E4174628E44E720035BDA7 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +668,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -647,6 +687,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sauronpi.ObjectiveCHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveCHelper/ObjectiveCHelper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -657,6 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -675,6 +719,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sauronpi.ObjectiveCHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveCHelper/ObjectiveCHelper-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -683,6 +729,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 365375EE3E48A83C249D7C5C /* Pods-ObjectiveCHelperTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -701,6 +748,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9D80E1F8D900288F2A696FE /* Pods-ObjectiveCHelperTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -719,6 +767,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E42F9BC40553364C53236AEA /* Pods-ObjectiveCHelper-ObjectiveCHelperUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -735,6 +784,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AB1338BD3FFDE0A3A0580670 /* Pods-ObjectiveCHelper-ObjectiveCHelperUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
