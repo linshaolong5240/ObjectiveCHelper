@@ -1,5 +1,5 @@
 //
-//  OCHTestViewController.h
+//  OCHUIScrollViewDemoController.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/9/30.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHTestViewController : UIViewController
+@interface OCHUIScrollViewDemoController : UIViewController
 
 @end
 

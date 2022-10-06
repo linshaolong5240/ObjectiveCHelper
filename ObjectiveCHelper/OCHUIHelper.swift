@@ -1,25 +1,26 @@
 //
-//  OCHUIPreview.swift
+//  OCHUIHelper.swift
 //  ObjectiveCHelper
 //
-//  Created by Apple on 2022/9/30.
+//  Created by Sauron on 2022/10/1.
 //
 
 import SwiftUI
 
-struct OCHUIPreview: View {
+@available(iOS 13.0, *)
+struct OCHUIHelper: View {
     var body: some View {
         ZStack {
-//            UIViewRepresent(OCHTestView())
-//            UIViewControllerRepresent(OCHTestViewController())
-            UIViewControllerRepresent(OCHUIScrollViewController());
+            //        UIViewRepresent(OCHTestView())
+            UIViewControllerRepresent(OCHUIKitDemoViewController())
         }
     }
 }
 
-struct OCHUIPreview_Previews: PreviewProvider {
+@available(iOS 13.0, *)
+struct OCHUIHelper_Previews: PreviewProvider {
     static var previews: some View {
-        OCHUIPreview()//.ignoresSafeArea()
+        OCHUIHelper()
     }
 }
 

@@ -1,26 +1,21 @@
 //
-//  OCHTestViewController.m
+//  OCHBaseViewController.m
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/9/30.
+//  Created by teenloong on 2022/10/1.
 //
 
-#import "OCHTestViewController.h"
+#import "OCHBaseViewController.h"
 
-@interface OCHTestViewController ()
+@interface OCHBaseViewController ()
 
 @end
 
-@implementation OCHTestViewController
+@implementation OCHBaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self configureContentView];
-}
-
-- (void)configureContentView {
-    self.view.backgroundColor = UIColor.blueColor;
 }
 
 /*

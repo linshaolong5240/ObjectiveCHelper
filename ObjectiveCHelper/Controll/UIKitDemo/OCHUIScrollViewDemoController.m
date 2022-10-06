@@ -1,20 +1,20 @@
 //
-//  OCHUIScrollViewController.m
+//  OCHUIScrollViewDemoController.m
 //  ObjectiveCHelper
 //
-//  Created by Apple on 2022/9/30.
+//  Created by Sauron on 2022/9/30.
 //
 
-#import "OCHUIScrollViewController.h"
+#import "OCHUIScrollViewDemoController.h"
 
-@interface OCHUIScrollViewController ()
+@interface OCHUIScrollViewDemoController ()
 
 @property(nonatomic, strong) UIScrollView* scrollView;
 @property(nonatomic, strong) UIStackView* contentView;
 
 @end
 
-@implementation OCHUIScrollViewController
+@implementation OCHUIScrollViewDemoController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

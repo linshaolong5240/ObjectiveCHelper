@@ -2,16 +2,16 @@
 //  OCHSection.h
 //  ObjectiveCHelper
 //
-//  Created by Apple on 2022/9/28.
+//  Created by Sauron on 2022/9/28.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHSection : NSObject
+@interface OCHSection<ObjectType> : NSObject
 @property(nonatomic, copy) NSString* title;
-@property(nonatomic, strong) NSMutableArray* items;
+@property(nonatomic, strong) NSMutableArray<ObjectType>* items;
 @end
 
 NS_ASSUME_NONNULL_END
