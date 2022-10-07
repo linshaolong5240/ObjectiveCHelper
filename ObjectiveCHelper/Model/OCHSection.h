@@ -10,8 +10,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHSection<ObjectType> : NSObject
-@property(nonatomic, copy) NSString* title;
-@property(nonatomic, strong) NSMutableArray<ObjectType>* items;
+
+@property(nonatomic, copy, nullable) NSString* title;
+@property(nonatomic, strong, nullable) NSMutableArray<ObjectType>* items;
+
+- (instancetype)initWithTitle:(nullable NSString *)title items:(nullable NSArray *)items;
+
 @end
 
 NS_ASSUME_NONNULL_END

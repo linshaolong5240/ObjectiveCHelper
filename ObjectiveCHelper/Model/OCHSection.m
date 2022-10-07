@@ -9,4 +9,16 @@
 
 @implementation OCHSection
 
+- (instancetype)initWithTitle:(nullable NSString *)title items:(nullable NSArray *)items {
+    self = [super init];
+    if (self) {
+        self.title = title;
+        self.items = items.mutableCopy;
+    } else {
+        return nil;
+    }
+
+    return self;
+}
+
 @end

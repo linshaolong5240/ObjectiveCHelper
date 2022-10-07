@@ -8,7 +8,7 @@
 #import "UIView+OCH.h"
 
 @implementation UIView (OCH)
-+ (NSString *)reusedIdentif {
++ (NSString *)reusedIdentifer {
     return NSStringFromClass([self class]);
 }
 @end

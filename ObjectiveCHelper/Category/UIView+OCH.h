@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (OCH)
-+ (NSString *)reusedIdentif;
++ (NSString *)reusedIdentifer;
 @end
 
 NS_ASSUME_NONNULL_END

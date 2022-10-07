@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "OCHTabbarViewController.h"
+#import "OCHUIKitDemoViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +18,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.window.rootViewController = [[OCHTabbarViewController alloc] init];    
+//    self.window.backgroundColor = UIColor.whiteColor;
+    UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[[OCHUIKitDemoViewController alloc] init]];
+    self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
 
     return YES;
