@@ -7,7 +7,8 @@ target 'ObjectiveCHelper' do
 
   # Pods for ObjectiveCHelper
   pod 'Masonry', '~> 1.1.0'
-
+  pod 'JXCategoryView'
+  
   target 'ObjectiveCHelperTests' do
     inherit! :search_paths
     # Pods for testing

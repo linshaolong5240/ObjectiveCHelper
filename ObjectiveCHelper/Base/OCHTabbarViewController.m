@@ -7,7 +7,7 @@
 
 #import "OCHTabbarViewController.h"
 #import "OCHUIKitDemoViewController.h"
-#import "OCHPieChartViewController.h"
+#import "OCHThirdPartyViewController.h"
 
 @interface OCHTabbarViewController ()
 
@@ -24,7 +24,7 @@
 
 - (void)configureTabBar {
     UIViewController *vc1 = [self makeTabBarViewController:[[OCHUIKitDemoViewController alloc] init] title:@"UIKitDemo" image:nil selectedImage:nil];
-    UIViewController *vc2 = [self makeTabBarViewController:OCHPieChartViewController.new title:@"OCHChartViewController" image:nil selectedImage:nil];
+    UIViewController *vc2 = [self makeTabBarViewController:OCHThirdPartyViewController.new title:@"OCHThirdPartyViewController" image:nil selectedImage:nil];
     self.viewControllers = @[vc1, vc2];
 }
 

@@ -16,10 +16,12 @@
 		1876AD5D28E6BEF500DA0387 /* OCHTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5C28E6BEF500DA0387 /* OCHTestView.m */; };
 		1876AD6028E6C27D00DA0387 /* OCHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5F28E6C27D00DA0387 /* OCHTestViewController.m */; };
 		1876AD6628E6E2E300DA0387 /* OCHUIScrollViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD6528E6E2E300DA0387 /* OCHUIScrollViewDemoController.m */; };
-		188CA46328F112EF00EF106E /* OCHPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46228F112EF00EF106E /* OCHPieChartViewController.m */; };
+		188CA46328F112EF00EF106E /* OCHDVPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46228F112EF00EF106E /* OCHDVPieChartViewController.m */; };
 		188CA46D28F1147000EF106E /* DVPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46828F1147000EF106E /* DVPieChart.m */; };
 		188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46B28F1147000EF106E /* DVFoodPieModel.m */; };
 		188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46C28F1147000EF106E /* DVPieCenterView.m */; };
+		188CA48128F1500E00EF106E /* OCHJXCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */; };
+		188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
 		18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */; };
@@ -70,14 +72,18 @@
 		1876AD5F28E6C27D00DA0387 /* OCHTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTestViewController.m; sourceTree = "<group>"; };
 		1876AD6428E6E2E300DA0387 /* OCHUIScrollViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHUIScrollViewDemoController.h; sourceTree = "<group>"; };
 		1876AD6528E6E2E300DA0387 /* OCHUIScrollViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHUIScrollViewDemoController.m; sourceTree = "<group>"; };
-		188CA46128F112EF00EF106E /* OCHPieChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHPieChartViewController.h; sourceTree = "<group>"; };
-		188CA46228F112EF00EF106E /* OCHPieChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHPieChartViewController.m; sourceTree = "<group>"; };
+		188CA46128F112EF00EF106E /* OCHDVPieChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHDVPieChartViewController.h; sourceTree = "<group>"; };
+		188CA46228F112EF00EF106E /* OCHDVPieChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHDVPieChartViewController.m; sourceTree = "<group>"; };
 		188CA46728F1147000EF106E /* DVPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVPieChart.h; sourceTree = "<group>"; };
 		188CA46828F1147000EF106E /* DVPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVPieChart.m; sourceTree = "<group>"; };
 		188CA46928F1147000EF106E /* DVFoodPieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVFoodPieModel.h; sourceTree = "<group>"; };
 		188CA46A28F1147000EF106E /* DVPieCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVPieCenterView.h; sourceTree = "<group>"; };
 		188CA46B28F1147000EF106E /* DVFoodPieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVFoodPieModel.m; sourceTree = "<group>"; };
 		188CA46C28F1147000EF106E /* DVPieCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVPieCenterView.m; sourceTree = "<group>"; };
+		188CA47F28F1500E00EF106E /* OCHJXCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHJXCategoryViewController.h; sourceTree = "<group>"; };
+		188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHJXCategoryViewController.m; sourceTree = "<group>"; };
+		188CA48228F1502C00EF106E /* OCHThirdPartyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHThirdPartyViewController.h; sourceTree = "<group>"; };
+		188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHThirdPartyViewController.m; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,15 +189,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		188CA45E28F10E1E00EF106E /* Chart */ = {
-			isa = PBXGroup;
-			children = (
-				188CA46428F1132D00EF106E /* Controller */,
-				188CA46528F1135A00EF106E /* View */,
-			);
-			path = Chart;
-			sourceTree = "<group>";
-		};
 		188CA45F28F1125E00EF106E /* UIKitDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,15 +206,6 @@
 				44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */,
 				1876AD6428E6E2E300DA0387 /* OCHUIScrollViewDemoController.h */,
 				1876AD6528E6E2E300DA0387 /* OCHUIScrollViewDemoController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		188CA46428F1132D00EF106E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				188CA46128F112EF00EF106E /* OCHPieChartViewController.h */,
-				188CA46228F112EF00EF106E /* OCHPieChartViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +229,20 @@
 				188CA46828F1147000EF106E /* DVPieChart.m */,
 			);
 			path = DVDishPieHeader;
+			sourceTree = "<group>";
+		};
+		188CA47E28F14F9100EF106E /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				188CA47F28F1500E00EF106E /* OCHJXCategoryViewController.h */,
+				188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */,
+				188CA46128F112EF00EF106E /* OCHDVPieChartViewController.h */,
+				188CA46228F112EF00EF106E /* OCHDVPieChartViewController.m */,
+				188CA48228F1502C00EF106E /* OCHThirdPartyViewController.h */,
+				188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */,
+				188CA46528F1135A00EF106E /* View */,
+			);
+			path = ThirdParty;
 			sourceTree = "<group>";
 		};
 		18E4173528E44E720035BDA7 = {
@@ -273,7 +275,6 @@
 				18E4174D28E44E740035BDA7 /* Assets.xcassets */,
 				1876AD2F28E450A200DA0387 /* Base */,
 				1876AD4128E472A200DA0387 /* Category */,
-				188CA45E28F10E1E00EF106E /* Chart */,
 				1876AD3328E4527A00DA0387 /* Controller */,
 				18E4175228E44E740035BDA7 /* Info.plist */,
 				18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */,
@@ -282,6 +283,7 @@
 				1876AD5428E6B97500DA0387 /* ObjectiveCHelper-Bridging-Header.h */,
 				1876AD4828E4748A00DA0387 /* OCHPrefixHeader.pch */,
 				44B9AB4228E835A400277DA0 /* OCHUIHelper.swift */,
+				188CA47E28F14F9100EF106E /* ThirdParty */,
 				188CA45F28F1125E00EF106E /* UIKitDemo */,
 				1876AD5A28E6BEAA00DA0387 /* View */,
 			);
@@ -566,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */,
 				188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */,
 				1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */,
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
@@ -575,9 +578,10 @@
 				1876AD6628E6E2E300DA0387 /* OCHUIScrollViewDemoController.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
+				188CA48128F1500E00EF106E /* OCHJXCategoryViewController.m in Sources */,
 				1876AD5D28E6BEF500DA0387 /* OCHTestView.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHBaseViewController.m in Sources */,
-				188CA46328F112EF00EF106E /* OCHPieChartViewController.m in Sources */,
+				188CA46328F112EF00EF106E /* OCHDVPieChartViewController.m in Sources */,
 				1876AD4B28E539D500DA0387 /* UIView+OCH.m in Sources */,
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,
 				188CA46D28F1147000EF106E /* DVPieChart.m in Sources */,
