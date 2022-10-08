@@ -1,5 +1,5 @@
 //
-//  OCHUIHelper.swift
+//  OCHPreviewHelper.swift
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/1.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct OCHUIHelper: View {
+struct OCHPreviewHelper: View {
     var body: some View {
         ZStack {
             //        UIViewRepresent(OCHTestView())
@@ -20,7 +20,7 @@ struct OCHUIHelper: View {
 @available(iOS 13.0, *)
 struct OCHUIHelper_Previews: PreviewProvider {
     static var previews: some View {
-        OCHUIHelper()
+        OCHPreviewHelper()
     }
 }
 

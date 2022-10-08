@@ -32,7 +32,7 @@
 		3093019FEA4D19C1BB7DF45E /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9299767C1AA87BE14B447F63 /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework */; };
 		44890BA328E8301D00C395D9 /* OCHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA228E8301D00C395D9 /* OCHBaseViewController.m */; };
 		44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */; };
-		44B9AB4328E835A400277DA0 /* OCHUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B9AB4228E835A400277DA0 /* OCHUIHelper.swift */; };
+		44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B9AB4228E835A400277DA0 /* OCHPreviewHelper.swift */; };
 		9164520C4FA8147686A4074F /* Pods_ObjectiveCHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72160D0D716E20EEB2158EE7 /* Pods_ObjectiveCHelper.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,7 +101,7 @@
 		44890BA228E8301D00C395D9 /* OCHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHBaseViewController.m; sourceTree = "<group>"; };
 		44890BA528E831C300C395D9 /* OCHUIKitDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHUIKitDemoViewController.h; sourceTree = "<group>"; };
 		44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHUIKitDemoViewController.m; sourceTree = "<group>"; };
-		44B9AB4228E835A400277DA0 /* OCHUIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCHUIHelper.swift; sourceTree = "<group>"; };
+		44B9AB4228E835A400277DA0 /* OCHPreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCHPreviewHelper.swift; sourceTree = "<group>"; };
 		6688CD4700FD6598AE22AFDC /* Pods_ObjectiveCHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72160D0D716E20EEB2158EE7 /* Pods_ObjectiveCHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9299767C1AA87BE14B447F63 /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,7 +248,7 @@
 				1876AD5C28E6BEF500DA0387 /* OCHPreview.m */,
 				1876AD5E28E6C27D00DA0387 /* OCHPreviewController.h */,
 				1876AD5F28E6C27D00DA0387 /* OCHPreviewController.m */,
-				44B9AB4228E835A400277DA0 /* OCHUIHelper.swift */,
+				44B9AB4228E835A400277DA0 /* OCHPreviewHelper.swift */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -582,7 +582,7 @@
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
 				1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */,
 				1876AD4728E4730400DA0387 /* UIColor+OCH.m in Sources */,
-				44B9AB4328E835A400277DA0 /* OCHUIHelper.swift in Sources */,
+				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
 				1876AD6628E6E2E300DA0387 /* OCHUIScrollViewDemoController.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
