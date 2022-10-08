@@ -12,7 +12,7 @@ struct OCHUIHelper: View {
     var body: some View {
         ZStack {
             //        UIViewRepresent(OCHTestView())
-            UIViewControllerRepresent(OCHUIKitDemoViewController())
+            UIViewControllerRepresent(OCHPreviewController())
         }
     }
 }

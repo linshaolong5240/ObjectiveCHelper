@@ -13,8 +13,8 @@
 		1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3928E464E500DA0387 /* OCHSection.m */; };
 		1876AD4728E4730400DA0387 /* UIColor+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD4628E4730400DA0387 /* UIColor+OCH.m */; };
 		1876AD4B28E539D500DA0387 /* UIView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD4A28E539D500DA0387 /* UIView+OCH.m */; };
-		1876AD5D28E6BEF500DA0387 /* OCHTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5C28E6BEF500DA0387 /* OCHTestView.m */; };
-		1876AD6028E6C27D00DA0387 /* OCHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5F28E6C27D00DA0387 /* OCHTestViewController.m */; };
+		1876AD5D28E6BEF500DA0387 /* OCHPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5C28E6BEF500DA0387 /* OCHPreview.m */; };
+		1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5F28E6C27D00DA0387 /* OCHPreviewController.m */; };
 		1876AD6628E6E2E300DA0387 /* OCHUIScrollViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD6528E6E2E300DA0387 /* OCHUIScrollViewDemoController.m */; };
 		188CA46328F112EF00EF106E /* OCHDVPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46228F112EF00EF106E /* OCHDVPieChartViewController.m */; };
 		188CA46D28F1147000EF106E /* DVPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46828F1147000EF106E /* DVPieChart.m */; };
@@ -66,10 +66,10 @@
 		1876AD4928E539D500DA0387 /* UIView+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+OCH.h"; sourceTree = "<group>"; };
 		1876AD4A28E539D500DA0387 /* UIView+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+OCH.m"; sourceTree = "<group>"; };
 		1876AD5428E6B97500DA0387 /* ObjectiveCHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveCHelper-Bridging-Header.h"; sourceTree = "<group>"; };
-		1876AD5B28E6BEF500DA0387 /* OCHTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHTestView.h; sourceTree = "<group>"; };
-		1876AD5C28E6BEF500DA0387 /* OCHTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTestView.m; sourceTree = "<group>"; };
-		1876AD5E28E6C27D00DA0387 /* OCHTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHTestViewController.h; sourceTree = "<group>"; };
-		1876AD5F28E6C27D00DA0387 /* OCHTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTestViewController.m; sourceTree = "<group>"; };
+		1876AD5B28E6BEF500DA0387 /* OCHPreview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHPreview.h; sourceTree = "<group>"; };
+		1876AD5C28E6BEF500DA0387 /* OCHPreview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHPreview.m; sourceTree = "<group>"; };
+		1876AD5E28E6C27D00DA0387 /* OCHPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHPreviewController.h; sourceTree = "<group>"; };
+		1876AD5F28E6C27D00DA0387 /* OCHPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHPreviewController.m; sourceTree = "<group>"; };
 		1876AD6428E6E2E300DA0387 /* OCHUIScrollViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHUIScrollViewDemoController.h; sourceTree = "<group>"; };
 		1876AD6528E6E2E300DA0387 /* OCHUIScrollViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHUIScrollViewDemoController.m; sourceTree = "<group>"; };
 		188CA46128F112EF00EF106E /* OCHDVPieChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHDVPieChartViewController.h; sourceTree = "<group>"; };
@@ -154,8 +154,6 @@
 		1876AD3328E4527A00DA0387 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1876AD5E28E6C27D00DA0387 /* OCHTestViewController.h */,
-				1876AD5F28E6C27D00DA0387 /* OCHTestViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,8 +181,6 @@
 		1876AD5A28E6BEAA00DA0387 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1876AD5B28E6BEF500DA0387 /* OCHTestView.h */,
-				1876AD5C28E6BEF500DA0387 /* OCHTestView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,6 +241,18 @@
 			path = ThirdParty;
 			sourceTree = "<group>";
 		};
+		188CA48528F155DC00EF106E /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				1876AD5B28E6BEF500DA0387 /* OCHPreview.h */,
+				1876AD5C28E6BEF500DA0387 /* OCHPreview.m */,
+				1876AD5E28E6C27D00DA0387 /* OCHPreviewController.h */,
+				1876AD5F28E6C27D00DA0387 /* OCHPreviewController.m */,
+				44B9AB4228E835A400277DA0 /* OCHUIHelper.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
 		18E4173528E44E720035BDA7 = {
 			isa = PBXGroup;
 			children = (
@@ -282,7 +290,7 @@
 				1876AD3728E464AE00DA0387 /* Model */,
 				1876AD5428E6B97500DA0387 /* ObjectiveCHelper-Bridging-Header.h */,
 				1876AD4828E4748A00DA0387 /* OCHPrefixHeader.pch */,
-				44B9AB4228E835A400277DA0 /* OCHUIHelper.swift */,
+				188CA48528F155DC00EF106E /* Preview */,
 				188CA47E28F14F9100EF106E /* ThirdParty */,
 				188CA45F28F1125E00EF106E /* UIKitDemo */,
 				1876AD5A28E6BEAA00DA0387 /* View */,
@@ -572,14 +580,14 @@
 				188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */,
 				1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */,
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
-				1876AD6028E6C27D00DA0387 /* OCHTestViewController.m in Sources */,
+				1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */,
 				1876AD4728E4730400DA0387 /* UIColor+OCH.m in Sources */,
 				44B9AB4328E835A400277DA0 /* OCHUIHelper.swift in Sources */,
 				1876AD6628E6E2E300DA0387 /* OCHUIScrollViewDemoController.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
 				188CA48128F1500E00EF106E /* OCHJXCategoryViewController.m in Sources */,
-				1876AD5D28E6BEF500DA0387 /* OCHTestView.m in Sources */,
+				1876AD5D28E6BEF500DA0387 /* OCHPreview.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHBaseViewController.m in Sources */,
 				188CA46328F112EF00EF106E /* OCHDVPieChartViewController.m in Sources */,
 				1876AD4B28E539D500DA0387 /* UIView+OCH.m in Sources */,

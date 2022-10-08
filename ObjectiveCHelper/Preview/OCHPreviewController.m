@@ -1,17 +1,19 @@
 //
-//  OCHTestViewController.m
+//  OCHPreviewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/9/30.
 //
 
-#import "OCHTestViewController.h"
+#import "OCHPreviewController.h"
+#import "JXCategoryView.h"
 
-@interface OCHTestViewController ()
+@interface OCHPreviewController ()
+    
 
 @end
 
-@implementation OCHTestViewController
+@implementation OCHPreviewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

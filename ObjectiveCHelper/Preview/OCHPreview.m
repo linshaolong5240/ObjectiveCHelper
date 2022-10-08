@@ -1,17 +1,17 @@
 //
-//  OCHTestView.m
+//  OCHPreview.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/9/30.
 //
 
-#import "OCHTestView.h"
+#import "OCHPreview.h"
 
-//@interface OCHTestView ()
+//@interface OCHPreview ()
 //
 //@end
 //
-//@implementation OCHTestView
+//@implementation OCHPreview
 //
 //- (instancetype)initWithFrame:(CGRect)frame {
 //    if (self = [super initWithFrame:frame]) {
@@ -34,7 +34,7 @@
 //
 //@end
 
-@interface OCHTestView ()
+@interface OCHPreview ()
 @property(nonatomic, strong) UISwitch *serverSwitch;
 @property(nonatomic, strong) UISwitch *pickUpAtHomeSwitch;
 @property(nonatomic, strong) UISwitch *deliveryToHomeSwitch;
@@ -47,7 +47,7 @@
 
 @end
 
-@implementation OCHTestView
+@implementation OCHPreview
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
