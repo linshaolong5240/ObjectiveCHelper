@@ -6,6 +6,8 @@
 //
 
 #import "OCHTabbarViewController.h"
+#import "OCHUIKitDemoViewController.h"
+#import "OCHPieChartViewController.h"
 
 @interface OCHTabbarViewController ()
 
@@ -16,7 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = UIColor.blueColor;
+    [self configureTabBar];
+    
+}
+
+- (void)configureTabBar {
+    UIViewController *vc1 = [self makeTabBarViewController:[[OCHUIKitDemoViewController alloc] init] title:@"UIKitDemo" image:nil selectedImage:nil];
+    UIViewController *vc2 = [self makeTabBarViewController:OCHPieChartViewController.new title:@"OCHChartViewController" image:nil selectedImage:nil];
+    self.viewControllers = @[vc1, vc2];
+}
+
+- (UIViewController *)makeTabBarViewController:(UIViewController *)viewController title:(nullable NSString *)title image:(nullable UIImage *)image selectedImage:(nullable UIImage *)selectedImage {
+    UIViewController *vc = [[UINavigationController alloc] initWithRootViewController:viewController];
+    UITabBarItem *tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:image selectedImage:selectedImage];
+    vc.tabBarItem = tabBarItem;
+    return vc;
 }
 
 /*

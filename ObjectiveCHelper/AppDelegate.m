@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "OCHUIKitDemoViewController.h"
+#import "OCHTabbarViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +19,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
 //    self.window.backgroundColor = UIColor.whiteColor;
-    UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[[OCHUIKitDemoViewController alloc] init]];
+    UIViewController *rootViewController = OCHTabbarViewController.new;
     self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
 

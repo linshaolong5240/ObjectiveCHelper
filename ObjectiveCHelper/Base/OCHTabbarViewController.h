@@ -7,13 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, OCHTabbarType) {
+typedef NS_ENUM(NSUInteger, OCHTabbarType) {
     OCHTabbarTypeUIKit,
 };
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHTabbarViewController : UIViewController
+@interface OCHTabbarViewController : UITabBarController
 
 @end
 
