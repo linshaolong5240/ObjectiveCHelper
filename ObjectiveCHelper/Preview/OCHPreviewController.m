@@ -44,6 +44,13 @@
     [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);
     }];
+    
+//    UIView *v = [YCAccessoryPrecurementCategoryTableView new];
+//    [self.contentView addSubview:v];
+//    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.edges.equalTo(self.contentView);
+//    }];
+    
 }
 
 /*

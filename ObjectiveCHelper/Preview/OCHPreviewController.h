@@ -7,6 +7,7 @@
 
 #import "OCHBaseViewController.h"
 #import "YCAccessoryProcurementCategoryViewController.h"
+#import "YCAccessoryPrecurementCategoryTableView.h"
 
 //ThirdParty
 #import "OCHJXCategoryViewController.h"

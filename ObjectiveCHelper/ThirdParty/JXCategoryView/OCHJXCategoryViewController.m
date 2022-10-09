@@ -31,6 +31,7 @@
     
     [self configureContentView];
     [self configureCategoryView];
+    [self configureCategoryListContainerView];
 }
 
 - (void)configureContentView {
@@ -65,7 +66,9 @@
     [self.categoryView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.height.mas_equalTo(30);
     }];
-    
+}
+
+- (void)configureCategoryListContainerView {
     self.views = [NSMutableArray array];
     NSArray<UIColor *> *colors = @[UIColor.redColor, UIColor.greenColor, UIColor.blueColor];
     for(NSInteger i = 0; i < self.items.count; i++) {
@@ -79,6 +82,7 @@
     
     self.categoryView.listContainer = self.categoryListContainerView;
 }
+
 
 // MARK: - JXCategoryViewDelegate
 

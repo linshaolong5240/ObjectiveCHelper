@@ -27,6 +27,8 @@
 		188CA48E28F16F1100EF106E /* YCAccessoryPrecurementSortButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48D28F16F1100EF106E /* YCAccessoryPrecurementSortButton.m */; };
 		188CA49228F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49128F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m */; };
 		188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */; };
+		188CA49928F265C200EF106E /* YCAccessoryPrecurementCategoryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49828F265C200EF106E /* YCAccessoryPrecurementCategoryTableView.m */; };
+		188CA49C28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49B28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
 		18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */; };
@@ -98,6 +100,10 @@
 		188CA49128F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAccessoryProcurementCategoryViewController.m; sourceTree = "<group>"; };
 		188CA49428F262D800EF106E /* OCHJXCategoryListContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHJXCategoryListContentView.h; sourceTree = "<group>"; };
 		188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHJXCategoryListContentView.m; sourceTree = "<group>"; };
+		188CA49728F265C200EF106E /* YCAccessoryPrecurementCategoryTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCAccessoryPrecurementCategoryTableView.h; sourceTree = "<group>"; };
+		188CA49828F265C200EF106E /* YCAccessoryPrecurementCategoryTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAccessoryPrecurementCategoryTableView.m; sourceTree = "<group>"; };
+		188CA49A28F268B400EF106E /* YCAccessoryPrecurementCategoryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCAccessoryPrecurementCategoryTableViewCell.h; sourceTree = "<group>"; };
+		188CA49B28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAccessoryPrecurementCategoryTableViewCell.m; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -279,6 +285,10 @@
 		188CA48F28F256F400EF106E /* AccessoryPrecurement */ = {
 			isa = PBXGroup;
 			children = (
+				188CA49728F265C200EF106E /* YCAccessoryPrecurementCategoryTableView.h */,
+				188CA49828F265C200EF106E /* YCAccessoryPrecurementCategoryTableView.m */,
+				188CA49A28F268B400EF106E /* YCAccessoryPrecurementCategoryTableViewCell.h */,
+				188CA49B28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m */,
 				188CA48728F167DF00EF106E /* YCAccessoryPrecurementFilterBar.h */,
 				188CA48828F167DF00EF106E /* YCAccessoryPrecurementFilterBar.m */,
 				188CA48C28F16F1100EF106E /* YCAccessoryPrecurementSortButton.h */,
@@ -625,12 +635,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */,
+				188CA49C28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m in Sources */,
 				188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */,
 				1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */,
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
 				1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */,
 				1876AD4728E4730400DA0387 /* UIColor+OCH.m in Sources */,
 				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
+				188CA49928F265C200EF106E /* YCAccessoryPrecurementCategoryTableView.m in Sources */,
 				1876AD6628E6E2E300DA0387 /* OCHUIScrollViewDemoController.m in Sources */,
 				188CA49228F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m in Sources */,
 				188CA48928F167DF00EF106E /* YCAccessoryPrecurementFilterBar.m in Sources */,

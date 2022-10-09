@@ -7,6 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
+//YRYC
+#import "YCAccessoryPrecurementCategoryTableViewCell.h"
+#import "YCAccessoryPrecurementCategoryTableView.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHPreview : UIView

@@ -11,8 +11,8 @@ import SwiftUI
 struct OCHPreviewHelper: View {
     var body: some View {
         ZStack {
-            //        UIViewRepresent(OCHTestView())
-            UIViewControllerRepresent(OCHJXCategoryViewController())
+            UIViewRepresent(YCAccessoryPrecurementCategoryTableView())
+//            UIViewControllerRepresent(OCHJXCategoryViewController())
 //            UIViewControllerRepresent(YCAccessoryProcurementCategoryViewController())
         }
     }

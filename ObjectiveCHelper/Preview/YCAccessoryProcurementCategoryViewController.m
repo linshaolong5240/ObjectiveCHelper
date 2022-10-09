@@ -8,16 +8,19 @@
 #import "YCAccessoryProcurementCategoryViewController.h"
 #import "JXCategoryView.h"
 #import "YCAccessoryPrecurementFilterBar.h"
+#import "YCAccessoryPrecurementCategoryTableView.h"
 
-@interface YCAccessoryProcurementCategoryViewController () <JXCategoryViewDelegate>
+@interface YCAccessoryProcurementCategoryViewController () <JXCategoryViewDelegate, JXCategoryListContainerViewDelegate>
 
 @property(nonatomic, copy) NSArray<NSString *> *items;  //汽车配件
 @property(nonatomic, strong) UIStackView *contentView;
 @property(nonatomic, strong) JXCategoryTitleView *categoryView;
 @property(nonatomic, strong) JXCategoryListContainerView *categoryListContainerView;
-@property(nonatomic, strong) NSMutableArray<UILabel *> *views;
+@property(nonatomic, strong) NSMutableArray *views;
 
 @property(nonatomic, strong) YCAccessoryPrecurementFilterBar *accessoryPrecurementFilterBar;
+
+@property(nonatomic, strong) YCAccessoryPrecurementCategoryTableView *tableview;
 
 @end
 
@@ -49,7 +52,7 @@
     
     [self configureCategoryView];
     [self configureAccessoryPrecurementFilterBar];
-    [self.contentView addArrangedSubview:UIView.new];
+    [self configureCategoryListContainerView];
 }
 
 - (void)configureCategoryView {
@@ -75,6 +78,7 @@
     
     UIStackView *hstack = [[UIStackView alloc] initWithArrangedSubviews:@[titleLabel, self.categoryView]];
     hstack.axis = UILayoutConstraintAxisHorizontal;
+    hstack.spacing = 20;
     [container addSubview:hstack];
     [hstack mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(container).insets(UIEdgeInsetsMake(0, 12, 0, 12));
@@ -98,27 +102,25 @@
     }];
 }
 
-//- (void)configureCategoryListContainerView {
+- (void)configureCategoryListContainerView {
 //    self.views = [NSMutableArray array];
-//    for(NSInteger i = 0; i < self.items.count; i++) {
+//    NSArray<UIColor *> *colors= @[UIColor.redColor, UIColor.greenColor, UIColor.blueColor, UIColor.yellowColor];
 //
+//    for(NSInteger i = 0; i < self.items.count; i++) {
+//        YCAccessoryPrecurementCategoryTableView *tableView = [YCAccessoryPrecurementCategoryTableView new];
+//        tableView.tag = i;
+//        tableView.backgroundColor = colors[i];
+//        [self.views addObject:tableView];
 //    }
+//
 //    self.categoryListContainerView = [[JXCategoryListContainerView alloc] initWithType:JXCategoryListContainerType_ScrollView delegate:self];
-//    self.categoryListContainerView.layer.cornerRadius = 6;
-//    self.categoryListContainerView.clipsToBounds = YES;
 //    self.categoryView.listContainer = self.categoryListContainerView;
 //
-//    UIView *container = [[UIView alloc] init];
-//    [self.contentView addArrangedSubview:container];
-//    [container mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.height.mas_equalTo(142);
-//    }];
-//
-//    [container addSubview:self.categoryListContainerView];
-//    [self.categoryListContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.equalTo(container).with.insets(UIEdgeInsetsMake(0, 6, 0, 6));
-//    }];
-//}
+//    [self.contentView addArrangedSubview:self.categoryListContainerView];
+    
+    self.tableview = [YCAccessoryPrecurementCategoryTableView new];
+    [self.contentView addArrangedSubview:self.tableview];
+}
 
 // MARK: - JXCategoryViewDelegate
 
@@ -126,6 +128,16 @@
 #if DEBUG
     NSLog(@"categoryView didSelectedItemAtIndex: %@", @(index));
 #endif
+}
+
+// MARK: - JXCategoryListContainerViewDelegate
+
+- (NSInteger)numberOfListsInlistContainerView:(JXCategoryListContainerView *)listContainerView {
+    return self.items.count;
+}
+
+- (id<JXCategoryListContentViewDelegate>)listContainerView:(JXCategoryListContainerView *)listContainerView initListForIndex:(NSInteger)index {
+    return self.views[index];
 }
 
 /*
