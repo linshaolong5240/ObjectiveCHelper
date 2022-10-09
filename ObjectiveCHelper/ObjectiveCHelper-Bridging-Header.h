@@ -3,4 +3,3 @@
 //
 #import "OCHPreview.h"
 #import "OCHPreviewController.h"
-#import "OCHUIKitDemoViewController.h"

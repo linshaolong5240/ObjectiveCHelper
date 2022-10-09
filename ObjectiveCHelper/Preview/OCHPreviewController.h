@@ -5,11 +5,15 @@
 //  Created by Sauron on 2022/9/30.
 //
 
-#import <UIKit/UIKit.h>
+#import "OCHBaseViewController.h"
+#import "YCAccessoryProcurementCategoryViewController.h"
+
+//ThirdParty
+#import "OCHJXCategoryViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHPreviewController : UIViewController
+@interface OCHPreviewController : OCHBaseViewController
 
 @end
 

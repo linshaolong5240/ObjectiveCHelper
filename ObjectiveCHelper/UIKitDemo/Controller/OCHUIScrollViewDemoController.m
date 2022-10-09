@@ -45,7 +45,6 @@
         label.text = [NSString stringWithFormat:@"%ld", i];
         [self.contentView addArrangedSubview:label];
     }
-    
 }
 
 /*

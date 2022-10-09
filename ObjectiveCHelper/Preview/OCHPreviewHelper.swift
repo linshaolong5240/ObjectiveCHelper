@@ -12,7 +12,8 @@ struct OCHPreviewHelper: View {
     var body: some View {
         ZStack {
             //        UIViewRepresent(OCHTestView())
-            UIViewControllerRepresent(OCHPreviewController())
+            UIViewControllerRepresent(OCHJXCategoryViewController())
+//            UIViewControllerRepresent(YCAccessoryProcurementCategoryViewController())
         }
     }
 }

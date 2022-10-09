@@ -22,6 +22,11 @@
 		188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46C28F1147000EF106E /* DVPieCenterView.m */; };
 		188CA48128F1500E00EF106E /* OCHJXCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */; };
 		188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */; };
+		188CA48928F167DF00EF106E /* YCAccessoryPrecurementFilterBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48828F167DF00EF106E /* YCAccessoryPrecurementFilterBar.m */; };
+		188CA48B28F16E8400EF106E /* YRYCAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188CA48A28F16E8400EF106E /* YRYCAssets.xcassets */; };
+		188CA48E28F16F1100EF106E /* YCAccessoryPrecurementSortButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48D28F16F1100EF106E /* YCAccessoryPrecurementSortButton.m */; };
+		188CA49228F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49128F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m */; };
+		188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
 		18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */; };
@@ -84,6 +89,15 @@
 		188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHJXCategoryViewController.m; sourceTree = "<group>"; };
 		188CA48228F1502C00EF106E /* OCHThirdPartyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHThirdPartyViewController.h; sourceTree = "<group>"; };
 		188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHThirdPartyViewController.m; sourceTree = "<group>"; };
+		188CA48728F167DF00EF106E /* YCAccessoryPrecurementFilterBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCAccessoryPrecurementFilterBar.h; sourceTree = "<group>"; };
+		188CA48828F167DF00EF106E /* YCAccessoryPrecurementFilterBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAccessoryPrecurementFilterBar.m; sourceTree = "<group>"; };
+		188CA48A28F16E8400EF106E /* YRYCAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YRYCAssets.xcassets; sourceTree = "<group>"; };
+		188CA48C28F16F1100EF106E /* YCAccessoryPrecurementSortButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCAccessoryPrecurementSortButton.h; sourceTree = "<group>"; };
+		188CA48D28F16F1100EF106E /* YCAccessoryPrecurementSortButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAccessoryPrecurementSortButton.m; sourceTree = "<group>"; };
+		188CA49028F2574600EF106E /* YCAccessoryProcurementCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCAccessoryProcurementCategoryViewController.h; sourceTree = "<group>"; };
+		188CA49128F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAccessoryProcurementCategoryViewController.m; sourceTree = "<group>"; };
+		188CA49428F262D800EF106E /* OCHJXCategoryListContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHJXCategoryListContentView.h; sourceTree = "<group>"; };
+		188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHJXCategoryListContentView.m; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -230,8 +244,7 @@
 		188CA47E28F14F9100EF106E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				188CA47F28F1500E00EF106E /* OCHJXCategoryViewController.h */,
-				188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */,
+				188CA49328F262AC00EF106E /* JXCategoryView */,
 				188CA46128F112EF00EF106E /* OCHDVPieChartViewController.h */,
 				188CA46228F112EF00EF106E /* OCHDVPieChartViewController.m */,
 				188CA48228F1502C00EF106E /* OCHThirdPartyViewController.h */,
@@ -244,6 +257,7 @@
 		188CA48528F155DC00EF106E /* Preview */ = {
 			isa = PBXGroup;
 			children = (
+				188CA48628F15C0700EF106E /* YRYC */,
 				1876AD5B28E6BEF500DA0387 /* OCHPreview.h */,
 				1876AD5C28E6BEF500DA0387 /* OCHPreview.m */,
 				1876AD5E28E6C27D00DA0387 /* OCHPreviewController.h */,
@@ -251,6 +265,39 @@
 				44B9AB4228E835A400277DA0 /* OCHPreviewHelper.swift */,
 			);
 			path = Preview;
+			sourceTree = "<group>";
+		};
+		188CA48628F15C0700EF106E /* YRYC */ = {
+			isa = PBXGroup;
+			children = (
+				188CA48F28F256F400EF106E /* AccessoryPrecurement */,
+				188CA48A28F16E8400EF106E /* YRYCAssets.xcassets */,
+			);
+			name = YRYC;
+			sourceTree = "<group>";
+		};
+		188CA48F28F256F400EF106E /* AccessoryPrecurement */ = {
+			isa = PBXGroup;
+			children = (
+				188CA48728F167DF00EF106E /* YCAccessoryPrecurementFilterBar.h */,
+				188CA48828F167DF00EF106E /* YCAccessoryPrecurementFilterBar.m */,
+				188CA48C28F16F1100EF106E /* YCAccessoryPrecurementSortButton.h */,
+				188CA48D28F16F1100EF106E /* YCAccessoryPrecurementSortButton.m */,
+				188CA49028F2574600EF106E /* YCAccessoryProcurementCategoryViewController.h */,
+				188CA49128F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m */,
+			);
+			name = AccessoryPrecurement;
+			sourceTree = "<group>";
+		};
+		188CA49328F262AC00EF106E /* JXCategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				188CA49428F262D800EF106E /* OCHJXCategoryListContentView.h */,
+				188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */,
+				188CA47F28F1500E00EF106E /* OCHJXCategoryViewController.h */,
+				188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */,
+			);
+			path = JXCategoryView;
 			sourceTree = "<group>";
 		};
 		18E4173528E44E720035BDA7 = {
@@ -447,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188CA48B28F16E8400EF106E /* YRYCAssets.xcassets in Resources */,
 				18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */,
 				18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */,
 			);
@@ -584,16 +632,20 @@
 				1876AD4728E4730400DA0387 /* UIColor+OCH.m in Sources */,
 				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
 				1876AD6628E6E2E300DA0387 /* OCHUIScrollViewDemoController.m in Sources */,
+				188CA49228F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m in Sources */,
+				188CA48928F167DF00EF106E /* YCAccessoryPrecurementFilterBar.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
 				188CA48128F1500E00EF106E /* OCHJXCategoryViewController.m in Sources */,
 				1876AD5D28E6BEF500DA0387 /* OCHPreview.m in Sources */,
+				188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHBaseViewController.m in Sources */,
 				188CA46328F112EF00EF106E /* OCHDVPieChartViewController.m in Sources */,
 				1876AD4B28E539D500DA0387 /* UIView+OCH.m in Sources */,
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,
 				188CA46D28F1147000EF106E /* DVPieChart.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
+				188CA48E28F16F1100EF106E /* YCAccessoryPrecurementSortButton.m in Sources */,
 				44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
