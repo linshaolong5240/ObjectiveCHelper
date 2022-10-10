@@ -220,13 +220,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		1876AD3328E4527A00DA0387 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		1876AD3728E464AE00DA0387 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,13 +238,6 @@
 				1876AD4A28E539D500DA0387 /* UIView+OCH.m */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		1876AD5A28E6BEAA00DA0387 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		188CA45F28F1125E00EF106E /* UIKitDemo */ = {
@@ -363,7 +349,6 @@
 				18E4174D28E44E740035BDA7 /* Assets.xcassets */,
 				1876AD2F28E450A200DA0387 /* Base */,
 				1876AD4128E472A200DA0387 /* Category */,
-				1876AD3328E4527A00DA0387 /* Controller */,
 				18E4175228E44E740035BDA7 /* Info.plist */,
 				18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */,
 				18E4175328E44E740035BDA7 /* main.m */,
@@ -373,7 +358,6 @@
 				188CA48528F155DC00EF106E /* Preview */,
 				188CA47E28F14F9100EF106E /* ThirdParty */,
 				188CA45F28F1125E00EF106E /* UIKitDemo */,
-				1876AD5A28E6BEAA00DA0387 /* View */,
 			);
 			path = ObjectiveCHelper;
 			sourceTree = "<group>";
