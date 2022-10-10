@@ -6,6 +6,7 @@
 //
 
 #import "OCHPreviewController.h"
+#import "OCHPreview.h"
 
 @interface OCHPreviewController ()
 
@@ -38,18 +39,18 @@
         }
     }];
     
-    UIViewController *vc = YCAccessoryProcurementCategoryViewController.new;
-    [self.contentView addSubview:vc.view];
-    [self addChildViewController:vc];
-    [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.contentView);
-    }];
-    
-//    UIView *v = [YCAccessoryPrecurementCategoryTableView new];
-//    [self.contentView addSubview:v];
-//    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+//    UIViewController *vc = YCAccessoryProcurementCategoryViewController.new;
+//    [self.contentView addSubview:vc.view];
+//    [self addChildViewController:vc];
+//    [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
 //            make.edges.equalTo(self.contentView);
 //    }];
+    
+    UIView *v = [OCHPreview new];
+    [self.contentView addSubview:v];
+    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.contentView);
+    }];
     
 }
 

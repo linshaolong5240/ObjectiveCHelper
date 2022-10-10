@@ -9,7 +9,7 @@
 
 //YRYC
 #import "YCAccessoryPrecurementCategoryTableViewCell.h"
-#import "YCAccessoryPrecurementCategoryTableView.h"
+#import "YCAccessoryPrecurementProductTableView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

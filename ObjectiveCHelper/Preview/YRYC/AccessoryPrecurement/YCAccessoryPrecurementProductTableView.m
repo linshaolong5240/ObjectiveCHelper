@@ -1,22 +1,22 @@
 //
-//  YCAccessoryPrecurementCategoryTableView.m
+//  YCAccessoryPrecurementProductTableView.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/9.
 //
 
-#import "YCAccessoryPrecurementCategoryTableView.h"
+#import "YCAccessoryPrecurementProductTableView.h"
 #import "JXCategoryView.h"
 #import "YCAccessoryPrecurementCategoryTableViewCell.h"
 
-@interface YCAccessoryPrecurementCategoryTableView () <JXCategoryListContentViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface YCAccessoryPrecurementProductTableView () <JXCategoryListContentViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong) NSMutableArray *items;
 @property(nonatomic, strong) UITableView *tableView;
 
 @end
 
-@implementation YCAccessoryPrecurementCategoryTableView
+@implementation YCAccessoryPrecurementProductTableView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -38,6 +38,7 @@
     self.tableView = [UITableView new];
     self.tableView.rowHeight = 115;
 //    self.tableView.estimatedRowHeight = UITableViewAutomaticDimension;
+    self.tableView.separatorInset = UIEdgeInsetsMake(0, 12, 0, 12);
     [self.tableView registerClass:YCAccessoryPrecurementCategoryTableViewCell.class forCellReuseIdentifier:NSStringFromClass([YCAccessoryPrecurementCategoryTableViewCell class])];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;

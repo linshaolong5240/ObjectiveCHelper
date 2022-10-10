@@ -8,7 +8,7 @@
 #import "YCAccessoryProcurementCategoryViewController.h"
 #import "JXCategoryView.h"
 #import "YCAccessoryPrecurementFilterBar.h"
-#import "YCAccessoryPrecurementCategoryTableView.h"
+#import "YCAccessoryPrecurementProductTableView.h"
 
 @interface YCAccessoryProcurementCategoryViewController () <JXCategoryViewDelegate, JXCategoryListContainerViewDelegate>
 
@@ -20,7 +20,7 @@
 
 @property(nonatomic, strong) YCAccessoryPrecurementFilterBar *accessoryPrecurementFilterBar;
 
-@property(nonatomic, strong) YCAccessoryPrecurementCategoryTableView *tableview;
+@property(nonatomic, strong) YCAccessoryPrecurementProductTableView *tableview;
 
 @end
 
@@ -107,7 +107,7 @@
 //    NSArray<UIColor *> *colors= @[UIColor.redColor, UIColor.greenColor, UIColor.blueColor, UIColor.yellowColor];
 //
 //    for(NSInteger i = 0; i < self.items.count; i++) {
-//        YCAccessoryPrecurementCategoryTableView *tableView = [YCAccessoryPrecurementCategoryTableView new];
+//        YCAccessoryPrecurementProductTableView *tableView = [YCAccessoryPrecurementProductTableView new];
 //        tableView.tag = i;
 //        tableView.backgroundColor = colors[i];
 //        [self.views addObject:tableView];
@@ -118,7 +118,7 @@
 //
 //    [self.contentView addArrangedSubview:self.categoryListContainerView];
     
-    self.tableview = [YCAccessoryPrecurementCategoryTableView new];
+    self.tableview = [YCAccessoryPrecurementProductTableView new];
     [self.contentView addArrangedSubview:self.tableview];
 }
 

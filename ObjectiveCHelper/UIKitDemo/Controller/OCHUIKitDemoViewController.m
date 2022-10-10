@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_END
     }];
 }
 
-//MARK: UITableViewDataSource
+// MARK: - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.sections[section].items.count;
@@ -60,7 +60,7 @@ NS_ASSUME_NONNULL_END
     return self.sections[section].title;
 }
 
-//MARK: UITableViewDataSource
+// MARK: - UITableViewDataDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIViewController *vc = UIViewControllermOCHUIKitDemoItem(indexPath.row);
     [self.navigationController pushViewController:vc animated:YES];
