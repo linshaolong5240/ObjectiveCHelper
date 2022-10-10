@@ -10,8 +10,6 @@
 
 @interface OCHPreviewController ()
 
-@property(nonatomic, strong) UIStackView *contentView;
-
 @end
 
 @implementation OCHPreviewController
@@ -19,39 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self configureContentView];
-}
-
-- (void)configureContentView {
-    self.contentView = [[UIStackView alloc] init];
-    self.contentView.axis = UILayoutConstraintAxisVertical;
-    [self.view addSubview:self.contentView];
-    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        if (@available(iOS 11.0, *)) {
-            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
-            make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);
-            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
-            make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
-        } else {
-            make.top.equalTo(self.mas_topLayoutGuideBottom);
-            make.left.right.equalTo(self.view);
-            make.bottom.equalTo(self.mas_bottomLayoutGuideTop);
-        }
-    }];
-    
-//    UIViewController *vc = YCAccessoryProcurementCategoryViewController.new;
-//    [self.contentView addSubview:vc.view];
-//    [self addChildViewController:vc];
-//    [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.edges.equalTo(self.contentView);
-//    }];
     
     UIView *v = [OCHPreview new];
     [self.contentView addSubview:v];
     [v mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);
     }];
-    
 }
 
 /*

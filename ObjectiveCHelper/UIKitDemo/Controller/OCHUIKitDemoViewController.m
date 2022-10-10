@@ -7,6 +7,8 @@
 
 #import "OCHUIKitDemoViewController.h"
 #import "OCHSection.h"
+
+#import "OCHUIKitUISearchbarDemoViewController.h"
 #import "OCHUIScrollViewDemoController.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -24,10 +26,6 @@ NS_ASSUME_NONNULL_END
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.sections = @[[[OCHSection alloc] initWithTitle:nil items:OCHUIKitDemoItemAllItems()]];
-    [self configureContentView];
-}
-
-- (void)configureContentView {
     [self configureTableView];
 }
 
@@ -89,6 +87,8 @@ NSArray<NSNumber *> * OCHUIKitDemoItemAllItems(void) {
 
 NSString * NSStringFromOCHUIKitDemoItem(OCHUIKitDemoItem item) {
     switch (item) {
+        case OCHUIKitDemoItemUISearchbar:
+            return @"OCHUIKitDemoItemUISearchbar";
         case OCHUIKitDemoItemUIScrollView:
             return @"OCHUIKitDemoItemUIScrollView";
             break;
@@ -100,6 +100,9 @@ NSString * NSStringFromOCHUIKitDemoItem(OCHUIKitDemoItem item) {
 
 UIViewController * UIViewControllermOCHUIKitDemoItem(OCHUIKitDemoItem item) {
     switch (item) {
+        case OCHUIKitDemoItemUISearchbar:
+            return [OCHUIKitUISearchbarDemoViewController new];
+            break;
         case OCHUIKitDemoItemUIScrollView:
             return [[OCHUIScrollViewDemoController alloc] init];
             break;

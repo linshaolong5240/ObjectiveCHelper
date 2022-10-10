@@ -12,8 +12,9 @@ struct OCHPreviewHelper: View {
     var body: some View {
         ZStack {
             UIViewRepresent(OCHPreview())
+                .frame(maxHeight: 50)
+//            UIViewControllerRepresent(OCHPreviewController())
 //            UIViewControllerRepresent(OCHJXCategoryViewController())
-//            UIViewControllerRepresent(YCAccessoryProcurementCategoryViewController())
         }
     }
 }

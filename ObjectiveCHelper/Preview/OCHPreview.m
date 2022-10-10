@@ -6,7 +6,7 @@
 //
 
 #import "OCHPreview.h"
-#import "YCAcccessoryPrecurementAllCategoritesView.h"
+#import "YCAccessoryPriceInquirySearchView.h"
 
 @interface OCHPreview ()
 
@@ -24,17 +24,32 @@
 }
 
 - (void)configureContentView {
-//    self.backgroundColor = UIColor.blueColor;
-////
-//    self.contentView = [UIStackView new];
-//    self.contentView.axis = UILayoutConstraintAxisHorizontal;
-//    self.contentView.spacing = 0;
-//    [self addSubview:self.contentView];
-//    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.equalTo(self);
-//    }];
+    //    self.backgroundColor = UIColor.blueColor;
+    ////
+    //    self.contentView = [UIStackView new];
+    //    self.contentView.axis = UILayoutConstraintAxisHorizontal;
+    //    self.contentView.spacing = 0;
+    //    [self addSubview:self.contentView];
+    //    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.edges.equalTo(self);
+    //    }];
     
-    UIView *v = [YCAcccessoryPrecurementAllCategoritesView new];
+    YCAccessoryPriceInquirySearchView *searchView = [YCAccessoryPriceInquirySearchView new];
+    [searchView setRightButtonWithImageName:@"icon_scan"];
+//    [searchView.rightButton setImage:[UIImage imageNamed:@"icon_scan"] forState:UIControlStateNormal];
+    searchView.textField.backgroundColor = UIColor.blueColor;
+
+    UIView *container = [UIView new];
+    container.backgroundColor = UIColor.grayColor;
+    container.layer.cornerRadius = 6;
+    
+    
+    [container addSubview:searchView];
+    [searchView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(container).insets(UIEdgeInsetsMake(10, 12, 10, 12));
+    }];
+    
+    UIView *v = container;
     [self addSubview:v];
     [v mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self);

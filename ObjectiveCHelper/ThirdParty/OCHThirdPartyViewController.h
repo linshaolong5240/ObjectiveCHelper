@@ -5,7 +5,7 @@
 //  Created by Sauron on 2022/10/8.
 //
 
-#import "OCHBaseViewController.h"
+#import "OCHContentViewController.h"
 #import "OCHJXCategoryViewController.h"
 
 typedef NS_ENUM(NSUInteger, OCHTirdPartyItem) {
@@ -21,7 +21,7 @@ UIViewController * UIViewControllerFromOCHTirdPartyItem(OCHTirdPartyItem item);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHThirdPartyViewController : OCHBaseViewController
+@interface OCHThirdPartyViewController : OCHContentViewController
 
 @end
 

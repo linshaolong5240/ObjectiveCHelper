@@ -5,11 +5,11 @@
 //  Created by Sauron on 2022/10/8.
 //
 
-#import "OCHBaseViewController.h"
+#import "OCHContentViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHDVPieChartViewController : OCHBaseViewController
+@interface OCHDVPieChartViewController : OCHContentViewController
 
 @end
 

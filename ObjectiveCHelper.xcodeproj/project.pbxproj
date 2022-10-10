@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0E50B35EF309D9DD368ECEEA /* Pods_ObjectiveCHelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6688CD4700FD6598AE22AFDC /* Pods_ObjectiveCHelperTests.framework */; };
+		1811B83528F423100074418B /* OCHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811B83428F423100074418B /* OCHBaseViewController.m */; };
+		1811B83828F423DD0074418B /* OCHScrollContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811B83728F423DD0074418B /* OCHScrollContentViewController.m */; };
 		183DCC7628F3BD8E0098EB29 /* YCAcccessoryPrecurementSubCategoritesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DCC7528F3BD8E0098EB29 /* YCAcccessoryPrecurementSubCategoritesCollectionViewCell.m */; };
+		1853C4F128F3EE6C00245003 /* OCHUIKitUISearchbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F028F3EE6C00245003 /* OCHUIKitUISearchbarDemoViewController.m */; };
+		1853C4F928F4017B00245003 /* YCAccessoryPriceInquirySearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F828F4017B00245003 /* YCAccessoryPriceInquirySearchView.m */; };
 		1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */; };
 		1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3528E452A100DA0387 /* OCHCollectionViewDemoController.m */; };
 		1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3928E464E500DA0387 /* OCHSection.m */; };
@@ -40,7 +44,7 @@
 		18E4176828E44E740035BDA7 /* ObjectiveCHelperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4176728E44E740035BDA7 /* ObjectiveCHelperUITests.m */; };
 		18E4176A28E44E740035BDA7 /* ObjectiveCHelperUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4176928E44E740035BDA7 /* ObjectiveCHelperUITestsLaunchTests.m */; };
 		3093019FEA4D19C1BB7DF45E /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9299767C1AA87BE14B447F63 /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework */; };
-		44890BA328E8301D00C395D9 /* OCHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA228E8301D00C395D9 /* OCHBaseViewController.m */; };
+		44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA228E8301D00C395D9 /* OCHContentViewController.m */; };
 		44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */; };
 		44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B9AB4228E835A400277DA0 /* OCHPreviewHelper.swift */; };
 		9164520C4FA8147686A4074F /* Pods_ObjectiveCHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72160D0D716E20EEB2158EE7 /* Pods_ObjectiveCHelper.framework */; };
@@ -64,8 +68,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1811B83328F423100074418B /* OCHBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHBaseViewController.h; sourceTree = "<group>"; };
+		1811B83428F423100074418B /* OCHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHBaseViewController.m; sourceTree = "<group>"; };
+		1811B83628F423DD0074418B /* OCHScrollContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHScrollContentViewController.h; sourceTree = "<group>"; };
+		1811B83728F423DD0074418B /* OCHScrollContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHScrollContentViewController.m; sourceTree = "<group>"; };
 		183DCC7428F3BD8E0098EB29 /* YCAcccessoryPrecurementSubCategoritesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCAcccessoryPrecurementSubCategoritesCollectionViewCell.h; sourceTree = "<group>"; };
 		183DCC7528F3BD8E0098EB29 /* YCAcccessoryPrecurementSubCategoritesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAcccessoryPrecurementSubCategoritesCollectionViewCell.m; sourceTree = "<group>"; };
+		1853C4EF28F3EE6C00245003 /* OCHUIKitUISearchbarDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHUIKitUISearchbarDemoViewController.h; sourceTree = "<group>"; };
+		1853C4F028F3EE6C00245003 /* OCHUIKitUISearchbarDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHUIKitUISearchbarDemoViewController.m; sourceTree = "<group>"; };
+		1853C4F728F4017B00245003 /* YCAccessoryPriceInquirySearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCAccessoryPriceInquirySearchView.h; sourceTree = "<group>"; };
+		1853C4F828F4017B00245003 /* YCAccessoryPriceInquirySearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAccessoryPriceInquirySearchView.m; sourceTree = "<group>"; };
 		1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHTabbarViewController.h; sourceTree = "<group>"; };
 		1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTabbarViewController.m; sourceTree = "<group>"; };
 		1876AD3428E452A100DA0387 /* OCHCollectionViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHCollectionViewDemoController.h; sourceTree = "<group>"; };
@@ -126,8 +138,8 @@
 		18E4176728E44E740035BDA7 /* ObjectiveCHelperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCHelperUITests.m; sourceTree = "<group>"; };
 		18E4176928E44E740035BDA7 /* ObjectiveCHelperUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCHelperUITestsLaunchTests.m; sourceTree = "<group>"; };
 		365375EE3E48A83C249D7C5C /* Pods-ObjectiveCHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-ObjectiveCHelperTests/Pods-ObjectiveCHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
-		44890BA128E8301D00C395D9 /* OCHBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHBaseViewController.h; sourceTree = "<group>"; };
-		44890BA228E8301D00C395D9 /* OCHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHBaseViewController.m; sourceTree = "<group>"; };
+		44890BA128E8301D00C395D9 /* OCHContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHContentViewController.h; sourceTree = "<group>"; };
+		44890BA228E8301D00C395D9 /* OCHContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHContentViewController.m; sourceTree = "<group>"; };
 		44890BA528E831C300C395D9 /* OCHUIKitDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHUIKitDemoViewController.h; sourceTree = "<group>"; };
 		44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHUIKitDemoViewController.m; sourceTree = "<group>"; };
 		44B9AB4228E835A400277DA0 /* OCHPreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCHPreviewHelper.swift; sourceTree = "<group>"; };
@@ -173,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				183DCCAD28F3CCD90098EB29 /* AccessoryPrecurement */,
+				1853C4F628F4014A00245003 /* AccessoryPriceInquiry */,
 				188CA48A28F16E8400EF106E /* YRYCAssets.xcassets */,
 			);
 			path = YRYC;
@@ -209,11 +222,24 @@
 			path = AllCategories;
 			sourceTree = "<group>";
 		};
+		1853C4F628F4014A00245003 /* AccessoryPriceInquiry */ = {
+			isa = PBXGroup;
+			children = (
+				1853C4F728F4017B00245003 /* YCAccessoryPriceInquirySearchView.h */,
+				1853C4F828F4017B00245003 /* YCAccessoryPriceInquirySearchView.m */,
+			);
+			path = AccessoryPriceInquiry;
+			sourceTree = "<group>";
+		};
 		1876AD2F28E450A200DA0387 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				44890BA128E8301D00C395D9 /* OCHBaseViewController.h */,
-				44890BA228E8301D00C395D9 /* OCHBaseViewController.m */,
+				1811B83328F423100074418B /* OCHBaseViewController.h */,
+				1811B83428F423100074418B /* OCHBaseViewController.m */,
+				44890BA128E8301D00C395D9 /* OCHContentViewController.h */,
+				44890BA228E8301D00C395D9 /* OCHContentViewController.m */,
+				1811B83628F423DD0074418B /* OCHScrollContentViewController.h */,
+				1811B83728F423DD0074418B /* OCHScrollContentViewController.m */,
 				1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */,
 				1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */,
 			);
@@ -253,6 +279,8 @@
 			children = (
 				1876AD3428E452A100DA0387 /* OCHCollectionViewDemoController.h */,
 				1876AD3528E452A100DA0387 /* OCHCollectionViewDemoController.m */,
+				1853C4EF28F3EE6C00245003 /* OCHUIKitUISearchbarDemoViewController.h */,
+				1853C4F028F3EE6C00245003 /* OCHUIKitUISearchbarDemoViewController.m */,
 				44890BA528E831C300C395D9 /* OCHUIKitDemoViewController.h */,
 				44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */,
 				1876AD6428E6E2E300DA0387 /* OCHUIScrollViewDemoController.h */,
@@ -648,6 +676,7 @@
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
 				1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */,
 				1876AD4728E4730400DA0387 /* UIColor+OCH.m in Sources */,
+				1811B83528F423100074418B /* OCHBaseViewController.m in Sources */,
 				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
 				188CA49928F265C200EF106E /* YCAccessoryPrecurementProductTableView.m in Sources */,
 				1876AD6628E6E2E300DA0387 /* OCHUIScrollViewDemoController.m in Sources */,
@@ -661,12 +690,15 @@
 				1876AD5D28E6BEF500DA0387 /* OCHPreview.m in Sources */,
 				188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */,
 				188CA4B928F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m in Sources */,
-				44890BA328E8301D00C395D9 /* OCHBaseViewController.m in Sources */,
+				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
 				188CA46328F112EF00EF106E /* OCHDVPieChartViewController.m in Sources */,
+				1853C4F928F4017B00245003 /* YCAccessoryPriceInquirySearchView.m in Sources */,
 				1876AD4B28E539D500DA0387 /* UIView+OCH.m in Sources */,
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,
 				188CA46D28F1147000EF106E /* DVPieChart.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
+				1811B83828F423DD0074418B /* OCHScrollContentViewController.m in Sources */,
+				1853C4F128F3EE6C00245003 /* OCHUIKitUISearchbarDemoViewController.m in Sources */,
 				188CA48E28F16F1100EF106E /* YCAccessoryPrecurementSortButton.m in Sources */,
 				44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */,
 			);

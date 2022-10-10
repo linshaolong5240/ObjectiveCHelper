@@ -9,9 +9,6 @@
 
 @interface OCHUIScrollViewDemoController ()
 
-@property(nonatomic, strong) UIScrollView* scrollView;
-@property(nonatomic, strong) UIStackView* contentView;
-
 @end
 
 @implementation OCHUIScrollViewDemoController
@@ -23,27 +20,11 @@
 }
 
 - (void)configureContentView {
-    UIScrollView* scrollView = [[UIScrollView alloc] init];
-    self.scrollView = scrollView;
-    [self.view addSubview:scrollView];
-    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
-    }];
-    
-    UIStackView* contentView = [[UIStackView alloc] init];
-    contentView.axis = UILayoutConstraintAxisVertical;
-    contentView.spacing = 6;
-    self.contentView = contentView;
-    [self.scrollView addSubview:self.contentView];
-    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.scrollView);
-        make.width.equalTo(self.scrollView);
-    }];
     
     for (NSInteger i = 0; i < 100; i++) {
         UILabel *label = UILabel.new;
         label.text = [NSString stringWithFormat:@"%ld", i];
-        [self.contentView addArrangedSubview:label];
+        [self.scrollContentView addArrangedSubview:label];
     }
 }
 

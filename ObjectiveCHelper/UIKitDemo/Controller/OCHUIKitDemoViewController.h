@@ -5,11 +5,12 @@
 //  Created by Sauron on 2022/10/1.
 //
 
-#import "OCHBaseViewController.h"
+#import "OCHContentViewController.h"
 
 typedef NS_ENUM(NSUInteger, OCHUIKitDemoItem) {
     OCHUIKitDemoItemBeg,
-    OCHUIKitDemoItemUIScrollView = OCHUIKitDemoItemBeg,
+    OCHUIKitDemoItemUISearchbar = OCHUIKitDemoItemBeg,
+    OCHUIKitDemoItemUIScrollView,
     OCHUIKitDemoItemEnd,
 };
 
@@ -19,7 +20,7 @@ UIViewController * UIViewControllermOCHUIKitDemoItem(OCHUIKitDemoItem item);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHUIKitDemoViewController : OCHBaseViewController
+@interface OCHUIKitDemoViewController : OCHContentViewController
 
 @end
 
