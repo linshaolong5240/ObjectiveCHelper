@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHCollectionViewDemoCell : UICollectionViewCell
 
+@property(nonatomic, strong, readonly) UILabel *textLabel;
+@property(nonatomic, strong, readonly) UIImageView *imageView;
+
 @end
 
 NS_ASSUME_NONNULL_END

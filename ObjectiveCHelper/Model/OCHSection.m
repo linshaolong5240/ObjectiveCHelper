@@ -11,9 +11,10 @@
 
 - (instancetype)initWithTitle:(nullable NSString *)title items:(nullable NSArray *)items {
     self = [super init];
+    
     if (self) {
-        self.title = title;
-        self.items = items.mutableCopy;
+        _title = title;
+        _items = items != nil ? items.mutableCopy : @[].mutableCopy;
     } else {
         return nil;
     }

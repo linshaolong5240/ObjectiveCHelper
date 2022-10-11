@@ -37,6 +37,8 @@
 		188CA4B528F3A86A00EF106E /* YCAcccessoryPrecurementAllCategoritesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA4B428F3A86A00EF106E /* YCAcccessoryPrecurementAllCategoritesView.m */; };
 		188CA4B928F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA4B828F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m */; };
 		189BB85E28F543C300F2B287 /* OCHCollectionViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB85D28F543C300F2B287 /* OCHCollectionViewDemoCell.m */; };
+		189BB87628F5920D00F2B287 /* OCHUICollectionViewDemoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87528F5920D00F2B287 /* OCHUICollectionViewDemoHeaderView.m */; };
+		189BB87928F595D400F2B287 /* OCHUICollectionViewDemoFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87828F595D400F2B287 /* OCHUICollectionViewDemoFooterView.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
 		18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */; };
@@ -128,6 +130,10 @@
 		188CA4B828F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m; sourceTree = "<group>"; };
 		189BB85C28F543C300F2B287 /* OCHCollectionViewDemoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHCollectionViewDemoCell.h; sourceTree = "<group>"; };
 		189BB85D28F543C300F2B287 /* OCHCollectionViewDemoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHCollectionViewDemoCell.m; sourceTree = "<group>"; };
+		189BB87428F5920D00F2B287 /* OCHUICollectionViewDemoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHUICollectionViewDemoHeaderView.h; sourceTree = "<group>"; };
+		189BB87528F5920D00F2B287 /* OCHUICollectionViewDemoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHUICollectionViewDemoHeaderView.m; sourceTree = "<group>"; };
+		189BB87728F595D400F2B287 /* OCHUICollectionViewDemoFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHUICollectionViewDemoFooterView.h; sourceTree = "<group>"; };
+		189BB87828F595D400F2B287 /* OCHUICollectionViewDemoFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHUICollectionViewDemoFooterView.m; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -356,6 +362,10 @@
 			children = (
 				189BB85C28F543C300F2B287 /* OCHCollectionViewDemoCell.h */,
 				189BB85D28F543C300F2B287 /* OCHCollectionViewDemoCell.m */,
+				189BB87728F595D400F2B287 /* OCHUICollectionViewDemoFooterView.h */,
+				189BB87828F595D400F2B287 /* OCHUICollectionViewDemoFooterView.m */,
+				189BB87428F5920D00F2B287 /* OCHUICollectionViewDemoHeaderView.h */,
+				189BB87528F5920D00F2B287 /* OCHUICollectionViewDemoHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -696,6 +706,7 @@
 				1876AD6628E6E2E300DA0387 /* OCHUIScrollViewDemoController.m in Sources */,
 				188CA49228F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m in Sources */,
 				188CA48928F167DF00EF106E /* YCAccessoryPrecurementFilterBar.m in Sources */,
+				189BB87628F5920D00F2B287 /* OCHUICollectionViewDemoHeaderView.m in Sources */,
 				183DCC7628F3BD8E0098EB29 /* YCAcccessoryPrecurementSubCategoritesCollectionViewCell.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHSection.m in Sources */,
 				188CA4B528F3A86A00EF106E /* YCAcccessoryPrecurementAllCategoritesView.m in Sources */,
@@ -703,6 +714,7 @@
 				188CA48128F1500E00EF106E /* OCHJXCategoryViewController.m in Sources */,
 				1876AD5D28E6BEF500DA0387 /* OCHPreview.m in Sources */,
 				188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */,
+				189BB87928F595D400F2B287 /* OCHUICollectionViewDemoFooterView.m in Sources */,
 				188CA4B928F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
 				188CA46328F112EF00EF106E /* OCHDVPieChartViewController.m in Sources */,
