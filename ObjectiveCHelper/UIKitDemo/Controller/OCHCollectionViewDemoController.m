@@ -6,7 +6,7 @@
 //
 
 #import "OCHCollectionViewDemoController.h"
-#import "Masonry.h"
+#import "OCHCollectionViewDemoCell.h"
 
 @interface OCHCollectionViewDemoController () <UICollectionViewDataSource>
 
@@ -40,14 +40,16 @@
 
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     self.collectionView.backgroundColor = UIColor.orangeColor;
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    [self.collectionView registerClass:[OCHCollectionViewDemoCell class] forCellWithReuseIdentifier:NSStringFromClass([OCHCollectionViewDemoCell class])];
     self.collectionView.dataSource = self;
-    
+    [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] animated:YES scrollPosition:(UICollectionViewScrollPositionTop)];
     [self.view addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);
     }];
 }
+
+// MARK: - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -58,7 +60,7 @@
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
+    UICollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([OCHCollectionViewDemoCell class]) forIndexPath:indexPath];
 
     cell.backgroundColor = UIColor.mainText;//self.sections[indexPath.row];
     return cell;

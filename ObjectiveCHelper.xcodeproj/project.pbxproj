@@ -36,6 +36,7 @@
 		188CA49C28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49B28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m */; };
 		188CA4B528F3A86A00EF106E /* YCAcccessoryPrecurementAllCategoritesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA4B428F3A86A00EF106E /* YCAcccessoryPrecurementAllCategoritesView.m */; };
 		188CA4B928F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA4B828F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m */; };
+		189BB85E28F543C300F2B287 /* OCHCollectionViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB85D28F543C300F2B287 /* OCHCollectionViewDemoCell.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
 		18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */; };
@@ -125,6 +126,8 @@
 		188CA4B428F3A86A00EF106E /* YCAcccessoryPrecurementAllCategoritesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAcccessoryPrecurementAllCategoritesView.m; sourceTree = "<group>"; };
 		188CA4B728F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCAcccessoryPrecurementAllCategoritesCollectionViewCell.h; sourceTree = "<group>"; };
 		188CA4B828F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m; sourceTree = "<group>"; };
+		189BB85C28F543C300F2B287 /* OCHCollectionViewDemoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHCollectionViewDemoCell.h; sourceTree = "<group>"; };
+		189BB85D28F543C300F2B287 /* OCHCollectionViewDemoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHCollectionViewDemoCell.m; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -270,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				188CA46028F1129B00EF106E /* Controller */,
+				189BB85B28F543A200F2B287 /* View */,
 			);
 			path = UIKitDemo;
 			sourceTree = "<group>";
@@ -345,6 +349,15 @@
 				188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */,
 			);
 			path = JXCategoryView;
+			sourceTree = "<group>";
+		};
+		189BB85B28F543A200F2B287 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				189BB85C28F543C300F2B287 /* OCHCollectionViewDemoCell.h */,
+				189BB85D28F543C300F2B287 /* OCHCollectionViewDemoCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		18E4173528E44E720035BDA7 = {
@@ -671,6 +684,7 @@
 			files = (
 				188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */,
 				188CA49C28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m in Sources */,
+				189BB85E28F543C300F2B287 /* OCHCollectionViewDemoCell.m in Sources */,
 				188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */,
 				1876AD3628E452A100DA0387 /* OCHCollectionViewDemoController.m in Sources */,
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
