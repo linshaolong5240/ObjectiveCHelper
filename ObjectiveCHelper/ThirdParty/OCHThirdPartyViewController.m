@@ -6,13 +6,13 @@
 //
 
 #import "OCHThirdPartyViewController.h"
-#import "OCHSection.h"
+#import "OCHTableSection.h"
 #import "OCHJXCategoryViewController.h"
 #import "OCHDVPieChartViewController.h"
 
 @interface OCHThirdPartyViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property(nonatomic, copy) NSArray<OCHSection<NSNumber *> *> *sections;
+@property(nonatomic, copy) NSArray<OCHTableSection<NSString *,NSNumber *> *> *sections;
 @property(nonatomic, strong) UITableView *tableView;
 
 @end
@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.sections = @[[[OCHSection alloc] initWithTitle:nil items:OCHTirdPartyItemAllItems()]];
+    self.sections = @[[[OCHTableSection alloc] initWithLabel:nil items:OCHTirdPartyItemAllItems()]];
     [self configureContentView];
 }
 
@@ -56,7 +56,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return self.sections[section].title;
+    return self.sections[section].label;
 }
 
 //MARK: UITableViewDataSource

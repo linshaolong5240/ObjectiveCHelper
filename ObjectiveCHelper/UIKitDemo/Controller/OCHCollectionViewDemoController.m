@@ -6,14 +6,14 @@
 //
 
 #import "OCHCollectionViewDemoController.h"
-#import "OCHSection.h"
+#import "OCHTableSection.h"
 #import "OCHCollectionViewDemoCell.h"
 #import "OCHUICollectionViewDemoHeaderView.h"
 #import "OCHUICollectionViewDemoFooterView.h"
 
 @interface OCHCollectionViewDemoController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property(nonatomic, copy) NSArray<OCHSection *>* sections;
+@property(nonatomic, copy) NSArray<OCHTableSection<NSString *, UIColor *> *>* sections;
 @property(nonatomic, strong) UICollectionView* collectionView;
 
 @end
@@ -24,8 +24,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.blueColor;
-    OCHSection *section = [[OCHSection alloc] initWithTitle:@"title1" items:UIColor.colorItems];
-    self.sections = @[section, section];
+    OCHTableSection *section1 = [[OCHTableSection alloc] initWithLabel:@"title1" items:UIColor.colorItems];
+    OCHTableSection *section2 = [[OCHTableSection alloc] initWithLabel:@"title2" items:UIColor.colorItems];
+
+    self.sections = @[section1, section2];
     [self configureCollectionView];
 }
 
@@ -73,14 +75,14 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         OCHUICollectionViewDemoHeaderView *v = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([OCHUICollectionViewDemoHeaderView class]) forIndexPath:indexPath];
-        v.textLabel.text = @"Header";
+        v.textLabel.text = [NSString stringWithFormat:@"Header: %@", self.sections[indexPath.section].label];
         v.backgroundColor = UIColor.orangeColor;
         return v;
     }
 
     if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
         OCHUICollectionViewDemoFooterView *v = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:NSStringFromClass([OCHUICollectionViewDemoFooterView class]) forIndexPath:indexPath];
-        v.textLabel.text = @"Footer";
+        v.textLabel.text = [NSString stringWithFormat:@"Footer: %@", self.sections[indexPath.section].label];
         v.backgroundColor = UIColor.purpleColor;
         return v;
     }
