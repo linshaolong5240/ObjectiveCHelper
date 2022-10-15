@@ -1,31 +1,30 @@
 //
-//  OCHBaseViewController.m
+//  UIKitCustomViewController.m
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/10/10.
+//  Created by Sauron on 2022/10/14.
 //
 
-#import "OCHBaseViewController.h"
+#import "UIKitCustomViewController.h"
 
-@interface OCHBaseViewController ()
+NSArray<NSNumber *> * UIKitCustomAllItems(void) {
+    NSMutableArray<NSNumber *> *items = [NSMutableArray array];
+    for(NSInteger i = UIKitCustomBeg; i < UIKitCustomEnd; i++) {
+        [items addObject:@(i)];
+    }
+
+    return items.copy;
+}
+
+@interface UIKitCustomViewController ()
 
 @end
 
-@implementation OCHBaseViewController
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (!self) return nil;
-    
-    _contentView = [UIStackView new];
-    
-    return self;
-}
+@implementation UIKitCustomViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = UIColor.whiteColor;
 }
 
 /*

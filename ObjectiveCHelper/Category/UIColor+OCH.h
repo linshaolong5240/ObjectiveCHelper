@@ -10,9 +10,23 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (OCH)
-+ (UIColor*)mainText;
 
 +(NSArray<UIColor *> *)colorItems;
+
+// MARK: - Background Color
++ (UIColor *)background;
++ (UIColor *)panelBackground;
+
+// MARK: - Text Color
++ (UIColor *)mainText;
++ (UIColor *)secondaryText;
+
+// MARK: - Text Field Color
++ (UIColor *)textFieldBackground;
++ (UIColor *)textFieldLabelBackground;
+
+// MARK: - Category Color
++ (UIColor *)categoryIndicatorLineColor;
 
 @end
 

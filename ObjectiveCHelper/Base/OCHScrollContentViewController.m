@@ -13,11 +13,10 @@
 
 @implementation OCHScrollContentViewController
 
-- (instancetype)init {
-    self = [super initWithNibName:nil bundle:nil];
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _scrollView = [UIScrollView new];
-        _scrollContentView = [UIStackView new];
     }
     
     return  self;
@@ -31,10 +30,10 @@
             make.edges.equalTo(self.view);
     }];
     
-    self.scrollContentView.axis = UILayoutConstraintAxisVertical;
-    self.scrollContentView.spacing = 6;
-    [self.scrollView addSubview:self.scrollContentView];
-    [self.scrollContentView mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.contentView.axis = UILayoutConstraintAxisVertical;
+    self.contentView.spacing = 6;
+    [self.scrollView addSubview:self.contentView];
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.scrollView);
         make.width.equalTo(self.scrollView);
     }];

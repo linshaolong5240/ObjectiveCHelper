@@ -7,6 +7,7 @@
 
 #import "OCHPreviewController.h"
 #import "OCHPreview.h"
+#import "YCAccessoryPriceInquiryOrderBySupplierView.h"
 
 @interface OCHPreviewController ()
 
@@ -18,7 +19,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIView *v = [OCHPreview new];
+//    UIView *v = [OCHPreview new];
+//    [self.contentView addSubview:v];
+//    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.edges.equalTo(self.contentView);
+//    }];
+    
+//    YCAccessoryPriceInquiryOrderSupplierTableView *v = [YCAccessoryPriceInquiryOrderSupplierTableView new];
+//    [self.contentView addSubview:v];
+//    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.edges.equalTo(self.contentView);
+//    }];
+    
+    YCAccessoryPriceInquiryOrderBySupplierView *v = [YCAccessoryPriceInquiryOrderBySupplierView new];
     [self.contentView addSubview:v];
     [v mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);

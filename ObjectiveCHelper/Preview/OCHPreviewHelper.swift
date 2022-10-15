@@ -11,8 +11,12 @@ import SwiftUI
 struct OCHPreviewHelper: View {
     var body: some View {
         ZStack {
-            UIViewRepresent(OCHPreview())
-                .frame(maxHeight: 50)
+            Color.gray;
+            VStack {
+                UIViewRepresent(OCHPreview())
+                Spacer()
+            }
+//                .frame(maxHeight: 500)
 //            UIViewControllerRepresent(OCHPreviewController())
 //            UIViewControllerRepresent(OCHJXCategoryViewController())
         }

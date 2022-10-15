@@ -12,7 +12,7 @@
 
 @interface OCHThirdPartyViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property(nonatomic, copy) NSArray<OCHTableSection<NSString *,NSNumber *> *> *sections;
+@property(nonatomic, copy) NSArray<OCHTableSection<NSString *, NSNumber *> *> *sections;
 @property(nonatomic, strong) UITableView *tableView;
 
 @end

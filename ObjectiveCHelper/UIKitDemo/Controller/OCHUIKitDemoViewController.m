@@ -79,7 +79,7 @@ NS_ASSUME_NONNULL_END
 
 NSArray<NSNumber *> * OCHUIKitDemoItemAllItems(void) {
     NSMutableArray<NSNumber *> *items = [NSMutableArray array];
-    for(NSInteger i = 0; i < OCHUIKitDemoItemEnd; i++) {
+    for(NSInteger i = OCHUIKitDemoItemBeg; i < OCHUIKitDemoItemEnd; i++) {
         [items addObject:@(i)];
     }
 

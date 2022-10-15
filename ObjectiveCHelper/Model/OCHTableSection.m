@@ -9,15 +9,30 @@
 
 @implementation OCHTableSection
 
+- (instancetype)init {
+    self = [super init];
+    if (!self) return nil;
+    
+    self.label = nil;
+    self.items = [NSMutableArray array];
+    
+    return nil;
+}
+
 - (instancetype)initWithLabel:(nullable id)label items:(nonnull NSArray *)items {
     self = [super init];
     
     if (!self) return  nil;;
     
-    _label = label;
-    _items = items.mutableCopy;
+    self.label = label;
+    self.items = items.mutableCopy;
 
     return self;
+}
+
++ (OCHTableSection *)sectionWithLabel:(nullable id)label items:(nonnull NSArray *)items {
+    OCHTableSection *section = [[OCHTableSection alloc] initWithLabel:label items:items];
+    return section;
 }
 
 @end

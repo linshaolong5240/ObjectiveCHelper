@@ -13,13 +13,11 @@
 
 @implementation OCHContentViewController
 
-- (instancetype)init {
-    self = [super initWithNibName:nil bundle:nil];
-    if (self) {
-        _contentView = [UIStackView new];
-    }
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (!self) return nil;
     
-    return  self;
+    return self;
 }
 
 - (void)viewDidLoad {

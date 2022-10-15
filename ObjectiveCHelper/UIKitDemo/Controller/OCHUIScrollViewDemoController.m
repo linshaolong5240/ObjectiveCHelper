@@ -24,7 +24,7 @@
     for (NSInteger i = 0; i < 100; i++) {
         UILabel *label = UILabel.new;
         label.text = [NSString stringWithFormat:@"%ld", i];
-        [self.scrollContentView addArrangedSubview:label];
+        [self.contentView addArrangedSubview:label];
     }
 }
 
