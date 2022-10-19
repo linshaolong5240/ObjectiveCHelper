@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_END
 - (void)configureTableView {
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.tableView.backgroundColor = UIColor.clearColor;
-    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:UITableViewCell.reusedIdentifer];
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_END
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UITableViewCell.reusedIdentifer forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = NSStringFromOCHUIKitDemo(self.sections[indexPath.section].items[indexPath.row].unsignedIntegerValue);
     return cell;

@@ -14,9 +14,9 @@
 //
 #import "OCHTableSection.h"
 
-//Category
-#import "UIColor+OCH.h"
-#import "UIView+OCH.h"
+//Category Extension
+#import "UIColor+Extension.h"
+#import "UIView+Extension.h"
 
 //Pod
 #import "Masonry.h"

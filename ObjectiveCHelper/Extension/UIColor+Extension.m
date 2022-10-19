@@ -1,13 +1,13 @@
 //
-//  UIColor+OCH.m
+//  UIColor+Extension.m
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/9/28.
+//  Created by Sauron on 2022/10/19.
 //
 
-#import "UIColor+OCH.h"
+#import "UIColor+Extension.h"
 
-@implementation UIColor (OCH)
+@implementation UIColor (Extension)
 
 +(NSArray<UIColor *> *)colorItems {
     return @[UIColor.blackColor, UIColor.darkGrayColor, UIColor.lightGrayColor, UIColor.whiteColor, UIColor.grayColor, UIColor.redColor, UIColor.greenColor, UIColor.blueColor, UIColor.cyanColor, UIColor.yellowColor, UIColor.magentaColor, UIColor.orangeColor, UIColor.purpleColor, UIColor.brownColor, UIColor.clearColor, UIColor.systemRedColor];
