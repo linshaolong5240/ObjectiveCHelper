@@ -12,12 +12,12 @@ struct OCHPreviewHelper: View {
     var body: some View {
         ZStack {
             Color.gray;
-            VStack {
-                UIViewRepresent(OCHPreview())
-                Spacer()
-            }
+//            VStack {
+//                UIViewRepresent(OCHPreview())
+//                Spacer()
+//            }
 //                .frame(maxHeight: 500)
-//            UIViewControllerRepresent(OCHPreviewController())
+            UIViewControllerRepresent(OCHPreviewController())
 //            UIViewControllerRepresent(OCHJXCategoryViewController())
         }
     }

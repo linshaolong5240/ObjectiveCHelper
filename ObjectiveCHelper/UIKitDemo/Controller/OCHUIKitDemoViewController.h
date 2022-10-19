@@ -7,17 +7,18 @@
 
 #import "OCHContentViewController.h"
 
-typedef NS_ENUM(NSUInteger, OCHUIKitDemoItem) {
-    OCHUIKitDemoItemBeg,
-    OCHUIKitDemoItemUICollectionView = OCHUIKitDemoItemBeg,
-    OCHUIKitDemoItemUISearchbar,
-    OCHUIKitDemoItemUIScrollView,
-    OCHUIKitDemoItemEnd,
+typedef NS_ENUM(NSUInteger, OCHUIKitDemo) {
+    OCHUIKitDemoBeg,
+    OCHUIKitDemoUICollectionView = OCHUIKitDemoBeg,
+    OCHUIKitDemoUISearchbar,
+    OCHUIKitDemoUIScrollView,
+    OCHUIKitDemoUITableView,
+    OCHUIKitDemoEnd,
 };
 
-NSArray<NSNumber *> * OCHUIKitDemoItemAllItems(void);
-NSString * NSStringFromOCHUIKitDemoItem(OCHUIKitDemoItem item);
-UIViewController * UIViewControllermOCHUIKitDemoItem(OCHUIKitDemoItem item);
+NSArray<NSNumber *> * OCHUIKitDemoAllItems(void);
+NSString * NSStringFromOCHUIKitDemo(OCHUIKitDemo item);
+UIViewController * UIViewControllermOCHUIKitDemo(OCHUIKitDemo item);
 
 NS_ASSUME_NONNULL_BEGIN
 

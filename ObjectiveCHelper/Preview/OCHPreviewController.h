@@ -6,7 +6,6 @@
 //
 
 #import "OCHContentViewController.h"
-#import "OCHUIKitUISearchbarDemoViewController.h"
 
 //ThirdParty
 #import "OCHJXCategoryViewController.h"

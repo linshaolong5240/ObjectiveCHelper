@@ -11,6 +11,7 @@
 #import "OCHCollectionViewDemoController.h"
 #import "OCHUIKitUISearchbarDemoViewController.h"
 #import "OCHUIScrollViewDemoController.h"
+#import "UITableViewDemoViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @interface OCHUIKitDemoViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -26,7 +27,7 @@ NS_ASSUME_NONNULL_END
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.sections = @[[[OCHTableSection alloc] initWithLabel:nil items:OCHUIKitDemoItemAllItems()]];
+    self.sections = @[[[OCHTableSection alloc] initWithLabel:nil items:OCHUIKitDemoAllItems()]];
     [self configureTableView];
 }
 
@@ -51,7 +52,7 @@ NS_ASSUME_NONNULL_END
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:UITableViewCell.reusedIdentifer forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = NSStringFromOCHUIKitDemoItem(self.sections[indexPath.section].items[indexPath.row].unsignedIntegerValue);
+    cell.textLabel.text = NSStringFromOCHUIKitDemo(self.sections[indexPath.section].items[indexPath.row].unsignedIntegerValue);
     return cell;
 }
 
@@ -61,7 +62,7 @@ NS_ASSUME_NONNULL_END
 
 // MARK: - UITableViewDataDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *vc = UIViewControllermOCHUIKitDemoItem(indexPath.row);
+    UIViewController *vc = UIViewControllermOCHUIKitDemo(indexPath.row);
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -77,40 +78,45 @@ NS_ASSUME_NONNULL_END
 
 @end
 
-NSArray<NSNumber *> * OCHUIKitDemoItemAllItems(void) {
+NSArray<NSNumber *> * OCHUIKitDemoAllItems(void) {
     NSMutableArray<NSNumber *> *items = [NSMutableArray array];
-    for(NSInteger i = OCHUIKitDemoItemBeg; i < OCHUIKitDemoItemEnd; i++) {
+    for(NSInteger i = OCHUIKitDemoBeg; i < OCHUIKitDemoEnd; i++) {
         [items addObject:@(i)];
     }
 
     return items.copy;
 }
 
-NSString * NSStringFromOCHUIKitDemoItem(OCHUIKitDemoItem item) {
+NSString * NSStringFromOCHUIKitDemo(OCHUIKitDemo item) {
     switch (item) {
-        case OCHUIKitDemoItemUICollectionView:
+        case OCHUIKitDemoUICollectionView:
             return @"OCHUIKitDemoItemUICollectionView";
-        case OCHUIKitDemoItemUISearchbar:
+        case OCHUIKitDemoUISearchbar:
             return @"OCHUIKitDemoItemUISearchbar";
-        case OCHUIKitDemoItemUIScrollView:
+        case OCHUIKitDemoUIScrollView:
             return @"OCHUIKitDemoItemUIScrollView";
             break;
+        case OCHUIKitDemoUITableView:
+            return @"OCHUIKitDemoUITableView";
         default:
             return @"";
             break;
     }
 }
 
-UIViewController * UIViewControllermOCHUIKitDemoItem(OCHUIKitDemoItem item) {
+UIViewController * UIViewControllermOCHUIKitDemo(OCHUIKitDemo item) {
     switch (item) {
-        case OCHUIKitDemoItemUICollectionView:
+        case OCHUIKitDemoUICollectionView:
             return [OCHCollectionViewDemoController new];
             break;;
-        case OCHUIKitDemoItemUISearchbar:
+        case OCHUIKitDemoUISearchbar:
             return [OCHUIKitUISearchbarDemoViewController new];
             break;
-        case OCHUIKitDemoItemUIScrollView:
+        case OCHUIKitDemoUIScrollView:
             return [[OCHUIScrollViewDemoController alloc] init];
+            break;
+        case OCHUIKitDemoUITableView:
+            return [[UITableViewDemoViewController alloc] init];
             break;
         default:
             return nil;

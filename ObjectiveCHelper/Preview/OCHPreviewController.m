@@ -7,7 +7,7 @@
 
 #import "OCHPreviewController.h"
 #import "OCHPreview.h"
-#import "YCAccessoryPriceInquiryOrderBySupplierView.h"
+#import "UITableViewDemoViewController.h"
 
 @interface OCHPreviewController ()
 
@@ -25,17 +25,18 @@
 //            make.edges.equalTo(self.contentView);
 //    }];
     
-//    YCAccessoryPriceInquiryOrderSupplierTableView *v = [YCAccessoryPriceInquiryOrderSupplierTableView new];
+    UITableViewDemoViewController *vc = [UITableViewDemoViewController new];
+    [self addChildViewController:vc];
+    [self.contentView addSubview:vc.view];
+    [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.contentView);
+    }];
+    
+//    YCAccessoryPriceInquiryOrderBySupplierView *v = [YCAccessoryPriceInquiryOrderBySupplierView new];
 //    [self.contentView addSubview:v];
 //    [v mas_makeConstraints:^(MASConstraintMaker *make) {
 //            make.edges.equalTo(self.contentView);
 //    }];
-    
-    YCAccessoryPriceInquiryOrderBySupplierView *v = [YCAccessoryPriceInquiryOrderBySupplierView new];
-    [self.contentView addSubview:v];
-    [v mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.contentView);
-    }];
 }
 
 /*
