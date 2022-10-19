@@ -1,19 +1,19 @@
 //
-//  OCHUIKitUISearchbarDemoViewController.m
+//  UIKitUISearchbarDemoViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/10.
 //
 
-#import "OCHUIKitUISearchbarDemoViewController.h"
+#import "UIKitUISearchbarDemoViewController.h"
 
-@interface OCHUIKitUISearchbarDemoViewController ()
+@interface UIKitUISearchbarDemoViewController ()
 
 @property(nonatomic, strong) UISearchBar *searchBar;
 
 @end
 
-@implementation OCHUIKitUISearchbarDemoViewController
+@implementation UIKitUISearchbarDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -8,9 +8,9 @@
 #import "OCHUIKitDemoViewController.h"
 #import "OCHTableSection.h"
 
-#import "OCHCollectionViewDemoController.h"
-#import "OCHUIKitUISearchbarDemoViewController.h"
-#import "OCHUIScrollViewDemoController.h"
+#import "UICollectionViewDemoController.h"
+#import "UIKitUISearchbarDemoViewController.h"
+#import "UIScrollViewDemoController.h"
 #import "UITableViewDemoViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -107,13 +107,13 @@ NSString * NSStringFromOCHUIKitDemo(OCHUIKitDemo item) {
 UIViewController * UIViewControllermOCHUIKitDemo(OCHUIKitDemo item) {
     switch (item) {
         case OCHUIKitDemoUICollectionView:
-            return [OCHCollectionViewDemoController new];
+            return [UICollectionViewDemoController new];
             break;;
         case OCHUIKitDemoUISearchbar:
-            return [OCHUIKitUISearchbarDemoViewController new];
+            return [UIKitUISearchbarDemoViewController new];
             break;
         case OCHUIKitDemoUIScrollView:
-            return [[OCHUIScrollViewDemoController alloc] init];
+            return [[UIScrollViewDemoController alloc] init];
             break;
         case OCHUIKitDemoUITableView:
             return [[UITableViewDemoViewController alloc] init];

@@ -1,5 +1,5 @@
 //
-//  OCHUIKitUISearchbarDemoViewController.h
+//  UIKitUISearchbarDemoViewController.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/10.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHUIKitUISearchbarDemoViewController : OCHContentViewController
+@interface UIKitUISearchbarDemoViewController : OCHContentViewController
 
 @end
 

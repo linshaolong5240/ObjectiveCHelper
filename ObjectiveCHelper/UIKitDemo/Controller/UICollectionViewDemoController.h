@@ -1,5 +1,5 @@
 //
-//  OCHCollectionViewDemoController.h
+//  UICollectionViewDemoController.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/9/28.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHCollectionViewDemoController : OCHContentViewController
+@interface UICollectionViewDemoController : OCHContentViewController
 
 @end
 

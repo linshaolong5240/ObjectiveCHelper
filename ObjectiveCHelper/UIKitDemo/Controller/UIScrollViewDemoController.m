@@ -1,17 +1,17 @@
 //
-//  OCHUIScrollViewDemoController.m
+//  UIScrollViewDemoController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/9/30.
 //
 
-#import "OCHUIScrollViewDemoController.h"
+#import "UIScrollViewDemoController.h"
 
-@interface OCHUIScrollViewDemoController ()
+@interface UIScrollViewDemoController ()
 
 @end
 
-@implementation OCHUIScrollViewDemoController
+@implementation UIScrollViewDemoController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

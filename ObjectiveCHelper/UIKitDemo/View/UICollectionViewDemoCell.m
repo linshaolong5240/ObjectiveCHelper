@@ -1,13 +1,13 @@
 //
-//  OCHCollectionViewDemoCell.m
+//  UICollectionViewDemoCell.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/11.
 //
 
-#import "OCHCollectionViewDemoCell.h"
+#import "UICollectionViewDemoCell.h"
 
-@implementation OCHCollectionViewDemoCell
+@implementation UICollectionViewDemoCell
 
 -(instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

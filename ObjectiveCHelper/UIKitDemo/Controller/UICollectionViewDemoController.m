@@ -1,24 +1,24 @@
 //
-//  OCHCollectionViewDemoController.m
+//  UICollectionViewDemoController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/9/28.
 //
 
-#import "OCHCollectionViewDemoController.h"
+#import "UICollectionViewDemoController.h"
 #import "OCHTableSection.h"
-#import "OCHCollectionViewDemoCell.h"
-#import "OCHUICollectionViewDemoHeaderView.h"
-#import "OCHUICollectionViewDemoFooterView.h"
+#import "UICollectionViewDemoCell.h"
+#import "UICollectionViewDemoHeaderView.h"
+#import "UICollectionViewDemoFooterView.h"
 
-@interface OCHCollectionViewDemoController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface UICollectionViewDemoController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property(nonatomic, copy) NSArray<OCHTableSection<NSString *, UIColor *> *>* sections;
 @property(nonatomic, strong) UICollectionView* collectionView;
 
 @end
 
-@implementation OCHCollectionViewDemoController
+@implementation UICollectionViewDemoController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,9 +45,9 @@
     layout.itemSize = CGSizeMake(width, 150);
 
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-    [self.collectionView registerClass:[OCHCollectionViewDemoCell class] forCellWithReuseIdentifier:NSStringFromClass([OCHCollectionViewDemoCell class])];
-    [self.collectionView registerClass:[OCHUICollectionViewDemoHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([OCHUICollectionViewDemoHeaderView class])];
-    [self.collectionView registerClass:[OCHUICollectionViewDemoFooterView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:NSStringFromClass([OCHUICollectionViewDemoFooterView class])];
+    [self.collectionView registerClass:[UICollectionViewDemoCell class] forCellWithReuseIdentifier:NSStringFromClass([UICollectionViewDemoCell class])];
+    [self.collectionView registerClass:[UICollectionViewDemoHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([UICollectionViewDemoHeaderView class])];
+    [self.collectionView registerClass:[UICollectionViewDemoFooterView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:NSStringFromClass([UICollectionViewDemoFooterView class])];
     self.collectionView.dataSource = self;
     [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] animated:YES scrollPosition:(UICollectionViewScrollPositionTop)];
     [self.view addSubview:self.collectionView];
@@ -67,21 +67,21 @@
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    OCHCollectionViewDemoCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([OCHCollectionViewDemoCell class]) forIndexPath:indexPath];
+    UICollectionViewDemoCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([UICollectionViewDemoCell class]) forIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"section: %ld, row: %ld", (long)indexPath.section, (long)indexPath.row];
     return cell;
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        OCHUICollectionViewDemoHeaderView *v = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([OCHUICollectionViewDemoHeaderView class]) forIndexPath:indexPath];
+        UICollectionViewDemoHeaderView *v = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([UICollectionViewDemoHeaderView class]) forIndexPath:indexPath];
         v.textLabel.text = [NSString stringWithFormat:@"Header: %@", self.sections[indexPath.section].label];
         v.backgroundColor = UIColor.orangeColor;
         return v;
     }
 
     if ([kind isEqualToString:UICollectionElementKindSectionFooter]) {
-        OCHUICollectionViewDemoFooterView *v = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:NSStringFromClass([OCHUICollectionViewDemoFooterView class]) forIndexPath:indexPath];
+        UICollectionViewDemoFooterView *v = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:NSStringFromClass([UICollectionViewDemoFooterView class]) forIndexPath:indexPath];
         v.textLabel.text = [NSString stringWithFormat:@"Footer: %@", self.sections[indexPath.section].label];
         v.backgroundColor = UIColor.purpleColor;
         return v;

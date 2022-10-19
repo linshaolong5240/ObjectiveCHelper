@@ -1,5 +1,5 @@
 //
-//  OCHUICollectionViewDemoHeaderView.h
+//  UICollectionViewDemoHeaderView.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/11.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHUICollectionViewDemoHeaderView : UICollectionReusableView
+@interface UICollectionViewDemoHeaderView : UICollectionReusableView
 
 @property(nonatomic, strong) UILabel *textLabel;
 

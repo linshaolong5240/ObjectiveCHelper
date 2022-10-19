@@ -1,13 +1,13 @@
 //
-//  OCHUICollectionViewDemoHeaderView.m
+//  UICollectionViewDemoFooterView.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/11.
 //
 
-#import "OCHUICollectionViewDemoHeaderView.h"
+#import "UICollectionViewDemoFooterView.h"
 
-@implementation OCHUICollectionViewDemoHeaderView
+@implementation UICollectionViewDemoFooterView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
