@@ -51,6 +51,8 @@
 		189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */; };
 		189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */; };
 		189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */; };
+		18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBC29013453003E5533 /* UILabelDemoViewController.m */; };
+		18D98BC02901356B003E5533 /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
 		18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */; };
@@ -170,6 +172,10 @@
 		189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoHeaderView.m; sourceTree = "<group>"; };
 		189BB87728F595D400F2B287 /* UICollectionViewDemoFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoFooterView.h; sourceTree = "<group>"; };
 		189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoFooterView.m; sourceTree = "<group>"; };
+		18D98BBB29013453003E5533 /* UILabelDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelDemoViewController.h; sourceTree = "<group>"; };
+		18D98BBC29013453003E5533 /* UILabelDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelDemoViewController.m; sourceTree = "<group>"; };
+		18D98BBE2901356B003E5533 /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
+		18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -312,6 +318,8 @@
 		1876AD4128E472A200DA0387 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				18D98BBE2901356B003E5533 /* NSAttributedString+Extension.h */,
+				18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */,
 				1828250D28FFC50400D2E4CF /* UIColor+Extension.h */,
 				1828250E28FFC50400D2E4CF /* UIColor+Extension.m */,
 				1828251028FFC5F600D2E4CF /* UIView+Extension.h */,
@@ -383,6 +391,8 @@
 				1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */,
 				182824F828FF8BA400D2E4CF /* UITableViewDemoViewController.h */,
 				182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */,
+				18D98BBB29013453003E5533 /* UILabelDemoViewController.h */,
+				18D98BBC29013453003E5533 /* UILabelDemoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -787,11 +797,13 @@
 				188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */,
 				188CA49C28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m in Sources */,
 				1885CBF628F900DF000552F7 /* UIKitCustomViewController.m in Sources */,
+				18D98BC02901356B003E5533 /* NSAttributedString+Extension.m in Sources */,
 				189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */,
 				188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */,
 				1876AD3628E452A100DA0387 /* UICollectionViewDemoController.m in Sources */,
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
 				1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */,
+				18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */,
 				1811B83528F423100074418B /* OCHBaseViewController.m in Sources */,
 				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
 				188CA49928F265C200EF106E /* YCAccessoryPrecurementProductTableView.m in Sources */,

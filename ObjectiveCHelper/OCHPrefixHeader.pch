@@ -15,6 +15,7 @@
 #import "OCHTableSection.h"
 
 //Category Extension
+#import "NSAttributedString+Extension.h"
 #import "UIColor+Extension.h"
 #import "UIView+Extension.h"
 
