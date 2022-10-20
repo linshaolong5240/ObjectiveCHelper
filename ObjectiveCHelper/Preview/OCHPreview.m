@@ -21,9 +21,6 @@
     if(!self) return nil;
     
     self.backgroundColor = UIColor.orangeColor;
-    _contentView = [UIStackView new];
-    _contentView.axis = UILayoutConstraintAxisVertical;
-    _contentView.spacing = 12;
     
     [self configureContentView];
     
@@ -31,28 +28,43 @@
 }
 
 - (void)configureContentView {
-    UILabel *titleLabel = [UILabel new];
-    titleLabel.text = @"同城供应商（福州）";
-    titleLabel.textColor = UIColor.mainText;
-    titleLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightMedium];
     
-    UIView *store1 = [self makeStoreListRowView];
-    UIView *store2 = [self makeStoreListRowView];
+    UILabel *label1 = [UILabel new];
+    label1.text = @"11";
+    UILabel *label2 = [UILabel new];
+    label2.text = @"11";
+    UILabel *label3 = [UILabel new];
+    label3.text = @"11";
     
-    UIStackView *storeList = [[UIStackView alloc] initWithArrangedSubviews:@[store1, store2]];
-    storeList.axis = UILayoutConstraintAxisVertical;
-    storeList.spacing = 12;
-    
-    [self.contentView addArrangedSubview:titleLabel];
-    [self.contentView addArrangedSubview:storeList];
-    [self.contentView addArrangedSubview:UIView.new];
+    UILabel *line1 = [UILabel new];
+    line1.backgroundColor = UIColor.orangeColor;
+    line1.text = @"1111";
+    UILabel *line2 = [UILabel new];
+    line2.backgroundColor = UIColor.orangeColor;
+    line2.text = @"1111";
+    CGFloat labelWidth = 50;
+    CGFloat width = (UIScreen.mainScreen.bounds.size.width - (labelWidth * 3)) / 2;
+    NSArray *labelArray =@[label1, label2, label3];
+    NSArray *lineArray =@[line1, line2];
 
-    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.equalTo(@17);
-    }];
+    UIStackView *hstack = [[UIStackView alloc] initWithArrangedSubviews:@[label1, line1, label2, line2, label3]];
+    hstack.backgroundColor = UIColor.blueColor;
+    hstack.axis = UILayoutConstraintAxisHorizontal;
+    hstack.distribution = UIStackViewDistributionFillProportionally;
+    for(UIView *v in labelArray) {
+        [v mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(10);//.priority(11);//.priorityLow();
+        }];
+    }
+    for(UIView *v in lineArray) {
+        [v mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(10).priority(9);//.priorityHigh();
+        }];
+    }
     
-    [self addSubview:self.contentView];
-    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+    [self addSubview:hstack];
+    [hstack mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self);
     }];
 }
