@@ -27,12 +27,12 @@
 
 - (void)configureContentView {
     UILabel *storeNameLabel = [UILabel new];
-    storeNameLabel.textColor = UIColor.mainText;
+    storeNameLabel.textColor = UIColor.mainTextColor;
     storeNameLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightMedium];
     self.storeNameLabel = storeNameLabel;
     
     UILabel *locationNameLabel = [UILabel new];
-    locationNameLabel.textColor = UIColor.secondaryText;
+    locationNameLabel.textColor = UIColor.secondaryTextColor;
     locationNameLabel.font = [UIFont systemFontOfSize:10 weight:UIFontWeightRegular];
     self.locationLabel = locationNameLabel;
     
@@ -49,7 +49,7 @@
     hstack.axis = UILayoutConstraintAxisHorizontal;
     
     UIView * container = [UIView new];
-    container.backgroundColor = UIColor.background;
+    container.backgroundColor = UIColor.backgroundColor;
     container.layer.cornerRadius = 6;
     [container addSubview:hstack];
     [hstack mas_makeConstraints:^(MASConstraintMaker *make) {

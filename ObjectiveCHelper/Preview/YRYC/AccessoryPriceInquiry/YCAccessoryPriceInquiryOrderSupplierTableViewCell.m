@@ -52,47 +52,47 @@
 
     UILabel *nameLabel = [UILabel new];
     nameLabel.text = @"配件名称：";
-    nameLabel.textColor = UIColor.secondaryText;
+    nameLabel.textColor = UIColor.secondaryTextColor;
     nameLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
     
     UILabel *qualityLabel = [UILabel new];
     qualityLabel.text = @"品 质：";
-    qualityLabel.textColor = UIColor.secondaryText;
+    qualityLabel.textColor = UIColor.secondaryTextColor;
     qualityLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
     
     UILabel *warrantyLabel = [UILabel new];
     warrantyLabel.text = @"质 保 期：";
-    warrantyLabel.textColor = UIColor.secondaryText;
+    warrantyLabel.textColor = UIColor.secondaryTextColor;
     warrantyLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
     
     UILabel *accessoryName = [UILabel new];
-    accessoryName.textColor = UIColor.mainText;
+    accessoryName.textColor = UIColor.mainTextColor;
     accessoryName.font = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
     self.name = accessoryName;
 
     UILabel *quality = [UILabel new];
-    quality.textColor = UIColor.mainText;
+    quality.textColor = UIColor.mainTextColor;
     quality.font = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
     self.quality = quality;
 
     UILabel *warranty = [UILabel new];
-    warranty.textColor = UIColor.mainText;
+    warranty.textColor = UIColor.mainTextColor;
     warranty.font = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
     self.warranty = warranty;
     
     UILabel *oemLabel = [UILabel new];
-    oemLabel.textColor = UIColor.secondaryText;
+    oemLabel.textColor = UIColor.secondaryTextColor;
     oemLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
     self.oemLabel = oemLabel;
     
     UILabel *priceWithCountLabel = [UILabel new];
     priceWithCountLabel.text = @"X 1 报价：";
-    priceWithCountLabel.textColor = UIColor.secondaryText;
+    priceWithCountLabel.textColor = UIColor.secondaryTextColor;
     priceWithCountLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
     
     UILabel *priceLabel = [UILabel new];
     priceLabel.text = @"￥2980.00";
-    priceLabel.textColor = UIColor.mainText;
+    priceLabel.textColor = UIColor.mainTextColor;
     priceLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightMedium];
     
     UIStackView *vstack1 = [[UIStackView alloc] initWithArrangedSubviews: @[self.checkMark, UIView.new]];

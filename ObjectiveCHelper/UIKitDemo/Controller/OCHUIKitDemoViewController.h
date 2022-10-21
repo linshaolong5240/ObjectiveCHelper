@@ -9,7 +9,8 @@
 
 typedef NS_ENUM(NSUInteger, OCHUIKitDemo) {
     OCHUIKitDemoBeg,
-    OCHUIKitDemoUILabel = OCHUIKitDemoBeg,
+    OCHUIKitDemoUIButton = OCHUIKitDemoBeg,
+    OCHUIKitDemoUILabel,
     OCHUIKitDemoUICollectionView,
     OCHUIKitDemoUISearchbar,
     OCHUIKitDemoUIScrollView,

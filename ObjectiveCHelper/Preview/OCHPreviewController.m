@@ -7,7 +7,7 @@
 
 #import "OCHPreviewController.h"
 #import "OCHPreview.h"
-#import "UILabelDemoViewController.h"
+#import "UIButtonDemoViewController.h"
 
 @interface OCHPreviewController ()
 
@@ -25,7 +25,7 @@
 //            make.edges.equalTo(self.contentView);
 //    }];
     
-    UILabelDemoViewController *vc = [UILabelDemoViewController new];
+    UIButtonDemoViewController *vc = [UIButtonDemoViewController new];
     [self addChildViewController:vc];
     [self.contentView addSubview:vc.view];
     [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {

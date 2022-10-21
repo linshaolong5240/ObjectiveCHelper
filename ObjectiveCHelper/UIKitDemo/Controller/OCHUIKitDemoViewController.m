@@ -8,6 +8,7 @@
 #import "OCHUIKitDemoViewController.h"
 #import "OCHTableSection.h"
 
+#import "UIButtonDemoViewController.h"
 #import "UILabelDemoViewController.h"
 #import "UICollectionViewDemoController.h"
 #import "UIKitUISearchbarDemoViewController.h"
@@ -90,6 +91,8 @@ NSArray<NSNumber *> * OCHUIKitDemoAllItems(void) {
 
 NSString * NSStringFromOCHUIKitDemo(OCHUIKitDemo item) {
     switch (item) {
+        case OCHUIKitDemoUIButton:
+            return @"OCHUIKitDemoUIButton";
         case OCHUIKitDemoUILabel:
             return @"OCHUIKitDemoUILabel";
             break;
@@ -113,6 +116,9 @@ NSString * NSStringFromOCHUIKitDemo(OCHUIKitDemo item) {
 
 UIViewController * UIViewControllermOCHUIKitDemo(OCHUIKitDemo item) {
     switch (item) {
+        case OCHUIKitDemoUIButton:
+            return [UIButtonDemoViewController new];
+            break;
         case OCHUIKitDemoUILabel:
             return [UILabelDemoViewController new];
             break;

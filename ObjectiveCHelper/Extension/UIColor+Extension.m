@@ -14,34 +14,34 @@
 }
 
 // MARK: - Background Color
-+ (UIColor *)background {
++ (UIColor *)backgroundColor {
     return [UIColor colorWithRed:246/255.0 green:247/255.0 blue:249/255.0 alpha:1.0];
 }
 
-+ (UIColor *)panelBackground {
++ (UIColor *)panelBackgroundColor {
     return [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0];
 }
 
 // MARK: - Text Color
-+ (UIColor *)mainText {
++ (UIColor *)mainTextColor {
     return [[UIColor alloc] initWithRed:51/255 green:51/255 blue:51/255 alpha:1.0];
 }
 
-+ (UIColor *)secondaryText {
++ (UIColor *)secondaryTextColor {
     return [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1.0];
 }
 
 // MARK: - Text Field Color
-+ (UIColor *)textFieldBackground {
++ (UIColor *)textFieldBackgroundColor {
     return [UIColor colorWithRed:246/255.0 green:247/255.0 blue:249/255.0 alpha:1.0];
 }
 
-+ (UIColor *)textFieldLabelBackground {
++ (UIColor *)textFieldLabelBackgroundColor {
     return [UIColor colorWithRed:228/255.0 green:232/255.0 blue:241/255.0 alpha:1.0];
 }
 
 // MARK: - Category Color
-+ (UIColor *)categoryIndicatorLineColor {
++ (UIColor *)categoryIndicatorLineColorColor {
     return UIColor.systemBlueColor;
 }
 

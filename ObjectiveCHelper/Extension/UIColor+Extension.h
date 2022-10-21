@@ -14,19 +14,19 @@ NS_ASSUME_NONNULL_BEGIN
 +(NSArray<UIColor *> *)colorItems;
 
 // MARK: - Background Color
-+ (UIColor *)background;
-+ (UIColor *)panelBackground;
++ (UIColor *)backgroundColor;
++ (UIColor *)panelBackgroundColor;
 
 // MARK: - Text Color
-+ (UIColor *)mainText;
-+ (UIColor *)secondaryText;
++ (UIColor *)mainTextColor;
++ (UIColor *)secondaryTextColor;
 
 // MARK: - Text Field Color
-+ (UIColor *)textFieldBackground;
-+ (UIColor *)textFieldLabelBackground;
++ (UIColor *)textFieldBackgroundColor;
++ (UIColor *)textFieldLabelBackgroundColor;
 
 // MARK: - Category Color
-+ (UIColor *)categoryIndicatorLineColor;
++ (UIColor *)categoryIndicatorLineColorColor;
 
 @end
 
