@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // MARK: - Background Color
 + (UIColor *)backgroundColor;
-+ (UIColor *)panelBackgroundColor;
++ (UIColor *)panelColor;
 
 // MARK: - Text Color
 + (UIColor *)mainTextColor;

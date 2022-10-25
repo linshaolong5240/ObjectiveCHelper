@@ -18,7 +18,7 @@
     return [UIColor colorWithRed:246/255.0 green:247/255.0 blue:249/255.0 alpha:1.0];
 }
 
-+ (UIColor *)panelBackgroundColor {
++ (UIColor *)panelColor {
     return [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0];
 }
 

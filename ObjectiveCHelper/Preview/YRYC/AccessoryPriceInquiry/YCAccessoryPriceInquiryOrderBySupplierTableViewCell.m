@@ -49,7 +49,7 @@ typedef OCHTableSection<YCAccessoryStore *, YCCarAccessory *> SectionType;
 
 - (void)configureContentView {
     UIView *panelView = [UIView new];
-    panelView.backgroundColor = UIColor.panelBackgroundColor;
+    panelView.backgroundColor = UIColor.panelColor;
     panelView.layer.cornerRadius = 6;
     [self.contentView addSubview:panelView];
     [panelView mas_makeConstraints:^(MASConstraintMaker *make) {
