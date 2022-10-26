@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSMutableArray<Element>* items;
 
 - (instancetype)initWithLabel:(Label)label items:(nonnull NSArray<Element> *)items;
-+ (YCTableSection *)sectionWithLabel:(Label)label items:(nonnull NSArray *)items;
++ (instancetype)sectionWithLabel:(Label)label items:(nonnull NSArray *)items;
 
 @end
 

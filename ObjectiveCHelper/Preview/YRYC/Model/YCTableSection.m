@@ -20,8 +20,8 @@
     return self;
 }
 
-+ (YCTableSection *)sectionWithLabel:(id)label items:(NSArray *)items {
-    YCTableSection *section = [[YCTableSection alloc] initWithLabel:label items:items];
++ (instancetype)sectionWithLabel:(id)label items:(NSArray *)items {
+    YCTableSection *section = [[self alloc] initWithLabel:label items:items];
     return section;
 }
 
