@@ -30,8 +30,8 @@
     return self;
 }
 
-+ (OCHTableSection *)sectionWithLabel:(nullable id)label items:(nonnull NSArray *)items {
-    OCHTableSection *section = [[OCHTableSection alloc] initWithLabel:label items:items];
++ (instancetype)sectionWithLabel:(nullable id)label items:(nonnull NSArray *)items {
+    OCHTableSection *section = [[self alloc] initWithLabel:label items:items];
     return section;
 }
 
