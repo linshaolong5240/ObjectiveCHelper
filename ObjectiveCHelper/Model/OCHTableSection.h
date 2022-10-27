@@ -9,13 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHTableSection<Label, Element> : NSObject
+@interface OCHTableSection<Label, Value> : NSObject
 
 @property(nullable, nonatomic, strong) Label label;
-@property(nonatomic, strong) NSMutableArray<Element> *items;
+@property(nullable, nonatomic, strong) Value items;
 
-- (instancetype)initWithLabel:(nullable Label)label items:(nonnull NSArray<Element> *)items;
-+ (instancetype)sectionWithLabel:(nullable Label)label items:(nonnull NSArray *)items;
+- (instancetype)initWithLabel:(nullable Label)label items:(nonnull Value)items;
++ (instancetype)sectionWithLabel:(nullable Label)label items:(nonnull Value)items;
 
 @end
 NS_ASSUME_NONNULL_END

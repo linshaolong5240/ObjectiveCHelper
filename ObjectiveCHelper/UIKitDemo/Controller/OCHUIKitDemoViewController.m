@@ -18,7 +18,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface OCHUIKitDemoViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property(nonatomic, copy) NSArray<OCHTableSection<NSString *, NSNumber *> *> *sections;
+@property(nonatomic, copy) NSArray<OCHTableSection<NSString *, NSArray<NSNumber *> *> *> *sections;
 @property(nonatomic, strong) UITableView *tableView;
 
 @end

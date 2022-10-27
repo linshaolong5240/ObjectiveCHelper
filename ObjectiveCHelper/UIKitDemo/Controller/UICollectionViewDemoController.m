@@ -13,7 +13,7 @@
 
 @interface UICollectionViewDemoController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property(nonatomic, copy) NSArray<OCHTableSection<NSString *, UIColor *> *>* sections;
+@property(nonatomic, copy) NSArray<OCHTableSection<NSString *, NSArray<UIColor *> *> *>* sections;
 @property(nonatomic, strong) UICollectionView* collectionView;
 
 @end

@@ -10,8 +10,8 @@
 #import "YCCarAccessory.h"
 #import "YCAccessoryPriceInquiryOrderBySupplierTableViewCell.h"
 
-typedef OCHTableSection<YCAccessoryStore *, YCCarAccessory *> SubSectionType;
-typedef OCHTableSection<NSString *, NSDictionary *> SectionType;
+typedef OCHTableSection<YCAccessoryStore *, NSArray<YCCarAccessory *> *> SubSectionType;
+typedef OCHTableSection<NSString *, NSArray<NSDictionary *> *> SectionType;
 
 @interface YCAccessoryPriceInquiryOrderBySupplierView () <UITableViewDataSource, UITableViewDelegate>
 
