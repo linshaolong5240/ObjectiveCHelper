@@ -52,6 +52,8 @@
 		188CA49C28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49B28F268B500EF106E /* YCAccessoryPrecurementCategoryTableViewCell.m */; };
 		188CA4B528F3A86A00EF106E /* YCAcccessoryPrecurementAllCategoritesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA4B428F3A86A00EF106E /* YCAcccessoryPrecurementAllCategoritesView.m */; };
 		188CA4B928F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA4B828F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m */; };
+		188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */; };
+		188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */; };
 		189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */; };
 		189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */; };
 		189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */; };
@@ -179,6 +181,10 @@
 		188CA4B428F3A86A00EF106E /* YCAcccessoryPrecurementAllCategoritesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAcccessoryPrecurementAllCategoritesView.m; sourceTree = "<group>"; };
 		188CA4B728F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCAcccessoryPrecurementAllCategoritesCollectionViewCell.h; sourceTree = "<group>"; };
 		188CA4B828F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m; sourceTree = "<group>"; };
+		188F2AA9290BDE740046FB65 /* OCHValueStepperDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHValueStepperDemoController.h; sourceTree = "<group>"; };
+		188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHValueStepperDemoController.m; sourceTree = "<group>"; };
+		188F2AAC290BDEE70046FB65 /* OCHValueStepper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHValueStepper.h; sourceTree = "<group>"; };
+		188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHValueStepper.m; sourceTree = "<group>"; };
 		189BB85C28F543C300F2B287 /* UICollectionViewDemoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoCell.h; sourceTree = "<group>"; };
 		189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoCell.m; sourceTree = "<group>"; };
 		189BB87428F5920D00F2B287 /* UICollectionViewDemoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoHeaderView.h; sourceTree = "<group>"; };
@@ -368,6 +374,7 @@
 		1885CBF228F900AB000552F7 /* UIKitCustom */ = {
 			isa = PBXGroup;
 			children = (
+				188F2AA8290BDE3E0046FB65 /* View */,
 				1885CBF328F900BA000552F7 /* Controller */,
 			);
 			path = UIKitCustom;
@@ -376,6 +383,8 @@
 		1885CBF328F900BA000552F7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				188F2AA9290BDE740046FB65 /* OCHValueStepperDemoController.h */,
+				188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */,
 				1885CBF428F900DF000552F7 /* UIKitCustomViewController.h */,
 				1885CBF528F900DF000552F7 /* UIKitCustomViewController.m */,
 			);
@@ -494,6 +503,15 @@
 				188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */,
 			);
 			path = JXCategoryView;
+			sourceTree = "<group>";
+		};
+		188F2AA8290BDE3E0046FB65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				188F2AAC290BDEE70046FB65 /* OCHValueStepper.h */,
+				188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		189BB85B28F543A200F2B287 /* View */ = {
@@ -873,8 +891,10 @@
 				1828251228FFC5F600D2E4CF /* UIView+Extension.m in Sources */,
 				1885CC0128F96A77000552F7 /* YCAccessoryPriceInquiryOrderSupplierTableViewCell.m in Sources */,
 				185628A0290796320022472B /* YCOptionPicker.m in Sources */,
+				188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */,
 				182356FB28FA52D800799D90 /* YCAccessoryPriceInquiryOrderSupplierTableViewHeader.m in Sources */,
 				188CA46328F112EF00EF106E /* OCHDVPieChartViewController.m in Sources */,
+				188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */,
 				1853C4F928F4017B00245003 /* YCAccessoryPriceInquirySearchView.m in Sources */,
 				18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */,
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,
