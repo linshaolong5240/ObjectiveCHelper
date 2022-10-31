@@ -22,6 +22,8 @@
         return  [NSString stringWithFormat:@"value: %d", (int)value];
     }];
     
+    [valueStepper addTarget:self action:@selector(stepperOnChanged:event:) forControlEvents:UIControlEventValueChanged];
+    
     [self.view addSubview:valueStepper];
     [valueStepper mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.width.equalTo(self.view);
@@ -29,6 +31,11 @@
     }];
 }
 
+- (void)stepperOnChanged:(OCHValueStepper *)stepper event:(UIControlEvents)event {
+#if DEBUG
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+#endif
+}
 /*
  #pragma mark - Navigation
  

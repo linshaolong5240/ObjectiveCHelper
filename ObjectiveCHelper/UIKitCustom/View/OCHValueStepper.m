@@ -8,17 +8,17 @@
 #import "OCHValueStepper.h"
 
 typedef NS_ENUM(NSUInteger, OCHValueStepperButtonTag) {
-    OCHValueStepperButtonTagAdd,
-    OCHValueStepperButtonTagSub,
+    OCHValueStepperActionAdd,
+    OCHValueStepperActionSub,
 };
 
 NSString *NSStringFromOCHValueStepperButtonTag(OCHValueStepperButtonTag tag) {
     switch (tag) {
-        case OCHValueStepperButtonTagAdd:
-            return @"OCHValueStepperButtonTagAdd";
+        case OCHValueStepperActionAdd:
+            return @"OCHValueStepperActionAdd";
             break;
-        case OCHValueStepperButtonTagSub:
-            return @"OCHValueStepperButtonTagSub";
+        case OCHValueStepperActionSub:
+            return @"OCHValueStepperActionSub";
             break;
         default:
             break;
@@ -67,7 +67,7 @@ NSString *NSStringFromOCHValueStepperButtonTag(OCHValueStepperButtonTag tag) {
 
 - (void)configureContetnView {
     UIButton *subButton = [[UIButton alloc] init];
-    subButton.tag = OCHValueStepperButtonTagSub;
+    subButton.tag = OCHValueStepperActionSub;
     subButton.backgroundColor = UIColor.systemBlueColor;
     subButton.layer.cornerRadius = 6;
     [subButton setTitle:@"-" forState:UIControlStateNormal];
@@ -75,7 +75,7 @@ NSString *NSStringFromOCHValueStepperButtonTag(OCHValueStepperButtonTag tag) {
     self.subButton = subButton;
     
     UIButton *addButton = [[UIButton alloc] init];
-    addButton.tag = OCHValueStepperButtonTagAdd;
+    addButton.tag = OCHValueStepperActionAdd;
     addButton.backgroundColor = UIColor.systemBlueColor;
     addButton.layer.cornerRadius = 6;
     [addButton setTitle:@"+" forState:UIControlStateNormal];
@@ -112,7 +112,7 @@ NSString *NSStringFromOCHValueStepperButtonTag(OCHValueStepperButtonTag tag) {
 }
 
 - (void)updateView {
-    self.valueField.text = _valueStringProvider(_value);
+    self.valueField.text = self.valueStringProvider(_value);
     
     if (0 == self.value) {
         self.subButton.hidden = YES;
@@ -124,15 +124,16 @@ NSString *NSStringFromOCHValueStepperButtonTag(OCHValueStepperButtonTag tag) {
 }
 
 - (void)buttonOnClicked:(UIButton *)button event:(UIControlEvents)event {
-#if DEBUG
-    NSLog(@"%s tag: %@", __PRETTY_FUNCTION__, NSStringFromOCHValueStepperButtonTag(button.tag));
-#endif
-    if (OCHValueStepperButtonTagSub == button.tag) {
+//#if DEBUG
+//    NSLog(@"%s tag: %@", __PRETTY_FUNCTION__, NSStringFromOCHValueStepperButtonTag(button.tag));
+//#endif
+    if (OCHValueStepperActionSub == button.tag) {
         self.value = MAX(self.minimumValue, self.value - self.stepValue);
-    } else if (OCHValueStepperButtonTagAdd == button.tag) {
+    } else if (OCHValueStepperActionAdd == button.tag) {
         self.value = MIN(self.maximumValue, self.value + self.stepValue);
     }
     [self updateView];
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 - (void)setValue:(double)value {

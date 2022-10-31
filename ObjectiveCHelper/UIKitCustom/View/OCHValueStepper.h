@@ -11,7 +11,7 @@ typedef NSString *_Nonnull(^ValueStepperStringProvider)(double value);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHValueStepper : UIView
+@interface OCHValueStepper : UIControl
 
 @property(nonatomic, assign) double value;
 @property(nonatomic, assign) double minimumValue;
