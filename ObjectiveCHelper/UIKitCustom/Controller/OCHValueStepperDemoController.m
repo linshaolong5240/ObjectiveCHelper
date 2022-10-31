@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"OCHValueStepper";
     OCHValueStepper *valueStepper = [[OCHValueStepper alloc] initWithFrame:CGRectZero valueString:^NSString * _Nonnull(double value) {
         return  [NSString stringWithFormat:@"value: %d", (int)value];
     }];
