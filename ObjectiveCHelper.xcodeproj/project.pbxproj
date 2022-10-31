@@ -683,6 +683,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1340;
+				ORGANIZATIONNAME = com.sauronpi;
 				TargetAttributes = {
 					18E4173D28E44E720035BDA7 = {
 						CreatedOnToolsVersion = 13.4.1;
