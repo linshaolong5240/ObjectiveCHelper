@@ -101,11 +101,11 @@ NSString *NSStringFromOCHValueStepperButtonTag(OCHValueStepperButtonTag tag) {
     }];
     
     [subButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(44);
+        make.width.equalTo(@44);
     }];
     
     [addButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(44);
+        make.width.equalTo(@44);
     }];
     
     [self updateView];
@@ -132,7 +132,6 @@ NSString *NSStringFromOCHValueStepperButtonTag(OCHValueStepperButtonTag tag) {
     } else if (OCHValueStepperActionAdd == button.tag) {
         self.value = MIN(self.maximumValue, self.value + self.stepValue);
     }
-    [self updateView];
     [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
