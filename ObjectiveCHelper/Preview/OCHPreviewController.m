@@ -8,6 +8,7 @@
 #import "OCHPreviewController.h"
 #import "OCHPreview.h"
 #import "UIButtonDemoViewController.h"
+#import "OCHValueStepper.h"
 
 @interface OCHPreviewController ()
 
@@ -25,18 +26,19 @@
 //            make.edges.equalTo(self.contentView);
 //    }];
     
-    UIButtonDemoViewController *vc = [UIButtonDemoViewController new];
-    [self addChildViewController:vc];
-    [self.contentView addSubview:vc.view];
-    [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.contentView);
-    }];
-    
-//    YCAccessoryPriceInquiryOrderBySupplierView *v = [YCAccessoryPriceInquiryOrderBySupplierView new];
-//    [self.contentView addSubview:v];
-//    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+//    UIButtonDemoViewController *vc = [UIButtonDemoViewController new];
+//    [self addChildViewController:vc];
+//    [self.contentView addSubview:vc.view];
+//    [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
 //            make.edges.equalTo(self.contentView);
 //    }];
+//
+    OCHValueStepper *v = [OCHValueStepper new];
+    v.value = 0;
+    [self.contentView addSubview:v];
+    [v mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.contentView);
+    }];
 }
 
 /*

@@ -18,9 +18,19 @@ typedef NS_ENUM(NSUInteger, OCHUIKitDemo) {
     OCHUIKitDemoEnd,
 };
 
-NSArray<NSNumber *> * OCHUIKitDemoAllItems(void);
-NSString * NSStringFromOCHUIKitDemo(OCHUIKitDemo item);
-UIViewController * UIViewControllermOCHUIKitDemo(OCHUIKitDemo item);
+NSArray<NSNumber *> *OCHUIKitDemoAllItems(void);
+NSString *NSStringFromOCHUIKitDemo(OCHUIKitDemo item);
+UIViewController *UIViewControllerFromOCHUIKitDemo(OCHUIKitDemo item);
+
+typedef NS_ENUM(NSUInteger, OCHUIKitCustom) {
+    OCHUIKitCustomBeg,
+    OCHUIKitCustomValueStepper = OCHUIKitCustomBeg,
+    OCHUIKitCustomEnd,
+};
+
+NSArray<NSNumber *> *OCHUIKitCustomAllItems(void);
+NSString *NSStringFromOCHUIKitCustom(OCHUIKitCustom item);
+UIViewController *UIViewControllerFromOCHUIKitCustom(OCHUIKitCustom item);
 
 NS_ASSUME_NONNULL_BEGIN
 

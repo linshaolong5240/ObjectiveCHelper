@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NSString *_Nonnull(^ValueStepperStringProvider)(double value);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHValueStepper : UIView
@@ -16,10 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) double maximumValue;
 @property(nonatomic, assign) double stepValue;
 
-@property(nonatomic, assign) UIEdgeInsets contentInsets;
-@property(nonatomic, strong, readonly) UITextField *valueField;
-@property(nonatomic, strong, readonly) UIButton *subButton;
-@property(nonatomic, strong, readonly) UIButton *addButton;
+- (instancetype)initWithFrame:(CGRect)frame valueString:(ValueStepperStringProvider)provider;
 
 @end
 

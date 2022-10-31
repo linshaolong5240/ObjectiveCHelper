@@ -25,24 +25,119 @@ NSString *NSStringFromOCHValueStepperButtonTag(OCHValueStepperButtonTag tag) {
     }
 }
 
+@interface OCHValueStepper ()
+
+@property(nonatomic, strong) UITextField *valueField;
+@property(nonatomic, strong) UIButton *subButton;
+@property(nonatomic, strong) UIButton *addButton;
+
+@property(nonatomic, copy) ValueStepperStringProvider valueStringProvider;
+
+@end
+
 @implementation OCHValueStepper
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        _value = 0;
+        _minimumValue = 0;
+        _maximumValue = 100;
+        _stepValue = 1;
+        _valueStringProvider = ^NSString *(double value) {
+            return [NSString stringWithFormat:@"%d", (int)value];
+        };
+        [self configureContetnView];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame valueString:(ValueStepperStringProvider)provider {
+    self = [super initWithFrame:frame];
+    if (self) {
+        _value = 0;
+        _minimumValue = 0;
+        _maximumValue = 100;
+        _stepValue = 1;
+        _valueStringProvider = provider;
         [self configureContetnView];
     }
     return self;
 }
 
 - (void)configureContetnView {
+    UIButton *subButton = [[UIButton alloc] init];
+    subButton.tag = OCHValueStepperButtonTagSub;
+    subButton.backgroundColor = UIColor.systemBlueColor;
+    subButton.layer.cornerRadius = 6;
+    [subButton setTitle:@"-" forState:UIControlStateNormal];
+    [subButton addTarget:self action:@selector(buttonOnClicked:event:) forControlEvents:UIControlEventTouchUpInside];
+    self.subButton = subButton;
     
+    UIButton *addButton = [[UIButton alloc] init];
+    addButton.tag = OCHValueStepperButtonTagAdd;
+    addButton.backgroundColor = UIColor.systemBlueColor;
+    addButton.layer.cornerRadius = 6;
+    [addButton setTitle:@"+" forState:UIControlStateNormal];
+    [addButton addTarget:self action:@selector(buttonOnClicked:event:) forControlEvents:UIControlEventTouchUpInside];
+    self.addButton = addButton;
+    
+    UITextField *valueField = [[UITextField alloc] init];
+    valueField.textAlignment = NSTextAlignmentCenter;
+    valueField.enabled = false;
+    self.valueField = valueField;
+    
+    UIStackView *hstack = [[UIStackView alloc] initWithArrangedSubviews:@[subButton, valueField, ]];
+    hstack.axis = UILayoutConstraintAxisHorizontal;
+    hstack.spacing = 10;
+
+    UIStackView *container = [[UIStackView alloc] initWithArrangedSubviews:@[hstack, addButton]];
+    container.axis = UILayoutConstraintAxisHorizontal;
+    container.spacing = 10;
+
+    [self addSubview:container];
+    [container mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
+    
+    [subButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(44);
+    }];
+    
+    [addButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(44);
+    }];
+    
+    [self updateView];
+}
+
+- (void)updateView {
+    self.valueField.text = _valueStringProvider(_value);
+    
+    if (0 == self.value) {
+        self.subButton.hidden = YES;
+        self.valueField.hidden = YES;
+    } else {
+        self.subButton.hidden = NO;
+        self.valueField.hidden = NO;
+    }
 }
 
 - (void)buttonOnClicked:(UIButton *)button event:(UIControlEvents)event {
 #if DEBUG
     NSLog(@"%s tag: %@", __PRETTY_FUNCTION__, NSStringFromOCHValueStepperButtonTag(button.tag));
 #endif
+    if (OCHValueStepperButtonTagSub == button.tag) {
+        self.value = MAX(self.minimumValue, self.value - self.stepValue);
+    } else if (OCHValueStepperButtonTagAdd == button.tag) {
+        self.value = MIN(self.maximumValue, self.value + self.stepValue);
+    }
+    [self updateView];
+}
+
+- (void)setValue:(double)value {
+    _value = value;
+    [self updateView];
 }
 
 /*
