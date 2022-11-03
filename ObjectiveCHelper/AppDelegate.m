@@ -8,6 +8,10 @@
 #import "AppDelegate.h"
 #import "OCHTabbarViewController.h"
 
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+#import <QMapKit/QMapKit.h>
+
 @interface AppDelegate ()
 
 @end
@@ -21,6 +25,16 @@
     UIViewController *rootViewController = OCHTabbarViewController.new;
     self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
+    
+    [AMapServices sharedServices].apiKey = @"6b84213157c7640fd007c800ac20ecf4";
+    BMKMapManager *mapManager = [[BMKMapManager alloc] init];
+    BOOL ret = [mapManager start:@"qCfINkbXjt4D2PwngcczywFRHjvqcM7b" generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"启动引擎失败");
+    }
+    [QMapServices sharedServices].APIKey = @"6LDBZ-OG3C6-7GGSW-EPAJH-NN6S5-3JFVQ";
+    [[QMapServices sharedServices] setPrivacyAgreement:YES];
+
 
     return YES;
 }

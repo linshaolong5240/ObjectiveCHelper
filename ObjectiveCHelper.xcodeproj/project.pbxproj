@@ -58,6 +58,12 @@
 		18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBC29013453003E5533 /* UILabelDemoViewController.m */; };
 		18D98BC02901356B003E5533 /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */; };
 		18E221B22913D9F300660A7F /* OCHMapDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221B12913D9F300660A7F /* OCHMapDemoViewController.m */; };
+		18E221B62913DB8300660A7F /* OCHMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221B52913DB8300660A7F /* OCHMapViewController.m */; };
+		18E221BA2913DDA900660A7F /* OCHAMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221B92913DDA900660A7F /* OCHAMapViewController.m */; };
+		18E221BD2913DDBB00660A7F /* OCHBaiduMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221BC2913DDBB00660A7F /* OCHBaiduMapViewController.m */; };
+		18E221C02913DDE500660A7F /* OCHTencentMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221BF2913DDE500660A7F /* OCHTencentMapViewController.m */; };
+		18E221C42913DF0500660A7F /* OCHMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221C32913DF0500660A7F /* OCHMapManager.m */; };
+		18E221C72913DF6200660A7F /* OCHMapConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221C62913DF6200660A7F /* OCHMapConfig.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
 		18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */; };
@@ -191,6 +197,18 @@
 		18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
 		18E221B02913D9F300660A7F /* OCHMapDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHMapDemoViewController.h; sourceTree = "<group>"; };
 		18E221B12913D9F300660A7F /* OCHMapDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHMapDemoViewController.m; sourceTree = "<group>"; };
+		18E221B42913DB8300660A7F /* OCHMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHMapViewController.h; sourceTree = "<group>"; };
+		18E221B52913DB8300660A7F /* OCHMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHMapViewController.m; sourceTree = "<group>"; };
+		18E221B82913DDA900660A7F /* OCHAMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHAMapViewController.h; sourceTree = "<group>"; };
+		18E221B92913DDA900660A7F /* OCHAMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHAMapViewController.m; sourceTree = "<group>"; };
+		18E221BB2913DDBB00660A7F /* OCHBaiduMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHBaiduMapViewController.h; sourceTree = "<group>"; };
+		18E221BC2913DDBB00660A7F /* OCHBaiduMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHBaiduMapViewController.m; sourceTree = "<group>"; };
+		18E221BE2913DDE500660A7F /* OCHTencentMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHTencentMapViewController.h; sourceTree = "<group>"; };
+		18E221BF2913DDE500660A7F /* OCHTencentMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTencentMapViewController.m; sourceTree = "<group>"; };
+		18E221C22913DF0500660A7F /* OCHMapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHMapManager.h; sourceTree = "<group>"; };
+		18E221C32913DF0500660A7F /* OCHMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHMapManager.m; sourceTree = "<group>"; };
+		18E221C52913DF6200660A7F /* OCHMapConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHMapConfig.h; sourceTree = "<group>"; };
+		18E221C62913DF6200660A7F /* OCHMapConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHMapConfig.m; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -513,10 +531,46 @@
 		18E221AF2913D9AC00660A7F /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				18E221B02913D9F300660A7F /* OCHMapDemoViewController.h */,
-				18E221B12913D9F300660A7F /* OCHMapDemoViewController.m */,
+				18E221C12913DEE400660A7F /* Model */,
+				18E221B32913DB5600660A7F /* Controller */,
+				18E221B72913DB8700660A7F /* View */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		18E221B32913DB5600660A7F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18E221B82913DDA900660A7F /* OCHAMapViewController.h */,
+				18E221B92913DDA900660A7F /* OCHAMapViewController.m */,
+				18E221BB2913DDBB00660A7F /* OCHBaiduMapViewController.h */,
+				18E221BC2913DDBB00660A7F /* OCHBaiduMapViewController.m */,
+				18E221B02913D9F300660A7F /* OCHMapDemoViewController.h */,
+				18E221B12913D9F300660A7F /* OCHMapDemoViewController.m */,
+				18E221B42913DB8300660A7F /* OCHMapViewController.h */,
+				18E221B52913DB8300660A7F /* OCHMapViewController.m */,
+				18E221BE2913DDE500660A7F /* OCHTencentMapViewController.h */,
+				18E221BF2913DDE500660A7F /* OCHTencentMapViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18E221B72913DB8700660A7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18E221C12913DEE400660A7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18E221C52913DF6200660A7F /* OCHMapConfig.h */,
+				18E221C62913DF6200660A7F /* OCHMapConfig.m */,
+				18E221C22913DF0500660A7F /* OCHMapManager.h */,
+				18E221C32913DF0500660A7F /* OCHMapManager.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		18E4173528E44E720035BDA7 = {
@@ -890,12 +944,15 @@
 				1876AD3628E452A100DA0387 /* UICollectionViewDemoController.m in Sources */,
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
 				1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */,
+				18E221BA2913DDA900660A7F /* OCHAMapViewController.m in Sources */,
 				18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */,
 				1811B83528F423100074418B /* OCHBaseViewController.m in Sources */,
 				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
 				188CA49928F265C200EF106E /* YCAccessoryPrecurementProductTableView.m in Sources */,
 				1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */,
+				18E221C02913DDE500660A7F /* OCHTencentMapViewController.m in Sources */,
 				1838BB012907DC310089E0A5 /* YCOptionPickerCell.m in Sources */,
+				18E221B62913DB8300660A7F /* OCHMapViewController.m in Sources */,
 				188CA49228F2574600EF106E /* YCAccessoryProcurementCategoryViewController.m in Sources */,
 				188CA48928F167DF00EF106E /* YCAccessoryPrecurementFilterBar.m in Sources */,
 				189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */,
@@ -919,6 +976,7 @@
 				188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */,
 				182356FB28FA52D800799D90 /* YCAccessoryPriceInquiryOrderSupplierTableViewHeader.m in Sources */,
 				188CA46328F112EF00EF106E /* OCHDVPieChartViewController.m in Sources */,
+				18E221C42913DF0500660A7F /* OCHMapManager.m in Sources */,
 				188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */,
 				1853C4F928F4017B00245003 /* YCAccessoryPriceInquirySearchView.m in Sources */,
 				18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */,
@@ -927,10 +985,12 @@
 				1823570728FA656800799D90 /* YCCarAccessory.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
 				1823570428FA5FFE00799D90 /* YCAccessoryStore.m in Sources */,
+				18E221C72913DF6200660A7F /* OCHMapConfig.m in Sources */,
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
 				1811B83828F423DD0074418B /* OCHScrollContentViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,
 				1823570128FA5A0800799D90 /* YCAccessoryPriceInquiryOrderBySupplierTableViewCell.m in Sources */,
+				18E221BD2913DDBB00660A7F /* OCHBaiduMapViewController.m in Sources */,
 				188CA48E28F16F1100EF106E /* YCAccessoryPrecurementSortButton.m in Sources */,
 				18E221B22913D9F300660A7F /* OCHMapDemoViewController.m in Sources */,
 				44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */,
@@ -1104,6 +1164,9 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ObjectiveCHelper/OCHPrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectiveCHelper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ObjectiveCHelper;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location Always Usage Description";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location When In Use Usage Description";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1136,6 +1199,9 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ObjectiveCHelper/OCHPrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectiveCHelper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ObjectiveCHelper;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location Always Usage Description";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location When In Use Usage Description";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

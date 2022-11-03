@@ -1,23 +1,25 @@
 //
-//  OCHMapDemoViewController.m
+//  OCHAMapViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/3.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OCHMapDemoViewController.h"
+#import "OCHAMapViewController.h"
+#import <MAMapKit/MAMapKit.h>
 
-@interface OCHMapDemoViewController ()
+@interface OCHAMapViewController ()
 
 @end
 
-@implementation OCHMapDemoViewController
+@implementation OCHAMapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Map Demo";
+    MAMapView *mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:mapView];
 }
 
 /*
