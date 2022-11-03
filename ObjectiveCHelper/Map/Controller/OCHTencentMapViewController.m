@@ -20,12 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    QMapView *mapView = [[QMapView alloc] initWithFrame:self.view.bounds];
-    mapView.showsUserLocation = YES;
-    mapView.delegate = self;
-    self.mapView = mapView;
-    [self.view addSubview:mapView];
-
+    self.mapView = [[QMapView alloc] initWithFrame:self.view.bounds];
+    self.mapView.showsUserLocation = YES;
+    self.mapView.userTrackingMode = QUserTrackingModeFollowWithHeading;
+    self.mapView.delegate = self;
+    [self.view addSubview:self.mapView];
 }
 
 #pragma mark - QMapViewDelegate

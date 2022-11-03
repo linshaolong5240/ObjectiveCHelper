@@ -10,7 +10,7 @@ target 'ObjectiveCHelper' do
   pod 'JXCategoryView'
   
   #百度地图
-  # pod 'BMKLocationKit', '~> 2.0.5'
+  pod 'BMKLocationKit', '~> 2.0.5'
   pod 'BaiduMapKit', '~> 6.5.4' # 默认集成全量包
   # 可选组件
 #   pod 'BaiduMapKit/Map', '~> 6.5.4'    # 集成地图Map包
