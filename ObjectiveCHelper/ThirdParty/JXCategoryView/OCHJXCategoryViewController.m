@@ -6,7 +6,7 @@
 //
 
 #import "OCHJXCategoryViewController.h"
-#import "JXCategoryView.h"
+#import <JXCategoryView.h>
 #import "OCHJXCategoryListContentView.h"
 
 @interface OCHJXCategoryViewController () <JXCategoryViewDelegate, JXCategoryListContainerViewDelegate>
