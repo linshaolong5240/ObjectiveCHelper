@@ -34,9 +34,6 @@
 		1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */; };
 		1885CBF628F900DF000552F7 /* UIKitCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885CBF528F900DF000552F7 /* UIKitCustomViewController.m */; };
 		1885CC0128F96A77000552F7 /* YCAccessoryPriceInquiryOrderSupplierTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885CC0028F96A77000552F7 /* YCAccessoryPriceInquiryOrderSupplierTableViewCell.m */; };
-		1885CC0D28F9834E000552F7 /* ClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885CC0C28F9834E000552F7 /* ClassA.m */; };
-		1885CC1028F9835A000552F7 /* ClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885CC0F28F9835A000552F7 /* ClassB.m */; };
-		1885CC1328F98496000552F7 /* ClassC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885CC1228F98496000552F7 /* ClassC.m */; };
 		188CA46328F112EF00EF106E /* OCHDVPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46228F112EF00EF106E /* OCHDVPieChartViewController.m */; };
 		188CA46D28F1147000EF106E /* DVPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46828F1147000EF106E /* DVPieChart.m */; };
 		188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46B28F1147000EF106E /* DVFoodPieModel.m */; };
@@ -60,6 +57,7 @@
 		18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */; };
 		18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBC29013453003E5533 /* UILabelDemoViewController.m */; };
 		18D98BC02901356B003E5533 /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */; };
+		18E221B22913D9F300660A7F /* OCHMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221B12913D9F300660A7F /* OCHMapViewController.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
 		18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */; };
@@ -146,12 +144,6 @@
 		1885CBF528F900DF000552F7 /* UIKitCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitCustomViewController.m; sourceTree = "<group>"; };
 		1885CBFF28F96A77000552F7 /* YCAccessoryPriceInquiryOrderSupplierTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCAccessoryPriceInquiryOrderSupplierTableViewCell.h; sourceTree = "<group>"; };
 		1885CC0028F96A77000552F7 /* YCAccessoryPriceInquiryOrderSupplierTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCAccessoryPriceInquiryOrderSupplierTableViewCell.m; sourceTree = "<group>"; };
-		1885CC0B28F9834E000552F7 /* ClassA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
-		1885CC0C28F9834E000552F7 /* ClassA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassA.m; sourceTree = "<group>"; };
-		1885CC0E28F9835A000552F7 /* ClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassB.h; sourceTree = "<group>"; };
-		1885CC0F28F9835A000552F7 /* ClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassB.m; sourceTree = "<group>"; };
-		1885CC1128F98496000552F7 /* ClassC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassC.h; sourceTree = "<group>"; };
-		1885CC1228F98496000552F7 /* ClassC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassC.m; sourceTree = "<group>"; };
 		188CA46128F112EF00EF106E /* OCHDVPieChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHDVPieChartViewController.h; sourceTree = "<group>"; };
 		188CA46228F112EF00EF106E /* OCHDVPieChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHDVPieChartViewController.m; sourceTree = "<group>"; };
 		188CA46728F1147000EF106E /* DVPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVPieChart.h; sourceTree = "<group>"; };
@@ -197,6 +189,8 @@
 		18D98BBC29013453003E5533 /* UILabelDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelDemoViewController.m; sourceTree = "<group>"; };
 		18D98BBE2901356B003E5533 /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
 		18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
+		18E221B02913D9F300660A7F /* OCHMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHMapViewController.h; sourceTree = "<group>"; };
+		18E221B12913D9F300660A7F /* OCHMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHMapViewController.m; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -404,19 +398,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		1885CC0A28F98336000552F7 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				1885CC0B28F9834E000552F7 /* ClassA.h */,
-				1885CC0C28F9834E000552F7 /* ClassA.m */,
-				1885CC0E28F9835A000552F7 /* ClassB.h */,
-				1885CC0F28F9835A000552F7 /* ClassB.m */,
-				1885CC1128F98496000552F7 /* ClassC.h */,
-				1885CC1228F98496000552F7 /* ClassC.m */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
 		188CA45F28F1125E00EF106E /* UIKitDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -529,6 +510,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		18E221AF2913D9AC00660A7F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				18E221B02913D9F300660A7F /* OCHMapViewController.h */,
+				18E221B12913D9F300660A7F /* OCHMapViewController.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		18E4173528E44E720035BDA7 = {
 			isa = PBXGroup;
 			children = (
@@ -554,7 +544,6 @@
 		18E4174028E44E720035BDA7 /* ObjectiveCHelper */ = {
 			isa = PBXGroup;
 			children = (
-				1885CC0A28F98336000552F7 /* Test */,
 				18E4174128E44E720035BDA7 /* AppDelegate.h */,
 				18E4174228E44E720035BDA7 /* AppDelegate.m */,
 				18E4174D28E44E740035BDA7 /* Assets.xcassets */,
@@ -563,6 +552,7 @@
 				18E4175228E44E740035BDA7 /* Info.plist */,
 				18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */,
 				18E4175328E44E740035BDA7 /* main.m */,
+				18E221AF2913D9AC00660A7F /* Map */,
 				1876AD3728E464AE00DA0387 /* Model */,
 				1876AD5428E6B97500DA0387 /* ObjectiveCHelper-Bridging-Header.h */,
 				1876AD4828E4748A00DA0387 /* OCHPrefixHeader.pch */,
@@ -626,6 +616,7 @@
 				18E4173B28E44E720035BDA7 /* Frameworks */,
 				18E4173C28E44E720035BDA7 /* Resources */,
 				700C0499FAB83BCBE009FFDA /* [CP] Embed Pods Frameworks */,
+				1A12760CAFDDD3999F14FDBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -664,6 +655,7 @@
 				18E4176028E44E740035BDA7 /* Frameworks */,
 				18E4176128E44E740035BDA7 /* Resources */,
 				E7C993F03AD7E61ACB44E18E /* [CP] Embed Pods Frameworks */,
+				C48EE7AC4B9660DFA6EDB500 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -769,6 +761,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1A12760CAFDDD3999F14FDBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper/Pods-ObjectiveCHelper-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper/Pods-ObjectiveCHelper-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper/Pods-ObjectiveCHelper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		46BCB4F7B269BC799CCAE405 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -806,6 +815,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper/Pods-ObjectiveCHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C48EE7AC4B9660DFA6EDB500 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper-ObjectiveCHelperUITests/Pods-ObjectiveCHelper-ObjectiveCHelperUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper-ObjectiveCHelperUITests/Pods-ObjectiveCHelper-ObjectiveCHelperUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper-ObjectiveCHelperUITests/Pods-ObjectiveCHelper-ObjectiveCHelperUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E7C993F03AD7E61ACB44E18E /* [CP] Embed Pods Frameworks */ = {
@@ -875,7 +901,6 @@
 				189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */,
 				183DCC7628F3BD8E0098EB29 /* YCAcccessoryPrecurementSubCategoritesCollectionViewCell.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHTableSection.m in Sources */,
-				1885CC1028F9835A000552F7 /* ClassB.m in Sources */,
 				1828250F28FFC50400D2E4CF /* UIColor+Extension.m in Sources */,
 				188CA4B528F3A86A00EF106E /* YCAcccessoryPrecurementAllCategoritesView.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
@@ -886,7 +911,6 @@
 				189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */,
 				182356FE28FA566E00799D90 /* YCAccessoryPriceInquiryOrderBySupplierView.m in Sources */,
 				188CA4B928F3AF2B00EF106E /* YCAcccessoryPrecurementAllCategoritesCollectionViewCell.m in Sources */,
-				1885CC0D28F9834E000552F7 /* ClassA.m in Sources */,
 				1838BB042907DCF60089E0A5 /* YCTableSection.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+Extension.m in Sources */,
@@ -907,8 +931,8 @@
 				1811B83828F423DD0074418B /* OCHScrollContentViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,
 				1823570128FA5A0800799D90 /* YCAccessoryPriceInquiryOrderBySupplierTableViewCell.m in Sources */,
-				1885CC1328F98496000552F7 /* ClassC.m in Sources */,
 				188CA48E28F16F1100EF106E /* YCAccessoryPrecurementSortButton.m in Sources */,
+				18E221B22913D9F300660A7F /* OCHMapViewController.m in Sources */,
 				44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

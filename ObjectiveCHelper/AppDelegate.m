@@ -7,7 +7,6 @@
 
 #import "AppDelegate.h"
 #import "OCHTabbarViewController.h"
-#import "ClassC.h"
 
 @interface AppDelegate ()
 
@@ -15,15 +14,10 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-#if DEBUG
-    ClassC *c = [ClassC new];
-    [c test];
-#endif
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-//    self.window.backgroundColor = UIColor.whiteColor;
+    self.window.backgroundColor = UIColor.whiteColor;
     UIViewController *rootViewController = OCHTabbarViewController.new;
     self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
