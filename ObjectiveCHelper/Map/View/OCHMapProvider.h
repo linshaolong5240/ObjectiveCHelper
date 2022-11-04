@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol OCHMapProviderDelegate <NSObject>
+
+@required
+
+@optional
+
+@end
+
 @protocol OCHMapProvider <NSObject>
 
 @required
+@property(nonatomic, weak) id<OCHMapProviderDelegate> providerDelete;
+
 - (UIView *)providerView;
 
 @optional

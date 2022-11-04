@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHTencentMapView : UIView <OCHMapProvider>
 
+@property(nonatomic, weak) id<OCHMapProviderDelegate> providerDelete;
+
 @end
 
 NS_ASSUME_NONNULL_END
