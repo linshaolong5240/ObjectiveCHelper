@@ -7,7 +7,7 @@
 //
 
 #import "OCHAMapViewController.h"
-#import <MAMapKit/MAMapKit.h>
+#import "OCHAMapView.h"
 
 @interface OCHAMapViewController ()
 
@@ -18,11 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    MAMapView *mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
+    OCHAMapView *mapView = [[OCHAMapView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:mapView];
-    
-    mapView.showsUserLocation = YES;
-    mapView.userTrackingMode = MAUserTrackingModeFollow;
 }
 
 /*
