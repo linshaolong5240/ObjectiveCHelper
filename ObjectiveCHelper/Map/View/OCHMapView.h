@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, OCHMapProvider) {
     OCHMapProviderTencent,
 };
 
-@protocol OCHMapViewSource;
+@protocol OCHMapSource;
 
 @protocol OCHMapViewDelegate <NSObject>
 
@@ -30,10 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHMapView : UIView
 
-///地图服务商
+///当前地图服务商
 @property(nonatomic, readonly) OCHMapProvider provider;
-
-@property(nonatomic, weak) id<OCHMapViewSource> mapViewSource;
+///当前地图源
 @property(nonatomic, weak) id<OCHMapViewDelegate> delegate;
 
 - (instancetype)init NS_UNAVAILABLE;

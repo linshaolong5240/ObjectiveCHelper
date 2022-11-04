@@ -1,5 +1,5 @@
 //
-//  OCHMapViewSource.h
+//  OCHMapSource.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/4.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol OCHMapViewSource <NSObject>
+@protocol OCHMapSource <NSObject>
 
 @required
 - (UIView *)mapSourceView;

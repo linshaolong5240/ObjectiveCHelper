@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OCHMapViewSource.h"
+#import "OCHMapSource.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHBaiduMapView : UIView <OCHMapViewSource>
+@interface OCHBaiduMapView : UIView <OCHMapSource>
 
 @end
 
