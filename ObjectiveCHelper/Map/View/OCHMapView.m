@@ -19,36 +19,36 @@ typedef NS_ENUM(NSUInteger, OCHMapUserTrackingMode) {
 
 @interface OCHMapView ()
 
-@property(nonatomic, strong) id<OCHMapSource> source;
+@property(nonatomic, strong) id<OCHMapProvider> provider;
 
 @end
 
 @implementation OCHMapView
 
-- (instancetype)initWithFrame:(CGRect)frame mapProvider:(OCHMapProvider) provider {
+- (instancetype)initWithFrame:(CGRect)frame providerType:(OCHMapProviderType) providerType {
     self = [super initWithFrame:frame];
     if (self) {
-        _provider = provider;
+        _providerType = providerType;
         [self setupView];
     }
     return self;
 }
 
 - (void)setupView {
-    switch (self.provider) {
-        case OCHMapProviderAMap:
-            self.source = [[OCHAMapView alloc] initWithFrame:self.bounds];
+    switch (self.providerType) {
+        case OCHMapProviderTypeAMap:
+            self.provider = [[OCHAMapView alloc] initWithFrame:self.bounds];
             break;
-        case OCHMapProviderBaidu:
-            self.source = [[OCHBaiduMapView alloc] initWithFrame:self.bounds];
+        case OCHMapProviderTypeBaidu:
+            self.provider = [[OCHBaiduMapView alloc] initWithFrame:self.bounds];
             break;
-        case OCHMapProviderTencent:
-            self.source = [[OCHTencentMapView alloc] initWithFrame:self.bounds];
+        case OCHMapProviderTypeTencent:
+            self.provider = [[OCHTencentMapView alloc] initWithFrame:self.bounds];
             break;
         default:
             break;
     }
-    [self addSubview:self.source.mapSourceView];
+    [self addSubview:self.provider.providerView];
 }
 
 @end

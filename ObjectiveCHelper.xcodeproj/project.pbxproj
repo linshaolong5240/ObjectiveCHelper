@@ -103,7 +103,7 @@
 		187650252915057400420786 /* OCHTencentMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTencentMapView.m; sourceTree = "<group>"; };
 		187650272915088600420786 /* OCHAMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHAMapView.h; sourceTree = "<group>"; };
 		187650282915088600420786 /* OCHAMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHAMapView.m; sourceTree = "<group>"; };
-		1876502A291518DD00420786 /* OCHMapSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHMapSource.h; sourceTree = "<group>"; };
+		1876502A291518DD00420786 /* OCHMapProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHMapProvider.h; sourceTree = "<group>"; };
 		1876502B291518DD00420786 /* OCHMapViewSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHMapViewSource.m; sourceTree = "<group>"; };
 		1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHTabbarViewController.h; sourceTree = "<group>"; };
 		1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTabbarViewController.m; sourceTree = "<group>"; };
@@ -433,7 +433,7 @@
 				18E13BD32914F84E000B6B41 /* OCHBaiduMapView.m */,
 				18E13BCF2914EF40000B6B41 /* OCHMapView.h */,
 				18E13BD02914EF40000B6B41 /* OCHMapView.m */,
-				1876502A291518DD00420786 /* OCHMapSource.h */,
+				1876502A291518DD00420786 /* OCHMapProvider.h */,
 				1876502B291518DD00420786 /* OCHMapViewSource.m */,
 				187650242915057400420786 /* OCHTencentMapView.h */,
 				187650252915057400420786 /* OCHTencentMapView.m */,

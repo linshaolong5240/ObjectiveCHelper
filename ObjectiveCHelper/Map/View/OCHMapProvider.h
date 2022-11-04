@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol OCHMapSource <NSObject>
+@protocol OCHMapProvider <NSObject>
 
 @required
-- (UIView *)mapSourceView;
+- (UIView *)providerView;
 
 @optional
 

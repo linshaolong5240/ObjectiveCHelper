@@ -36,7 +36,7 @@
 
 #pragma mark - OCHMapViewSource
 
-- (UIView *)mapSourceView {
+- (UIView *)providerView {
     return self;
 }
 

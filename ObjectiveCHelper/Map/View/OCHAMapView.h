@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OCHMapSource.h"
+#import "OCHMapProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHAMapView : UIView <OCHMapSource>
+@interface OCHAMapView : UIView <OCHMapProvider>
 
 @end
 
