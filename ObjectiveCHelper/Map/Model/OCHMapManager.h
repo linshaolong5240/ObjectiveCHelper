@@ -7,13 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AMapFoundationKit/AMapFoundationKit.h>//高德
-#import <BaiduMapAPI_Base/BMKBaseComponent.h>//百度
-#import <QMapKit/QMapKit.h>//腾讯
+
+@class OCHMapConfig;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHMapManager : NSObject
+
+@property(nonatomic, readonly) BOOL isInit;
+
++ (instancetype)sharesInstance;
+- (void)initWithConfig:(OCHMapConfig *)config;
 
 @end
 

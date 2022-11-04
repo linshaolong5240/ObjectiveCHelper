@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHMapConfig : NSObject
 
+@property(nonatomic, copy) NSString *aMapKey;
 @property(nonatomic, copy) NSString *baiduMapKey;
 @property(nonatomic, copy) NSString *tencentMapKey;
-@property(nonatomic, copy) NSString *aMapKey;
 
 @end
 

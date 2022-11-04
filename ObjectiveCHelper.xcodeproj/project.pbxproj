@@ -52,6 +52,7 @@
 		18E4175E28E44E740035BDA7 /* ObjectiveCHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4175D28E44E740035BDA7 /* ObjectiveCHelperTests.m */; };
 		18E4176828E44E740035BDA7 /* ObjectiveCHelperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4176728E44E740035BDA7 /* ObjectiveCHelperUITests.m */; };
 		18E4176A28E44E740035BDA7 /* ObjectiveCHelperUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4176928E44E740035BDA7 /* ObjectiveCHelperUITestsLaunchTests.m */; };
+		18E9AAFB2914B98C00D9D614 /* OCHAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E9AAFA2914B98C00D9D614 /* OCHAppConfig.m */; };
 		3093019FEA4D19C1BB7DF45E /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9299767C1AA87BE14B447F63 /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework */; };
 		44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA228E8301D00C395D9 /* OCHContentViewController.m */; };
 		44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */; };
@@ -165,6 +166,8 @@
 		18E4176328E44E740035BDA7 /* ObjectiveCHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4176728E44E740035BDA7 /* ObjectiveCHelperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCHelperUITests.m; sourceTree = "<group>"; };
 		18E4176928E44E740035BDA7 /* ObjectiveCHelperUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCHelperUITestsLaunchTests.m; sourceTree = "<group>"; };
+		18E9AAF92914B98C00D9D614 /* OCHAppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHAppConfig.h; sourceTree = "<group>"; };
+		18E9AAFA2914B98C00D9D614 /* OCHAppConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHAppConfig.m; sourceTree = "<group>"; };
 		365375EE3E48A83C249D7C5C /* Pods-ObjectiveCHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-ObjectiveCHelperTests/Pods-ObjectiveCHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		44890BA128E8301D00C395D9 /* OCHContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHContentViewController.h; sourceTree = "<group>"; };
 		44890BA228E8301D00C395D9 /* OCHContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHContentViewController.m; sourceTree = "<group>"; };
@@ -460,6 +463,8 @@
 				18E221AF2913D9AC00660A7F /* Map */,
 				1876AD3728E464AE00DA0387 /* Model */,
 				1876AD5428E6B97500DA0387 /* ObjectiveCHelper-Bridging-Header.h */,
+				18E9AAF92914B98C00D9D614 /* OCHAppConfig.h */,
+				18E9AAFA2914B98C00D9D614 /* OCHAppConfig.m */,
 				1876AD4828E4748A00DA0387 /* OCHPrefixHeader.pch */,
 				188CA48528F155DC00EF106E /* Preview */,
 				188CA47E28F14F9100EF106E /* ThirdParty */,
@@ -820,6 +825,7 @@
 				188CA46D28F1147000EF106E /* DVPieChart.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
 				18E221C72913DF6200660A7F /* OCHMapConfig.m in Sources */,
+				18E9AAFB2914B98C00D9D614 /* OCHAppConfig.m in Sources */,
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
 				1811B83828F423DD0074418B /* OCHScrollContentViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,

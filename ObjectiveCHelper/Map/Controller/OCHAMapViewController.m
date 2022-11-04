@@ -20,6 +20,9 @@
     // Do any additional setup after loading the view.
     MAMapView *mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:mapView];
+    
+    mapView.showsUserLocation = YES;
+    mapView.userTrackingMode = MAUserTrackingModeFollow;
 }
 
 /*

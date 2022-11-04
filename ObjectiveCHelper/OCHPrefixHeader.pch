@@ -14,6 +14,9 @@
 //
 #import "OCHTableSection.h"
 
+//AppConfig
+#import "OCHAppConfig.h"
+
 //Category Extension
 #import "NSAttributedString+Extension.h"
 #import "UIColor+Extension.h"

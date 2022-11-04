@@ -27,7 +27,8 @@ target 'ObjectiveCHelper' do
 #   pod 'Tencent-MapSDK/QMapFoundation', '~> 4.5.10'        # 添加地图基础库模块，在4.5.6版本后需要添加
   
   #高德地图
-  pod 'AMap2DMap', '~> 5.6.1'
+  pod 'AMap3DMap', '~> 9.5.0'
+#  pod 'AMap2DMap', '~> 5.6.1'
   # pod 'AMapSearch', '~> 9.4.5'
   # pod 'AMapLocation', '~> 2.9.0'
   # pod 'AMap2DMap-NO-IDFA', '~> 5.6.1'
