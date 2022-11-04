@@ -7,12 +7,9 @@
 //
 
 #import "OCHMapView.h"
-
-typedef NS_ENUM(NSUInteger, OCHMapSource) {
-    OCHMapSourceAMap,
-    OCHMapSourceBaidu,
-    OCHMapSourceTencent,
-};
+#import "OCHAMapView.h"
+#import "OCHBaiduMapView.h"
+#import "OCHTencentMapView.h"
 
 typedef NS_ENUM(NSUInteger, OCHMapUserTrackingMode) {
     OCHMapUserTrackingModeNone,                    ///< 不追踪用户的location更新
@@ -22,20 +19,31 @@ typedef NS_ENUM(NSUInteger, OCHMapUserTrackingMode) {
 
 @implementation OCHMapView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame mapProvider:(OCHMapProvider) provider {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        _provider = provider;
+        [self setupView];
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setupView {
+    id<OCHMapViewSource> mapViewSource;
+    switch (self.provider) {
+        case OCHMapProviderAMap:
+            mapViewSource = [[OCHAMapView alloc] initWithFrame:self.bounds];
+            break;
+        case OCHMapProviderBaidu:
+            mapViewSource = [[OCHBaiduMapView alloc] initWithFrame:self.bounds];
+            break;
+        case OCHMapProviderTencent:
+            mapViewSource = [[OCHTencentMapView alloc] initWithFrame:self.bounds];
+            break;
+        default:
+            break;
+    }
+    [self addSubview:mapViewSource.mapSourceView];
 }
-*/
 
 @end

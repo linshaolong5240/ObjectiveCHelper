@@ -29,6 +29,12 @@
     [self addSubview:self.mapView];
 }
 
+#pragma mark - OCHMapViewSource
+
+- (UIView *)mapSourceView {
+    return self;
+}
+
 #pragma mark - Gettset / Setter
 
 - (QMapView *)mapView {

@@ -13,23 +13,23 @@
 #import "OCHMapViewController.h"
 
 typedef NS_ENUM(NSUInteger, YCMapItem) {
+    YCMapItemAMap,
     YCMapItemBaidu,
     YCMapItemTencent,
-    YCMapItemAMap,
     YCMapItemYCMap,
     YCMapItemNumber,
 };
 
 NSString *NSStringFromYCMapItem(YCMapItem type) {
     switch (type) {
+        case YCMapItemAMap:
+            return @"A Map";
         case YCMapItemBaidu:
             return @"Baidu Map";
             break;
         case YCMapItemTencent:
             return @"Tencent Map";
             break;
-        case YCMapItemAMap:
-            return @"A Map";
         case YCMapItemYCMap:
             return @"YC Map";
             break;
@@ -41,14 +41,14 @@ NSString *NSStringFromYCMapItem(YCMapItem type) {
 
 UIViewController *UIViewControllerFromYCMapItem(YCMapItem type) {
     switch (type) {
+        case YCMapItemAMap:
+            return [[OCHAMapViewController alloc] init];
+            break;
         case YCMapItemBaidu:
             return [[OCHBaiduMapViewController alloc] init];
             break;
         case YCMapItemTencent:
             return [[OCHTencentMapViewController alloc] init];
-            break;
-        case YCMapItemAMap:
-            return [[OCHAMapViewController alloc] init];
             break;
         case YCMapItemYCMap:
             return [[OCHMapViewController alloc] init];

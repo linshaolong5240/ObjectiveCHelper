@@ -34,6 +34,12 @@
     [self.locationManager startUpdatingLocation];
 }
 
+#pragma mark - OCHMapViewSource
+
+- (UIView *)mapSourceView {
+    return self;
+}
+
 #pragma mark - BMKLocationManagerDelegate
 
 /**

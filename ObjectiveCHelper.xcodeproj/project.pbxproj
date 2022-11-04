@@ -18,6 +18,7 @@
 		186027712908CDFA001A3D2B /* UITableView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+Extension.m */; };
 		187650262915057400420786 /* OCHTencentMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187650252915057400420786 /* OCHTencentMapView.m */; };
 		187650292915088600420786 /* OCHAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187650282915088600420786 /* OCHAMapView.m */; };
+		1876502C291518DD00420786 /* OCHMapViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876502B291518DD00420786 /* OCHMapViewSource.m */; };
 		1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */; };
 		1876AD3628E452A100DA0387 /* UICollectionViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3528E452A100DA0387 /* UICollectionViewDemoController.m */; };
 		1876AD3A28E464E500DA0387 /* OCHTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3928E464E500DA0387 /* OCHTableSection.m */; };
@@ -102,6 +103,8 @@
 		187650252915057400420786 /* OCHTencentMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTencentMapView.m; sourceTree = "<group>"; };
 		187650272915088600420786 /* OCHAMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHAMapView.h; sourceTree = "<group>"; };
 		187650282915088600420786 /* OCHAMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHAMapView.m; sourceTree = "<group>"; };
+		1876502A291518DD00420786 /* OCHMapViewSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHMapViewSource.h; sourceTree = "<group>"; };
+		1876502B291518DD00420786 /* OCHMapViewSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHMapViewSource.m; sourceTree = "<group>"; };
 		1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHTabbarViewController.h; sourceTree = "<group>"; };
 		1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHTabbarViewController.m; sourceTree = "<group>"; };
 		1876AD3428E452A100DA0387 /* UICollectionViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoController.h; sourceTree = "<group>"; };
@@ -430,6 +433,8 @@
 				18E13BD32914F84E000B6B41 /* OCHBaiduMapView.m */,
 				18E13BCF2914EF40000B6B41 /* OCHMapView.h */,
 				18E13BD02914EF40000B6B41 /* OCHMapView.m */,
+				1876502A291518DD00420786 /* OCHMapViewSource.h */,
+				1876502B291518DD00420786 /* OCHMapViewSource.m */,
 				187650242915057400420786 /* OCHTencentMapView.h */,
 				187650252915057400420786 /* OCHTencentMapView.m */,
 			);
@@ -810,6 +815,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */,
+				1876502C291518DD00420786 /* OCHMapViewSource.m in Sources */,
 				1885CBF628F900DF000552F7 /* UIKitCustomViewController.m in Sources */,
 				18D98BC02901356B003E5533 /* NSAttributedString+Extension.m in Sources */,
 				189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */,

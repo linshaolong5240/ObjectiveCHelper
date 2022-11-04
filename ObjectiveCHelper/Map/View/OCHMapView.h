@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MAMapKit/MAMapKit.h>
 
-@protocol OCHMapSourceView <NSObject>
+typedef NS_ENUM(NSUInteger, OCHMapProvider) {
+    OCHMapProviderAMap,
+    OCHMapProviderBaidu,
+    OCHMapProviderTencent,
+};
+
+@protocol OCHMapViewSource;
+
+@protocol OCHMapViewDelegate <NSObject>
 
 @required
 
@@ -17,9 +25,21 @@
 
 @end
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHMapView : UIView
+
+///地图服务商
+@property(nonatomic, readonly) OCHMapProvider provider;
+
+@property(nonatomic, weak) id<OCHMapViewSource> mapViewSource;
+@property(nonatomic, weak) id<OCHMapViewDelegate> delegate;
+
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
+- (instancetype)initWithFrame:(CGRect)frame mapProvider:(OCHMapProvider) provider;
 
 @end
 
