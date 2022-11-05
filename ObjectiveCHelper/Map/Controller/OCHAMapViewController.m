@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     OCHAMapView *mapView = [[OCHAMapView alloc] initWithFrame:self.view.bounds];
     mapView.showsUserLocation = true;
-    mapView.userTrackingMode = OCHMapUserTrackingModeFollow;
+    mapView.userTrackingMode = OCHMapUserTrackingModeFollowWithHeading;
     
     [self.view addSubview:mapView];
 }

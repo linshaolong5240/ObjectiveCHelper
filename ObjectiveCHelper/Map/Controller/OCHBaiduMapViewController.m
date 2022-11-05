@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view.
     self.mapView = [[OCHBaiduMapView alloc]initWithFrame:self.view.bounds];
     self.mapView.showsUserLocation = true;
-    self.mapView.userTrackingMode = OCHMapUserTrackingModeFollow;
+    self.mapView.userTrackingMode = OCHMapUserTrackingModeFollowWithHeading;
     
     [self.view addSubview:self.mapView];
 }

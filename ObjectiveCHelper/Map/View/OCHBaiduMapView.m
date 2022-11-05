@@ -157,7 +157,6 @@
 - (BMKMapView *)mapView {
     if (!_mapView) {
         _mapView = [[BMKMapView alloc]initWithFrame:self.bounds];
-        _mapView.showMapScaleBar = YES;
         _mapView.delegate = self;
     }
     
