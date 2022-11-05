@@ -13,7 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHTencentMapView : UIView <OCHMapProvider>
 
-@property(nonatomic, weak) id<OCHMapProviderDelegate> providerDelete;
+@property(nonatomic, weak) id<OCHMapProviderDelegate> mapProviderDeletegate;
+
+@property (nonatomic, assign) BOOL showsUserLocation;
+@property(nonatomic, assign) OCHMapUserTrackingMode userTrackingMode;
 
 @end
 

@@ -34,10 +34,35 @@
     [self.locationManager startUpdatingLocation];
 }
 
-#pragma mark - OCHMapViewSource
+#pragma mark - OCHMapProvider
 
 - (UIView *)providerView {
     return self;
+}
+
+- (BOOL)showsUserLocation {
+    return self.mapView.showsUserLocation;
+}
+
+- (void)setShowsUserLocation:(BOOL)showsUserLocation {
+    self.mapView.showsUserLocation = showsUserLocation;
+}
+
+- (void)setUserTrackingMode:(OCHMapUserTrackingMode)userTrackingMode {
+    _userTrackingMode = userTrackingMode;
+    switch (userTrackingMode) {
+        case OCHMapUserTrackingModeNone:
+            self.mapView.userTrackingMode = BMKUserTrackingModeNone;
+            break;
+        case OCHMapUserTrackingModeFollow:
+            self.mapView.userTrackingMode = BMKUserTrackingModeFollow;
+            break;
+        case OCHMapUserTrackingModeFollowWithHeading:
+            self.mapView.userTrackingMode = BMKUserTrackingModeFollowWithHeading;
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - BMKLocationManagerDelegate
@@ -132,9 +157,7 @@
 - (BMKMapView *)mapView {
     if (!_mapView) {
         _mapView = [[BMKMapView alloc]initWithFrame:self.bounds];
-        _mapView.showsUserLocation = YES;
         _mapView.showMapScaleBar = YES;
-        _mapView.userTrackingMode = BMKUserTrackingModeFollow;
         _mapView.delegate = self;
     }
     

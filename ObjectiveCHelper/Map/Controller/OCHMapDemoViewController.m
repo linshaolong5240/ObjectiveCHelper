@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, YCMapItem) {
     YCMapItemAMap,
     YCMapItemBaidu,
     YCMapItemTencent,
-    YCMapItemYCMap,
+    YCMapItemOCHMap,
     YCMapItemNumber,
 };
 
@@ -30,8 +30,8 @@ NSString *NSStringFromYCMapItem(YCMapItem type) {
         case YCMapItemTencent:
             return @"Tencent Map";
             break;
-        case YCMapItemYCMap:
-            return @"YC Map";
+        case YCMapItemOCHMap:
+            return @"OCH Map";
             break;
         default:
             return @"";
@@ -50,7 +50,7 @@ UIViewController *UIViewControllerFromYCMapItem(YCMapItem type) {
         case YCMapItemTencent:
             return [[OCHTencentMapViewController alloc] init];
             break;
-        case YCMapItemYCMap:
+        case YCMapItemOCHMap:
             return [[OCHMapViewController alloc] init];
             break;
         default:

@@ -7,11 +7,8 @@
 //
 
 #import "OCHMapViewController.h"
-#import "OCHMapView.h"
 
 @interface OCHMapViewController ()
-
-@property(nonatomic, strong) OCHMapView *mapview;
 
 @end
 
@@ -20,8 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.mapview = [[OCHMapView alloc] initWithFrame:self.view.bounds providerType:(OCHMapProviderTypeTencent)];
-    [self.view addSubview:self.mapview];
 }
 
 /*

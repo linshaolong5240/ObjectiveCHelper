@@ -35,15 +35,37 @@
     return self;
 }
 
+- (BOOL)showsUserLocation {
+    return self.mapView.showsUserLocation;
+}
+
+- (void)setShowsUserLocation:(BOOL)showsUserLocation {
+    self.mapView.showsUserLocation = showsUserLocation;
+}
+
+- (void)setUserTrackingMode:(OCHMapUserTrackingMode)userTrackingMode {
+    _userTrackingMode = userTrackingMode;
+    switch (userTrackingMode) {
+        case OCHMapUserTrackingModeNone:
+            self.mapView.userTrackingMode = QUserTrackingModeNone;
+            break;
+        case OCHMapUserTrackingModeFollow:
+            self.mapView.userTrackingMode = QUserTrackingModeFollow;
+            break;
+        case OCHMapUserTrackingModeFollowWithHeading:
+            self.mapView.userTrackingMode = QUserTrackingModeFollowWithHeading;
+            break;
+        default:
+            break;
+    }
+}
+
 #pragma mark - Gettset / Setter
 
 - (QMapView *)mapView {
     if (!_mapView) {
         _mapView = [[QMapView alloc] initWithFrame:self.bounds];
-        _mapView.showsUserLocation = YES;
-        _mapView.userTrackingMode = QUserTrackingModeFollowWithHeading;
         _mapView.delegate = self;
-
     }
     return _mapView;
 }
