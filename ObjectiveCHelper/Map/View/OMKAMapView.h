@@ -7,16 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OMKProvider.h"
+#import "OMKMapViewProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKAMapView : UIView <OMKProvider>
+@interface OMKAMapView : UIView <OMKMapViewProvider>
 
-@property(nonatomic, weak) id<OCHMapProviderDelegate> delegate;
+@property(nonatomic, weak) id<OMKMapViewDelegate> delegate;
 
 @property (nonatomic, assign) BOOL showsUserLocation;
-@property(nonatomic, assign) OCHMapUserTrackingMode userTrackingMode;
+@property(nonatomic, assign) OMKUserTrackingMode userTrackingMode;
 
 @end
 

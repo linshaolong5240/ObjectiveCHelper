@@ -7,49 +7,7 @@
 //
 
 #import "OMKDemoViewController.h"
-#import "OMKBaiduMapViewController.h"
-#import "OMKTencentMapViewController.h"
-#import "OMKAMapViewController.h"
-
-typedef NS_ENUM(NSUInteger, YCMapItem) {
-    YCMapItemAMap,
-    YCMapItemBaidu,
-    YCMapItemTencent,
-    YCMapItemNumber,
-};
-
-NSString *NSStringFromYCMapItem(YCMapItem type) {
-    switch (type) {
-        case YCMapItemAMap:
-            return @"A Map";
-        case YCMapItemBaidu:
-            return @"Baidu Map";
-            break;
-        case YCMapItemTencent:
-            return @"Tencent Map";
-            break;
-        default:
-            return @"";
-            break;
-    }
-}
-
-UIViewController *UIViewControllerFromYCMapItem(YCMapItem type) {
-    switch (type) {
-        case YCMapItemAMap:
-            return [[OMKAMapViewController alloc] init];
-            break;
-        case YCMapItemBaidu:
-            return [[OMKBaiduMapViewController alloc] init];
-            break;
-        case YCMapItemTencent:
-            return [[OMKTencentMapViewController alloc] init];
-            break;
-        default:
-            return [[UIViewController alloc] init];
-            break;
-    }
-}
+#import "OMKMapViewController.h"
 
 @interface OMKDemoViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -72,7 +30,7 @@ UIViewController *UIViewControllerFromYCMapItem(YCMapItem type) {
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return YCMapItemNumber;
+    return OMKMapTypeNumber;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -88,8 +46,7 @@ UIViewController *UIViewControllerFromYCMapItem(YCMapItem type) {
 #if DEBUG
     NSLog(@"%s", __PRETTY_FUNCTION__);
 #endif
-    
-    UIViewController *vc = UIViewControllerFromYCMapItem(indexPath.row);
+    OMKMapViewController *vc = [[OMKMapViewController alloc] initWithMapType:indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

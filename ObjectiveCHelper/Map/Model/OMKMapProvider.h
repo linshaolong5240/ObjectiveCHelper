@@ -8,13 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, OMKMapType) {
+    OMKMapTypeAMap,
+    OMKMapTypeBaidu,
+    OMKMapTypeTencent,
+    OMKMapTypeNumber,
+};
+
 typedef NS_ENUM(NSUInteger, OCHMapUserTrackingMode) {
     OCHMapUserTrackingModeNone,                 ///< 不追踪用户的location更新
     OCHMapUserTrackingModeFollow,               ///< 追踪用户的location更新
     OCHMapUserTrackingModeFollowWithHeading,    ///< 追踪用户的location与heading更新
 };
 
-@protocol OCHMapProviderDelegate <NSObject>
+NSString *NSStringFromYCMapItem(OMKMapType type);
+
+@protocol OCHMapViewDelegate <NSObject>
 
 @required
 
@@ -22,10 +31,10 @@ typedef NS_ENUM(NSUInteger, OCHMapUserTrackingMode) {
 
 @end
 
-@protocol OMKProvider <NSObject>
+@protocol OMKMapViewProvider <NSObject>
 
 @required
-@property(nonatomic, weak) id<OCHMapProviderDelegate> delegate;
+@property(nonatomic, weak) id<OCHMapViewDelegate> delegate;
 
 - (UIView *)providerView;
 

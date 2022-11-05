@@ -36,10 +36,6 @@
 
 #pragma mark - OCHMapProvider
 
-- (UIView *)providerView {
-    return self;
-}
-
 - (BOOL)showsUserLocation {
     return self.mapView.showsUserLocation;
 }
@@ -48,7 +44,7 @@
     self.mapView.showsUserLocation = showsUserLocation;
 }
 
-- (void)setUserTrackingMode:(OCHMapUserTrackingMode)userTrackingMode {
+- (void)setUserTrackingMode:(OMKUserTrackingMode)userTrackingMode {
     _userTrackingMode = userTrackingMode;
     switch (userTrackingMode) {
         case OCHMapUserTrackingModeNone:
