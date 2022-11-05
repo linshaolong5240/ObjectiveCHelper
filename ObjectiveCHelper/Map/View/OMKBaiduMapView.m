@@ -15,8 +15,8 @@
 
 @property (nonatomic, strong) BMKMapView *mapView;
 @property (nonatomic, strong) BMKUserLocation *userLocation; ///<当前位置对象
+@property (nonatomic, strong) BMKPointAnnotation *userLocationAnnotation;
 @property (nonatomic, strong) BMKLocationManager *locationManager; //定位对象
-
 @end
 
 @implementation OMKBaiduMapView
@@ -98,8 +98,21 @@
     if (!self.userLocation) {
         self.userLocation = [[BMKUserLocation alloc] init];
     }
+    
+    if (!self.userLocationAnnotation) {
+        BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
+        annotation.coordinate = location.location.coordinate;
+        annotation.title = @"北京";
+        //副标题
+        annotation.subtitle = @"天安门";
+        self.userLocationAnnotation = annotation;
+    }
+    
     self.userLocation.location = location.location;
     [self.mapView updateLocationData:self.userLocation];
+    
+    [self.mapView removeAnnotation:self.userLocationAnnotation];
+    [self.mapView addAnnotation:self.userLocationAnnotation];
 }
 
 /**
@@ -147,6 +160,24 @@
      didUpdateNetworkState:(BMKLocationNetworkState)state orError:(NSError * _Nullable)error {
     
 }
+
+#pragma mark - BMKLocationManagerDelegate
+
+//- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
+//{
+//    if ([annotation isKindOfClass:[BMKPointAnnotation class]])
+//    {
+//        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
+//        BMKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+//        if (annotationView == nil)
+//        {
+//            annotationView = [[BMKAnnotationView alloc] initWithAnnotation:annotation
+//                                                              reuseIdentifier:reuseIndetifier];
+//        }
+//        return annotationView;
+//    }
+//    return nil;
+//}
 
 #pragma mark - Getter / Setter
 
