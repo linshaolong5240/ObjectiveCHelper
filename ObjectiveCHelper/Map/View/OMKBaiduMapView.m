@@ -34,7 +34,7 @@
     [self.locationManager startUpdatingLocation];
 }
 
-#pragma mark - OCHMapProvider
+#pragma mark - OMKMapProvider
 
 - (BOOL)showsUserLocation {
     return self.mapView.showsUserLocation;

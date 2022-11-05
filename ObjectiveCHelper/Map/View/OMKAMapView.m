@@ -29,7 +29,7 @@
     [self addSubview:self.mapView];
 }
 
-#pragma mark - OCHMapProvider
+#pragma mark - OMKMapProvider
 
 - (BOOL)showsUserLocation {
     return self.mapView.showsUserLocation;
