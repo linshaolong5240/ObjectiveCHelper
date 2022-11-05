@@ -29,6 +29,16 @@
     [self addSubview:self.mapView];
 }
 
+#pragma mark - Getter / Setter
+
+- (MAMapView *)mapView {
+    if (!_mapView) {
+        _mapView = [[MAMapView alloc] initWithFrame:self.bounds];
+        _mapView.delegate = self;
+    }
+    return _mapView;
+}
+
 #pragma mark - OMKMapProvider
 
 - (BOOL)showsUserLocation {
@@ -55,16 +65,5 @@
             break;
     }
 }
-
-#pragma mark - Getter / Setter
-
-- (MAMapView *)mapView {
-    if (!_mapView) {
-        _mapView = [[MAMapView alloc] initWithFrame:self.bounds];
-        _mapView.delegate = self;
-    }
-    return _mapView;
-}
-
 
 @end

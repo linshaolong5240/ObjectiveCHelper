@@ -12,6 +12,7 @@
 @interface OMKTencentMapView () <QMapViewDelegate>
 
 @property(nonatomic, strong) QMapView *mapView;
+@property (nonatomic, strong) QPointAnnotation *userLocationAnnotation;
 
 @end
 
@@ -27,6 +28,16 @@
 
 - (void)setupView {
     [self addSubview:self.mapView];
+}
+
+#pragma mark - Gettset / Setter
+
+- (QMapView *)mapView {
+    if (!_mapView) {
+        _mapView = [[QMapView alloc] initWithFrame:self.bounds];
+        _mapView.delegate = self;
+    }
+    return _mapView;
 }
 
 #pragma mark - OMKMapProvider
@@ -56,27 +67,23 @@
     }
 }
 
-#pragma mark - Gettset / Setter
-
-- (QMapView *)mapView {
-    if (!_mapView) {
-        _mapView = [[QMapView alloc] initWithFrame:self.bounds];
-        _mapView.delegate = self;
-    }
-    return _mapView;
-}
-
 #pragma mark - QMapViewDelegate
+
+#pragma mark - QMapViewDelegate - Location
 
 // <QMapViewDelegate>中的定位回调函数
 - (void)mapViewWillStartLocatingUser:(QMapView *)mapView
 {
+#if DEBUG
     NSLog(@"%s", __FUNCTION__);
+#endif
 }
 
 - (void)mapViewDidStopLocatingUser:(QMapView *)mapView
 {
+#if DEBUG
     NSLog(@"%s", __FUNCTION__);
+#endif
 }
 
 /**
@@ -87,7 +94,17 @@
  */
 - (void)mapView:(QMapView *)mapView didUpdateUserLocation:(QUserLocation *)userLocation fromHeading:(BOOL)fromHeading
 {
+#if DEBUG
     NSLog(@"%s fromHeading = %d, location = %@, heading = %@", __FUNCTION__, fromHeading, userLocation.location, userLocation.heading);
+#endif
+    
+    if (!self.userLocationAnnotation) {
+        self.userLocationAnnotation = [[QPointAnnotation alloc] init];
+        self.userLocationAnnotation.coordinate = userLocation.location.coordinate;
+        self.userLocationAnnotation.title = @"我的位置";
+        self.userLocationAnnotation.subtitle = @"我的位置";
+        [mapView addAnnotation:self.userLocationAnnotation];
+    }
 }
 
 /**
@@ -97,7 +114,9 @@
  */
 - (void)mapView:(QMapView *)mapView didFailToLocateUserWithError:(NSError *)error
 {
+#if DEBUG
     NSLog(@"%s error = %@", __FUNCTION__, error);
+#endif
 }
 
 /**
@@ -108,7 +127,31 @@
  */
 - (void)mapView:(QMapView *)mapView didChangeUserTrackingMode:(QUserTrackingMode)mode animated:(BOOL)animated
 {
+#if DEBUG
     NSLog(@"%s mode = %ld, animated = %d", __FUNCTION__, (long)mode, animated);
+#endif
 }
+
+#pragma mark - QMapViewDelegate - Annotation
+
+/**
+ * @brief 根据anntation生成对应的View
+ * @param mapView 地图View
+ * @param annotation 指定的标注
+ * @return 生成的标注View
+ */
+- (QAnnotationView *)mapView:(QMapView *)mapView viewForAnnotation:(id<QAnnotation>)annotation {
+    if ([annotation isKindOfClass:[QPointAnnotation class]]) {
+        static NSString *annotationIdentifier = @"pointAnnotation";
+        QPinAnnotationView *pinView = (QPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
+        if (pinView == nil) {
+            pinView = [[QPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
+        }
+        pinView.canShowCallout = YES;
+        return pinView;
+    }
+    return nil;
+}
+
 
 @end
