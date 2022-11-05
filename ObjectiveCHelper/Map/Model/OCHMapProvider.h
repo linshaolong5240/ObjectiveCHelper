@@ -25,7 +25,7 @@ typedef NS_ENUM(NSUInteger, OCHMapUserTrackingMode) {
 @protocol OCHMapProvider <NSObject>
 
 @required
-@property(nonatomic, weak) id<OCHMapProviderDelegate> mapProviderDeletegate;
+@property(nonatomic, weak) id<OCHMapProviderDelegate> delegate;
 
 - (UIView *)providerView;
 
