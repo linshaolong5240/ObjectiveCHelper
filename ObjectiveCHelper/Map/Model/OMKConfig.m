@@ -1,14 +1,14 @@
 //
-//  OCHMapConfig.m
+//  OMKConfig.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/3.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OCHMapConfig.h"
+#import "OMKConfig.h"
 
-@implementation OCHMapConfig
+@implementation OMKConfig
 
 - (instancetype)init {
     self = [super init];

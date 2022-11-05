@@ -1,26 +1,26 @@
 //
-//  OCHBaiduMapViewController.m
+//  OMKBaiduMapViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/3.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OCHBaiduMapViewController.h"
-#import "OCHBaiduMapView.h"
+#import "OMKBaiduMapViewController.h"
+#import "OMKBaiduMapView.h"
 
-@interface OCHBaiduMapViewController ()
+@interface OMKBaiduMapViewController ()
 
-@property (nonatomic, strong) OCHBaiduMapView *mapView;
+@property (nonatomic, strong) OMKBaiduMapView *mapView;
 
 @end
 
-@implementation OCHBaiduMapViewController
+@implementation OMKBaiduMapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.mapView = [[OCHBaiduMapView alloc]initWithFrame:self.view.bounds];
+    self.mapView = [[OMKBaiduMapView alloc]initWithFrame:self.view.bounds];
     self.mapView.showsUserLocation = true;
     self.mapView.userTrackingMode = OCHMapUserTrackingModeFollowWithHeading;
     

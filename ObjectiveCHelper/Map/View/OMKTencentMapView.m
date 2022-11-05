@@ -1,21 +1,21 @@
 //
-//  OCHTencentMapView.m
+//  OMKTencentMapView.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/4.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OCHTencentMapView.h"
+#import "OMKTencentMapView.h"
 #import <QMapKit/QMapKit.h>
 
-@interface OCHTencentMapView () <QMapViewDelegate>
+@interface OMKTencentMapView () <QMapViewDelegate>
 
 @property(nonatomic, strong) QMapView *mapView;
 
 @end
 
-@implementation OCHTencentMapView
+@implementation OMKTencentMapView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

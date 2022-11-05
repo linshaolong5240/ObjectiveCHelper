@@ -1,13 +1,13 @@
 //
-//  OCHMapManager.m
+//  OMKManager.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/3.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OCHMapManager.h"
-#import "OCHMapConfig.h"
+#import "OMKManager.h"
+#import "OMKConfig.h"
 
 #import <AMapFoundationKit/AMapFoundationKit.h>//高德地图Bae
 #import <MAMapKit/MAMapKit.h>
@@ -17,13 +17,13 @@
 
 #import <QMapKit/QMapKit.h>//腾讯地图
 
-@interface OCHMapManager () <BMKLocationAuthDelegate, BMKGeneralDelegate>
+@interface OMKManager () <BMKLocationAuthDelegate, BMKGeneralDelegate>
 
 @property (nonatomic, strong) BMKMapManager *mapManager; //主引擎类
 
 @end
 
-@implementation OCHMapManager
+@implementation OMKManager
 
 - (instancetype)init {
     self = [super init];
@@ -34,16 +34,16 @@
 }
 
 + (instancetype)sharesInstance {
-    static OCHMapManager *manager = nil;
+    static OMKManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[OCHMapManager alloc] init];
+        manager = [[OMKManager alloc] init];
     });
     
     return manager;
 }
 
-- (void)initWithConfig:(OCHMapConfig *)config {
+- (void)initWithConfig:(OMKConfig *)config {
     if (!_isInit) {
         [self setupAMapWithKey:config.aMapKey];
         [self setupBaiduMapWithKey:config.baiduMapKey];

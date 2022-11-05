@@ -1,17 +1,17 @@
 //
-//  OCHBaiduMapView.m
+//  OMKBaiduMapView.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/4.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OCHBaiduMapView.h"
+#import "OMKBaiduMapView.h"
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BMKLocationKit/BMKLocationManager.h>
 
-@interface OCHBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>
+@interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>
 
 @property (nonatomic, strong) BMKMapView *mapView;
 @property (nonatomic, strong) BMKUserLocation *userLocation; ///<当前位置对象
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation OCHBaiduMapView
+@implementation OMKBaiduMapView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

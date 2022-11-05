@@ -1,30 +1,28 @@
 //
-//  OCHTencentMapViewController.m
+//  OMKAMapViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/3.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OCHTencentMapViewController.h"
-#import "OCHTencentMapView.h"
+#import "OMKAMapViewController.h"
+#import "OMKAMapView.h"
 
-@interface OCHTencentMapViewController ()
-
-@property(nonatomic, strong) OCHTencentMapView *mapView;
+@interface OMKAMapViewController ()
 
 @end
 
-@implementation OCHTencentMapViewController
+@implementation OMKAMapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.mapView = [[OCHTencentMapView alloc] initWithFrame:self.view.bounds];
-    self.mapView.showsUserLocation = true;
-    self.mapView.userTrackingMode = OCHMapUserTrackingModeFollowWithHeading;
-
-    [self.view addSubview:self.mapView];
+    OMKAMapView *mapView = [[OMKAMapView alloc] initWithFrame:self.view.bounds];
+    mapView.showsUserLocation = true;
+    mapView.userTrackingMode = OCHMapUserTrackingModeFollowWithHeading;
+    
+    [self.view addSubview:mapView];
 }
 
 /*

@@ -1,5 +1,5 @@
 //
-//  OCHBaiduMapViewController.h
+//  OMKBaiduMapViewController.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/3.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHBaiduMapViewController : UIViewController
+@interface OMKBaiduMapViewController : UIViewController
 
 @end
 

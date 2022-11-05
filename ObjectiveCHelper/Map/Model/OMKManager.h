@@ -1,5 +1,5 @@
 //
-//  OCHMapConfig.h
+//  OMKManager.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/3.
@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class OMKConfig;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHMapConfig : NSObject
+@interface OMKManager : NSObject
 
-@property(nonatomic, copy) NSString *aMapKey;
-@property(nonatomic, copy) NSString *baiduMapKey;
-@property(nonatomic, copy) NSString *tencentMapKey;
+@property(nonatomic, readonly) BOOL isInit;
+
++ (instancetype)sharesInstance;
+- (void)initWithConfig:(OMKConfig *)config;
 
 @end
 

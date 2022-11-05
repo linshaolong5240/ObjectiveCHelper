@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, OCHMapUserTrackingMode) {
 
 @end
 
-@protocol OCHMapProvider <NSObject>
+@protocol OMKProvider <NSObject>
 
 @required
 @property(nonatomic, weak) id<OCHMapProviderDelegate> delegate;

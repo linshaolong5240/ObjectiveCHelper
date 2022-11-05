@@ -7,8 +7,8 @@
 
 #import "AppDelegate.h"
 #import "OCHTabbarViewController.h"
-#import "OCHMapConfig.h"
-#import "OCHMapManager.h"
+#import "OMKConfig.h"
+#import "OMKManager.h"
 
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
@@ -24,12 +24,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    OCHMapConfig *mapConfig = [[OCHMapConfig alloc] init];
+    OMKConfig *mapConfig = [[OMKConfig alloc] init];
     mapConfig.aMapKey = OCHAppConfig.aMapKey;
     mapConfig.baiduMapKey = OCHAppConfig.baiduMapKey;
     mapConfig.tencentMapKey = OCHAppConfig.tencentMapKey;
     
-    [[OCHMapManager sharesInstance] initWithConfig:mapConfig];
+    [[OMKManager sharesInstance] initWithConfig:mapConfig];
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.backgroundColor = UIColor.whiteColor;

@@ -1,22 +1,20 @@
 //
-//  OCHMapDemoViewController.m
+//  OMKDemoViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/3.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OCHMapDemoViewController.h"
-#import "OCHBaiduMapViewController.h"
-#import "OCHTencentMapViewController.h"
-#import "OCHAMapViewController.h"
-#import "OCHMapViewController.h"
+#import "OMKDemoViewController.h"
+#import "OMKBaiduMapViewController.h"
+#import "OMKTencentMapViewController.h"
+#import "OMKAMapViewController.h"
 
 typedef NS_ENUM(NSUInteger, YCMapItem) {
     YCMapItemAMap,
     YCMapItemBaidu,
     YCMapItemTencent,
-    YCMapItemOCHMap,
     YCMapItemNumber,
 };
 
@@ -30,9 +28,6 @@ NSString *NSStringFromYCMapItem(YCMapItem type) {
         case YCMapItemTencent:
             return @"Tencent Map";
             break;
-        case YCMapItemOCHMap:
-            return @"OCH Map";
-            break;
         default:
             return @"";
             break;
@@ -42,16 +37,13 @@ NSString *NSStringFromYCMapItem(YCMapItem type) {
 UIViewController *UIViewControllerFromYCMapItem(YCMapItem type) {
     switch (type) {
         case YCMapItemAMap:
-            return [[OCHAMapViewController alloc] init];
+            return [[OMKAMapViewController alloc] init];
             break;
         case YCMapItemBaidu:
-            return [[OCHBaiduMapViewController alloc] init];
+            return [[OMKBaiduMapViewController alloc] init];
             break;
         case YCMapItemTencent:
-            return [[OCHTencentMapViewController alloc] init];
-            break;
-        case YCMapItemOCHMap:
-            return [[OCHMapViewController alloc] init];
+            return [[OMKTencentMapViewController alloc] init];
             break;
         default:
             return [[UIViewController alloc] init];
@@ -59,12 +51,11 @@ UIViewController *UIViewControllerFromYCMapItem(YCMapItem type) {
     }
 }
 
-
-@interface OCHMapDemoViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface OMKDemoViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation OCHMapDemoViewController
+@implementation OMKDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -101,7 +92,6 @@ UIViewController *UIViewControllerFromYCMapItem(YCMapItem type) {
     UIViewController *vc = UIViewControllerFromYCMapItem(indexPath.row);
     [self.navigationController pushViewController:vc animated:YES];
 }
-
 
 /*
 #pragma mark - Navigation

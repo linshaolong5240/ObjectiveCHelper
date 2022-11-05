@@ -1,5 +1,5 @@
 //
-//  OCHTencentMapView.h
+//  OMKBaiduMapView.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/4.
@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OCHMapProvider.h"
+#import "OMKProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHTencentMapView : UIView <OCHMapProvider>
+@interface OMKBaiduMapView : UIView <OMKProvider>
 
 @property(nonatomic, weak) id<OCHMapProviderDelegate> delegate;
 
