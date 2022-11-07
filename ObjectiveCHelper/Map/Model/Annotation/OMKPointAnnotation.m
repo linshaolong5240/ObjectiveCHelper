@@ -1,13 +1,13 @@
 //
-//  OMKAnnotation.m
+//  OMKPointAnnotation.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/5.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKAnnotation.h"
+#import "OMKPointAnnotation.h"
 
-@implementation OMKAnnotation
+@implementation OMKPointAnnotation
 
 @end

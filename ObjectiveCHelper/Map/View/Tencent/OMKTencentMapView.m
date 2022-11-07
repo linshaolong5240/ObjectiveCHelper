@@ -68,6 +68,15 @@
     }
 }
 
+- (void)addAnnotation:(OMKPointAnnotation *)annotation {
+    QPointAnnotation *pointAnnotation = [[QPointAnnotation alloc] init];
+    pointAnnotation.coordinate = annotation.coordinate;
+    pointAnnotation.title = annotation.title;
+    pointAnnotation.subtitle = annotation.subtitle;
+    
+    [self.mapView addAnnotation:pointAnnotation];
+}
+
 #pragma mark - QMapViewDelegate
 
 #pragma mark - QMapViewDelegate - Location
@@ -99,13 +108,13 @@
     NSLog(@"%s fromHeading = %d, location = %@, heading = %@", __FUNCTION__, fromHeading, userLocation.location, userLocation.heading);
 #endif
     
-    if (!self.userLocationAnnotation) {
-        self.userLocationAnnotation = [[QPointAnnotation alloc] init];
-        self.userLocationAnnotation.coordinate = userLocation.location.coordinate;
-        self.userLocationAnnotation.title = @"我的位置";
-        self.userLocationAnnotation.subtitle = @"我的位置";
-        [mapView addAnnotation:self.userLocationAnnotation];
-    }
+//    if (!self.userLocationAnnotation) {
+//        self.userLocationAnnotation = [[QPointAnnotation alloc] init];
+//        self.userLocationAnnotation.coordinate = userLocation.location.coordinate;
+//        self.userLocationAnnotation.title = @"我的位置";
+//        self.userLocationAnnotation.subtitle = @"我的位置";
+//        [mapView addAnnotation:self.userLocationAnnotation];
+//    }
 }
 
 /**

@@ -68,6 +68,15 @@
     }
 }
 
+- (void)addAnnotation:(OMKPointAnnotation *)annotation {
+    MAPointAnnotation *pointAnntation = [[MAPointAnnotation alloc] init];
+    pointAnntation.coordinate = annotation.coordinate;
+    pointAnntation.title = annotation.title;
+    pointAnntation.subtitle = annotation.subtitle;
+    
+    [self.mapView addAnnotation:pointAnntation];
+}
+
 #pragma mark - MAMapViewDelegate
 
 #pragma mark - MAMapViewDelegate - Location
@@ -95,13 +104,13 @@
 * @param updatingLocation 标示是否是location数据更新, YES:location数据更新 NO:heading数据更新
 */
 - (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation {
-    if (!_userLocationAnnotation) {
-        _userLocationAnnotation = [[MAPointAnnotation alloc] init];
-        _userLocationAnnotation.title = @"title";
-        _userLocationAnnotation.subtitle = @"subtitle";
-        [mapView addAnnotation:_userLocationAnnotation];
-    }
-    self.userLocationAnnotation.coordinate = userLocation.coordinate;
+//    if (!_userLocationAnnotation) {
+//        _userLocationAnnotation = [[MAPointAnnotation alloc] init];
+//        _userLocationAnnotation.title = @"title";
+//        _userLocationAnnotation.subtitle = @"subtitle";
+//        [mapView addAnnotation:_userLocationAnnotation];
+//    }
+//    self.userLocationAnnotation.coordinate = userLocation.coordinate;
 }
 
 /**

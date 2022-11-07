@@ -42,6 +42,13 @@
     }
     self.mapView.showsUserLocation = YES;
     self.mapView.userTrackingMode = OCHMapUserTrackingModeFollowWithHeading;
+    
+    OMKPointAnnotation *annotation = [[OMKPointAnnotation alloc] init];
+    annotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.1911);
+    annotation.title = @"tittle";
+    annotation.subtitle = @"subtittle";
+    
+    [self.mapView addAnnotation:annotation];
     [self.view addSubview:self.mapView];
 }
 

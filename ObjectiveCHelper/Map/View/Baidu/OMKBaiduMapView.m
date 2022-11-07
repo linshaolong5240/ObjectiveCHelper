@@ -106,6 +106,16 @@
     }
 }
 
+- (void)addAnnotation:(OMKPointAnnotation *)annotation {
+    BMKPointAnnotation* pointAnnotation = [[BMKPointAnnotation alloc]init];
+    pointAnnotation.coordinate = annotation.coordinate;
+    pointAnnotation.title = @"北京";
+    //副标题
+    pointAnnotation.subtitle = @"天安门";
+
+    [self.mapView addAnnotation:pointAnnotation];
+}
+
 #pragma mark - BMKLocationManagerDelegate
 
 /**
@@ -144,19 +154,19 @@
         self.userLocation = [[BMKUserLocation alloc] init];
     }
     
-    if (!self.userLocationAnnotation) {
-        BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
-        annotation.coordinate = location.location.coordinate;
-        annotation.title = @"北京";
-        //副标题
-        annotation.subtitle = @"天安门";
-        self.userLocationAnnotation = annotation;
-        [self.mapView addAnnotation:self.userLocationAnnotation];
-    }
-    
+//    if (!self.userLocationAnnotation) {
+//        BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
+//        annotation.coordinate = location.location.coordinate;
+//        annotation.title = @"北京";
+//        //副标题
+//        annotation.subtitle = @"天安门";
+//        self.userLocationAnnotation = annotation;
+//        [self.mapView addAnnotation:self.userLocationAnnotation];
+//    }
+//    self.userLocationAnnotation.coordinate = location.location.coordinate;
+
     self.userLocation.location = location.location;
     [self.mapView updateLocationData:self.userLocation];
-    self.userLocationAnnotation.coordinate = location.location.coordinate;
 }
 
 /**

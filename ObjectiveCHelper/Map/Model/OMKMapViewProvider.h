@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "OMKPointAnnotation.h"
+
 typedef NS_ENUM(NSUInteger, OMKMapType) {
     OMKMapTypeAMap,
     OMKMapTypeBaidu,
@@ -21,13 +23,15 @@ typedef NS_ENUM(NSUInteger, OMKUserTrackingMode) {
     OCHMapUserTrackingModeFollowWithHeading,    ///< 追踪用户的location与heading更新
 };
 
-NSString *NSStringFromYCMapItem(OMKMapType type);
+NSString *NSStringFromOMKMapType(OMKMapType type);
 
 @protocol OMKMapViewDelegate <NSObject>
 
 @required
 
 @optional
+
+
 
 @end
 
@@ -38,6 +42,12 @@ NSString *NSStringFromYCMapItem(OMKMapType type);
 
 @property(nonatomic, assign) BOOL showsUserLocation;
 @property(nonatomic, assign) OMKUserTrackingMode userTrackingMode;
+
+/**
+ * @brief 向地图窗口添加标注，需要实现MAMapViewDelegate的-mapView:viewForAnnotation:函数来生成标注对应的View
+ * @param annotation 要添加的标注
+ */
+- (void) addAnnotation:(OMKPointAnnotation *)annotation;
 
 @optional
 

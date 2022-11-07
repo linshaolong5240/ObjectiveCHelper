@@ -8,7 +8,7 @@
 
 #import "OMKMapViewProvider.h"
 
-NSString *NSStringFromYCMapItem(OMKMapType type) {
+NSString *NSStringFromOMKMapType(OMKMapType type) {
     switch (type) {
         case OMKMapTypeAMap:
             return @"A Map";
