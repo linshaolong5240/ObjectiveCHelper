@@ -8,6 +8,7 @@
 
 #import "OMKTencentMapView.h"
 #import <QMapKit/QMapKit.h>
+#import "OMKTencentAnnotationView.h"
 
 @interface OMKTencentMapView () <QMapViewDelegate>
 
@@ -145,7 +146,7 @@
         static NSString *annotationIdentifier = @"pointAnnotation";
         QPinAnnotationView *pinView = (QPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
         if (pinView == nil) {
-            pinView = [[QPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
+            pinView = [[OMKTencentAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
         }
         pinView.canShowCallout = YES;
         return pinView;
