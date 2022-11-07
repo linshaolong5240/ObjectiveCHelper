@@ -144,11 +144,10 @@
 - (QAnnotationView *)mapView:(QMapView *)mapView viewForAnnotation:(id<QAnnotation>)annotation {
     if ([annotation isKindOfClass:[QPointAnnotation class]]) {
         static NSString *annotationIdentifier = @"pointAnnotation";
-        QPinAnnotationView *pinView = (QPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
+        QAnnotationView *pinView = (QAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
         if (pinView == nil) {
             pinView = [[OMKTencentAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
         }
-        pinView.canShowCallout = YES;
         return pinView;
     }
     return nil;

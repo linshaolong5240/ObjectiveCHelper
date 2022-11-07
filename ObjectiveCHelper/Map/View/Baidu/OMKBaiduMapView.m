@@ -214,6 +214,7 @@
         if (annotationView == nil) {
             annotationView = [[OMKBaiduAnnotationView alloc] initWithAnnotation:annotation
                                                               reuseIdentifier:reuseIndetifier];
+            annotationView.canShowCallout = NO;
         }
         return annotationView;
     }
