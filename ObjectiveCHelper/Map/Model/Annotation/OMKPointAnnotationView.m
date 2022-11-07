@@ -17,8 +17,8 @@
 
 @implementation OMKPointAnnotationView
 
-- (instancetype)initWithFrame:(CGRect)frame annotation:(OMKPointAnnotation *)annotation {
-    self = [super initWithFrame:frame];
+- (instancetype)initWithAnnotation:(OMKPointAnnotation *)annotation {
+    self = [super initWithFrame:CGRectZero];
     if (self) {
         _annotation = annotation;
         [self setupUI];

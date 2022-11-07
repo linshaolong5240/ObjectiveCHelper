@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OMKPointAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OMKPointAnnotationView : UIView
+
+- (instancetype)initWithAnnotation:(OMKPointAnnotation *)annotation;
 
 @end
 
