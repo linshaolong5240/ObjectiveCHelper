@@ -107,11 +107,12 @@
 }
 
 - (void)addAnnotation:(OMKPointAnnotation *)annotation {
-    BMKPointAnnotation* pointAnnotation = [[BMKPointAnnotation alloc]init];
+    annotation = [annotation copy];
+    BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc]init];
     pointAnnotation.coordinate = annotation.coordinate;
-    pointAnnotation.title = @"北京";
+    pointAnnotation.title = annotation.title;
     //副标题
-    pointAnnotation.subtitle = @"天安门";
+    pointAnnotation.subtitle = annotation.subtitle;
 
     [self.mapView addAnnotation:pointAnnotation];
 }

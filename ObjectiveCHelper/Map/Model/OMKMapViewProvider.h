@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "OMKPointAnnotation.h"
+#import "OMKPointAnnotationView.h"
 
 typedef NS_ENUM(NSUInteger, OMKMapType) {
     OMKMapTypeAMap,
@@ -25,13 +26,15 @@ typedef NS_ENUM(NSUInteger, OMKUserTrackingMode) {
 
 NSString *NSStringFromOMKMapType(OMKMapType type);
 
+@protocol OMKMapViewProvider;
+
 @protocol OMKMapViewDelegate <NSObject>
 
 @required
 
 @optional
 
-
+- (OMKPointAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(OMKPointAnnotation *)annotation;
 
 @end
 

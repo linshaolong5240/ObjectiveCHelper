@@ -10,4 +10,13 @@
 
 @implementation OMKPointAnnotation
 
+- (nonnull id)copyWithZone:(nullable NSZone *)zone {
+    id copy = [[[self class] allocWithZone:zone] init];
+    [copy setCoordinate:self.coordinate];// = self.coordinate;
+    [copy setTitle:self.title];
+    [copy setSubtitle:self.subtitle];
+    
+    return copy;
+}
+
 @end
