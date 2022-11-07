@@ -11,6 +11,9 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BMKLocationKit/BMKLocationManager.h>
 
+#import "OMKBaiduAnnotationView.h"
+
+
 @interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>
 
 @property (nonatomic, strong) BMKMapView *mapView;
@@ -204,20 +207,17 @@
 
 #pragma mark - BMKLocationManagerDelegate
 
-//- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
-//{
-//    if ([annotation isKindOfClass:[BMKPointAnnotation class]])
-//    {
-//        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
-//        BMKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
-//        if (annotationView == nil)
-//        {
-//            annotationView = [[BMKAnnotationView alloc] initWithAnnotation:annotation
-//                                                              reuseIdentifier:reuseIndetifier];
-//        }
-//        return annotationView;
-//    }
-//    return nil;
-//}
+- (nullable __kindof BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
+    if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
+        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
+        BMKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+        if (annotationView == nil) {
+            annotationView = [[OMKBaiduAnnotationView alloc] initWithAnnotation:annotation
+                                                              reuseIdentifier:reuseIndetifier];
+        }
+        return annotationView;
+    }
+    return nil;
+}
 
 @end

@@ -10,6 +10,7 @@
 		0E50B35EF309D9DD368ECEEA /* Pods_ObjectiveCHelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6688CD4700FD6598AE22AFDC /* Pods_ObjectiveCHelperTests.framework */; };
 		1811B83528F423100074418B /* OCHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811B83428F423100074418B /* OCHBaseViewController.m */; };
 		1811B83828F423DD0074418B /* OCHScrollContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811B83728F423DD0074418B /* OCHScrollContentViewController.m */; };
+		181918F229189D2F00694BD1 /* OMKBaiduAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 181918F129189D2F00694BD1 /* OMKBaiduAnnotationView.m */; };
 		182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */; };
 		182824FD28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824FC28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.m */; };
 		1828250F28FFC50400D2E4CF /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828250E28FFC50400D2E4CF /* UIColor+Extension.m */; };
@@ -85,6 +86,8 @@
 		1811B83428F423100074418B /* OCHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHBaseViewController.m; sourceTree = "<group>"; };
 		1811B83628F423DD0074418B /* OCHScrollContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHScrollContentViewController.h; sourceTree = "<group>"; };
 		1811B83728F423DD0074418B /* OCHScrollContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHScrollContentViewController.m; sourceTree = "<group>"; };
+		181918F029189D2F00694BD1 /* OMKBaiduAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBaiduAnnotationView.h; sourceTree = "<group>"; };
+		181918F129189D2F00694BD1 /* OMKBaiduAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBaiduAnnotationView.m; sourceTree = "<group>"; };
 		182824F828FF8BA400D2E4CF /* UITableViewDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoViewController.h; sourceTree = "<group>"; };
 		182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewDemoViewController.m; sourceTree = "<group>"; };
 		182824FB28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoTableViewCell.h; sourceTree = "<group>"; };
@@ -221,6 +224,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181918EF29189AB400694BD1 /* Baidu */ = {
+			isa = PBXGroup;
+			children = (
+				18E13BD22914F84E000B6B41 /* OMKBaiduMapView.h */,
+				18E13BD32914F84E000B6B41 /* OMKBaiduMapView.m */,
+				181918F029189D2F00694BD1 /* OMKBaiduAnnotationView.h */,
+				181918F129189D2F00694BD1 /* OMKBaiduAnnotationView.m */,
+			);
+			path = Baidu;
+			sourceTree = "<group>";
+		};
 		1876AD2F28E450A200DA0387 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,10 +429,9 @@
 		18E221B72913DB8700660A7F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				181918EF29189AB400694BD1 /* Baidu */,
 				187650272915088600420786 /* OMKAMapView.h */,
 				187650282915088600420786 /* OMKAMapView.m */,
-				18E13BD22914F84E000B6B41 /* OMKBaiduMapView.h */,
-				18E13BD32914F84E000B6B41 /* OMKBaiduMapView.m */,
 				187650242915057400420786 /* OMKTencentMapView.h */,
 				187650252915057400420786 /* OMKTencentMapView.m */,
 				18FCF2FD291647CA004A0CD7 /* OMKMapView.h */,
@@ -828,6 +841,7 @@
 				1811B83528F423100074418B /* OCHBaseViewController.m in Sources */,
 				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
 				18FCF30A29166282004A0CD7 /* OMKAnnotation.m in Sources */,
+				181918F229189D2F00694BD1 /* OMKBaiduAnnotationView.m in Sources */,
 				1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */,
 				189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */,
 				18FCF2FC29164595004A0CD7 /* OMKMapViewController.m in Sources */,
