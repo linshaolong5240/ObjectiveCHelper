@@ -18,7 +18,7 @@ NSString *NSStringFromOMKMapType(OMKMapType type) {
         case OMKMapTypeTencent:
             return @"Tencent Map";
             break;
-        default:
+        case OMKMapTypeNumber:
             return @"";
             break;
     }

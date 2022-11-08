@@ -63,8 +63,6 @@
         case OCHMapUserTrackingModeFollowWithHeading:
             self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
             break;
-        default:
-            break;
     }
 }
 

@@ -101,8 +101,6 @@
         case OCHMapUserTrackingModeFollowWithHeading:
             self.mapView.userTrackingMode = BMKUserTrackingModeFollowWithHeading;
             break;
-        default:
-            break;
     }
 }
 
