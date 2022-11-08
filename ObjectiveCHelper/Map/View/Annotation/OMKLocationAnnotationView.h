@@ -1,8 +1,8 @@
 //
-//  OMKPointAnnotationView.h
+//  OMKLocationAnnotationView.h
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/11/7.
+//  Created by Sauron on 2022/11/8.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
@@ -11,9 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKPointAnnotationView : UIView
-
-- (instancetype)initWithAnnotation:(OMKPointAnnotation *)annotation;
+@interface OMKLocationAnnotationView : UIView
 
 @end
 

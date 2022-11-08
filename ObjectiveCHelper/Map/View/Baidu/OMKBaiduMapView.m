@@ -12,6 +12,7 @@
 #import <BMKLocationKit/BMKLocationManager.h>
 
 #import "OMKBaiduAnnotationView.h"
+#import "OMKLocationAnnotationView.h"
 
 
 @interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>
