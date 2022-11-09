@@ -8,16 +8,17 @@
 #import "OCHContentViewController.h"
 #import "OCHJXCategoryViewController.h"
 
-typedef NS_ENUM(NSUInteger, OCHTirdPartyItem) {
+typedef NS_ENUM(NSUInteger, OCHThirdPartyItem) {
     OCHTirdPartyItemBeg,
     OCHTirdPartyItemJXCategoryView = OCHTirdPartyItemBeg,
     OCHTirdPartyItemDVPieChart,
+    OCHTirdPartyItemReactiveObjC,
     OCHTirdPartyItemEnd,
 };
 
 NSArray<NSNumber *> * OCHTirdPartyItemAllItems(void);
-NSString * NSStringFromOCHTirdPartyItem(OCHTirdPartyItem item);
-UIViewController * UIViewControllerFromOCHTirdPartyItem(OCHTirdPartyItem item);
+NSString * NSStringFromOCHTirdPartyItem(OCHThirdPartyItem item);
+UIViewController * UIViewControllerFromOCHTirdPartyItem(OCHThirdPartyItem item);
 
 NS_ASSUME_NONNULL_BEGIN
 

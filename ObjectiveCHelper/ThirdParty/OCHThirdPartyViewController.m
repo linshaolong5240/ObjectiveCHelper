@@ -87,7 +87,7 @@ NSArray<NSNumber *> * OCHTirdPartyItemAllItems(void) {
     return items.copy;
 }
 
-NSString * NSStringFromOCHTirdPartyItem(OCHTirdPartyItem item) {
+NSString * NSStringFromOCHTirdPartyItem(OCHThirdPartyItem item) {
     switch (item) {
         case OCHTirdPartyItemJXCategoryView:
             return @"OCHTirdPartyItemJXCategoryView";
@@ -100,7 +100,7 @@ NSString * NSStringFromOCHTirdPartyItem(OCHTirdPartyItem item) {
     }
 }
 
-UIViewController * UIViewControllerFromOCHTirdPartyItem(OCHTirdPartyItem item) {
+UIViewController * UIViewControllerFromOCHTirdPartyItem(OCHThirdPartyItem item) {
     switch (item) {
         case OCHTirdPartyItemJXCategoryView:
             return [[OCHJXCategoryViewController alloc] init];

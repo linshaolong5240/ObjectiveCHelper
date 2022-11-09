@@ -40,6 +40,7 @@
 		188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */; };
 		188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */; };
 		1898F4B12919FFBC00F13718 /* OMKLocationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F4B02919FFBC00F13718 /* OMKLocationAnnotationView.m */; };
+		1898F4B5291A3E4400F13718 /* ReactiveObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F4B4291A3E4400F13718 /* ReactiveObjCViewController.m */; };
 		189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */; };
 		189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */; };
 		189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */; };
@@ -152,6 +153,8 @@
 		188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHValueStepper.m; sourceTree = "<group>"; };
 		1898F4AF2919FFBC00F13718 /* OMKLocationAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKLocationAnnotationView.h; sourceTree = "<group>"; };
 		1898F4B02919FFBC00F13718 /* OMKLocationAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKLocationAnnotationView.m; sourceTree = "<group>"; };
+		1898F4B3291A3E4400F13718 /* ReactiveObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveObjCViewController.h; sourceTree = "<group>"; };
+		1898F4B4291A3E4400F13718 /* ReactiveObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveObjCViewController.m; sourceTree = "<group>"; };
 		189BB85C28F543C300F2B287 /* UICollectionViewDemoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoCell.h; sourceTree = "<group>"; };
 		189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoCell.m; sourceTree = "<group>"; };
 		189BB87428F5920D00F2B287 /* UICollectionViewDemoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoHeaderView.h; sourceTree = "<group>"; };
@@ -382,6 +385,7 @@
 		188CA47E28F14F9100EF106E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				1898F4B2291A3E2100F13718 /* ReactiveObjC */,
 				188CA49328F262AC00EF106E /* JXCategoryView */,
 				188CA46128F112EF00EF106E /* OCHDVPieChartViewController.h */,
 				188CA46228F112EF00EF106E /* OCHDVPieChartViewController.m */,
@@ -433,6 +437,15 @@
 				181918FC2918EAC500694BD1 /* OMKPointAnnotationView.m */,
 			);
 			path = Annotation;
+			sourceTree = "<group>";
+		};
+		1898F4B2291A3E2100F13718 /* ReactiveObjC */ = {
+			isa = PBXGroup;
+			children = (
+				1898F4B3291A3E4400F13718 /* ReactiveObjCViewController.h */,
+				1898F4B4291A3E4400F13718 /* ReactiveObjCViewController.m */,
+			);
+			path = ReactiveObjC;
 			sourceTree = "<group>";
 		};
 		189BB85B28F543A200F2B287 /* View */ = {
@@ -892,6 +905,7 @@
 				189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */,
 				18FCF2FC29164595004A0CD7 /* OMKMapViewController.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHTableSection.m in Sources */,
+				1898F4B5291A3E4400F13718 /* ReactiveObjCViewController.m in Sources */,
 				1828250F28FFC50400D2E4CF /* UIColor+Extension.m in Sources */,
 				181918FD2918EAC500694BD1 /* OMKPointAnnotationView.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
