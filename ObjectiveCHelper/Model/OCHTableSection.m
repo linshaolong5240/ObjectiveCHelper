@@ -24,12 +24,11 @@ typedef id Value;
 
 - (instancetype)initWithLabel:(nullable Label)label value:(nullable Value)value {
     self = [super init];
+    if (self) {
+        self.label = label;
+        self.value = value;
+    }
     
-    if (!self) return  nil;;
-    
-    self.label = label;
-    self.value = value;
-
     return self;
 }
 
