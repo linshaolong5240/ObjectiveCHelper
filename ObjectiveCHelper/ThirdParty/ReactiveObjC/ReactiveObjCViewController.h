@@ -6,11 +6,11 @@
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OCHBaseViewController.h"
+#import "OCHScrollContentViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ReactiveObjCViewController : OCHBaseViewController
+@interface ReactiveObjCViewController : OCHScrollContentViewController
 
 @end
 

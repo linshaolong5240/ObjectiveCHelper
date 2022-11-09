@@ -31,7 +31,7 @@
     }];
     
     self.contentView.axis = UILayoutConstraintAxisVertical;
-    self.contentView.spacing = 6;
+    self.contentView.spacing = 10;
     [self.scrollView addSubview:self.contentView];
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.scrollView);
