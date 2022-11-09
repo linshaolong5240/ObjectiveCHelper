@@ -7,31 +7,34 @@
 
 #import "OCHTableSection.h"
 
+typedef id Label;
+typedef id Value;
+
 @implementation OCHTableSection
 
 - (instancetype)init {
     self = [super init];
-    if (!self) return nil;
-    
-    self.label = nil;
-    self.items = [NSMutableArray array];
+    if (self) {
+        self.label = nil;
+        self.value = nil;
+    }
     
     return nil;
 }
 
-- (instancetype)initWithLabel:(nullable id)label items:(nonnull NSArray *)items {
+- (instancetype)initWithLabel:(nullable Label)label value:(nullable Value)value {
     self = [super init];
     
     if (!self) return  nil;;
     
     self.label = label;
-    self.items = items.mutableCopy;
+    self.value = value;
 
     return self;
 }
 
-+ (instancetype)sectionWithLabel:(nullable id)label items:(nonnull NSArray *)items {
-    OCHTableSection *section = [[self alloc] initWithLabel:label items:items];
++ (instancetype)sectionWithLabel:(nullable Label)label value:(nullable Value)value {
+    OCHTableSection *section = [[self alloc] initWithLabel:label value:value];
     return section;
 }
 

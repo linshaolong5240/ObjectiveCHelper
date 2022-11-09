@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.sections = @[[[OCHTableSection alloc] initWithLabel:nil items:OCHTirdPartyItemAllItems()]];
+    self.sections = @[[[OCHTableSection alloc] initWithLabel:nil value:OCHTirdPartyItemAllItems()]];
     [self configureContentView];
 }
 
@@ -47,13 +47,13 @@
 //MARK: UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.sections[section].items.count;
+    return self.sections[section].value.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = NSStringFromOCHTirdPartyItem(self.sections[indexPath.section].items[indexPath.row].unsignedIntegerValue);
+    cell.textLabel.text = NSStringFromOCHTirdPartyItem(self.sections[indexPath.section].value[indexPath.row].unsignedIntegerValue);
     return cell;
 }
 

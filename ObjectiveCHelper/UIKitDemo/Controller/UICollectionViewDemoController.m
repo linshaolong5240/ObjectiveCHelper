@@ -24,8 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.blueColor;
-    OCHTableSection *section1 = [[OCHTableSection alloc] initWithLabel:@"title1" items:UIColor.colorItems];
-    OCHTableSection *section2 = [[OCHTableSection alloc] initWithLabel:@"title2" items:UIColor.colorItems];
+    OCHTableSection *section1 = [[OCHTableSection alloc] initWithLabel:@"title1" value:UIColor.colorItems];
+    OCHTableSection *section2 = [[OCHTableSection alloc] initWithLabel:@"title2" value:UIColor.colorItems];
 
     self.sections = @[section1, section2];
     [self configureCollectionView];
@@ -63,7 +63,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.sections[section].items.count;
+    return self.sections[section].value.count;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

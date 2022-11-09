@@ -126,8 +126,8 @@ typedef NS_ENUM(NSUInteger, SectionType) {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.sections = @[
-        [[OCHTableSection alloc] initWithLabel:@"UIKitCustom" items:OCHUIKitCustomAllItems()],
-        [[OCHTableSection alloc] initWithLabel:@"UIKitDemo" items:OCHUIKitDemoAllItems()],
+        [[OCHTableSection alloc] initWithLabel:@"UIKitCustom" value:OCHUIKitCustomAllItems()],
+        [[OCHTableSection alloc] initWithLabel:@"UIKitDemo" value:OCHUIKitDemoAllItems()],
     ];
     [self configureTableView];
 }
@@ -151,16 +151,16 @@ typedef NS_ENUM(NSUInteger, SectionType) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.sections[section].items.count;
+    return self.sections[section].value.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (SectionTypeUIKitCustom == indexPath.section) {
-        cell.textLabel.text = NSStringFromOCHUIKitCustom(self.sections[indexPath.section].items[indexPath.row].unsignedIntegerValue);
+        cell.textLabel.text = NSStringFromOCHUIKitCustom(self.sections[indexPath.section].value[indexPath.row].unsignedIntegerValue);
     } else {
-        cell.textLabel.text = NSStringFromOCHUIKitDemo(self.sections[indexPath.section].items[indexPath.row].unsignedIntegerValue);
+        cell.textLabel.text = NSStringFromOCHUIKitDemo(self.sections[indexPath.section].value[indexPath.row].unsignedIntegerValue);
     }
     return cell;
 }

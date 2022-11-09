@@ -19,8 +19,8 @@
     // Do any additional setup after loading the view.
     self.title = @"UITableView";
     self.sections = @[
-        [OCHTableSection sectionWithLabel:@"section1" items:UIColor.colorItems],
-        [OCHTableSection sectionWithLabel:@"section2" items:UIColor.colorItems],
+        [OCHTableSection sectionWithLabel:@"section1" value:UIColor.colorItems],
+        [OCHTableSection sectionWithLabel:@"section2" value:UIColor.colorItems],
     ].mutableCopy;
     [self configureContentView];
 }
@@ -51,13 +51,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.sections[section].items.count;
+    return self.sections[section].value.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewDemoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewDemoTableViewCell class]) forIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"section:%ld, row: %ld", indexPath.section, indexPath.row];
-    cell.backgroundColor = self.sections[indexPath.section].items[indexPath.row];
+    cell.backgroundColor = self.sections[indexPath.section].value[indexPath.row];
     return cell;
 }
 
