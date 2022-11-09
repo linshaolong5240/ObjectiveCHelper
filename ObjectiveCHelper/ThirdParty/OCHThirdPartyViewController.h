@@ -11,6 +11,7 @@
 typedef NS_ENUM(NSUInteger, OCHThirdPartyItem) {
     OCHTirdPartyItemBeg,
     OCHTirdPartyItemJXCategoryView = OCHTirdPartyItemBeg,
+    OCHTirdPartyItemMJRefresh,
     OCHTirdPartyItemDVPieChart,
     OCHTirdPartyItemReactiveObjC,
     OCHTirdPartyItemEnd,

@@ -8,7 +8,9 @@
 #import "OCHThirdPartyViewController.h"
 #import "OCHTableSection.h"
 #import "OCHJXCategoryViewController.h"
-#import "OCHDVPieChartViewController.h"
+#import "OCHDVPieChartDemoViewController.h"
+#import "MJRefreshDemoViewController.h"
+#import "ReactiveObjCViewController.h"
 
 @interface OCHThirdPartyViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -94,7 +96,13 @@ NSString * NSStringFromOCHTirdPartyItem(OCHThirdPartyItem item) {
             break;
         case OCHTirdPartyItemDVPieChart:
             return @"OCHTirdPartyItemDVPieChart";
-        default:
+        case OCHTirdPartyItemMJRefresh:
+            return @"OCHTirdPartyItemMJRefresh";
+            break;
+        case OCHTirdPartyItemReactiveObjC:
+            return @"OCHTirdPartyItemReactiveObjC";
+            break;
+        case OCHTirdPartyItemEnd:
             return @"";
             break;
     }
@@ -106,10 +114,15 @@ UIViewController * UIViewControllerFromOCHTirdPartyItem(OCHThirdPartyItem item) 
             return [[OCHJXCategoryViewController alloc] init];
             break;
         case OCHTirdPartyItemDVPieChart:
-            return [[OCHDVPieChartViewController alloc] init];
+            return [[OCHDVPieChartDemoViewController alloc] init];
             break;
-        default:
+        case OCHTirdPartyItemMJRefresh:
+            return [[MJRefreshDemoViewController alloc] init];
+            break;
+        case OCHTirdPartyItemReactiveObjC:
+            return [[ReactiveObjCViewController alloc] init];
+            break;
+        case OCHTirdPartyItemEnd:
             return nil;
-            break;
     }
 }

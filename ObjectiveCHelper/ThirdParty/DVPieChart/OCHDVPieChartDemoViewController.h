@@ -1,5 +1,5 @@
 //
-//  OCHDVPieChartViewController.h
+//  OCHDVPieChartDemoViewController.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/8.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHDVPieChartViewController : OCHContentViewController
+@interface OCHDVPieChartDemoViewController : OCHContentViewController
 
 @end
 

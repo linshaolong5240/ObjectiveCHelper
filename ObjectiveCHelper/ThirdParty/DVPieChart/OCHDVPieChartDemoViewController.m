@@ -1,19 +1,19 @@
 //
-//  OCHDVPieChartViewController.m
+//  OCHDVPieChartDemoViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/8.
 //
 
-#import "OCHDVPieChartViewController.h"
+#import "OCHDVPieChartDemoViewController.h"
 #import "DVPieChart.h"
 #import "DVFoodPieModel.h"
 
-@interface OCHDVPieChartViewController ()
+@interface OCHDVPieChartDemoViewController ()
 
 @end
 
-@implementation OCHDVPieChartViewController
+@implementation OCHDVPieChartDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
