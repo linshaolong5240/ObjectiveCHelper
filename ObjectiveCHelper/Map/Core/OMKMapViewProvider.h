@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import "OMKAnnotationView.h"
 #import "OMKPointAnnotation.h"
 #import "OMKPointAnnotationView.h"
 
@@ -34,7 +35,7 @@ NSString *NSStringFromOMKMapType(OMKMapType type);
 
 @optional
 
-- (OMKPointAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(OMKPointAnnotation *)annotation;
+- (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation;
 
 @end
 
@@ -50,14 +51,8 @@ NSString *NSStringFromOMKMapType(OMKMapType type);
  * @brief 向地图窗口添加标注，需要实现MAMapViewDelegate的-mapView:viewForAnnotation:函数来生成标注对应的View
  * @param annotation 要添加的标注
  */
-- (void) addAnnotation:(OMKPointAnnotation *)annotation;
+- (void) addAnnotation:(id<OMKAnnotation>)annotation;
 
 @optional
 
 @end
-
-NS_ASSUME_NONNULL_BEGIN
-
-
-
-NS_ASSUME_NONNULL_END

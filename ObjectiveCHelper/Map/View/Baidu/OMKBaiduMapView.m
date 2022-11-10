@@ -28,30 +28,9 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setupView];
-    }
-    return self;
-}
-
-- (void)setupView {
-    [self addSubview:self.mapView];
-    [self.locationManager startUpdatingLocation];
-}
-
-#pragma mark - Getter / Setter
-
-- (BMKMapView *)mapView {
-    if (!_mapView) {
         _mapView = [[BMKMapView alloc]initWithFrame:self.bounds];
         _mapView.delegate = self;
-    }
-    
-    return _mapView;
-}
-
-- (BMKLocationManager *)locationManager {
-    if (!_locationManager) {
-        //初始化BMKLocationManager类的实例
+        
         _locationManager = [[BMKLocationManager alloc] init];
         //设置定位管理类实例的代理
         _locationManager.delegate = self;
@@ -75,9 +54,18 @@
          后开始计算。
          */
         _locationManager.locationTimeout = 10;
+        
+        [self setupView];
     }
-    return _locationManager;
+    return self;
 }
+
+- (void)setupView {
+    [self addSubview:self.mapView];
+    [self.locationManager startUpdatingLocation];
+}
+
+#pragma mark - Getter / Setter
 
 
 #pragma mark - OMKMapProvider

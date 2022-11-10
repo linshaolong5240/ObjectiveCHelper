@@ -7,6 +7,7 @@
 //
 
 #import "OMKBaiduAnnotationView.h"
+#import "OMKAnnotation.h"
 
 @implementation OMKBaiduAnnotationView
 

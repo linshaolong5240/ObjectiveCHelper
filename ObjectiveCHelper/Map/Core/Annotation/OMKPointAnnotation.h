@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CLLocation.h>
+#import "OMKAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKPointAnnotation : NSObject <NSCopying>
+@interface OMKPointAnnotation : NSObject <OMKAnnotation>
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString *title;

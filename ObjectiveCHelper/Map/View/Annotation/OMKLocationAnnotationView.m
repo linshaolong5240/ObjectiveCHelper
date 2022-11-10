@@ -13,26 +13,17 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setupUI];
+        [self configureView];
     }
     
     return self;
 }
 
-- (instancetype)initWithAnnotation:(OMKPointAnnotation *)anntotatioon {
-    self = [self initWithFrame:CGRectMake(0, 0, 63, 63)];
-    if (self) {
-        [self setupUI];
-    }
-    
-    return self;
-}
-
-- (void)setupUI {
+- (void)configureView {
     UIImageView *pointImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-    pointImageView.image = [UIImage imageNamed:@"omk_point_location_user"];
+    pointImageView.image = [UIImage imageNamed:@"omk_point_user_location"];
     UIImageView *bubbleImageView = [[UIImageView alloc] initWithFrame:CGRectMake((self.bounds.size.width - 44) / 2.0, 0, 44, 24)];
-    bubbleImageView.image = [UIImage imageNamed:@"omk_point_location_employee"];
+    bubbleImageView.image = [UIImage imageNamed:@"omk_bubble_user_location"];
     
     [self addSubview:pointImageView];
     [self addSubview:bubbleImageView];

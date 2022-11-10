@@ -22,6 +22,9 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        _mapView = [[MAMapView alloc] initWithFrame:self.bounds];
+        _mapView.delegate = self;
+
         [self setupView];
     }
     return self;
@@ -32,14 +35,6 @@
 }
 
 #pragma mark - Getter / Setter
-
-- (MAMapView *)mapView {
-    if (!_mapView) {
-        _mapView = [[MAMapView alloc] initWithFrame:self.bounds];
-        _mapView.delegate = self;
-    }
-    return _mapView;
-}
 
 #pragma mark - OMKMapProvider
 

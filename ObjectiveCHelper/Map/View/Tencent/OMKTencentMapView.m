@@ -22,6 +22,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        _mapView = [[QMapView alloc] initWithFrame:self.bounds];
+        _mapView.delegate = self;
         [self setupView];
     }
     return self;
@@ -31,15 +33,7 @@
     [self addSubview:self.mapView];
 }
 
-#pragma mark - Gettset / Setter
-
-- (QMapView *)mapView {
-    if (!_mapView) {
-        _mapView = [[QMapView alloc] initWithFrame:self.bounds];
-        _mapView.delegate = self;
-    }
-    return _mapView;
-}
+#pragma mark - Getter / Setter
 
 #pragma mark - OMKMapProvider
 

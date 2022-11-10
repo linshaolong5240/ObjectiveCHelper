@@ -10,11 +10,3 @@
 #import "OMKAMapView.h"
 #import "OMKBaiduMapView.h"
 #import "OMKTencentMapView.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface OMKMapView : UIView
-
-@end
-
-NS_ASSUME_NONNULL_END
