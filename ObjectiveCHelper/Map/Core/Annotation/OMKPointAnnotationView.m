@@ -9,27 +9,21 @@
 #import "OMKPointAnnotationView.h"
 #import "OMKPointAnnotation.h"
 
-@interface OMKPointAnnotationView ()
-
-@property(nonatomic, copy) OMKPointAnnotation *annotation;
-
-@end
-
 @implementation OMKPointAnnotationView
 
-- (instancetype)initWithAnnotation:(OMKPointAnnotation *)annotation {
-    self = [super initWithFrame:CGRectZero];
+- (instancetype)initWithAnnotation:(id<OMKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self) {
-        _annotation = annotation;
-        [self setupUI];
+        [self configureView];
     }
-    
     return self;
 }
 
-- (void)setupUI {
+
+- (void)configureView {
     self.backgroundColor = UIColor.orangeColor;
     self.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, 16, 16);
+    self.frame = self.bounds;
     self.layer.cornerRadius = 8;
     self.layer.borderColor = UIColor.whiteColor.CGColor;
     self.layer.borderWidth = 2;
@@ -42,7 +36,7 @@
     [subtitleLable sizeToFit];
     
     UIStackView *vstack = [[UIStackView alloc] init];
-    vstack.backgroundColor = UIColor.blueColor;
+    vstack.backgroundColor = UIColor.orangeColor;
     vstack.axis = UILayoutConstraintAxisVertical;
     if (titleLable.text) {
         [vstack addArrangedSubview: titleLable];

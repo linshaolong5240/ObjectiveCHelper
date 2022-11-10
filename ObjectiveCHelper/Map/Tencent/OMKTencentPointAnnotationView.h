@@ -1,16 +1,17 @@
 //
-//  OMKBaiduAnnotationView.h
+//  OMKTencentPointAnnotationView.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/7.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import <Foundation/Foundation.h>
+#import <QMapKit/QMapKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKBaiduAnnotationView : BMKAnnotationView
+@interface OMKTencentPointAnnotationView : QAnnotationView
 
 @end
 

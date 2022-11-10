@@ -1,21 +1,21 @@
 //
-//  OMKBaiduAnnotationView.m
+//  OMKAMapPointAnnotationView.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/7.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKBaiduAnnotationView.h"
-#import "OMKAnnotation.h"
+#import "OMKAMapPointAnnotationView.h"
 
-@implementation OMKBaiduAnnotationView
+@implementation OMKAMapPointAnnotationView
 
-- (instancetype)initWithAnnotation:(id<BMKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
+- (id)initWithAnnotation:(id<MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self) {
         [self setupUI];
     }
+    
     return self;
 }
 
@@ -52,5 +52,14 @@
     }];
     
 }
+
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
 
 @end

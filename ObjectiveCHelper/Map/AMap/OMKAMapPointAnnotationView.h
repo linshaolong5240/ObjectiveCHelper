@@ -1,5 +1,5 @@
 //
-//  OMKAMapAnnotationView.h
+//  OMKAMapPointAnnotationView.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/7.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKAMapAnnotationView : MAAnnotationView
+@interface OMKAMapPointAnnotationView : MAAnnotationView
 
 @end
 

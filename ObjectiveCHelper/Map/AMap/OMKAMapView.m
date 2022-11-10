@@ -8,7 +8,7 @@
 
 #import "OMKAMapView.h"
 #import <MAMapKit/MAMapKit.h>
-#import "OMKAMapAnnotationView.h"
+#import "OMKAMapPointAnnotationView.h"
 
 @interface OMKAMapView () <MAMapViewDelegate>
 
@@ -61,7 +61,7 @@
     }
 }
 
-- (void)addAnnotation:(OMKPointAnnotation *)annotation {
+- (void)addAnnotation:(id<OMKAnnotation>)annotation {
     MAPointAnnotation *pointAnntation = [[MAPointAnnotation alloc] init];
     pointAnntation.coordinate = annotation.coordinate;
     pointAnntation.title = annotation.title;
@@ -144,9 +144,9 @@
        return nil;
     } else if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
         static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
-        MAAnnotationView *annotationView = (MAAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
+        OMKAMapPointAnnotationView *annotationView = (OMKAMapPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
         if (annotationView == nil) {
-            annotationView = [[OMKAMapAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
+            annotationView = [[OMKAMapPointAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
         }
         return annotationView;
     }

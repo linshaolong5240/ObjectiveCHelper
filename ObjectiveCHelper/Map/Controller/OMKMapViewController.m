@@ -42,16 +42,26 @@
     }
     self.mapView.showsUserLocation = YES;
     self.mapView.userTrackingMode = OCHMapUserTrackingModeFollowWithHeading;
+    self.mapView.delegate = self;
+    
+    [self.view addSubview:self.mapView];
     
     OMKPointAnnotation *annotation = [[OMKPointAnnotation alloc] init];
     annotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.1911);
     annotation.title = @"tittle";
     annotation.subtitle = @"subtittle";
-    
     [self.mapView addAnnotation:annotation];
-    [self.view addSubview:self.mapView];
+    
 }
 
 #pragma mark - OMKMapViewDelegate
+
+- (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation {
+    if ([annotation isKindOfClass:[OMKAnnotation class]]) {
+        OMKAnnotationView *annotationView = [[OMKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:NSStringFromClass([OMKAnnotationView class])];
+        return annotationView;
+    }
+    return nil;
+}
 
 @end

@@ -11,9 +11,10 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BMKLocationKit/BMKLocationManager.h>
 
-#import "OMKBaiduAnnotationView.h"
 #import "OMKLocationAnnotationView.h"
 
+#import "OMKBaiduPointAnnotation.h"
+#import "OMKBaiduPointAnnotationView.h"
 
 @interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>
 
@@ -55,53 +56,14 @@
          */
         _locationManager.locationTimeout = 10;
         
-        [self setupView];
+        [self configureView];
     }
     return self;
 }
 
-- (void)setupView {
+- (void)configureView {
     [self addSubview:self.mapView];
     [self.locationManager startUpdatingLocation];
-}
-
-#pragma mark - Getter / Setter
-
-
-#pragma mark - OMKMapProvider
-
-- (BOOL)showsUserLocation {
-    return self.mapView.showsUserLocation;
-}
-
-- (void)setShowsUserLocation:(BOOL)showsUserLocation {
-    self.mapView.showsUserLocation = showsUserLocation;
-}
-
-- (void)setUserTrackingMode:(OMKUserTrackingMode)userTrackingMode {
-    _userTrackingMode = userTrackingMode;
-    switch (userTrackingMode) {
-        case OCHMapUserTrackingModeNone:
-            self.mapView.userTrackingMode = BMKUserTrackingModeNone;
-            break;
-        case OCHMapUserTrackingModeFollow:
-            self.mapView.userTrackingMode = BMKUserTrackingModeFollow;
-            break;
-        case OCHMapUserTrackingModeFollowWithHeading:
-            self.mapView.userTrackingMode = BMKUserTrackingModeFollowWithHeading;
-            break;
-    }
-}
-
-- (void)addAnnotation:(OMKPointAnnotation *)annotation {
-    annotation = [annotation copy];
-    BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc]init];
-    pointAnnotation.coordinate = annotation.coordinate;
-    pointAnnotation.title = annotation.title;
-    //副标题
-    pointAnnotation.subtitle = annotation.subtitle;
-
-    [self.mapView addAnnotation:pointAnnotation];
 }
 
 #pragma mark - BMKLocationManagerDelegate
@@ -203,20 +165,68 @@
     
 }
 
-#pragma mark - BMKLocationManagerDelegate
+#pragma mark - BMKMapViewDelegate
 
 - (nullable __kindof BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
-    if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
-        static NSString *reuseIndetifier = @"annotationReuseIndetifier";
-        BMKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
-        if (annotationView == nil) {
-            annotationView = [[OMKBaiduAnnotationView alloc] initWithAnnotation:annotation
-                                                              reuseIdentifier:reuseIndetifier];
-            annotationView.canShowCallout = NO;
+    if ([annotation isKindOfClass:[OMKBaiduPointAnnotation class]]) {
+        OMKBaiduPointAnnotation *baiduAnnotation = (OMKBaiduPointAnnotation *)annotation;
+        if ([baiduAnnotation.omkAnnotation isKindOfClass:[OMKPointAnnotation class]]) {
+            OMKBaiduPointAnnotationView *annotationView = (OMKBaiduPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:NSStringFromClass([OMKAnnotationView class])];
+            if (annotationView == nil) {
+                OMKPointAnnotationView *view = [self.delegate mapView:self viewForAnnotation:baiduAnnotation.omkAnnotation];
+                annotationView = [[OMKBaiduPointAnnotationView alloc] initWithView:view];
+                annotationView.canShowCallout = NO;
+            }
+            return annotationView;
         }
-        return annotationView;
+
+        //        BMKPinAnnotationView *annotationView = (BMKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:NSStringFromClass([BMKAnnotationView class])];
+        //        if (annotationView == nil) {
+        //            annotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
+        //                                                              reuseIdentifier:NSStringFromClass([BMKPinAnnotationView class])];
+        //        }
     }
+    
+//    static NSString *reuseIndetifier = @"annotationReuseIndetifier";
+//    BMKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
+//    if (annotationView == nil)
+//    {
+//        annotationView = [[BMKAnnotationView alloc] initWithAnnotation:annotation
+//                                                          reuseIdentifier:reuseIndetifier];
+//    }
+//    return annotationView;
+    
     return nil;
+}
+
+#pragma mark - OMKMapProvider
+
+- (BOOL)showsUserLocation {
+    return self.mapView.showsUserLocation;
+}
+
+- (void)setShowsUserLocation:(BOOL)showsUserLocation {
+    self.mapView.showsUserLocation = showsUserLocation;
+}
+
+- (void)setUserTrackingMode:(OMKUserTrackingMode)userTrackingMode {
+    _userTrackingMode = userTrackingMode;
+    switch (userTrackingMode) {
+        case OCHMapUserTrackingModeNone:
+            self.mapView.userTrackingMode = BMKUserTrackingModeNone;
+            break;
+        case OCHMapUserTrackingModeFollow:
+            self.mapView.userTrackingMode = BMKUserTrackingModeFollow;
+            break;
+        case OCHMapUserTrackingModeFollowWithHeading:
+            self.mapView.userTrackingMode = BMKUserTrackingModeFollowWithHeading;
+            break;
+    }
+}
+
+- (void)addAnnotation:(id<OMKAnnotation>)annotation {
+    OMKBaiduPointAnnotation *baiduAnnotation = [[OMKBaiduPointAnnotation alloc] initWithAnnotation:annotation];
+    [self.mapView addAnnotation:baiduAnnotation];
 }
 
 @end

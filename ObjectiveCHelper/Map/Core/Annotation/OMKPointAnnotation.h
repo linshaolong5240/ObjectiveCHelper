@@ -12,11 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKPointAnnotation : NSObject <OMKAnnotation>
-
-@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *subtitle;
+@interface OMKPointAnnotation : OMKAnnotation
 
 @end
 

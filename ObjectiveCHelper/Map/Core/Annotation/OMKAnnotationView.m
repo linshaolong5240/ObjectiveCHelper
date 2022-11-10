@@ -7,15 +7,18 @@
 //
 
 #import "OMKAnnotationView.h"
+#import "OMKAnnotation.h"
 
 @implementation OMKAnnotationView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithAnnotation:(id<OMKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithFrame:CGRectZero];
+    if (self) {
+        _annotation = annotation;
+        _reuseIdentifier = reuseIdentifier;
+    }
+    
+    return self;
 }
-*/
 
 @end

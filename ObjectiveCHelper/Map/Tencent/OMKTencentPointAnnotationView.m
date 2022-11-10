@@ -1,21 +1,20 @@
 //
-//  OMKAMapAnnotationView.m
+//  OMKTencentPointAnnotationView.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/7.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKAMapAnnotationView.h"
+#import "OMKTencentPointAnnotationView.h"
 
-@implementation OMKAMapAnnotationView
+@implementation OMKTencentPointAnnotationView
 
-- (id)initWithAnnotation:(id<MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
+- (id)initWithAnnotation:(id<QAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self) {
         [self setupUI];
     }
-    
     return self;
 }
 
@@ -52,14 +51,5 @@
     }];
     
 }
-
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

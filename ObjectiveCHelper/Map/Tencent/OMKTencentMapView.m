@@ -8,7 +8,7 @@
 
 #import "OMKTencentMapView.h"
 #import <QMapKit/QMapKit.h>
-#import "OMKTencentAnnotationView.h"
+#import "OMKTencentPointAnnotationView.h"
 
 @interface OMKTencentMapView () <QMapViewDelegate>
 
@@ -60,7 +60,7 @@
     }
 }
 
-- (void)addAnnotation:(OMKPointAnnotation *)annotation {
+- (void)addAnnotation:(id<OMKAnnotation>)annotation {
     QPointAnnotation *pointAnnotation = [[QPointAnnotation alloc] init];
     pointAnnotation.coordinate = annotation.coordinate;
     pointAnnotation.title = annotation.title;
@@ -145,9 +145,9 @@
 - (QAnnotationView *)mapView:(QMapView *)mapView viewForAnnotation:(id<QAnnotation>)annotation {
     if ([annotation isKindOfClass:[QPointAnnotation class]]) {
         static NSString *annotationIdentifier = @"pointAnnotation";
-        QAnnotationView *pinView = (QAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
+        OMKTencentPointAnnotationView *pinView = (OMKTencentPointAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
         if (pinView == nil) {
-            pinView = [[OMKTencentAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
+            pinView = [[OMKTencentPointAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
         }
         return pinView;
     }
