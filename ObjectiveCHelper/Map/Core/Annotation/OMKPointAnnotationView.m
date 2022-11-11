@@ -27,24 +27,24 @@
     self.layer.borderColor = UIColor.whiteColor.CGColor;
     self.layer.borderWidth = 2;
     
-    UILabel *titleLable = [[UILabel alloc] init];
-    titleLable.text = self.annotation.title;
-    [titleLable sizeToFit];
-    UILabel *subtitleLable = [[UILabel alloc] init];
-    subtitleLable.text = self.annotation.subtitle;
-    [subtitleLable sizeToFit];
+    UILabel *titleLabel = [[UILabel alloc] init];
+    titleLabel.text = self.annotation.title;
+    [titleLabel sizeToFit];
+    UILabel *subtitleLabel = [[UILabel alloc] init];
+    subtitleLabel.text = self.annotation.subtitle;
+    [subtitleLabel sizeToFit];
     
     UIStackView *vstack = [[UIStackView alloc] init];
     vstack.backgroundColor = UIColor.orangeColor;
     vstack.axis = UILayoutConstraintAxisVertical;
-    if (titleLable.text) {
-        [vstack addArrangedSubview: titleLable];
+    if (titleLabel.text) {
+        [vstack addArrangedSubview: titleLabel];
     }
-    if (subtitleLable.text) {
-        [vstack addArrangedSubview: subtitleLable];
+    if (subtitleLabel.text) {
+        [vstack addArrangedSubview: subtitleLabel];
     }
     [self addSubview:vstack];
-    CGFloat width = titleLable.bounds.size.width > subtitleLable.bounds.size.width ? titleLable.bounds.size.width : subtitleLable.bounds.size.width;
+    CGFloat width = titleLabel.bounds.size.width > subtitleLabel.bounds.size.width ? titleLabel.bounds.size.width : subtitleLabel.bounds.size.width;
     
     [vstack mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.mas_top).offset(- 10);
