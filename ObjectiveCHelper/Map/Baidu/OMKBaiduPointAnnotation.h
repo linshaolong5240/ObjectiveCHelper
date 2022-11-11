@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OMKBaiduPointAnnotation : BMKPointAnnotation <OMKAnnotation>
 
-@property(nonatomic, strong) id<OMKAnnotation> omkAnnotation;
+@property(nonatomic, strong) OMKAnnotation * omkAnnotation;
 
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithAnnotation:(id<OMKAnnotation>) annotation NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithAnnotation:(__kindof OMKAnnotation *) annotation NS_DESIGNATED_INITIALIZER;
 
 @end
 

@@ -171,10 +171,10 @@
     if ([annotation isKindOfClass:[OMKBaiduPointAnnotation class]]) {
         OMKBaiduPointAnnotation *baiduAnnotation = (OMKBaiduPointAnnotation *)annotation;
         if ([baiduAnnotation.omkAnnotation isKindOfClass:[OMKPointAnnotation class]]) {
-            OMKBaiduPointAnnotationView *annotationView = (OMKBaiduPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:NSStringFromClass([OMKAnnotationView class])];
+            OMKBaiduPointAnnotationView *annotationView = (OMKBaiduPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:NSStringFromClass([OMKPointAnnotationView class])];
             if (annotationView == nil) {
                 OMKPointAnnotationView *view = [self.delegate mapView:self viewForAnnotation:baiduAnnotation.omkAnnotation];
-                annotationView = [[OMKBaiduPointAnnotationView alloc] initWithView:view];
+                annotationView = [[OMKBaiduPointAnnotationView alloc] initWithView:view annotation:annotation];
                 annotationView.canShowCallout = NO;
             }
             return annotationView;
@@ -209,7 +209,7 @@
     }
 }
 
-- (void)addAnnotation:(id<OMKAnnotation>)annotation {
+- (void)addAnnotation:(__kindof OMKAnnotation *)annotation {
     OMKBaiduPointAnnotation *baiduAnnotation = [[OMKBaiduPointAnnotation alloc] initWithAnnotation:annotation];
     [self.mapView addAnnotation:baiduAnnotation];
 }

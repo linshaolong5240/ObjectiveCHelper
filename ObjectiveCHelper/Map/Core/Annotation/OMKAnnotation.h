@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol OMKAnnotationDelegate;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol OMKAnnotation <NSObject, NSCopying>
+@protocol OMKAnnotation <NSObject>
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString *title;
@@ -20,9 +22,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OMKAnnotation : NSObject <OMKAnnotation>
 
+@property (nonatomic, weak) id<OMKAnnotationDelegate> delegate;
+
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subtitle;
+
+
+@end
+
+@protocol OMKAnnotationDelegate <NSObject>
+
+@optional
+
+- (void)annotation:(OMKAnnotation *)annotation didChangedCoordinate:(CLLocationCoordinate2D)coordinate;
 
 @end
 

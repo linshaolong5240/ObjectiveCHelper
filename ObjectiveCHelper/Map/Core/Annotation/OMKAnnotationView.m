@@ -11,7 +11,7 @@
 
 @implementation OMKAnnotationView
 
-- (instancetype)initWithAnnotation:(id<OMKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
+- (instancetype)initWithAnnotation:(__kindof OMKAnnotation *)annotation reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithFrame:CGRectZero];
     if (self) {
         _annotation = annotation;

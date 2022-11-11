@@ -13,9 +13,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _coordinate = CLLocationCoordinate2DMake(39.915, 116.404);
-        _title = @"";
-        _subtitle = @"";
+
     }
     return self;
 }
@@ -26,13 +24,11 @@
 #endif
 }
 
-- (nonnull id)copyWithZone:(nullable NSZone *)zone {
-    id copy = [[[self class] allocWithZone:zone] init];
-    [copy setCoordinate:self.coordinate];// = self.coordinate;
-    [copy setTitle:self.title];
-    [copy setSubtitle:self.subtitle];
-    
-    return copy;
+- (void)setCoordinate:(CLLocationCoordinate2D)coordinate {
+    _coordinate = coordinate;
+    if ([self.delegate respondsToSelector:@selector(annotation:didChangedCoordinate:)]) {
+        [self.delegate annotation:self didChangedCoordinate:coordinate];
+    }
 }
 
 @end

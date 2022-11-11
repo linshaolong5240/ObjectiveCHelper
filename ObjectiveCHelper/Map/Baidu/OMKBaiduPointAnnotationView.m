@@ -18,10 +18,10 @@
 
 @implementation OMKBaiduPointAnnotationView
 
-- (instancetype)initWithView:(__kindof OMKAnnotationView *)view {
-    self = [super initWithAnnotation:[[OMKBaiduPointAnnotation alloc] initWithAnnotation:view.annotation] reuseIdentifier:view.reuseIdentifier];
+- (instancetype)initWithView:(__kindof OMKAnnotationView *)view annotation:(id <BMKAnnotation>)annotation {
+    self = [super initWithAnnotation:annotation reuseIdentifier:view.reuseIdentifier];
     if (self) {
-        _omkAnnotationView =  view;
+        _omkAnnotationView = view;
         [self configureView];
     }
     return self;

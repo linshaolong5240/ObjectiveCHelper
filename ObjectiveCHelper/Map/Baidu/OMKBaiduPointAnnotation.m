@@ -8,18 +8,27 @@
 
 #import "OMKBaiduPointAnnotation.h"
 
+@interface OMKBaiduPointAnnotation () <OMKAnnotationDelegate>
+
+@end
+
 @implementation OMKBaiduPointAnnotation
 
-- (instancetype)initWithAnnotation:(id<OMKAnnotation>) annotation {
+- (instancetype)initWithAnnotation:(__kindof OMKAnnotation *) annotation {
     self = [super init];
     if (self) {
         _omkAnnotation = annotation;
+        _omkAnnotation.delegate = self;
         self.coordinate = annotation.coordinate;
         self.title = annotation.title;
         self.subtitle = annotation.subtitle;
     }
     
     return self;
+}
+
+- (void)annotation:(OMKAnnotation *)annotation didChangedCoordinate:(CLLocationCoordinate2D)coordinate {
+    [self setCoordinate:coordinate];
 }
 
 @end

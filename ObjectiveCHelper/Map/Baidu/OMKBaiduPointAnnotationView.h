@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface OMKBaiduPointAnnotationView : BMKAnnotationView
 
 - (instancetype)initWithAnnotation:(id <BMKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier NS_UNAVAILABLE;
-- (instancetype)initWithView:(__kindof OMKAnnotationView *)view NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithView:(__kindof OMKAnnotationView *)view annotation:(id <BMKAnnotation>)annotation NS_DESIGNATED_INITIALIZER;
 
 @end
 
