@@ -29,7 +29,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _mapView = [[BMKMapView alloc]initWithFrame:self.bounds];
+        _mapView = [[BMKMapView alloc] initWithFrame:self.bounds];
         _mapView.delegate = self;
         
         _locationManager = [[BMKLocationManager alloc] init];
@@ -170,10 +170,12 @@
 - (nullable __kindof BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
     if ([annotation isKindOfClass:[OMKBaiduPointAnnotation class]]) {
         OMKBaiduPointAnnotation *baiduAnnotation = (OMKBaiduPointAnnotation *)annotation;
+        //判断上层Annotation类型
         if ([baiduAnnotation.omkAnnotation isKindOfClass:[OMKPointAnnotation class]]) {
+            //dequeueReusableAnnotationViewWithIdentifier
             OMKBaiduPointAnnotationView *annotationView = (OMKBaiduPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:NSStringFromClass([OMKPointAnnotationView class])];
             if (annotationView == nil) {
-                OMKPointAnnotationView *view = [self.delegate mapView:self viewForAnnotation:baiduAnnotation.omkAnnotation];
+                OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:baiduAnnotation.omkAnnotation];
                 annotationView = [[OMKBaiduPointAnnotationView alloc] initWithView:view annotation:annotation];
                 annotationView.canShowCallout = NO;
             }
@@ -212,6 +214,27 @@
 - (void)addAnnotation:(__kindof OMKAnnotation *)annotation {
     OMKBaiduPointAnnotation *baiduAnnotation = [[OMKBaiduPointAnnotation alloc] initWithAnnotation:annotation];
     [self.mapView addAnnotation:baiduAnnotation];
+}
+
+- (void)removeAnnotation:(__kindof OMKAnnotation *)annotation {
+    NSUInteger index;
+    
+    index = [self.mapView.annotations indexOfObjectPassingTest:^BOOL(id<BMKAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[OMKBaiduPointAnnotation class]]) {
+            OMKBaiduPointAnnotation *baiduAnnotation = (OMKBaiduPointAnnotation *)obj;
+            if (baiduAnnotation.omkAnnotation == annotation) {
+                NSLog(@"%@", @(idx));
+                *stop = YES;
+                return YES;
+            }
+        }
+        return NO;
+    }];
+    
+    if (index != NSNotFound) {
+        id<BMKAnnotation> baiduAnnotation = self.mapView.annotations[index];
+        [self.mapView removeAnnotation:baiduAnnotation];
+    }
 }
 
 @end

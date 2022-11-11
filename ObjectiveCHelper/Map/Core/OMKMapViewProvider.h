@@ -35,7 +35,7 @@ NSString *NSStringFromOMKMapType(OMKMapType type);
 
 @optional
 
-- (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation;
+- (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(__kindof OMKAnnotation *)annotation;
 
 @end
 
@@ -52,6 +52,8 @@ NSString *NSStringFromOMKMapType(OMKMapType type);
  * @param annotation 要添加的标注
  */
 - (void) addAnnotation:(__kindof OMKAnnotation *)annotation;
+
+- (void) removeAnnotation:(__kindof OMKAnnotation *)annotation;
 
 @optional
 

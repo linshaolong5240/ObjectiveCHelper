@@ -35,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 
+- (void)setCoordinate:(CLLocationCoordinate2D)coordinate;
+
 - (void)annotation:(OMKAnnotation *)annotation didChangedCoordinate:(CLLocationCoordinate2D)coordinate;
 
 @end
