@@ -23,7 +23,6 @@
 - (void)configureView {
     self.backgroundColor = UIColor.orangeColor;
     self.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, 16, 16);
-    self.frame = self.bounds;
     self.layer.cornerRadius = 8;
     self.layer.borderColor = UIColor.whiteColor.CGColor;
     self.layer.borderWidth = 2;
@@ -52,7 +51,6 @@
             make.centerX.equalTo(self);
             make.width.mas_equalTo(width);
     }];
-    
 }
 
 @end

@@ -11,6 +11,7 @@
 @interface OMKMapViewController () <OMKMapViewDelegate>
 
 @property(nonatomic, strong) UIView<OMKMapViewProvider> *mapView;
+@property(nonatomic, strong) OMKPointAnnotation *customAnnotation;
 
 @end
 
@@ -50,6 +51,7 @@
     annotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.1911);
     annotation.title = @"tittle";
     annotation.subtitle = @"subtittle";
+    self.customAnnotation = annotation;
     [self.mapView addAnnotation:annotation];
     
 }
@@ -57,8 +59,8 @@
 #pragma mark - OMKMapViewDelegate
 
 - (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation {
-    if ([annotation isKindOfClass:[OMKAnnotation class]]) {
-        OMKAnnotationView *annotationView = [[OMKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:NSStringFromClass([OMKAnnotationView class])];
+    if ([annotation isKindOfClass:[OMKPointAnnotation class]]) {
+        OMKPointAnnotationView *annotationView = [[OMKPointAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:NSStringFromClass([OMKPointAnnotationView class])];
         return annotationView;
     }
     return nil;

@@ -20,6 +20,12 @@
     return self;
 }
 
+- (void)dealloc {
+#if DEBUG
+    NSLog(@"dealloc: %@, title: %@, subtitle: %@, coordinate", NSStringFromClass([self class]), self.title, self.subtitle);
+#endif
+}
+
 - (nonnull id)copyWithZone:(nullable NSZone *)zone {
     id copy = [[[self class] allocWithZone:zone] init];
     [copy setCoordinate:self.coordinate];// = self.coordinate;

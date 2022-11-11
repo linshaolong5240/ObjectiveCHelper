@@ -179,22 +179,7 @@
             }
             return annotationView;
         }
-
-        //        BMKPinAnnotationView *annotationView = (BMKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:NSStringFromClass([BMKAnnotationView class])];
-        //        if (annotationView == nil) {
-        //            annotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation
-        //                                                              reuseIdentifier:NSStringFromClass([BMKPinAnnotationView class])];
-        //        }
     }
-    
-//    static NSString *reuseIndetifier = @"annotationReuseIndetifier";
-//    BMKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseIndetifier];
-//    if (annotationView == nil)
-//    {
-//        annotationView = [[BMKAnnotationView alloc] initWithAnnotation:annotation
-//                                                          reuseIdentifier:reuseIndetifier];
-//    }
-//    return annotationView;
     
     return nil;
 }
