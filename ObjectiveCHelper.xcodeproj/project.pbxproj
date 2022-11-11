@@ -18,6 +18,7 @@
 		1828250F28FFC50400D2E4CF /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828250E28FFC50400D2E4CF /* UIColor+Extension.m */; };
 		1828251228FFC5F600D2E4CF /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828251128FFC5F600D2E4CF /* UIView+Extension.m */; };
 		1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */; };
+		18542CF8291E33100045AF03 /* OMKAnnotation+Baidu.m in Sources */ = {isa = PBXBuildFile; fileRef = 18542CF7291E33100045AF03 /* OMKAnnotation+Baidu.m */; };
 		186027712908CDFA001A3D2B /* UITableView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+Extension.m */; };
 		187650262915057400420786 /* OMKTencentMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187650252915057400420786 /* OMKTencentMapView.m */; };
 		187650292915088600420786 /* OMKAMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187650282915088600420786 /* OMKAMapView.m */; };
@@ -112,6 +113,8 @@
 		1828251128FFC5F600D2E4CF /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		1853C4EF28F3EE6C00245003 /* UIKitUISearchbarDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitUISearchbarDemoViewController.h; sourceTree = "<group>"; };
 		1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitUISearchbarDemoViewController.m; sourceTree = "<group>"; };
+		18542CF6291E33100045AF03 /* OMKAnnotation+Baidu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OMKAnnotation+Baidu.h"; sourceTree = "<group>"; };
+		18542CF7291E33100045AF03 /* OMKAnnotation+Baidu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OMKAnnotation+Baidu.m"; sourceTree = "<group>"; };
 		1860276F2908CDFA001A3D2B /* UITableView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Extension.h"; sourceTree = "<group>"; };
 		186027702908CDFA001A3D2B /* UITableView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Extension.m"; sourceTree = "<group>"; };
 		187650242915057400420786 /* OMKTencentMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKTencentMapView.h; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 				1896D659291CEF5300B03CC0 /* OMKBaiduPointAnnotation.m */,
 				1896D652291CD61400B03CC0 /* OMKBaiduPointAnnotationView.h */,
 				1896D653291CD61400B03CC0 /* OMKBaiduPointAnnotationView.m */,
+				18542CF6291E33100045AF03 /* OMKAnnotation+Baidu.h */,
+				18542CF7291E33100045AF03 /* OMKAnnotation+Baidu.m */,
 			);
 			path = Baidu;
 			sourceTree = "<group>";
@@ -899,6 +904,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18542CF8291E33100045AF03 /* OMKAnnotation+Baidu.m in Sources */,
 				188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */,
 				1876502C291518DD00420786 /* OMKMapViewProvider.m in Sources */,
 				1885CBF628F900DF000552F7 /* UIKitCustomViewController.m in Sources */,

@@ -31,15 +31,13 @@
     [super layoutSubviews];
 #if DEBUG
     NSLog(@"OMKBaiduAnnotationView: %@", NSStringFromCGRect(self.frame));
-    NSLog(@"omk:%@", NSStringFromCGRect(self.omkAnnotationView.frame));
+    NSLog(@"OMK:%@", NSStringFromCGRect(self.omkAnnotationView.frame));
 #endif
 }
 
 - (void)configureView {
     self.frame = self.omkAnnotationView.bounds;
     [self addSubview:self.omkAnnotationView];
-//    self.backgroundColor = UIColor.greenColor;
-//    self.frame = CGRectMake(0, 0, 100, 100);
 }
 
 @end

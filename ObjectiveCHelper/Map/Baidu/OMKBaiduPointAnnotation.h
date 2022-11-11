@@ -7,11 +7,12 @@
 //
 
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
-#import "OMKAnnotation.h"
+
+@class OMKAnnotation;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKBaiduPointAnnotation : BMKPointAnnotation <OMKAnnotation>
+@interface OMKBaiduPointAnnotation : BMKPointAnnotation
 
 @property(nonatomic, strong) OMKAnnotation * omkAnnotation;
 

@@ -168,19 +168,16 @@
 #pragma mark - BMKMapViewDelegate
 
 - (nullable __kindof BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
-    if ([annotation isKindOfClass:[OMKBaiduPointAnnotation class]]) {
-        OMKBaiduPointAnnotation *baiduAnnotation = (OMKBaiduPointAnnotation *)annotation;
-        //判断上层Annotation类型
-        if ([baiduAnnotation.omkAnnotation isKindOfClass:[OMKPointAnnotation class]]) {
-            //dequeueReusableAnnotationViewWithIdentifier
-            OMKBaiduPointAnnotationView *annotationView = (OMKBaiduPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:NSStringFromClass([OMKPointAnnotationView class])];
-            if (annotationView == nil) {
-                OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:baiduAnnotation.omkAnnotation];
-                annotationView = [[OMKBaiduPointAnnotationView alloc] initWithView:view annotation:annotation];
-                annotationView.canShowCallout = NO;
-            }
-            return annotationView;
+    if ([annotation isKindOfClass:[OMKPointAnnotation class]]) {
+        OMKPointAnnotation *omkAnnotation = (OMKPointAnnotation *)annotation;
+        //dequeueReusableAnnotationViewWithIdentifier
+        OMKBaiduPointAnnotationView *annotationView = (OMKBaiduPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:NSStringFromClass([OMKPointAnnotationView class])];
+        if (annotationView == nil) {
+            OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
+            annotationView = [[OMKBaiduPointAnnotationView alloc] initWithView:view annotation:annotation];
+            annotationView.canShowCallout = NO;
         }
+        return annotationView;
     }
     
     return nil;
@@ -212,8 +209,7 @@
 }
 
 - (void)addAnnotation:(__kindof OMKAnnotation *)annotation {
-    OMKBaiduPointAnnotation *baiduAnnotation = [[OMKBaiduPointAnnotation alloc] initWithAnnotation:annotation];
-    [self.mapView addAnnotation:baiduAnnotation];
+    [self.mapView addAnnotation:annotation];
 }
 
 - (void)removeAnnotation:(__kindof OMKAnnotation *)annotation {

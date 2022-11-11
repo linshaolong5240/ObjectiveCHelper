@@ -35,7 +35,7 @@ NSString *NSStringFromOMKMapType(OMKMapType type);
 
 @optional
 
-- (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(__kindof OMKAnnotation *)annotation;
+- (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation;
 
 @end
 

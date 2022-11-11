@@ -33,42 +33,6 @@
     [self addSubview:self.mapView];
 }
 
-#pragma mark - Getter / Setter
-
-#pragma mark - OMKMapProvider
-
-- (BOOL)showsUserLocation {
-    return self.mapView.showsUserLocation;
-}
-
-- (void)setShowsUserLocation:(BOOL)showsUserLocation {
-    self.mapView.showsUserLocation = showsUserLocation;
-}
-
-- (void)setUserTrackingMode:(OMKUserTrackingMode)userTrackingMode {
-    _userTrackingMode = userTrackingMode;
-    switch (userTrackingMode) {
-        case OCHMapUserTrackingModeNone:
-            self.mapView.userTrackingMode = QUserTrackingModeNone;
-            break;
-        case OCHMapUserTrackingModeFollow:
-            self.mapView.userTrackingMode = QUserTrackingModeFollow;
-            break;
-        case OCHMapUserTrackingModeFollowWithHeading:
-            self.mapView.userTrackingMode = QUserTrackingModeFollowWithHeading;
-            break;
-    }
-}
-
-- (void)addAnnotation:(id<OMKAnnotation>)annotation {
-    QPointAnnotation *pointAnnotation = [[QPointAnnotation alloc] init];
-    pointAnnotation.coordinate = annotation.coordinate;
-    pointAnnotation.title = annotation.title;
-    pointAnnotation.subtitle = annotation.subtitle;
-    
-    [self.mapView addAnnotation:pointAnnotation];
-}
-
 #pragma mark - QMapViewDelegate
 
 #pragma mark - QMapViewDelegate - Location
@@ -154,5 +118,59 @@
     return nil;
 }
 
+#pragma mark - OMKMapProvider
+
+- (BOOL)showsUserLocation {
+    return self.mapView.showsUserLocation;
+}
+
+- (void)setShowsUserLocation:(BOOL)showsUserLocation {
+    self.mapView.showsUserLocation = showsUserLocation;
+}
+
+- (void)setUserTrackingMode:(OMKUserTrackingMode)userTrackingMode {
+    _userTrackingMode = userTrackingMode;
+    switch (userTrackingMode) {
+        case OCHMapUserTrackingModeNone:
+            self.mapView.userTrackingMode = QUserTrackingModeNone;
+            break;
+        case OCHMapUserTrackingModeFollow:
+            self.mapView.userTrackingMode = QUserTrackingModeFollow;
+            break;
+        case OCHMapUserTrackingModeFollowWithHeading:
+            self.mapView.userTrackingMode = QUserTrackingModeFollowWithHeading;
+            break;
+    }
+}
+
+- (void)addAnnotation:(__kindof OMKAnnotation *)annotation {
+    QPointAnnotation *pointAnnotation = [[QPointAnnotation alloc] init];
+    pointAnnotation.coordinate = annotation.coordinate;
+    pointAnnotation.title = annotation.title;
+    pointAnnotation.subtitle = annotation.subtitle;
+    
+    [self.mapView addAnnotation:pointAnnotation];
+}
+
+- (void)removeAnnotation:(__kindof OMKAnnotation *)annotation {
+//    NSUInteger index;
+//
+//    index = [self.mapView.annotations indexOfObjectPassingTest:^BOOL(id<BMKAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        if ([obj isKindOfClass:[QPointAnnotation class]]) {
+//            QPointAnnotation *baiduAnnotation = (QPointAnnotation *)obj;
+//            if (baiduAnnotation.omkAnnotation == annotation) {
+//                NSLog(@"%@", @(idx));
+//                *stop = YES;
+//                return YES;
+//            }
+//        }
+//        return NO;
+//    }];
+//
+//    if (index != NSNotFound) {
+//        id<BMKAnnotation> baiduAnnotation = self.mapView.annotations[index];
+//        [self.mapView removeAnnotation:baiduAnnotation];
+//    }
+}
 
 @end

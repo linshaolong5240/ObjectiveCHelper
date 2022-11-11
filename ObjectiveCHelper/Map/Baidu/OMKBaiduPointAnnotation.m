@@ -7,6 +7,7 @@
 //
 
 #import "OMKBaiduPointAnnotation.h"
+#import "OMKAnnotation.h"
 
 @interface OMKBaiduPointAnnotation () <OMKAnnotationDelegate>
 

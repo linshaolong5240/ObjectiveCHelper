@@ -24,6 +24,14 @@
 #endif
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    id copy = [[[self class] allocWithZone:zone] init];
+    [copy setCoordinate:self.coordinate];
+    [copy setTitle:self.title];
+    [copy setSubtitle:self.subtitle];
+    return copy;
+}
+
 - (void)setCoordinate:(CLLocationCoordinate2D)coordinate {
     _coordinate = coordinate;
     if ([self.delegate respondsToSelector:@selector(annotation:didChangedCoordinate:)]) {
