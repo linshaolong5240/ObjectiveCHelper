@@ -9,6 +9,12 @@
 
 @implementation UIView (Extension)
 
+- (void)removeAllSubviews {
+    for(UIView *v in self.subviews) {
+        [v removeFromSuperview];
+    }
+}
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     UIResponder *responser = [self nextResponder];
     while (![responser isKindOfClass:[UIViewController class]] && responser != nil) {
