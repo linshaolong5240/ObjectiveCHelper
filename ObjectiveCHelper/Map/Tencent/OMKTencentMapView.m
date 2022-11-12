@@ -8,6 +8,7 @@
 
 #import "OMKTencentMapView.h"
 #import <QMapKit/QMapKit.h>
+//OMK Support
 #import "OMKTencentPointAnnotationView.h"
 
 @interface OMKTencentMapView () <QMapViewDelegate>
@@ -107,13 +108,18 @@
  * @return 生成的标注View
  */
 - (QAnnotationView *)mapView:(QMapView *)mapView viewForAnnotation:(id<QAnnotation>)annotation {
-    if ([annotation isKindOfClass:[QPointAnnotation class]]) {
-        static NSString *annotationIdentifier = @"pointAnnotation";
-        OMKTencentPointAnnotationView *pinView = (OMKTencentPointAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationIdentifier];
-        if (pinView == nil) {
-            pinView = [[OMKTencentPointAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationIdentifier];
+    if ([annotation isKindOfClass:[OMKTencentPointAnnotation class]]) {
+        OMKTencentPointAnnotation *omkAnnotation = (OMKTencentPointAnnotation *)annotation;
+        OMKTencentPointAnnotationView *annotationView = (OMKTencentPointAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        if (annotationView == nil) {
+            OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
+            annotationView = [[OMKTencentPointAnnotationView alloc] initWithView:view];
+            annotationView.canShowCallout = NO;
+            
+//            annotationView = [[QPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+//            annotationView.canShowCallout = YES;
         }
-        return pinView;
+        return annotationView;
     }
     return nil;
 }
@@ -143,34 +149,28 @@
     }
 }
 
-- (void)addAnnotation:(__kindof OMKAnnotation *)annotation {
-    QPointAnnotation *pointAnnotation = [[QPointAnnotation alloc] init];
-    pointAnnotation.coordinate = annotation.coordinate;
-    pointAnnotation.title = annotation.title;
-    pointAnnotation.subtitle = annotation.subtitle;
-    
-    [self.mapView addAnnotation:pointAnnotation];
+- (void)addAnnotation:(id<OMKAnnotation, QAnnotation>)annotation {
+    [self.mapView addAnnotation:annotation];
 }
 
-- (void)removeAnnotation:(__kindof OMKAnnotation *)annotation {
-//    NSUInteger index;
-//
-//    index = [self.mapView.annotations indexOfObjectPassingTest:^BOOL(id<BMKAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        if ([obj isKindOfClass:[QPointAnnotation class]]) {
-//            QPointAnnotation *baiduAnnotation = (QPointAnnotation *)obj;
-//            if (baiduAnnotation.omkAnnotation == annotation) {
-//                NSLog(@"%@", @(idx));
-//                *stop = YES;
-//                return YES;
-//            }
-//        }
-//        return NO;
-//    }];
-//
-//    if (index != NSNotFound) {
-//        id<BMKAnnotation> baiduAnnotation = self.mapView.annotations[index];
-//        [self.mapView removeAnnotation:baiduAnnotation];
-//    }
+- (void)removeAnnotation:(id<OMKAnnotation, QAnnotation>)annotation {
+    NSUInteger index;
+    
+    index = [self.mapView.annotations indexOfObjectPassingTest:^BOOL(id<QAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj == annotation) {
+#if DEBUG
+            NSLog(@"%@", @(idx));
+#endif
+            *stop = YES;
+            return YES;
+        }
+        return NO;
+    }];
+    
+    if (index != NSNotFound) {
+        id<QAnnotation> tencentAnnotation = self.mapView.annotations[index];
+        [self.mapView removeAnnotation:tencentAnnotation];
+    }
 }
 
 @end

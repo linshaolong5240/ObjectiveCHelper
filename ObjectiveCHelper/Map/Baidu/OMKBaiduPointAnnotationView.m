@@ -35,7 +35,7 @@
 }
 
 - (void)configureView {
-    self.frame = self.omkAnnotationView.bounds;
+    self.bounds = self.omkAnnotationView.frame;
     [self addSubview:self.omkAnnotationView];
 }
 

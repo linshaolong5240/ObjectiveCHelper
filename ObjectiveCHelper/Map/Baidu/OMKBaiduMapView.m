@@ -10,7 +10,7 @@
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BMKLocationKit/BMKLocationManager.h>
-
+//OMK Support
 #import "OMKBaiduPointAnnotationView.h"
 
 @interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>

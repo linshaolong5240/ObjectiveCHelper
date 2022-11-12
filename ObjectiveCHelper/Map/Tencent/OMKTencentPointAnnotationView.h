@@ -6,12 +6,17 @@
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <QMapKit/QMapKit.h>
+#import "OMKTencentPointAnnotation.h"
+
+@class OMKAnnotationView;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OMKTencentPointAnnotationView : QAnnotationView
+
+- (instancetype)initWithAnnotation:(id <QAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier NS_UNAVAILABLE;
+- (instancetype)initWithView:(__kindof OMKAnnotationView *)view NS_DESIGNATED_INITIALIZER;
 
 @end
 

@@ -12,17 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol OMKAnnotation <NSObject, NSCopying>
-
-@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *subtitle;
-
-@property (nonatomic, readonly,copy) NSString *reuseIdentifier;
-
-@end
-
-@interface OMKAnnotation : NSObject <OMKAnnotation>
+@protocol OMKAnnotation <NSObject>
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString *title;
