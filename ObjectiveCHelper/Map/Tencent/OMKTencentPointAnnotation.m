@@ -10,7 +10,7 @@
 
 @implementation OMKTencentPointAnnotation
 
--(NSString *)reuseIdentifier {
+-(NSString *)reuseViewIdentifier {
     return NSStringFromClass([self class]);
 }
 

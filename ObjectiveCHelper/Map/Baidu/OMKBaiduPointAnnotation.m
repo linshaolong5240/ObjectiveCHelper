@@ -10,7 +10,7 @@
 
 @implementation OMKBaiduPointAnnotation
 
--(NSString *)reuseIdentifier {
+-(NSString *)reuseViewIdentifier {
     return NSStringFromClass([self class]);
 }
 

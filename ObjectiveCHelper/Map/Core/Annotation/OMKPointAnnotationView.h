@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OMKPointAnnotationView : OMKAnnotationView
 
+- (instancetype)initWithAnnotation:(OMKPointAnnotation *)annotation;
+
 @end
 
 NS_ASSUME_NONNULL_END

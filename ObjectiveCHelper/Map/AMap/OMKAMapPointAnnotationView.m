@@ -18,7 +18,7 @@
 @implementation OMKAMapPointAnnotationView
 
 - (instancetype)initWithView:(__kindof OMKAnnotationView *)view {
-    self = [super initWithAnnotation:(id<MAAnnotation>)view.annotation reuseIdentifier:view.annotation.reuseIdentifier];
+    self = [super initWithAnnotation:(id<MAAnnotation>)view.annotation reuseIdentifier:view.annotation.reuseViewIdentifier];
     if (self) {
         _omkAnnotationView = view;
         [self setupView];

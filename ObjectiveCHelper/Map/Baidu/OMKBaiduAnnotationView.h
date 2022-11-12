@@ -1,5 +1,5 @@
 //
-//  OMKBaiduPointAnnotationView.h
+//  OMKBaiduAnnotationView.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/10.
@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKBaiduPointAnnotationView : BMKAnnotationView
+@interface OMKBaiduAnnotationView : BMKAnnotationView
 
 - (instancetype)initWithAnnotation:(id <BMKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier NS_UNAVAILABLE;
 - (instancetype)initWithView:(__kindof OMKAnnotationView *)view NS_DESIGNATED_INITIALIZER;

@@ -1,24 +1,24 @@
 //
-//  OMKBaiduPointAnnotationView.m
+//  OMKBaiduAnnotationView.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/10.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKBaiduPointAnnotationView.h"
+#import "OMKBaiduAnnotationView.h"
 #import "OMKAnnotationView.h"
 
-@interface OMKBaiduPointAnnotationView ()
+@interface OMKBaiduAnnotationView ()
 
 @property(nonatomic, strong) OMKAnnotationView *omkAnnotationView;
 
 @end
 
-@implementation OMKBaiduPointAnnotationView
+@implementation OMKBaiduAnnotationView
 
 - (instancetype)initWithView:(__kindof OMKAnnotationView *)view {
-    self = [super initWithAnnotation:(id<BMKAnnotation>)view.annotation reuseIdentifier:view.annotation.reuseIdentifier];
+    self = [super initWithAnnotation:(id<BMKAnnotation>)view.annotation reuseIdentifier:view.annotation.reuseViewIdentifier];
     if (self) {
         _omkAnnotationView = view;
         [self setupView];

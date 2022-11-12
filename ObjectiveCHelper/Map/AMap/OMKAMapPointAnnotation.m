@@ -10,7 +10,7 @@
 
 @implementation OMKAMapPointAnnotation
 
--(NSString *)reuseIdentifier {
+-(NSString *)reuseViewIdentifier {
     return NSStringFromClass([self class]);
 }
 
