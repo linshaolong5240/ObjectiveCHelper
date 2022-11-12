@@ -21,7 +21,7 @@
     self = [super initWithAnnotation:(id<MAAnnotation>)view.annotation reuseIdentifier:view.annotation.reuseIdentifier];
     if (self) {
         _omkAnnotationView = view;
-        [self configureView];
+        [self setupView];
     }
     return self;
 }
@@ -34,7 +34,7 @@
 #endif
 }
 
-- (void)configureView {
+- (void)setupView {
     self.bounds = self.omkAnnotationView.frame;
     [self addSubview:self.omkAnnotationView];
 }

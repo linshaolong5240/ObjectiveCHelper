@@ -13,13 +13,13 @@
 - (instancetype)initWithAnnotation:(OMKPointAnnotation *)annotation {
     self = [super initWithAnnotation:annotation];
     if (self) {
-        [self configureView];
+        [self setupView];
     }
     return self;
 }
 
 
-- (void)configureView {
+- (void)setupView {
     self.backgroundColor = UIColor.orangeColor;
     self.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, 16, 16);
     self.layer.cornerRadius = 8;
