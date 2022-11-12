@@ -7,7 +7,6 @@
 //
 
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
-#import "OMKBaiduPointAnnotation.h"
 
 @class OMKAnnotationView;
 

@@ -29,7 +29,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 #if DEBUG
-    NSLog(@"OMKBaiduAnnotationView: %@", NSStringFromCGRect(self.frame));
+    NSLog(@"OMKBaiduAnnotationView frame: %@", NSStringFromCGRect(self.frame));
     NSLog(@"OMK:%@", NSStringFromCGRect(self.omkAnnotationView.frame));
 #endif
 }

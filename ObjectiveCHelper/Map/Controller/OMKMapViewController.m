@@ -31,6 +31,7 @@
     switch (self.mapType) {
         case OMKMapTypeAMap:
             self.mapView = [[OMKAMapView alloc] initWithFrame:self.view.bounds];
+            self.customAnnotation = [[OMKAMapPointAnnotation alloc] init];
             break;
         case OMKMapTypeBaidu:
             self.mapView = [[OMKBaiduMapView alloc] initWithFrame:self.view.bounds];
@@ -54,8 +55,8 @@
     [self.mapView addAnnotation:self.customAnnotation];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.customAnnotation.coordinate = CLLocationCoordinate2DMake(27.0533, 119.1911);
-//        [self.mapView removeAnnotation:self.customAnnotation];
+//        self.customAnnotation.coordinate = CLLocationCoordinate2DMake(27.0533, 119.1911);
+        [self.mapView removeAnnotation:self.customAnnotation];
     });
 }
 

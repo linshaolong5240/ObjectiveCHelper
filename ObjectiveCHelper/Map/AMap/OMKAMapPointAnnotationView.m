@@ -7,59 +7,36 @@
 //
 
 #import "OMKAMapPointAnnotationView.h"
+#import "OMKAnnotationView.h"
+
+@interface OMKAMapPointAnnotationView ()
+
+@property(nonatomic, strong) OMKAnnotationView *omkAnnotationView;
+
+@end
 
 @implementation OMKAMapPointAnnotationView
 
-- (id)initWithAnnotation:(id<MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
+- (instancetype)initWithView:(__kindof OMKAnnotationView *)view {
+    self = [super initWithAnnotation:(id<MAAnnotation>)view.annotation reuseIdentifier:view.annotation.reuseIdentifier];
     if (self) {
-        [self setupUI];
+        _omkAnnotationView = view;
+        [self configureView];
     }
-    
     return self;
 }
 
-- (void)setupUI {
-    self.backgroundColor = UIColor.orangeColor;
-    self.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, 16, 16);
-    self.layer.cornerRadius = 8;
-    self.layer.borderColor = UIColor.whiteColor.CGColor;
-    self.layer.borderWidth = 2;
-    
-    UILabel *titleLable = [[UILabel alloc] init];
-    titleLable.text = self.annotation.title;
-    [titleLable sizeToFit];
-    UILabel *subtitleLable = [[UILabel alloc] init];
-    subtitleLable.text = self.annotation.subtitle;
-    [subtitleLable sizeToFit];
-    
-    UIStackView *vstack = [[UIStackView alloc] init];
-    vstack.backgroundColor = UIColor.blueColor;
-    vstack.axis = UILayoutConstraintAxisVertical;
-    if (titleLable.text) {
-        [vstack addArrangedSubview: titleLable];
-    }
-    if (subtitleLable.text) {
-        [vstack addArrangedSubview: subtitleLable];
-    }
-    [self addSubview:vstack];
-    CGFloat width = titleLable.bounds.size.width > subtitleLable.bounds.size.width ? titleLable.bounds.size.width : subtitleLable.bounds.size.width;
-    
-    [vstack mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(self.mas_top).offset(- 10);
-            make.centerX.equalTo(self);
-            make.width.mas_equalTo(width);
-    }];
-    
+- (void)layoutSubviews {
+    [super layoutSubviews];
+#if DEBUG
+    NSLog(@"OMKBaiduAnnotationView frame: %@", NSStringFromCGRect(self.frame));
+    NSLog(@"OMK:%@", NSStringFromCGRect(self.omkAnnotationView.frame));
+#endif
 }
 
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)configureView {
+    self.bounds = self.omkAnnotationView.frame;
+    [self addSubview:self.omkAnnotationView];
 }
-*/
 
 @end

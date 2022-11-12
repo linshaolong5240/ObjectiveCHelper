@@ -115,9 +115,6 @@
             OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
             annotationView = [[OMKTencentPointAnnotationView alloc] initWithView:view];
             annotationView.canShowCallout = NO;
-            
-//            annotationView = [[QPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:omkAnnotation.reuseIdentifier];
-//            annotationView.canShowCallout = YES;
         }
         return annotationView;
     }

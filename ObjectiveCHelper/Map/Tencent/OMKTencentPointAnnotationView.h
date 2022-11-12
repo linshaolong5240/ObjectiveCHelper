@@ -7,7 +7,6 @@
 //
 
 #import <QMapKit/QMapKit.h>
-#import "OMKTencentPointAnnotation.h"
 
 @class OMKAnnotationView;
 

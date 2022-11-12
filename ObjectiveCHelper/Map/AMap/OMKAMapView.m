@@ -8,6 +8,7 @@
 
 #import "OMKAMapView.h"
 #import <MAMapKit/MAMapKit.h>
+//OMK Support
 #import "OMKAMapPointAnnotationView.h"
 
 @interface OMKAMapView () <MAMapViewDelegate>
@@ -33,44 +34,6 @@
 - (void)setupView {
     [self addSubview:self.mapView];
 }
-
-#pragma mark - Getter / Setter
-
-#pragma mark - OMKMapProvider
-
-- (BOOL)showsUserLocation {
-    return self.mapView.showsUserLocation;
-}
-
-- (void)setShowsUserLocation:(BOOL)showsUserLocation {
-    self.mapView.showsUserLocation = showsUserLocation;
-}
-
-- (void)setUserTrackingMode:(OMKUserTrackingMode)userTrackingMode {
-    _userTrackingMode = userTrackingMode;
-    switch (userTrackingMode) {
-        case OCHMapUserTrackingModeNone:
-            self.mapView.userTrackingMode = MAUserTrackingModeNone;
-            break;
-        case OCHMapUserTrackingModeFollow:
-            self.mapView.userTrackingMode = MAUserTrackingModeFollow;
-            break;
-        case OCHMapUserTrackingModeFollowWithHeading:
-            self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
-            break;
-    }
-}
-
-- (void)addAnnotation:(id<OMKAnnotation>)annotation {
-    MAPointAnnotation *pointAnntation = [[MAPointAnnotation alloc] init];
-    pointAnntation.coordinate = annotation.coordinate;
-    pointAnntation.title = annotation.title;
-    pointAnntation.subtitle = annotation.subtitle;
-    
-    [self.mapView addAnnotation:pointAnntation];
-}
-
-#pragma mark - MAMapViewDelegate
 
 #pragma mark - MAMapViewDelegate - Location
 
@@ -124,6 +87,8 @@
     
 }
 
+#pragma mark - QMapViewDelegate - Annotation
+
 /**
  * @brief 根据anntation生成对应的View。
  
@@ -142,15 +107,67 @@
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation {
     if ([annotation isKindOfClass:[MAUserLocation class]]) {
        return nil;
-    } else if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
-        static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
-        OMKAMapPointAnnotationView *annotationView = (OMKAMapPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
+    } else if ([annotation isKindOfClass:[OMKAMapPointAnnotation class]]) {
+        OMKAMapPointAnnotation *omkAnnotation = (OMKAMapPointAnnotation *)annotation;
+        //dequeueReusableAnnotationViewWithIdentifier
+        OMKAMapPointAnnotationView *annotationView = (OMKAMapPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
-            annotationView = [[OMKAMapPointAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
+            OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
+            annotationView = [[OMKAMapPointAnnotationView alloc] initWithView:view];
+            annotationView.canShowCallout = NO;
         }
         return annotationView;
     }
     return nil;
+}
+
+#pragma mark - OMKMapProvider
+
+- (BOOL)showsUserLocation {
+    return self.mapView.showsUserLocation;
+}
+
+- (void)setShowsUserLocation:(BOOL)showsUserLocation {
+    self.mapView.showsUserLocation = showsUserLocation;
+}
+
+- (void)setUserTrackingMode:(OMKUserTrackingMode)userTrackingMode {
+    _userTrackingMode = userTrackingMode;
+    switch (userTrackingMode) {
+        case OCHMapUserTrackingModeNone:
+            self.mapView.userTrackingMode = MAUserTrackingModeNone;
+            break;
+        case OCHMapUserTrackingModeFollow:
+            self.mapView.userTrackingMode = MAUserTrackingModeFollow;
+            break;
+        case OCHMapUserTrackingModeFollowWithHeading:
+            self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
+            break;
+    }
+}
+
+- (void)addAnnotation:(id<OMKAnnotation, MAAnnotation>)annotation {
+    [self.mapView addAnnotation:annotation];
+}
+
+- (void)removeAnnotation:(id<OMKAnnotation, MAAnnotation>)annotation {
+    NSUInteger index;
+    
+    index = [self.mapView.annotations indexOfObjectPassingTest:^BOOL(id<MAAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj == annotation) {
+#if DEBUG
+            NSLog(@"%@", @(idx));
+#endif
+            *stop = YES;
+            return YES;
+        }
+        return NO;
+    }];
+    
+    if (index != NSNotFound) {
+        id<MAAnnotation> amapAnnotation = self.mapView.annotations[index];
+        [self.mapView removeAnnotation:amapAnnotation];
+    }
 }
 
 @end

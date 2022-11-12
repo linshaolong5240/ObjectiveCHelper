@@ -37,6 +37,7 @@
 		188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */; };
 		188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */; };
 		188CD569291F711600E05D19 /* OMKTencentPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CD568291F711600E05D19 /* OMKTencentPointAnnotation.m */; };
+		188CD56C291F80C800E05D19 /* OMKAMapPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CD56B291F80C800E05D19 /* OMKAMapPointAnnotation.m */; };
 		188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */; };
 		188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */; };
 		1896D645291C97EE00B03CC0 /* OMKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896D644291C97EE00B03CC0 /* OMKAnnotationView.m */; };
@@ -154,6 +155,8 @@
 		188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHJXCategoryListContentView.m; sourceTree = "<group>"; };
 		188CD567291F711600E05D19 /* OMKTencentPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKTencentPointAnnotation.h; sourceTree = "<group>"; };
 		188CD568291F711600E05D19 /* OMKTencentPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKTencentPointAnnotation.m; sourceTree = "<group>"; };
+		188CD56A291F80C800E05D19 /* OMKAMapPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKAMapPointAnnotation.h; sourceTree = "<group>"; };
+		188CD56B291F80C800E05D19 /* OMKAMapPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKAMapPointAnnotation.m; sourceTree = "<group>"; };
 		188F2AA9290BDE740046FB65 /* OCHValueStepperDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHValueStepperDemoController.h; sourceTree = "<group>"; };
 		188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHValueStepperDemoController.m; sourceTree = "<group>"; };
 		188F2AAC290BDEE70046FB65 /* OCHValueStepper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHValueStepper.h; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 		181918F72918B69400694BD1 /* AMap */ = {
 			isa = PBXGroup;
 			children = (
+				188CD56A291F80C800E05D19 /* OMKAMapPointAnnotation.h */,
+				188CD56B291F80C800E05D19 /* OMKAMapPointAnnotation.m */,
 				181918F82918D5F500694BD1 /* OMKAMapPointAnnotationView.h */,
 				181918F92918D5F500694BD1 /* OMKAMapPointAnnotationView.m */,
 				187650272915088600420786 /* OMKAMapView.h */,
@@ -422,6 +427,17 @@
 			path = JXCategoryView;
 			sourceTree = "<group>";
 		};
+		188CD56D291F844B00E05D19 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				18FCF30829166282004A0CD7 /* OMKPointAnnotation.h */,
+				18FCF30929166282004A0CD7 /* OMKPointAnnotation.m */,
+				181918FB2918EAC500694BD1 /* OMKPointAnnotationView.h */,
+				181918FC2918EAC500694BD1 /* OMKPointAnnotationView.m */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
 		188F2AA8290BDE3E0046FB65 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				18AAC2EF291F5004009F49D1 /* Base */,
+				188CD56D291F844B00E05D19 /* Annotation */,
 				18E221C52913DF6200660A7F /* OMKConfig.h */,
 				18E221C62913DF6200660A7F /* OMKConfig.m */,
 				18E221C22913DF0500660A7F /* OMKManager.h */,
@@ -487,10 +504,6 @@
 				1896D647291C982E00B03CC0 /* OMKAnnotation.m */,
 				1896D643291C97EE00B03CC0 /* OMKAnnotationView.h */,
 				1896D644291C97EE00B03CC0 /* OMKAnnotationView.m */,
-				18FCF30829166282004A0CD7 /* OMKPointAnnotation.h */,
-				18FCF30929166282004A0CD7 /* OMKPointAnnotation.m */,
-				181918FB2918EAC500694BD1 /* OMKPointAnnotationView.h */,
-				181918FC2918EAC500694BD1 /* OMKPointAnnotationView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -971,6 +984,7 @@
 				18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */,
 				18E221C72913DF6200660A7F /* OMKConfig.m in Sources */,
 				18E9AAFB2914B98C00D9D614 /* OCHAppConfig.m in Sources */,
+				188CD56C291F80C800E05D19 /* OMKAMapPointAnnotation.m in Sources */,
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
 				1811B83828F423DD0074418B /* OCHScrollContentViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,
