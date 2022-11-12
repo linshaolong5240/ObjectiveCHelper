@@ -10,6 +10,12 @@
 
 @implementation OMKBaiduPointAnnotation
 
+-(void)dealloc {
+#if DEBUG
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+#endif
+}
+
 -(NSString *)reuseViewIdentifier {
     return NSStringFromClass([self class]);
 }

@@ -8,8 +8,4 @@
 
 #import "OMKAnnotation.h"
 
-@protocol OMKPointAnnotation <OMKAnnotation>
-
-@end
-
 typedef NSObject<OMKAnnotation> OMKPointAnnotation;
