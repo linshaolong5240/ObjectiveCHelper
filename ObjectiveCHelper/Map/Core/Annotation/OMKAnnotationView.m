@@ -11,11 +11,10 @@
 
 @implementation OMKAnnotationView
 
-- (instancetype)initWithAnnotation:(__kindof OMKAnnotation *)annotation reuseIdentifier:(NSString *)reuseIdentifier {
+- (instancetype)initWithAnnotation:(id<OMKAnnotation>)annotation {
     self = [super initWithFrame:CGRectZero];
     if (self) {
         _annotation = annotation;
-        _reuseIdentifier = reuseIdentifier;
     }
     
     return self;

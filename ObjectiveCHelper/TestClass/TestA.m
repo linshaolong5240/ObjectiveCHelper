@@ -1,16 +1,16 @@
 //
-//  OMKBaiduPointAnnotation.m
+//  TestA.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/12.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKBaiduPointAnnotation.h"
+#import "TestA.h"
 
-@implementation OMKBaiduPointAnnotation
+@implementation TestA
 
--(NSString *)reuseidentifier {
+- (NSString *)reuseIdentifier {
     return NSStringFromClass([self class]);
 }
 

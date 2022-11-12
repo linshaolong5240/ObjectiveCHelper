@@ -42,12 +42,15 @@
 		1896D645291C97EE00B03CC0 /* OMKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896D644291C97EE00B03CC0 /* OMKAnnotationView.m */; };
 		1896D648291C982E00B03CC0 /* OMKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896D647291C982E00B03CC0 /* OMKAnnotation.m */; };
 		1896D654291CD61400B03CC0 /* OMKBaiduPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896D653291CD61400B03CC0 /* OMKBaiduPointAnnotationView.m */; };
-		1896D65A291CEF5300B03CC0 /* OMKBaiduPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896D659291CEF5300B03CC0 /* OMKBaiduPointAnnotation.m */; };
 		1898F4B12919FFBC00F13718 /* OMKLocationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F4B02919FFBC00F13718 /* OMKLocationAnnotationView.m */; };
 		1898F4B5291A3E4400F13718 /* ReactiveObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F4B4291A3E4400F13718 /* ReactiveObjCViewController.m */; };
 		189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */; };
 		189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */; };
 		189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */; };
+		18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2E1291F3B76009F49D1 /* TestA.m */; };
+		18AAC2E5291F3B89009F49D1 /* TestB.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2E4291F3B89009F49D1 /* TestB.m */; };
+		18AAC2EB291F43C2009F49D1 /* OMKBaiduMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2EA291F43C2009F49D1 /* OMKBaiduMapViewController.m */; };
+		18AAC2EE291F44F8009F49D1 /* OMKBaiduPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2ED291F44F8009F49D1 /* OMKBaiduPointAnnotation.m */; };
 		18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */; };
 		18CF77EC291B807D0068CCC7 /* MJRefreshDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EB291B807D0068CCC7 /* MJRefreshDemoViewController.m */; };
 		18CF77F0291B85980068CCC7 /* OCHRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EF291B85980068CCC7 /* OCHRefreshHeader.m */; };
@@ -163,8 +166,6 @@
 		1896D647291C982E00B03CC0 /* OMKAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKAnnotation.m; sourceTree = "<group>"; };
 		1896D652291CD61400B03CC0 /* OMKBaiduPointAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBaiduPointAnnotationView.h; sourceTree = "<group>"; };
 		1896D653291CD61400B03CC0 /* OMKBaiduPointAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBaiduPointAnnotationView.m; sourceTree = "<group>"; };
-		1896D658291CEF5300B03CC0 /* OMKBaiduPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBaiduPointAnnotation.h; sourceTree = "<group>"; };
-		1896D659291CEF5300B03CC0 /* OMKBaiduPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBaiduPointAnnotation.m; sourceTree = "<group>"; };
 		1898F4AF2919FFBC00F13718 /* OMKLocationAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKLocationAnnotationView.h; sourceTree = "<group>"; };
 		1898F4B02919FFBC00F13718 /* OMKLocationAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKLocationAnnotationView.m; sourceTree = "<group>"; };
 		1898F4B3291A3E4400F13718 /* ReactiveObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveObjCViewController.h; sourceTree = "<group>"; };
@@ -175,6 +176,14 @@
 		189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoHeaderView.m; sourceTree = "<group>"; };
 		189BB87728F595D400F2B287 /* UICollectionViewDemoFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoFooterView.h; sourceTree = "<group>"; };
 		189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoFooterView.m; sourceTree = "<group>"; };
+		18AAC2E0291F3B76009F49D1 /* TestA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestA.h; sourceTree = "<group>"; };
+		18AAC2E1291F3B76009F49D1 /* TestA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestA.m; sourceTree = "<group>"; };
+		18AAC2E3291F3B89009F49D1 /* TestB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestB.h; sourceTree = "<group>"; };
+		18AAC2E4291F3B89009F49D1 /* TestB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestB.m; sourceTree = "<group>"; };
+		18AAC2E9291F43C2009F49D1 /* OMKBaiduMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBaiduMapViewController.h; sourceTree = "<group>"; };
+		18AAC2EA291F43C2009F49D1 /* OMKBaiduMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBaiduMapViewController.m; sourceTree = "<group>"; };
+		18AAC2EC291F44F8009F49D1 /* OMKBaiduPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBaiduPointAnnotation.h; sourceTree = "<group>"; };
+		18AAC2ED291F44F8009F49D1 /* OMKBaiduPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBaiduPointAnnotation.m; sourceTree = "<group>"; };
 		18CE4054290268590075C1A6 /* UIButtonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIButtonDemoViewController.h; sourceTree = "<group>"; };
 		18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonDemoViewController.m; sourceTree = "<group>"; };
 		18CF77EA291B807D0068CCC7 /* MJRefreshDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshDemoViewController.h; sourceTree = "<group>"; };
@@ -262,12 +271,12 @@
 			children = (
 				18E13BD22914F84E000B6B41 /* OMKBaiduMapView.h */,
 				18E13BD32914F84E000B6B41 /* OMKBaiduMapView.m */,
-				1896D658291CEF5300B03CC0 /* OMKBaiduPointAnnotation.h */,
-				1896D659291CEF5300B03CC0 /* OMKBaiduPointAnnotation.m */,
 				1896D652291CD61400B03CC0 /* OMKBaiduPointAnnotationView.h */,
 				1896D653291CD61400B03CC0 /* OMKBaiduPointAnnotationView.m */,
 				18542CF6291E33100045AF03 /* OMKAnnotation+Baidu.h */,
 				18542CF7291E33100045AF03 /* OMKAnnotation+Baidu.m */,
+				18AAC2EC291F44F8009F49D1 /* OMKBaiduPointAnnotation.h */,
+				18AAC2ED291F44F8009F49D1 /* OMKBaiduPointAnnotation.m */,
 			);
 			path = Baidu;
 			sourceTree = "<group>";
@@ -466,6 +475,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		18AAC2DF291F3B64009F49D1 /* TestClass */ = {
+			isa = PBXGroup;
+			children = (
+				18AAC2E0291F3B76009F49D1 /* TestA.h */,
+				18AAC2E1291F3B76009F49D1 /* TestA.m */,
+				18AAC2E3291F3B89009F49D1 /* TestB.h */,
+				18AAC2E4291F3B89009F49D1 /* TestB.m */,
+			);
+			path = TestClass;
+			sourceTree = "<group>";
+		};
 		18CF77E9291B80630068CCC7 /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +532,8 @@
 				18E221B12913D9F300660A7F /* OMKDemoViewController.m */,
 				18FCF2FA29164595004A0CD7 /* OMKMapViewController.h */,
 				18FCF2FB29164595004A0CD7 /* OMKMapViewController.m */,
+				18AAC2E9291F43C2009F49D1 /* OMKBaiduMapViewController.h */,
+				18AAC2EA291F43C2009F49D1 /* OMKBaiduMapViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -565,6 +587,7 @@
 				18E9AAFA2914B98C00D9D614 /* OCHAppConfig.m */,
 				1876AD4828E4748A00DA0387 /* OCHPrefixHeader.pch */,
 				188CA48528F155DC00EF106E /* Preview */,
+				18AAC2DF291F3B64009F49D1 /* TestClass */,
 				188CA47E28F14F9100EF106E /* ThirdParty */,
 				1885CBF228F900AB000552F7 /* UIKitCustom */,
 				188CA45F28F1125E00EF106E /* UIKitDemo */,
@@ -925,9 +948,9 @@
 				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
 				18FCF30A29166282004A0CD7 /* OMKPointAnnotation.m in Sources */,
 				1898F4B12919FFBC00F13718 /* OMKLocationAnnotationView.m in Sources */,
-				1896D65A291CEF5300B03CC0 /* OMKBaiduPointAnnotation.m in Sources */,
 				1896D648291C982E00B03CC0 /* OMKAnnotation.m in Sources */,
 				1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */,
+				18AAC2E5291F3B89009F49D1 /* TestB.m in Sources */,
 				189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */,
 				18FCF2FC29164595004A0CD7 /* OMKMapViewController.m in Sources */,
 				18CF77F0291B85980068CCC7 /* OCHRefreshHeader.m in Sources */,
@@ -942,6 +965,8 @@
 				1876AD5D28E6BEF500DA0387 /* OCHPreview.m in Sources */,
 				187650292915088600420786 /* OMKAMapView.m in Sources */,
 				188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */,
+				18AAC2EB291F43C2009F49D1 /* OMKBaiduMapViewController.m in Sources */,
+				18AAC2EE291F44F8009F49D1 /* OMKBaiduPointAnnotation.m in Sources */,
 				189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+Extension.m in Sources */,
@@ -955,6 +980,7 @@
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,
 				188CA46D28F1147000EF106E /* DVPieChart.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
+				18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */,
 				18E221C72913DF6200660A7F /* OMKConfig.m in Sources */,
 				18E9AAFB2914B98C00D9D614 /* OCHAppConfig.m in Sources */,
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,

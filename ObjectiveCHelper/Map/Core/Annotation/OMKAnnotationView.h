@@ -8,20 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@class OMKAnnotation;
+@protocol OMKAnnotation;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OMKAnnotationView : UIView
 
-@property(nonatomic, strong) OMKAnnotation * annotation;
-/// 复用标志
-@property (nonatomic, readonly) NSString *reuseIdentifier;
+@property(nonatomic, strong) id<OMKAnnotation> annotation;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
-- (instancetype)initWithAnnotation:(__kindof OMKAnnotation *)annotation reuseIdentifier:(NSString *)reuseIdentifier NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithAnnotation:(id<OMKAnnotation>)annotation NS_DESIGNATED_INITIALIZER;
 
 @end
 

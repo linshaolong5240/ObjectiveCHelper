@@ -12,8 +12,6 @@
 #import <BMKLocationKit/BMKLocationManager.h>
 
 #import "OMKLocationAnnotationView.h"
-
-#import "OMKBaiduPointAnnotation.h"
 #import "OMKBaiduPointAnnotationView.h"
 
 @interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>
@@ -104,17 +102,17 @@
         self.userLocation = [[BMKUserLocation alloc] init];
     }
     
-//    if (!self.userLocationAnnotation) {
-//        BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
-//        annotation.coordinate = location.location.coordinate;
-//        annotation.title = @"北京";
-//        //副标题
-//        annotation.subtitle = @"天安门";
-//        self.userLocationAnnotation = annotation;
-//        [self.mapView addAnnotation:self.userLocationAnnotation];
-//    }
-//    self.userLocationAnnotation.coordinate = location.location.coordinate;
-
+    //    if (!self.userLocationAnnotation) {
+    //        BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
+    //        annotation.coordinate = location.location.coordinate;
+    //        annotation.title = @"北京";
+    //        //副标题
+    //        annotation.subtitle = @"天安门";
+    //        self.userLocationAnnotation = annotation;
+    //        [self.mapView addAnnotation:self.userLocationAnnotation];
+    //    }
+    //    self.userLocationAnnotation.coordinate = location.location.coordinate;
+    
     self.userLocation.location = location.location;
     [self.mapView updateLocationData:self.userLocation];
 }
@@ -168,13 +166,13 @@
 #pragma mark - BMKMapViewDelegate
 
 - (nullable __kindof BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
-    if ([annotation isKindOfClass:[OMKPointAnnotation class]]) {
-        OMKPointAnnotation *omkAnnotation = (OMKPointAnnotation *)annotation;
+    if ([annotation isKindOfClass:[OMKBaiduPointAnnotation class]]) {
+        OMKBaiduPointAnnotation *omkAnnotation = (OMKBaiduPointAnnotation *)annotation;
         //dequeueReusableAnnotationViewWithIdentifier
-        OMKBaiduPointAnnotationView *annotationView = (OMKBaiduPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:NSStringFromClass([OMKPointAnnotationView class])];
+        OMKBaiduPointAnnotationView *annotationView = (OMKBaiduPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
             OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
-            annotationView = [[OMKBaiduPointAnnotationView alloc] initWithView:view annotation:annotation];
+            annotationView = [[OMKBaiduPointAnnotationView alloc] initWithView:view];
             annotationView.canShowCallout = NO;
         }
         return annotationView;
@@ -208,21 +206,18 @@
     }
 }
 
-- (void)addAnnotation:(__kindof OMKAnnotation *)annotation {
+- (void)addAnnotation:(id<OMKAnnotation, BMKAnnotation>)annotation {
     [self.mapView addAnnotation:annotation];
 }
 
-- (void)removeAnnotation:(__kindof OMKAnnotation *)annotation {
+- (void)removeAnnotation:(id<OMKAnnotation, BMKAnnotation>)annotation {
     NSUInteger index;
     
     index = [self.mapView.annotations indexOfObjectPassingTest:^BOOL(id<BMKAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isKindOfClass:[OMKBaiduPointAnnotation class]]) {
-            OMKBaiduPointAnnotation *baiduAnnotation = (OMKBaiduPointAnnotation *)obj;
-            if (baiduAnnotation.omkAnnotation == annotation) {
-                NSLog(@"%@", @(idx));
-                *stop = YES;
-                return YES;
-            }
+        if (obj == annotation) {
+            NSLog(@"%@", @(idx));
+            *stop = YES;
+            return YES;
         }
         return NO;
     }];

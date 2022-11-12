@@ -2,22 +2,18 @@
 //  OMKBaiduPointAnnotation.h
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/11/10.
+//  Created by Sauron on 2022/11/12.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
-
-@class OMKAnnotation;
+#import "OMKAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKBaiduPointAnnotation : BMKPointAnnotation
+@interface OMKBaiduPointAnnotation : BMKPointAnnotation <OMKAnnotation>
 
-@property(nonatomic, strong) OMKAnnotation * omkAnnotation;
-
-- (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithAnnotation:(__kindof OMKAnnotation *) annotation NS_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly,copy) NSString *reuseIdentifier;
 
 @end
 

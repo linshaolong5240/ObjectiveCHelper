@@ -7,7 +7,6 @@
 //
 
 #import "OMKBaiduPointAnnotationView.h"
-#import "OMKBaiduPointAnnotation.h"
 #import "OMKAnnotationView.h"
 
 @interface OMKBaiduPointAnnotationView ()
@@ -18,8 +17,8 @@
 
 @implementation OMKBaiduPointAnnotationView
 
-- (instancetype)initWithView:(__kindof OMKAnnotationView *)view annotation:(id <BMKAnnotation>)annotation {
-    self = [super initWithAnnotation:annotation reuseIdentifier:view.reuseIdentifier];
+- (instancetype)initWithView:(__kindof OMKAnnotationView *)view {
+    self = [super initWithAnnotation:(id<BMKAnnotation>)view.annotation reuseIdentifier:view.annotation.reuseIdentifier];
     if (self) {
         _omkAnnotationView = view;
         [self configureView];

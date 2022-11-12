@@ -7,7 +7,3 @@
 //
 
 #import "OMKPointAnnotation.h"
-
-@implementation OMKPointAnnotation
-
-@end

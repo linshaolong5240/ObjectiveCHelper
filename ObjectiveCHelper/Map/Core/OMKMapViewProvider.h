@@ -51,9 +51,9 @@ NSString *NSStringFromOMKMapType(OMKMapType type);
  * @brief 向地图窗口添加标注，需要实现MAMapViewDelegate的-mapView:viewForAnnotation:函数来生成标注对应的View
  * @param annotation 要添加的标注
  */
-- (void) addAnnotation:(__kindof OMKAnnotation *)annotation;
+- (void) addAnnotation:(id<OMKAnnotation>)annotation;
 
-- (void) removeAnnotation:(__kindof OMKAnnotation *)annotation;
+- (void) removeAnnotation:(id<OMKAnnotation>)annotation;
 
 @optional
 

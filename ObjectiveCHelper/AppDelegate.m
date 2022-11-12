@@ -9,6 +9,8 @@
 #import "OCHTabbarViewController.h"
 #import "OMKConfig.h"
 #import "OMKManager.h"
+#import "TestA.h"
+#import "TestB.h"
 
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
@@ -36,6 +38,15 @@
     UIViewController *rootViewController = OCHTabbarViewController.new;
     self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
+    
+#if DEBUG
+    TestA *testA = [[TestA alloc] init];
+    TestB *testB = [[TestB alloc] init];
+    TestA *testC = (TestA *)testB;
+    NSLog(@"TestA resuseIdentifier: %@", testA.reuseIdentifier);
+    NSLog(@"TestB resuseIdentifier: %@", testB.reuseIdentifier);
+    NSLog(@"TestC resuseIdentifier: %@", testC.reuseIdentifier);
+#endif
 
     return YES;
 }

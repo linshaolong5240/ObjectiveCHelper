@@ -10,7 +10,7 @@
 
 @interface OMKMapViewController () <OMKMapViewDelegate>
 
-@property(nonatomic, strong) UIView<OMKMapViewProvider> *mapView;
+@property(nonatomic, strong) OMKMapView *mapView;
 @property(nonatomic, strong) OMKPointAnnotation *customAnnotation;
 
 @end
@@ -34,6 +34,7 @@
             break;
         case OMKMapTypeBaidu:
             self.mapView = [[OMKBaiduMapView alloc] initWithFrame:self.view.bounds];
+            self.customAnnotation = [[OMKBaiduPointAnnotation alloc] init];
             break;
         case OMKMapTypeTencent:
             self.mapView = [[OMKTencentMapView alloc] initWithFrame:self.view.bounds];
@@ -46,13 +47,10 @@
     self.mapView.delegate = self;
     
     [self.view addSubview:self.mapView];
-    
-    OMKPointAnnotation *annotation = [[OMKPointAnnotation alloc] init];
-    annotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.1911);
-    annotation.title = @"tittle";
-    annotation.subtitle = @"subtittle";
-    self.customAnnotation = annotation;
-    [self.mapView addAnnotation:annotation];
+    self.customAnnotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.1911);
+    self.customAnnotation.title = @"tittle";
+    self.customAnnotation.subtitle = @"subtittle";
+    [self.mapView addAnnotation:self.customAnnotation];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.customAnnotation.coordinate = CLLocationCoordinate2DMake(27.0533, 119.1911);
@@ -63,10 +61,8 @@
 #pragma mark - OMKMapViewDelegate
 
 - (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation {
-    if ([annotation isKindOfClass:[OMKPointAnnotation class]]) {
-        OMKPointAnnotationView *annotationView = [[OMKPointAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:NSStringFromClass([OMKPointAnnotationView class])];
-        return annotationView;
-    }
+    OMKPointAnnotationView *annotationView = [[OMKPointAnnotationView alloc] initWithAnnotation:annotation];
+    return annotationView;
     return nil;
 }
 

@@ -10,3 +10,5 @@
 #import "OMKAMapView.h"
 #import "OMKBaiduMapView.h"
 #import "OMKTencentMapView.h"
+
+typedef UIView<OMKMapViewProvider> OMKMapView;

@@ -32,11 +32,8 @@
     return copy;
 }
 
-- (void)setCoordinate:(CLLocationCoordinate2D)coordinate {
-    _coordinate = coordinate;
-    if ([self.delegate respondsToSelector:@selector(annotation:didChangedCoordinate:)]) {
-        [self.delegate annotation:self didChangedCoordinate:coordinate];
-    }
+-(NSString *)reuseIdentifier {
+    return NSStringFromClass([self class]);
 }
 
 @end

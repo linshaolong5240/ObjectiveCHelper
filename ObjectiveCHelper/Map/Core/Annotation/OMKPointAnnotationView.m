@@ -11,8 +11,8 @@
 
 @implementation OMKPointAnnotationView
 
-- (instancetype)initWithAnnotation:(id<OMKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
+- (instancetype)initWithAnnotation:(OMKPointAnnotation *)annotation {
+    self = [super initWithAnnotation:annotation];
     if (self) {
         [self configureView];
     }
