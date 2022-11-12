@@ -65,6 +65,9 @@
 #pragma mark - OMKMapViewDelegate
 
 - (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation {
+#if DEBUG
+    NSLog(@"%s class name %@ : %@", __PRETTY_FUNCTION__, NSStringFromClass([self.customAnnotation class]), NSStringFromClass([annotation class]));
+#endif
     OMKPointAnnotationView *annotationView = [[OMKPointAnnotationView alloc] initWithAnnotation:annotation];
     return annotationView;
     return nil;
