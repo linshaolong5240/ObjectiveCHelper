@@ -7,7 +7,6 @@
 //
 
 #import "OMKPointAnnotationView.h"
-#import "OMKPointAnnotation.h"
 
 @implementation OMKPointAnnotationView
 

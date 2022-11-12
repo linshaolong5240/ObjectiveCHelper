@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#import "OMKAnnotationView.h"
 #import "OMKPointAnnotation.h"
 #import "OMKPointAnnotationView.h"
 

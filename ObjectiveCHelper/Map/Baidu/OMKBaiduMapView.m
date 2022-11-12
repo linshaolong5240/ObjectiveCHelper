@@ -11,7 +11,6 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BMKLocationKit/BMKLocationManager.h>
 
-#import "OMKLocationAnnotationView.h"
 #import "OMKBaiduPointAnnotationView.h"
 
 @interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>
@@ -215,7 +214,9 @@
     
     index = [self.mapView.annotations indexOfObjectPassingTest:^BOOL(id<BMKAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if (obj == annotation) {
+#if DEBUG
             NSLog(@"%@", @(idx));
+#endif
             *stop = YES;
             return YES;
         }
