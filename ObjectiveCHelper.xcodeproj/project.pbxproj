@@ -383,6 +383,35 @@
 			path = Annotation;
 			sourceTree = "<group>";
 		};
+		1846DF452922445A00F3EC2F /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				1846DF462922446F00F3EC2F /* Base */,
+				18FF5A792921E3C500335501 /* OMKCustomerLocationmAnnotation.h */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		1846DF462922446F00F3EC2F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1896D646291C982E00B03CC0 /* OMKAnnotation.h */,
+				1896D647291C982E00B03CC0 /* OMKAnnotation.m */,
+				1896D643291C97EE00B03CC0 /* OMKAnnotationView.h */,
+				1896D644291C97EE00B03CC0 /* OMKAnnotationView.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1846DF472922448B00F3EC2F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				188CD574291F97E400E05D19 /* OMKOverlay.h */,
+				188CD575291F97E400E05D19 /* OMKOverlay.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		1876AD2F28E450A200DA0387 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,7 +549,8 @@
 		1896D642291C97B500B03CC0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				18AAC2EF291F5004009F49D1 /* Base */,
+				1846DF452922445A00F3EC2F /* Annotation */,
+				18AAC2EF291F5004009F49D1 /* Overlay */,
 				18E221C52913DF6200660A7F /* OMKConfig.h */,
 				18E221C62913DF6200660A7F /* OMKConfig.m */,
 				18E221C22913DF0500660A7F /* OMKManager.h */,
@@ -568,18 +598,12 @@
 			path = TestClass;
 			sourceTree = "<group>";
 		};
-		18AAC2EF291F5004009F49D1 /* Base */ = {
+		18AAC2EF291F5004009F49D1 /* Overlay */ = {
 			isa = PBXGroup;
 			children = (
-				1896D646291C982E00B03CC0 /* OMKAnnotation.h */,
-				1896D647291C982E00B03CC0 /* OMKAnnotation.m */,
-				1896D643291C97EE00B03CC0 /* OMKAnnotationView.h */,
-				1896D644291C97EE00B03CC0 /* OMKAnnotationView.m */,
-				188CD574291F97E400E05D19 /* OMKOverlay.h */,
-				188CD575291F97E400E05D19 /* OMKOverlay.m */,
-				18FF5A792921E3C500335501 /* OMKCustomerLocationmAnnotation.h */,
+				1846DF472922448B00F3EC2F /* Base */,
 			);
-			path = Base;
+			path = Overlay;
 			sourceTree = "<group>";
 		};
 		18CF77E9291B80630068CCC7 /* MJRefresh */ = {

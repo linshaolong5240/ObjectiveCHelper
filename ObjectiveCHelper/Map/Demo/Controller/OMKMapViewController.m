@@ -73,11 +73,12 @@
 
 #pragma mark - OMKMapViewDelegate
 
-- (void)mapView:(OMKMapView *)mapView didSelectAnnotationView:(OMKAnnotationView *)view {
+- (void)mapView:(OMKMapView *)mapView didSelectAnnotationView:(id<OMKAnnotationView>)view {
 #if DEBUG
     NSLog(@"%s", __PRETTY_FUNCTION__);
 #endif
 }
+
 -(void)mapView:(OMKMapView *)mapView didDeselectAnnotationView:(id<OMKAnnotationView>)view {
 #if DEBUG
     NSLog(@"%s", __PRETTY_FUNCTION__);
