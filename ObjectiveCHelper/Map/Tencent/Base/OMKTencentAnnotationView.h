@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKTencentAnnotationView : QAnnotationView <OMKAnnotationViewProvider>
+@interface OMKTencentAnnotationView : QAnnotationView <OMKAnnotationView>
 
 @end
 
