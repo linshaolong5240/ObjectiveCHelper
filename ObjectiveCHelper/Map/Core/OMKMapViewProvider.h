@@ -42,7 +42,21 @@ typedef UIView<OMKMapViewProvider> OMKMapView;
  * @param annotation 指定的标注
  * @return 生成的标注View
  */
-- (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation;
+- (__kindof OMKAnnotationView *)mapView:(OMKMapView *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation;
+
+/**
+ * @brief  当选中一个annotation view时，调用此接口
+ * @param mapView 地图View
+ * @param view 选中的annotation view
+ */
+- (void)mapView:(OMKMapView *)mapView didSelectAnnotationView:(id<OMKAnnotationView>)view;
+
+/**
+ * @brief  当取消选中一个annotation view时，调用此接口
+ * @param mapView 地图View
+ * @param view 取消选中的annotation view
+ */
+- (void)mapView:(OMKMapView *)mapView didDeselectAnnotationView:(id<OMKAnnotationView>)view;
 
 /**
  *  @brief 定位时的userTrackingMode 改变时delegate调用此函数

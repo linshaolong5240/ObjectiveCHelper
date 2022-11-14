@@ -9,7 +9,7 @@
 #import "OMKTencentMapView.h"
 #import <QMapKit/QMapKit.h>
 //OMK Support
-#import "OMKTencentAnnotationContainerView.h"
+#import "OMKTencentPointAnnotationView.h"
 
 QUserTrackingMode QUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
@@ -61,8 +61,6 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
 - (void)setupView {
     [self addSubview:self.mapView];
 }
-
-#pragma mark - QMapViewDelegate
 
 #pragma mark - QMapViewDelegate - Location
 
@@ -125,15 +123,50 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
 - (QAnnotationView *)mapView:(QMapView *)mapView viewForAnnotation:(id<QAnnotation>)annotation {
     if ([annotation isKindOfClass:[OMKTencentPointAnnotation class]]) {
         OMKTencentPointAnnotation *omkAnnotation = (OMKTencentPointAnnotation *)annotation;
-        OMKTencentAnnotationContainerView *annotationView = (OMKTencentAnnotationContainerView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        OMKTencentPointAnnotationView *annotationView = (OMKTencentPointAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
-            OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
-            annotationView = [[OMKTencentAnnotationContainerView alloc] initWithView:view];
-            annotationView.canShowCallout = NO;
+            annotationView = [[OMKTencentPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
         }
         return annotationView;
     }
     return nil;
+}
+
+/**
+ * @brief  当选中一个annotation view时，调用此接口
+ * @param mapView 地图View
+ * @param view 选中的annotation view
+ */
+- (void)mapView:(QMapView *)mapView didSelectAnnotationView:(QAnnotationView *)view {
+    if (![self.delegate respondsToSelector:@selector(mapView:didSelectAnnotationView:)]) {
+        return;
+    }
+    if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
+        return;
+    }
+    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
+    
+    //OMKTencentPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
+    if ([view isKindOfClass:[OMKTencentPointAnnotationView class]]) {
+        [self.mapView deselectAnnotation:view.annotation animated:NO];
+    }
+}
+
+/**
+ * @brief  当取消选中一个annotation view时，调用此接口
+ * @param mapView 地图View
+ * @param view 取消选中的annotation view
+ */
+- (void)mapView:(QMapView *)mapView didDeselectAnnotationView:(QAnnotationView *)view {
+    if (![self.delegate respondsToSelector:@selector(mapView:didDeselectAnnotationView:)]) {
+        return;
+    }
+    if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
+        return;
+    }
+    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    [self.delegate mapView:self didDeselectAnnotationView:omkAnnotationView];
 }
 
 /**
@@ -143,9 +176,10 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
  * @param animated 是否有动画
  */
 - (void)mapView:(QMapView *)mapView didChangeUserTrackingMode:(QUserTrackingMode)mode animated:(BOOL)animated {
-    if ([self.delegate respondsToSelector:@selector(mapView:didChangeUserTrackingMode:animated:)]) {
-        [self.delegate mapView:self didChangeUserTrackingMode:OMKUserTrackingModeFromQUserTrackingMode(mode) animated:animated];
+    if (![self.delegate respondsToSelector:@selector(mapView:didChangeUserTrackingMode:animated:)]) {
+        return;
     }
+    [self.delegate mapView:self didChangeUserTrackingMode:OMKUserTrackingModeFromQUserTrackingMode(mode) animated:animated];
 }
 
 #pragma mark - OMKMapProvider

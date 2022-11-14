@@ -1,5 +1,5 @@
 //
-//  OMKBaiduAnnotationView.m
+//  OMKBaiduPointAnnotationView.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/14.
@@ -8,8 +8,10 @@
 
 #import "OMKBaiduAnnotationView.h"
 
-@implementation OMKBaiduAnnotationView
+NS_ASSUME_NONNULL_BEGIN
 
-
+@interface OMKBaiduPointAnnotationView : OMKBaiduAnnotationView
 
 @end
+
+NS_ASSUME_NONNULL_END

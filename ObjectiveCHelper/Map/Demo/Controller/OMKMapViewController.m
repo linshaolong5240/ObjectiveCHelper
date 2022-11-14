@@ -58,7 +58,6 @@
     @weakify(self)
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         @strongify(self)
-//        self.customAnnotation.title = @"titlle changed";
         self.customAnnotation.coordinate = CLLocationCoordinate2DMake(27.0533, 119.1911);
 //        [self.mapView removeAnnotation:self.customAnnotation];
     });
@@ -73,6 +72,17 @@
     OMKPointAnnotationView *annotationView = [[OMKPointAnnotationView alloc] initWithAnnotation:annotation];
     return annotationView;
     return nil;
+}
+
+- (void)mapView:(OMKMapView *)mapView didSelectAnnotationView:(OMKAnnotationView *)view {
+#if DEBUG
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+#endif
+}
+-(void)mapView:(OMKMapView *)mapView didDeselectAnnotationView:(id<OMKAnnotationView>)view {
+#if DEBUG
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+#endif
 }
 
 - (void)mapView:(OMKMapView *)mapView didChangeUserTrackingMode:(OMKUserTrackingMode)mode animated:(BOOL)animated {

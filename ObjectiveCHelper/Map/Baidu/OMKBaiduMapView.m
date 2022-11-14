@@ -11,7 +11,7 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BMKLocationKit/BMKLocationManager.h>
 //OMK Support
-#import "OMKBaiduAnnotationContainerView.h"
+#import "OMKBaiduPointAnnotationView.h"
 
 BMKUserTrackingMode BMKUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
@@ -193,17 +193,17 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     
 }
 
-#pragma mark - BMKMapViewDelegate
-
+#pragma mark - BMKMapViewDelegate - Annotation
+/// 根据anntation生成对应的View
+/// @param mapView 地图View
+/// @param annotation 指定的标注
+/// @return 生成的标注View
 - (nullable __kindof BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
     if ([annotation isKindOfClass:[OMKBaiduPointAnnotation class]]) {
         OMKBaiduPointAnnotation *omkAnnotation = (OMKBaiduPointAnnotation *)annotation;
-        //dequeueReusableAnnotationViewWithIdentifier
-        OMKBaiduAnnotationContainerView *annotationView = (OMKBaiduAnnotationContainerView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
-        if (annotationView == nil && [self.delegate respondsToSelector:@selector(viewForAnnotation:)]) {
-            OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
-            annotationView = [[OMKBaiduAnnotationContainerView alloc] initWithView:view];
-            annotationView.canShowCallout = NO;
+        OMKBaiduAnnotationView *annotationView = (OMKBaiduAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        if (annotationView == nil) {
+            annotationView = [[OMKBaiduPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
         }
         return annotationView;
     }
@@ -211,10 +211,50 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     return nil;
 }
 
-- (void)mapView:(BMKMapView *)mapView didChangeUserTrackingMode:(BMKUserTrackingMode)mode {
-    if ([self.delegate respondsToSelector:@selector(mapView:didChangeUserTrackingMode:animated:)]) {
-        [self.delegate mapView:self didChangeUserTrackingMode:OMKUserTrackingModeFromBMKUserTrackingMode(mode) animated:NO];
+/// 当选中一个annotation views时，调用此接口
+/// 当BMKAnnotation的title为nil，BMKAnnotationView的canShowCallout为NO时，不显示气泡，点击BMKAnnotationView会回调此接口。
+/// 当气泡已经弹出，点击BMKAnnotationView不会继续回调此接口。
+/// @param mapView 地图View
+/// @param view 选中的annotation views
+- (void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view {
+    if (![self.delegate respondsToSelector:@selector(mapView:didSelectAnnotationView:)]) {
+        return;
     }
+    if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
+        return;
+    }
+    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
+    
+    //OMKBaiduPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
+    if ([view isKindOfClass:[OMKBaiduPointAnnotationView class]]) {
+        [self.mapView deselectAnnotation:view.annotation animated:NO];
+    }
+}
+
+/// 当取消选中一个annotation views时，调用此接口
+/// @param mapView 地图View
+/// @param view 取消选中的annotation views
+- (void)mapView:(BMKMapView *)mapView didDeselectAnnotationView:(BMKAnnotationView *)view {
+    if (![self.delegate respondsToSelector:@selector(mapView:didDeselectAnnotationView:)]) {
+        return;
+    }
+    if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
+        return;
+    }
+    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    [self.delegate mapView:self didDeselectAnnotationView:omkAnnotationView];
+}
+
+/// 切换定位模式会调用此接口
+/// @param mapView 地图View
+/// @param mode 切换后的定位模式
+- (void)mapView:(BMKMapView *)mapView didChangeUserTrackingMode:(BMKUserTrackingMode)mode {
+    if (![self.delegate respondsToSelector:@selector(mapView:didChangeUserTrackingMode:animated:)]) {
+        return;
+    }
+    [self.delegate mapView:self didChangeUserTrackingMode:OMKUserTrackingModeFromBMKUserTrackingMode(mode) animated:NO];
+
 }
 
 #pragma mark - OMKMapProvider

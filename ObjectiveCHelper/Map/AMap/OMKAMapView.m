@@ -9,7 +9,7 @@
 #import "OMKAMapView.h"
 #import <MAMapKit/MAMapKit.h>
 //OMK Support
-#import "OMKAMapAnnotationContainerView.h"
+#import "OMKAMapPointAnnotationView.h"
 
 MAUserTrackingMode MAUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
@@ -138,11 +138,9 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
         return nil;
     } else if ([annotation isKindOfClass:[OMKAMapPointAnnotation class]]) {
         OMKAMapPointAnnotation *omkAnnotation = (OMKAMapPointAnnotation *)annotation;
-        //dequeueReusableAnnotationViewWithIdentifier
-        OMKAMapAnnotationContainerView *annotationView = (OMKAMapAnnotationContainerView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        OMKAMapPointAnnotationView *annotationView = (OMKAMapPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
-            OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
-            annotationView = [[OMKAMapAnnotationContainerView alloc] initWithView:view];
+            annotationView = [[OMKAMapPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
             annotationView.canShowCallout = NO;
         }
         return annotationView;
@@ -150,6 +148,50 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
     return nil;
 }
 
+/**
+ * @brief 当选中一个annotation view时，调用此接口. 注意如果已经是选中状态，再次点击不会触发此回调。取消选中需调用-(void)deselectAnnotation:animated:
+ * @param mapView 地图View
+ * @param view 选中的annotation view
+ */
+- (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view {
+    if (![self.delegate respondsToSelector:@selector(mapView:didSelectAnnotationView:)]) {
+        return;
+    }
+    if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
+        return;
+    }
+    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
+    
+    //OMKAMapPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
+    if ([view isKindOfClass:[OMKAMapPointAnnotationView class]]) {
+        [self.mapView deselectAnnotation:view.annotation animated:NO];
+    }
+
+}
+
+/**
+ * @brief 当取消选中一个annotation view时，调用此接口
+ * @param mapView 地图View
+ * @param view 取消选中的annotation view
+ */
+- (void)mapView:(MAMapView *)mapView didDeselectAnnotationView:(MAAnnotationView *)view {
+    if (![self.delegate respondsToSelector:@selector(mapView:didDeselectAnnotationView:)]) {
+        return;
+    }
+    if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
+        return;
+    }
+    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    [self.delegate mapView:self didDeselectAnnotationView:omkAnnotationView];
+}
+
+/**
+ * @brief 当userTrackingMode改变时，调用此接口
+ * @param mapView 地图View
+ * @param mode 改变后的mode
+ * @param animated 动画
+ */
 - (void)mapView:(MAMapView *)mapView didChangeUserTrackingMode:(MAUserTrackingMode)mode animated:(BOOL)animated {
     if ([self.delegate respondsToSelector:@selector(mapView:didChangeUserTrackingMode:animated:)]) {
         [self.delegate mapView:self didChangeUserTrackingMode:OMKUserTrackingModeFromMAUserTrackingMode(mode) animated:animated];
