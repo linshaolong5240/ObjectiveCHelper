@@ -44,9 +44,10 @@
         default:
             break;
     }
+    
+    self.mapView.delegate = self;
     self.mapView.showsUserLocation = YES;
     self.mapView.userTrackingMode = OCHMapUserTrackingModeFollowWithHeading;
-    self.mapView.delegate = self;
     
     [self.view addSubview:self.mapView];
     self.customAnnotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.1911);
@@ -57,6 +58,7 @@
     @weakify(self)
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         @strongify(self)
+//        self.customAnnotation.title = @"titlle changed";
         self.customAnnotation.coordinate = CLLocationCoordinate2DMake(27.0533, 119.1911);
 //        [self.mapView removeAnnotation:self.customAnnotation];
     });
@@ -71,6 +73,12 @@
     OMKPointAnnotationView *annotationView = [[OMKPointAnnotationView alloc] initWithAnnotation:annotation];
     return annotationView;
     return nil;
+}
+
+- (void)mapView:(OMKMapView *)mapView didChangeUserTrackingMode:(OMKUserTrackingMode)mode animated:(BOOL)animated {
+#if DEBUG
+    NSLog(@"%s %@", __PRETTY_FUNCTION__, NSStringFromOMKUserTrackingMode(mode));
+#endif
 }
 
 @end

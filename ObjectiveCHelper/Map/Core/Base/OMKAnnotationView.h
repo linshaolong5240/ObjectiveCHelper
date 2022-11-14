@@ -13,11 +13,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol OMKAnnotationView <NSObject>
 
+@property (nonatomic, strong) UIImage *image;
+
+@property (nonatomic) BOOL canShowCallout;
+
 @end
 
 @interface OMKAnnotationView : UIView <OMKAnnotationView>
 
 @property(nonatomic, strong) id<OMKAnnotation> annotation;
+
+@property (nonatomic, strong) UIImage *image;
+@property (nonatomic) BOOL canShowCallout;
 
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithFrame:(CGRect)frame NS_UNAVAILABLE;

@@ -11,6 +11,34 @@
 //OMK Support
 #import "OMKTencentAnnotationContainerView.h"
 
+QUserTrackingMode QUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
+    switch (mode) {
+        case OCHMapUserTrackingModeNone:
+            return QUserTrackingModeNone;
+            break;
+        case OCHMapUserTrackingModeFollow:
+            return QUserTrackingModeFollow;
+            break;
+        case OCHMapUserTrackingModeFollowWithHeading:
+            return QUserTrackingModeFollowWithHeading;
+            break;
+    }
+}
+
+OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode mode) {
+    switch (mode) {
+        case QUserTrackingModeNone:
+            return OCHMapUserTrackingModeNone;
+            break;
+        case QUserTrackingModeFollow:
+            return OCHMapUserTrackingModeFollow;
+            break;
+        case QUserTrackingModeFollowWithHeading:
+            return OCHMapUserTrackingModeFollowWithHeading;
+            break;
+    }
+}
+
 @interface OMKTencentMapView () <QMapViewDelegate>
 
 @property(nonatomic, strong) QMapView *mapView;
@@ -86,19 +114,6 @@
 #endif
 }
 
-/**
- * @brief 定位时的userTrackingMode 改变时delegate调用此函数
- * @param mapView 地图View
- * @param mode QMUserTrackingMode
- * @param animated 是否有动画
- */
-- (void)mapView:(QMapView *)mapView didChangeUserTrackingMode:(QUserTrackingMode)mode animated:(BOOL)animated
-{
-#if DEBUG
-    NSLog(@"%s mode = %ld, animated = %d", __FUNCTION__, (long)mode, animated);
-#endif
-}
-
 #pragma mark - QMapViewDelegate - Annotation
 
 /**
@@ -119,6 +134,18 @@
         return annotationView;
     }
     return nil;
+}
+
+/**
+ * @brief 定位时的userTrackingMode 改变时delegate调用此函数
+ * @param mapView 地图View
+ * @param mode QMUserTrackingMode
+ * @param animated 是否有动画
+ */
+- (void)mapView:(QMapView *)mapView didChangeUserTrackingMode:(QUserTrackingMode)mode animated:(BOOL)animated {
+    if ([self.delegate respondsToSelector:@selector(mapView:didChangeUserTrackingMode:animated:)]) {
+        [self.delegate mapView:self didChangeUserTrackingMode:OMKUserTrackingModeFromQUserTrackingMode(mode) animated:animated];
+    }
 }
 
 #pragma mark - OMKMapProvider

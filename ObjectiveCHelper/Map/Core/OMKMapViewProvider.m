@@ -23,3 +23,17 @@ NSString *NSStringFromOMKMapType(OMKMapType type) {
             break;
     }
 }
+
+NSString *NSStringFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
+    switch (mode) {
+        case OCHMapUserTrackingModeNone:                 ///< 不追踪用户的location更新
+            return @"OCHMapUserTrackingModeNone";
+            break;
+        case OCHMapUserTrackingModeFollow:               ///< 追踪用户的location更新
+            return @"OCHMapUserTrackingModeFollow";
+            break;
+        case OCHMapUserTrackingModeFollowWithHeading:    ///< 追踪用户的location与heading更新
+            return @"OCHMapUserTrackingModeFollowWithHeading";
+            break;
+    }
+}

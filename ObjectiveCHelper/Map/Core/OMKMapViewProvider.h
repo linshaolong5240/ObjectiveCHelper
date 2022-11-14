@@ -24,8 +24,11 @@ typedef NS_ENUM(NSUInteger, OMKUserTrackingMode) {
 };
 
 NSString *NSStringFromOMKMapType(OMKMapType type);
+NSString *NSStringFromOMKUserTrackingMode(OMKUserTrackingMode mode);
 
 @protocol OMKMapViewProvider;
+
+typedef UIView<OMKMapViewProvider> OMKMapView;
 
 @protocol OMKMapViewDelegate <NSObject>
 
@@ -33,7 +36,21 @@ NSString *NSStringFromOMKMapType(OMKMapType type);
 
 @optional
 
+/**
+ * @brief 根据anntation生成对应的View
+ * @param mapView 地图View
+ * @param annotation 指定的标注
+ * @return 生成的标注View
+ */
 - (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation;
+
+/**
+ *  @brief 定位时的userTrackingMode 改变时delegate调用此函数
+ *  @param mapView 地图View
+ *  @param mode QMUserTrackingMode
+ *  @param animated 是否有动画
+ */
+- (void)mapView:(OMKMapView *)mapView didChangeUserTrackingMode:(OMKUserTrackingMode)mode animated:(BOOL)animated;
 
 @end
 

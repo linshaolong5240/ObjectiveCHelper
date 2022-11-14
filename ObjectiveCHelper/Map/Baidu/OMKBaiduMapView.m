@@ -13,6 +13,37 @@
 //OMK Support
 #import "OMKBaiduAnnotationContainerView.h"
 
+BMKUserTrackingMode BMKUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
+    switch (mode) {
+        case OCHMapUserTrackingModeNone:
+            return BMKUserTrackingModeNone;
+            break;
+        case OCHMapUserTrackingModeFollow:
+            return BMKUserTrackingModeFollow;
+            break;
+        case OCHMapUserTrackingModeFollowWithHeading:
+            return BMKUserTrackingModeFollowWithHeading;
+            break;
+    }
+}
+
+OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMode mode) {
+    switch (mode) {
+        case BMKUserTrackingModeNone:
+            return OCHMapUserTrackingModeNone;
+            break;
+        case BMKUserTrackingModeHeading:
+            return OCHMapUserTrackingModeNone;
+            break;
+        case BMKUserTrackingModeFollow:
+            return OCHMapUserTrackingModeFollow;
+            break;
+        case BMKUserTrackingModeFollowWithHeading:
+            return OCHMapUserTrackingModeFollowWithHeading;
+            break;
+    }
+}
+
 @interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>
 
 @property (nonatomic, strong) BMKMapView *mapView;
@@ -169,7 +200,7 @@
         OMKBaiduPointAnnotation *omkAnnotation = (OMKBaiduPointAnnotation *)annotation;
         //dequeueReusableAnnotationViewWithIdentifier
         OMKBaiduAnnotationContainerView *annotationView = (OMKBaiduAnnotationContainerView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
-        if (annotationView == nil) {
+        if (annotationView == nil && [self.delegate respondsToSelector:@selector(viewForAnnotation:)]) {
             OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
             annotationView = [[OMKBaiduAnnotationContainerView alloc] initWithView:view];
             annotationView.canShowCallout = NO;
@@ -178,6 +209,12 @@
     }
     
     return nil;
+}
+
+- (void)mapView:(BMKMapView *)mapView didChangeUserTrackingMode:(BMKUserTrackingMode)mode {
+    if ([self.delegate respondsToSelector:@selector(mapView:didChangeUserTrackingMode:animated:)]) {
+        [self.delegate mapView:self didChangeUserTrackingMode:OMKUserTrackingModeFromBMKUserTrackingMode(mode) animated:NO];
+    }
 }
 
 #pragma mark - OMKMapProvider
@@ -192,17 +229,7 @@
 
 - (void)setUserTrackingMode:(OMKUserTrackingMode)userTrackingMode {
     _userTrackingMode = userTrackingMode;
-    switch (userTrackingMode) {
-        case OCHMapUserTrackingModeNone:
-            self.mapView.userTrackingMode = BMKUserTrackingModeNone;
-            break;
-        case OCHMapUserTrackingModeFollow:
-            self.mapView.userTrackingMode = BMKUserTrackingModeFollow;
-            break;
-        case OCHMapUserTrackingModeFollowWithHeading:
-            self.mapView.userTrackingMode = BMKUserTrackingModeFollowWithHeading;
-            break;
-    }
+    self.mapView.userTrackingMode = BMKUserTrackingModeFromOMKUserTrackingMode(userTrackingMode);
 }
 
 - (void)addAnnotation:(id<OMKAnnotation, BMKAnnotation>)annotation {
