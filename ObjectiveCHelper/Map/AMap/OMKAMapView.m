@@ -9,7 +9,8 @@
 #import "OMKAMapView.h"
 #import <MAMapKit/MAMapKit.h>
 //OMK Support
-#import "OMKAMapPointAnnotationView.h"
+#import "OMKAPointAnnotationView.h"
+#import "OMKACustomerLocationAnnotationView.h"
 
 MAUserTrackingMode MAUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
@@ -136,15 +137,24 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation {
     if ([annotation isKindOfClass:[MAUserLocation class]]) {
         return nil;
-    } else if ([annotation isKindOfClass:[OMKAMapPointAnnotation class]]) {
-        OMKAMapPointAnnotation *omkAnnotation = (OMKAMapPointAnnotation *)annotation;
-        OMKAMapPointAnnotationView *annotationView = (OMKAMapPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+    }
+    else if ([annotation isKindOfClass:[OMKAPointAnnotation class]]) {
+        OMKAPointAnnotation *omkAnnotation = (OMKAPointAnnotation *)annotation;
+        OMKAPointAnnotationView *annotationView = (OMKAPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
-            annotationView = [[OMKAMapPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
-            annotationView.canShowCallout = NO;
+            annotationView = [[OMKAPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
         }
         return annotationView;
     }
+    else if ([annotation isKindOfClass:[OMKACustomerLocationAnnotation class]]) {
+        OMKACustomerLocationAnnotation *omkAnnotation = (OMKACustomerLocationAnnotation *)annotation;
+        OMKAAnnotationView *annotationView = (OMKAAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        if (annotationView == nil) {
+            annotationView = [[OMKACustomerLocationAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+        }
+        return annotationView;
+    }
+
     return nil;
 }
 
@@ -164,7 +174,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
     [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
     
     //OMKAMapPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
-    if ([view isKindOfClass:[OMKAMapPointAnnotationView class]]) {
+    if ([view isKindOfClass:[OMKAPointAnnotationView class]]) {
         [self.mapView deselectAnnotation:view.annotation animated:NO];
     }
 

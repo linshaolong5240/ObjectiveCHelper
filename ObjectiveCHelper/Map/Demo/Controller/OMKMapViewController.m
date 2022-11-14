@@ -32,7 +32,8 @@
     switch (self.mapType) {
         case OMKMapTypeAMap:
             self.mapView = [[OMKAMapView alloc] initWithFrame:self.view.bounds];
-            self.pointAnnotation = [[OMKAMapPointAnnotation alloc] init];
+            self.pointAnnotation = [[OMKAPointAnnotation alloc] init];
+            self.customerLocationAnnotation = [[OMKACustomerLocationAnnotation alloc] init];
             break;
         case OMKMapTypeBaidu:
             self.mapView = [[OMKBaiduMapView alloc] initWithFrame:self.view.bounds];
@@ -44,6 +45,8 @@
             self.pointAnnotation = [[OMKQPointAnnotation alloc] init];
             self.customerLocationAnnotation = [[OMKQCustomerLocationAnnotation alloc] init];
             break;
+        case OMKMapTypeNumber:
+            break;;
     }
     
     self.mapView.delegate = self;

@@ -1,8 +1,8 @@
 //
-//  OMKAMapPointAnnotation.h
+//  OMKAAnnotation.h
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/11/12.
+//  Created by Sauron on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKAMapPointAnnotation : MAPointAnnotation <OMKAnnotation>
+@interface OMKAAnnotation : MAPointAnnotation <OMKAnnotation>
 
 @property (nonatomic, readonly,copy) NSString *reuseIdentifier;
 

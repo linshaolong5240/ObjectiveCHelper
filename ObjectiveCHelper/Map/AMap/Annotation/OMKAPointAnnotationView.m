@@ -1,14 +1,14 @@
 //
-//  OMKAMapPointAnnotationView.m
+//  OMKAPointAnnotationView.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKAMapPointAnnotationView.h"
+#import "OMKAPointAnnotationView.h"
 
-@implementation OMKAMapPointAnnotationView
+@implementation OMKAPointAnnotationView
 
 - (id)initWithAnnotation:(id<MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
