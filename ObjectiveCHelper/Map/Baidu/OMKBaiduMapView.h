@@ -11,6 +11,7 @@
 #import "OMKBPointAnnotation.h"
 #import "OMKBCustomerLocationAnnotation.h"
 #import "OMKBEmployeeLocationAnnotation.h"
+#import "OMKBCircleOverlay.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

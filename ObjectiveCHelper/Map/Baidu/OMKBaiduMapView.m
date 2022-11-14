@@ -256,6 +256,18 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     [self.delegate mapView:self didDeselectAnnotationView:omkAnnotationView];
 }
 
+- (__kindof BMKOverlayView *)mapView:(BMKMapView *)mapView viewForOverlay:(id<BMKOverlay>)overlay {
+    if ([overlay isKindOfClass:[BMKCircle class]]){
+        BMKCircleView* circleView = [[BMKCircleView alloc] initWithOverlay:overlay];
+        circleView.fillColor = [[UIColor cyanColor] colorWithAlphaComponent:0.5];
+        circleView.strokeColor = [[UIColor blueColor] colorWithAlphaComponent:0.5];
+        circleView.lineWidth = 10.0;
+
+        return circleView;
+    }
+    return nil;
+}
+
 /// 切换定位模式会调用此接口
 /// @param mapView 地图View
 /// @param mode 切换后的定位模式
@@ -304,6 +316,14 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
         id<BMKAnnotation> baiduAnnotation = self.mapView.annotations[index];
         [self.mapView removeAnnotation:baiduAnnotation];
     }
+}
+
+- (void)addOverlay:(id <OMKOverlay, BMKOverlay>)overlay {
+    [self.mapView addOverlay:overlay];
+}
+
+- (void)removeOverlay:(id <OMKOverlay, BMKOverlay>)overlay {
+    [self.mapView removeOverlay:overlay];
 }
 
 @end

@@ -13,6 +13,7 @@
 @property(nonatomic, strong) UIView<OMKMapViewProvider> *mapView;
 @property(nonatomic, strong) id<OMKAnnotation> pointAnnotation;
 @property(nonatomic, strong) id<OMKCustomerLocationmAnnotation> customerLocationAnnotation;
+@property(nonatomic, strong) id<OMKCircleOverlay> circleOverlay;
 
 @end
 
@@ -39,6 +40,7 @@
             self.mapView = [[OMKBaiduMapView alloc] initWithFrame:self.view.bounds];
             self.pointAnnotation = [[OMKBPointAnnotation alloc] init];
             self.customerLocationAnnotation = [[OMKBCustomerLocationAnnotation alloc] init];
+            self.circleOverlay = [[OMKBCircleOverlay alloc] init];
             break;
         case OMKMapTypeTencent:
             self.mapView = [[OMKTencentMapView alloc] initWithFrame:self.view.bounds];
@@ -62,6 +64,12 @@
     
     self.customerLocationAnnotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.2911);
     [self.mapView addAnnotation:self.customerLocationAnnotation];
+    
+    // 添加圆形覆盖物
+    CLLocationCoordinate2D coor = CLLocationCoordinate2DMake(26.0533, 119.3911);
+    
+    [self.circleOverlay setCircleWithCenterCoordinate:coor radius:5000];
+    [self.mapView addOverlay:self.circleOverlay];
     
 //    @weakify(self)
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

@@ -1,17 +1,16 @@
 //
-//  OMKOverlay.h
+//  OMKOverlayView.h
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/11/12.
+//  Created by Sauron on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "OMKAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol OMKOverlay <OMKAnnotation>
+@protocol OMKOverlayView <NSObject>
 
 @end
 

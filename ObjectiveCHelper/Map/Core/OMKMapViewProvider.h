@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "OMKAnnotationView.h"
+#import "OMKOverlay.h"
+#import "OMKCircleOverlay.h"
 
 typedef NS_ENUM(NSUInteger, OMKMapType) {
     OMKMapTypeAMap,
@@ -74,6 +76,10 @@ typedef UIView<OMKMapViewProvider> OMKMapView;
 - (void) addAnnotation:(id<OMKAnnotation>)annotation;
 
 - (void) removeAnnotation:(id<OMKAnnotation>)annotation;
+
+- (void)addOverlay:(id <OMKOverlay>)overlay;
+
+- (void)removeOverlay:(id <OMKOverlay>)overlay;
 
 @optional
 
