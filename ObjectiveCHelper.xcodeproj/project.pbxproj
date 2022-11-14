@@ -25,6 +25,8 @@
 		1846DF3D2922407800F3EC2F /* OMKAAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF3C2922407800F3EC2F /* OMKAAnnotation.m */; };
 		1846DF402922417D00F3EC2F /* OMKACustomerLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF3F2922417D00F3EC2F /* OMKACustomerLocationAnnotation.m */; };
 		1846DF43292241BF00F3EC2F /* OMKACustomerLocationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF42292241BF00F3EC2F /* OMKACustomerLocationAnnotationView.m */; };
+		1846DF4B2922450900F3EC2F /* OMKBEmployeeLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF4A2922450900F3EC2F /* OMKBEmployeeLocationAnnotation.m */; };
+		1846DF4E2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF4D2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.m */; };
 		1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */; };
 		186027712908CDFA001A3D2B /* UITableView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+Extension.m */; };
 		187650262915057400420786 /* OMKTencentMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187650252915057400420786 /* OMKTencentMapView.m */; };
@@ -140,6 +142,12 @@
 		1846DF3F2922417D00F3EC2F /* OMKACustomerLocationAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKACustomerLocationAnnotation.m; sourceTree = "<group>"; };
 		1846DF41292241BF00F3EC2F /* OMKACustomerLocationAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKACustomerLocationAnnotationView.h; sourceTree = "<group>"; };
 		1846DF42292241BF00F3EC2F /* OMKACustomerLocationAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKACustomerLocationAnnotationView.m; sourceTree = "<group>"; };
+		1846DF48292244CD00F3EC2F /* OMKEmployeeLocationmAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKEmployeeLocationmAnnotation.h; sourceTree = "<group>"; };
+		1846DF492922450900F3EC2F /* OMKBEmployeeLocationAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBEmployeeLocationAnnotation.h; sourceTree = "<group>"; };
+		1846DF4A2922450900F3EC2F /* OMKBEmployeeLocationAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBEmployeeLocationAnnotation.m; sourceTree = "<group>"; };
+		1846DF4C2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBEmployeeLocationAnnotationView.h; sourceTree = "<group>"; };
+		1846DF4D2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBEmployeeLocationAnnotationView.m; sourceTree = "<group>"; };
+		1846DF4F2922475A00F3EC2F /* OMKPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKPointAnnotation.h; sourceTree = "<group>"; };
 		1853C4EF28F3EE6C00245003 /* UIKitUISearchbarDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitUISearchbarDemoViewController.h; sourceTree = "<group>"; };
 		1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitUISearchbarDemoViewController.m; sourceTree = "<group>"; };
 		1860276F2908CDFA001A3D2B /* UITableView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Extension.h"; sourceTree = "<group>"; };
@@ -321,7 +329,6 @@
 			isa = PBXGroup;
 			children = (
 				1846DF2529222B6C00F3EC2F /* Annotation */,
-				18FF5A6D2921DAEB00335501 /* Base */,
 				187650272915088600420786 /* OMKAMapView.h */,
 				187650282915088600420786 /* OMKAMapView.m */,
 			);
@@ -348,6 +355,10 @@
 				18FF5A7B2921E47600335501 /* OMKBCustomerLocationAnnotation.m */,
 				1846DF292922325500F3EC2F /* OMKBCustomerLocationAnnotationView.h */,
 				1846DF2A2922325500F3EC2F /* OMKBCustomerLocationAnnotationView.m */,
+				1846DF492922450900F3EC2F /* OMKBEmployeeLocationAnnotation.h */,
+				1846DF4A2922450900F3EC2F /* OMKBEmployeeLocationAnnotation.m */,
+				1846DF4C2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.h */,
+				1846DF4D2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.m */,
 			);
 			path = Annotation;
 			sourceTree = "<group>";
@@ -371,6 +382,7 @@
 		1846DF2529222B6C00F3EC2F /* Annotation */ = {
 			isa = PBXGroup;
 			children = (
+				18FF5A6D2921DAEB00335501 /* Base */,
 				188CD56A291F80C800E05D19 /* OMKAPointAnnotation.h */,
 				188CD56B291F80C800E05D19 /* OMKAPointAnnotation.m */,
 				1846DF2629222B9000F3EC2F /* OMKAPointAnnotationView.h */,
@@ -388,6 +400,8 @@
 			children = (
 				1846DF462922446F00F3EC2F /* Base */,
 				18FF5A792921E3C500335501 /* OMKCustomerLocationmAnnotation.h */,
+				1846DF48292244CD00F3EC2F /* OMKEmployeeLocationmAnnotation.h */,
+				1846DF4F2922475A00F3EC2F /* OMKPointAnnotation.h */,
 			);
 			path = Annotation;
 			sourceTree = "<group>";
@@ -1060,6 +1074,7 @@
 				188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */,
 				188CD569291F711600E05D19 /* OMKQPointAnnotation.m in Sources */,
 				1896D645291C97EE00B03CC0 /* OMKAnnotationView.m in Sources */,
+				1846DF4E2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.m in Sources */,
 				18FF5A702921DB8800335501 /* OMKAAnnotationView.m in Sources */,
 				1876AD3628E452A100DA0387 /* UICollectionViewDemoController.m in Sources */,
 				1846DF3729223EFC00F3EC2F /* OMKQCustomerLocationAnnotation.m in Sources */,
@@ -1083,6 +1098,7 @@
 				1876AD3A28E464E500DA0387 /* OCHTableSection.m in Sources */,
 				1898F4B5291A3E4400F13718 /* ReactiveObjCViewController.m in Sources */,
 				1828250F28FFC50400D2E4CF /* UIColor+Extension.m in Sources */,
+				1846DF4B2922450900F3EC2F /* OMKBEmployeeLocationAnnotation.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
 				1846DF43292241BF00F3EC2F /* OMKACustomerLocationAnnotationView.m in Sources */,
 				18FCF2FF291647CA004A0CD7 /* OMKMapView.m in Sources */,

@@ -10,9 +10,9 @@
 
 @interface OMKMapViewController () <OMKMapViewDelegate>
 
-@property(nonatomic, strong) OMKMapView *mapView;
-@property(nonatomic, strong) OMKPointAnnotation *pointAnnotation;
-@property(nonatomic, strong) OMKCustomerAnnotation *customerLocationAnnotation;
+@property(nonatomic, strong) UIView<OMKMapViewProvider> *mapView;
+@property(nonatomic, strong) id<OMKAnnotation> pointAnnotation;
+@property(nonatomic, strong) id<OMKCustomerLocationmAnnotation> customerLocationAnnotation;
 
 @end
 

@@ -11,6 +11,4 @@
 #import "OMKBaiduMapView.h"
 #import "OMKTencentMapView.h"
 
-typedef UIView<OMKMapViewProvider> OMKMapView;
-typedef NSObject<OMKAnnotation> OMKPointAnnotation;
-typedef NSObject<OMKCustomerLocationmAnnotation> OMKCustomerAnnotation;
+

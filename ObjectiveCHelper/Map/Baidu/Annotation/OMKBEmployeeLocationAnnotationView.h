@@ -1,5 +1,5 @@
 //
-//  OMKBCustomerLocationAnnotationView.h
+//  OMKBEmployeeLocationAnnotationView.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/14.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKBCustomerLocationAnnotationView : OMKBAnnotationView
+@interface OMKBEmployeeLocationAnnotationView : OMKBAnnotationView
 
 @end
 

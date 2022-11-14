@@ -7,10 +7,11 @@
 //
 
 #import "OMKQAnnotation.h"
+#import "OMKPointAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKQPointAnnotation : OMKQAnnotation
+@interface OMKQPointAnnotation : OMKQAnnotation <OMKPointAnnotation>
 
 @end
 

@@ -10,6 +10,7 @@
 #import "OMKMapViewProvider.h"
 #import "OMKBPointAnnotation.h"
 #import "OMKBCustomerLocationAnnotation.h"
+#import "OMKBEmployeeLocationAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
