@@ -1,31 +1,26 @@
 //
-//  OMKPointAnnotationView.m
+//  OMKQPointAnnotationView.m
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/11/7.
+//  Created by Apple on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKPointAnnotationView.h"
+#import "OMKQPointAnnotationView.h"
 
-@implementation OMKPointAnnotationView
+@implementation OMKQPointAnnotationView
 
-- (instancetype)initWithAnnotation:(OMKPointAnnotation *)annotation {
-    self = [super initWithAnnotation:annotation];
+- (id)initWithAnnotation:(id<QAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self setupView];
+        self.canShowCallout = NO;
+        [self configureView];
     }
     return self;
 }
 
-
-- (void)setupView {
-    self.backgroundColor = UIColor.orangeColor;
-    self.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, 16, 16);
-    self.layer.cornerRadius = 8;
-    self.layer.borderColor = UIColor.whiteColor.CGColor;
-    self.layer.borderWidth = 2;
-    
+- (void)configureView {
+    self.image = [UIImage imageNamed:@"omk_point_annotation_location"];
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.text = self.annotation.title;
     [titleLabel sizeToFit];
@@ -44,7 +39,6 @@
     }
     [self addSubview:vstack];
     CGFloat width = titleLabel.bounds.size.width > subtitleLabel.bounds.size.width ? titleLabel.bounds.size.width : subtitleLabel.bounds.size.width;
-    
     [vstack mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.mas_top).offset(- 10);
             make.centerX.equalTo(self);

@@ -1,16 +1,16 @@
 //
-//  OMKTencentPointAnnotationView.h
+//  OMKQPointAnnotationView.h
 //  ObjectiveCHelper
 //
 //  Created by Apple on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKTencentAnnotationView.h"
+#import "OMKQAnnotationView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKTencentPointAnnotationView : OMKTencentAnnotationView
+@interface OMKQPointAnnotationView : OMKQAnnotationView
 
 @end
 

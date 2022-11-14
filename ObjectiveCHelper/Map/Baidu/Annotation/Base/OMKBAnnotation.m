@@ -1,14 +1,14 @@
 //
-//  OMKBaiduPointAnnotation.m
+//  OMKBAnnotation.m
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/11/12.
+//  Created by Sauron on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKBaiduPointAnnotation.h"
+#import "OMKBAnnotation.h"
 
-@implementation OMKBaiduPointAnnotation
+@implementation OMKBAnnotation
 
 -(void)dealloc {
 #if DEBUG

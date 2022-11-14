@@ -1,14 +1,14 @@
 //
-//  OMKTencentPointAnnotation.m
+//  OMKQAnnotation.m
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/11/12.
+//  Created by Apple on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKTencentPointAnnotation.h"
+#import "OMKQAnnotation.h"
 
-@implementation OMKTencentPointAnnotation
+@implementation OMKQAnnotation
 
 -(NSString *)reuseViewIdentifier {
     return NSStringFromClass([self class]);

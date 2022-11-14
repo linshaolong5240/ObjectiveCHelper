@@ -9,7 +9,8 @@
 #import "OMKTencentMapView.h"
 #import <QMapKit/QMapKit.h>
 //OMK Support
-#import "OMKTencentPointAnnotationView.h"
+#import "OMKQPointAnnotationView.h"
+#import "OMKQCustomerLocationAnnotationView.h"
 
 QUserTrackingMode QUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
@@ -121,14 +122,23 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
  * @return 生成的标注View
  */
 - (QAnnotationView *)mapView:(QMapView *)mapView viewForAnnotation:(id<QAnnotation>)annotation {
-    if ([annotation isKindOfClass:[OMKTencentPointAnnotation class]]) {
-        OMKTencentPointAnnotation *omkAnnotation = (OMKTencentPointAnnotation *)annotation;
-        OMKTencentPointAnnotationView *annotationView = (OMKTencentPointAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+    if ([annotation isKindOfClass:[OMKQPointAnnotation class]]) {
+        OMKQPointAnnotation *omkAnnotation = (OMKQPointAnnotation *)annotation;
+        OMKQAnnotationView *annotationView = (OMKQAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
-            annotationView = [[OMKTencentPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+            annotationView = [[OMKQPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
         }
         return annotationView;
     }
+    else if ([annotation isKindOfClass:[OMKQCustomerLocationAnnotation class]]) {
+        OMKQPointAnnotation *omkAnnotation = (OMKQPointAnnotation *)annotation;
+        OMKQAnnotationView *annotationView = (OMKQAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        if (annotationView == nil) {
+            annotationView = [[OMKQCustomerLocationAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+        }
+        return annotationView;
+    }
+    
     return nil;
 }
 
@@ -148,7 +158,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
     [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
     
     //OMKTencentPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
-    if ([view isKindOfClass:[OMKTencentPointAnnotationView class]]) {
+    if ([view isKindOfClass:[OMKQPointAnnotationView class]]) {
         [self.mapView deselectAnnotation:view.annotation animated:NO];
     }
 }

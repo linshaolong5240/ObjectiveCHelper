@@ -1,19 +1,19 @@
 //
-//  OMKPersonLocationAnnotation.h
+//  OMKBAnnotation.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import "OMKAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol OMKPersonLocationAnnotation <OMKAnnotation>
+@interface OMKBAnnotation : BMKPointAnnotation <OMKAnnotation>
 
-@property(nonatomic, copy) UIImage *locationImage;
-@property(nonatomic, copy) UIImage *bubbleImage;
+@property (nonatomic, readonly,copy) NSString *reuseIdentifier;
 
 @end
 

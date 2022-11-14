@@ -11,7 +11,9 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BMKLocationKit/BMKLocationManager.h>
 //OMK Support
-#import "OMKBaiduPointAnnotationView.h"
+#import "OMKBPointAnnotationView.h"
+#import "OMKBCustomerLocationAnnotationView.h"
+
 
 BMKUserTrackingMode BMKUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
@@ -199,11 +201,19 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
 /// @param annotation 指定的标注
 /// @return 生成的标注View
 - (nullable __kindof BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
-    if ([annotation isKindOfClass:[OMKBaiduPointAnnotation class]]) {
-        OMKBaiduPointAnnotation *omkAnnotation = (OMKBaiduPointAnnotation *)annotation;
-        OMKBaiduAnnotationView *annotationView = (OMKBaiduAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+    if ([annotation isKindOfClass:[OMKBPointAnnotation class]]) {
+        OMKBPointAnnotation *omkAnnotation = (OMKBPointAnnotation *)annotation;
+        OMKBAnnotationView *annotationView = (OMKBAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
-            annotationView = [[OMKBaiduPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+            annotationView = [[OMKBPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+        }
+        return annotationView;
+    }
+    else if ([annotation isKindOfClass:[OMKBCustomerLocationAnnotation class]]) {
+        OMKBCustomerLocationAnnotation *omkAnnotation = (OMKBCustomerLocationAnnotation *)annotation;
+        OMKBAnnotationView *annotationView = (OMKBAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        if (annotationView == nil) {
+            annotationView = [[OMKBCustomerLocationAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
         }
         return annotationView;
     }
@@ -227,7 +237,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
     
     //OMKBaiduPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
-    if ([view isKindOfClass:[OMKBaiduPointAnnotationView class]]) {
+    if ([view isKindOfClass:[OMKBPointAnnotationView class]]) {
         [self.mapView deselectAnnotation:view.annotation animated:NO];
     }
 }

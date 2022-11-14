@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "OMKMapViewProvider.h"
-#import "OMKTencentPointAnnotation.h"
+#import "OMKQPointAnnotation.h"
+#import "OMKQCustomerLocationAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

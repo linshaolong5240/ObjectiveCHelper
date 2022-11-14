@@ -11,7 +11,8 @@
 @interface OMKMapViewController () <OMKMapViewDelegate>
 
 @property(nonatomic, strong) OMKMapView *mapView;
-@property(nonatomic, strong) OMKPointAnnotation *customAnnotation;
+@property(nonatomic, strong) OMKPointAnnotation *pointAnnotation;
+@property(nonatomic, strong) OMKCustomerAnnotation *customerLocationAnnotation;
 
 @end
 
@@ -31,17 +32,17 @@
     switch (self.mapType) {
         case OMKMapTypeAMap:
             self.mapView = [[OMKAMapView alloc] initWithFrame:self.view.bounds];
-            self.customAnnotation = [[OMKAMapPointAnnotation alloc] init];
+            self.pointAnnotation = [[OMKAMapPointAnnotation alloc] init];
             break;
         case OMKMapTypeBaidu:
             self.mapView = [[OMKBaiduMapView alloc] initWithFrame:self.view.bounds];
-            self.customAnnotation = [[OMKBaiduPointAnnotation alloc] init];
+            self.pointAnnotation = [[OMKBPointAnnotation alloc] init];
+            self.customerLocationAnnotation = [[OMKBCustomerLocationAnnotation alloc] init];
             break;
         case OMKMapTypeTencent:
             self.mapView = [[OMKTencentMapView alloc] initWithFrame:self.view.bounds];
-            self.customAnnotation = [[OMKTencentPointAnnotation alloc] init];
-            break;
-        default:
+            self.pointAnnotation = [[OMKQPointAnnotation alloc] init];
+            self.customerLocationAnnotation = [[OMKQCustomerLocationAnnotation alloc] init];
             break;
     }
     
@@ -50,29 +51,24 @@
     self.mapView.userTrackingMode = OCHMapUserTrackingModeFollowWithHeading;
     
     [self.view addSubview:self.mapView];
-    self.customAnnotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.1911);
-    self.customAnnotation.title = @"tittle";
-    self.customAnnotation.subtitle = @"subtittle";
-    [self.mapView addAnnotation:self.customAnnotation];
     
-    @weakify(self)
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        @strongify(self)
-        self.customAnnotation.coordinate = CLLocationCoordinate2DMake(27.0533, 119.1911);
-//        [self.mapView removeAnnotation:self.customAnnotation];
-    });
+    self.pointAnnotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.1911);
+    self.pointAnnotation.title = @"tittle";
+    self.pointAnnotation.subtitle = @"subtittle";
+    [self.mapView addAnnotation:self.pointAnnotation];
+    
+    self.customerLocationAnnotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.2911);
+    [self.mapView addAnnotation:self.customerLocationAnnotation];
+    
+//    @weakify(self)
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        @strongify(self)
+//        self.pointAnnotation.coordinate = CLLocationCoordinate2DMake(27.0533, 119.1911);
+//        [self.mapView removeAnnotation:self.pointAnnotation];
+//    });
 }
 
 #pragma mark - OMKMapViewDelegate
-
-- (__kindof OMKAnnotationView *)mapView:(UIView<OMKMapViewProvider> *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation {
-#if DEBUG
-    NSLog(@"%s class name %@ : %@", __PRETTY_FUNCTION__, NSStringFromClass([self.customAnnotation class]), NSStringFromClass([annotation class]));
-#endif
-    OMKPointAnnotationView *annotationView = [[OMKPointAnnotationView alloc] initWithAnnotation:annotation];
-    return annotationView;
-    return nil;
-}
 
 - (void)mapView:(OMKMapView *)mapView didSelectAnnotationView:(OMKAnnotationView *)view {
 #if DEBUG

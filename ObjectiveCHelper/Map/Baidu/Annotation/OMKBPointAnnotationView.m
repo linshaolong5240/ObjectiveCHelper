@@ -1,16 +1,16 @@
 //
-//  OMKTencentPointAnnotationView.m
+//  OMKBPointAnnotationView.m
 //  ObjectiveCHelper
 //
-//  Created by Apple on 2022/11/14.
+//  Created by Sauron on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKTencentPointAnnotationView.h"
+#import "OMKBPointAnnotationView.h"
 
-@implementation OMKTencentPointAnnotationView
+@implementation OMKBPointAnnotationView
 
-- (id)initWithAnnotation:(id<QAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
+- (instancetype)initWithAnnotation:(id<BMKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self) {
         self.canShowCallout = NO;

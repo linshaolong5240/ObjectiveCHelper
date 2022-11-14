@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OMKPointAnnotation.h"
-#import "OMKPointAnnotationView.h"
+#import "OMKAnnotationView.h"
 
 typedef NS_ENUM(NSUInteger, OMKMapType) {
     OMKMapTypeAMap,
@@ -35,14 +34,6 @@ typedef UIView<OMKMapViewProvider> OMKMapView;
 @required
 
 @optional
-
-/**
- * @brief 根据anntation生成对应的View
- * @param mapView 地图View
- * @param annotation 指定的标注
- * @return 生成的标注View
- */
-- (__kindof OMKAnnotationView *)mapView:(OMKMapView *)mapView viewForAnnotation:(id<OMKAnnotation>)annotation;
 
 /**
  * @brief  当选中一个annotation view时，调用此接口
