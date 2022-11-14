@@ -9,7 +9,7 @@
 #import "OMKTencentMapView.h"
 #import <QMapKit/QMapKit.h>
 //OMK Support
-#import "OMKTencentPointAnnotationView.h"
+#import "OMKTencentAnnotationContainerView.h"
 
 @interface OMKTencentMapView () <QMapViewDelegate>
 
@@ -110,10 +110,10 @@
 - (QAnnotationView *)mapView:(QMapView *)mapView viewForAnnotation:(id<QAnnotation>)annotation {
     if ([annotation isKindOfClass:[OMKTencentPointAnnotation class]]) {
         OMKTencentPointAnnotation *omkAnnotation = (OMKTencentPointAnnotation *)annotation;
-        OMKTencentPointAnnotationView *annotationView = (OMKTencentPointAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        OMKTencentAnnotationContainerView *annotationView = (OMKTencentAnnotationContainerView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
             OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
-            annotationView = [[OMKTencentPointAnnotationView alloc] initWithView:view];
+            annotationView = [[OMKTencentAnnotationContainerView alloc] initWithView:view];
             annotationView.canShowCallout = NO;
         }
         return annotationView;

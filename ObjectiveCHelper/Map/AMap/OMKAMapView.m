@@ -9,7 +9,7 @@
 #import "OMKAMapView.h"
 #import <MAMapKit/MAMapKit.h>
 //OMK Support
-#import "OMKAMapPointAnnotationView.h"
+#import "OMKAMapAnnotationContainerView.h"
 
 @interface OMKAMapView () <MAMapViewDelegate>
 
@@ -110,10 +110,10 @@
     } else if ([annotation isKindOfClass:[OMKAMapPointAnnotation class]]) {
         OMKAMapPointAnnotation *omkAnnotation = (OMKAMapPointAnnotation *)annotation;
         //dequeueReusableAnnotationViewWithIdentifier
-        OMKAMapPointAnnotationView *annotationView = (OMKAMapPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        OMKAMapAnnotationContainerView *annotationView = (OMKAMapAnnotationContainerView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
             OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
-            annotationView = [[OMKAMapPointAnnotationView alloc] initWithView:view];
+            annotationView = [[OMKAMapAnnotationContainerView alloc] initWithView:view];
             annotationView.canShowCallout = NO;
         }
         return annotationView;

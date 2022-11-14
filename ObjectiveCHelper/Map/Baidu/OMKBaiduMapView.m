@@ -11,7 +11,7 @@
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BMKLocationKit/BMKLocationManager.h>
 //OMK Support
-#import "OMKBaiduAnnotationView.h"
+#import "OMKBaiduAnnotationContainerView.h"
 
 @interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>
 
@@ -168,10 +168,10 @@
     if ([annotation isKindOfClass:[OMKBaiduPointAnnotation class]]) {
         OMKBaiduPointAnnotation *omkAnnotation = (OMKBaiduPointAnnotation *)annotation;
         //dequeueReusableAnnotationViewWithIdentifier
-        OMKBaiduAnnotationView *annotationView = (OMKBaiduAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        OMKBaiduAnnotationContainerView *annotationView = (OMKBaiduAnnotationContainerView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
             OMKAnnotationView *view = [self.delegate mapView:self viewForAnnotation:omkAnnotation];
-            annotationView = [[OMKBaiduAnnotationView alloc] initWithView:view];
+            annotationView = [[OMKBaiduAnnotationContainerView alloc] initWithView:view];
             annotationView.canShowCallout = NO;
         }
         return annotationView;

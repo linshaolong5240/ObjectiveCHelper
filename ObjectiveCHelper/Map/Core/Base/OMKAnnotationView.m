@@ -7,7 +7,6 @@
 //
 
 #import "OMKAnnotationView.h"
-#import "OMKAnnotation.h"
 
 @implementation OMKAnnotationView
 

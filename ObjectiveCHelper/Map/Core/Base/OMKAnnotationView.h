@@ -11,7 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKAnnotationView : UIView
+@protocol OMKAnnotationViewProvider <NSObject>
+
+@end
+
+@interface OMKAnnotationView : UIView <OMKAnnotationViewProvider>
 
 @property(nonatomic, strong) id<OMKAnnotation> annotation;
 

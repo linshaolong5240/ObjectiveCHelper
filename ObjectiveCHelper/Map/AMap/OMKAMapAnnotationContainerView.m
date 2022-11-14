@@ -1,24 +1,24 @@
 //
-//  OMKBaiduAnnotationView.m
+//  OMKAMapAnnotationContainerView.m
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/11/10.
+//  Created by Sauron on 2022/11/7.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKBaiduAnnotationView.h"
+#import "OMKAMapAnnotationContainerView.h"
 #import "OMKAnnotationView.h"
 
-@interface OMKBaiduAnnotationView ()
+@interface OMKAMapAnnotationContainerView ()
 
 @property(nonatomic, strong) OMKAnnotationView *omkAnnotationView;
 
 @end
 
-@implementation OMKBaiduAnnotationView
+@implementation OMKAMapAnnotationContainerView
 
 - (instancetype)initWithView:(__kindof OMKAnnotationView *)view {
-    self = [super initWithAnnotation:(id<BMKAnnotation>)view.annotation reuseIdentifier:view.annotation.reuseViewIdentifier];
+    self = [super initWithAnnotation:(id<MAAnnotation>)view.annotation reuseIdentifier:view.annotation.reuseViewIdentifier];
     if (self) {
         _omkAnnotationView = view;
         [self setupView];
