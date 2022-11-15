@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "OMKMapViewProvider.h"
+//Annotation
 #import "OMKAPointAnnotation.h"
 #import "OMKACustomerLocationAnnotation.h"
+//Overlay
+#import "OMKACircle.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
