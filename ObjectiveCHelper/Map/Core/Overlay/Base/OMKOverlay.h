@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OMKAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol OMKOverlay <OMKAnnotation>
+@protocol OMKOverlay <NSObject>
+
+@optional
+
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+
+- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import "OMKTencentMapView.h"
 #import <QMapKit/QMapKit.h>
+#import <QMapKit/QMSSearchKit.h>
 //Annotation
 #import "OMKQPointAnnotationView.h"
 #import "OMKQCustomerLocationAnnotationView.h"
@@ -41,10 +42,11 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
     }
 }
 
-@interface OMKTencentMapView () <QMapViewDelegate>
+@interface OMKTencentMapView () <QMapViewDelegate, QMSSearchDelegate>
 
 @property(nonatomic, strong) QMapView *mapView;
 @property (nonatomic, strong) QPointAnnotation *userLocationAnnotation;
+@property (nonatomic, strong) QMSSearcher *searcher;
 
 @end
 
@@ -55,6 +57,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
     if (self) {
         _mapView = [[QMapView alloc] initWithFrame:self.bounds];
         _mapView.delegate = self;
+        _searcher = [[QMSSearcher alloc] initWithDelegate:self];
         [self setupView];
     }
     return self;
@@ -229,6 +232,69 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
     [self.delegate mapView:self didChangeUserTrackingMode:OMKUserTrackingModeFromQUserTrackingMode(mode) animated:animated];
 }
 
+- (void)searchWithSearchOption:(QMSSearchOption *)searchOption didFailWithError:(NSError *)error {
+#if DEBUG
+    NSLog(@"%s, error: %@", __PRETTY_FUNCTION__, error);
+#endif
+}
+
+- (void)searchWithDrivingRouteSearchOption:(QMSDrivingRouteSearchOption *)drivingRouteSearchOption didRecevieResult:(QMSDrivingRouteSearchResult *)drivingRouteSearchResult {
+#if DEBUG
+    NSLog(@"Result: %@", drivingRouteSearchResult);
+#endif
+    // 从每段路线规划结果中得到polyline的相关信息
+    for (QMSRoutePlan *plan in drivingRouteSearchResult.routes) {
+        CLLocationCoordinate2D coords[plan.polyline.count];
+        
+        for (int i = 0; i < plan.polyline.count; i++) {
+            
+            CLLocationCoordinate2D coordinate = [self getCoordinate:[plan.polyline objectAtIndex:i]];
+            
+            coords[i].latitude  = coordinate.latitude;
+            coords[i].longitude = coordinate.longitude;
+        }
+        
+        NSArray<QMSRouteStep *> *steps = plan.steps;
+        NSMutableArray<QSegmentText *> *segs = [NSMutableArray array];
+        for (QMSRouteStep *step in steps) {
+            NSString *name = step.road_name;
+            if (name.length > 0) {
+                int start = [step.polyline_idx.firstObject intValue];
+                int end = [step.polyline_idx.lastObject intValue];
+                QSegmentText *s1 = [[QSegmentText alloc] init];
+                s1.startIndex = start;
+                s1.endIndex = end;
+                s1.name = name;
+                [segs addObject:s1];
+            }
+        }
+        
+        QTextStyle *style = [[QTextStyle alloc] init];
+        style.textColor = [UIColor blackColor];
+        style.strokeColor = [UIColor whiteColor];
+        style.fontSize = 12;
+        
+        QText *route = [[QText alloc] initWithSegments:segs];
+        route.style = style;
+        
+        OMKQPolyline *polyline = [[OMKQPolyline alloc] initWithCoordinates:coords count:plan.polyline.count];
+        [self.mapView addOverlay:polyline];
+    }
+}
+
+// 解析返回结果里polyline的坐标
+- (CLLocationCoordinate2D)getCoordinate:(NSValue *)obj
+{
+    CLLocationCoordinate2D coordinate;
+    
+    if ([obj isKindOfClass:[[NSValue valueWithBytes:&coordinate objCType:@encode(CLLocationCoordinate2D)] class]]) {
+        
+        [obj getValue:(void *)&coordinate];
+    }
+    
+    return CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude);
+}
+
 #pragma mark - OMKMapProvider
 
 - (BOOL)showsUserLocation {
@@ -284,6 +350,14 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
 
 - (void)removeOverlays:(NSArray<id <OMKOverlay, QOverlay>> *)overlays {
     [self.mapView removeOverlays:overlays];
+}
+
+- (void)searchDrivingRouteFrom:(CLLocationCoordinate2D)from to:(CLLocationCoordinate2D)to {
+    QMSDrivingRouteSearchOption *drivingOpt = [[QMSDrivingRouteSearchOption alloc] init];
+    [drivingOpt setPolicyWithType:QMSDrivingRoutePolicyTypeLeastTime];
+    [drivingOpt setFrom:@"39.983906,116.307999"];
+    [drivingOpt setTo:@"39.979381,116.314128"];
+    [self.searcher searchWithDrivingRouteSearchOption:drivingOpt];
 }
 
 @end
