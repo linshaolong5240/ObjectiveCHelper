@@ -36,6 +36,7 @@
             self.mapView = [[OMKAMapView alloc] initWithFrame:self.view.bounds];
             self.pointAnnotation = [[OMKAPointAnnotation alloc] init];
             self.customerLocationAnnotation = [[OMKACustomerLocationAnnotation alloc] init];
+            self.employeeLocationAnnotation = [[OMKAEmployeeLocationAnnotation alloc] init];
             self.circleOverlay = [[OMKACircle alloc] init];
             break;
         case OMKMapTypeBaidu:

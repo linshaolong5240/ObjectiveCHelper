@@ -8,9 +8,10 @@
 
 #import "OMKAMapView.h"
 #import <MAMapKit/MAMapKit.h>
-//OMK Support
+//Annotation
 #import "OMKAPointAnnotationView.h"
 #import "OMKACustomerLocationAnnotationView.h"
+#import "OMKAEmployeeLocationAnnotationView.h"
 
 MAUserTrackingMode MAUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
@@ -151,6 +152,14 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
         OMKAAnnotationView *annotationView = (OMKAAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
             annotationView = [[OMKACustomerLocationAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+        }
+        return annotationView;
+    }
+    else if ([annotation isKindOfClass:[OMKAEmployeeLocationAnnotation class]]) {
+        OMKAEmployeeLocationAnnotation *omkAnnotation = (OMKAEmployeeLocationAnnotation *)annotation;
+        OMKAAnnotationView *annotationView = (OMKAAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        if (annotationView == nil) {
+            annotationView = [[OMKAEmployeeLocationAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
         }
         return annotationView;
     }

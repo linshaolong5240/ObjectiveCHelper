@@ -11,6 +11,7 @@
 //Annotation
 #import "OMKAPointAnnotation.h"
 #import "OMKACustomerLocationAnnotation.h"
+#import "OMKAEmployeeLocationAnnotation.h"
 //Overlay
 #import "OMKACircle.h"
 

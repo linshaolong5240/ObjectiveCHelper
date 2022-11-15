@@ -18,6 +18,8 @@
 		1837C05029232A1C00793002 /* OMKACircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837C04F29232A1C00793002 /* OMKACircle.m */; };
 		1837C053292335E400793002 /* OMKQEmployeeLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837C052292335E400793002 /* OMKQEmployeeLocationAnnotation.m */; };
 		1837C0562923362200793002 /* OMKQEmployeeLocationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837C0552923362100793002 /* OMKQEmployeeLocationAnnotationView.m */; };
+		1837C059292337DB00793002 /* OMKAEmployeeLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837C058292337DB00793002 /* OMKAEmployeeLocationAnnotation.m */; };
+		1837C05C2923382D00793002 /* OMKAEmployeeLocationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837C05B2923382D00793002 /* OMKAEmployeeLocationAnnotationView.m */; };
 		1846DF1F2922212200F3EC2F /* OMKBPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF1E2922212200F3EC2F /* OMKBPointAnnotationView.m */; };
 		1846DF242922298800F3EC2F /* OMKQPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF232922298800F3EC2F /* OMKQPointAnnotationView.m */; };
 		1846DF2829222B9000F3EC2F /* OMKAPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF2729222B9000F3EC2F /* OMKAPointAnnotationView.m */; };
@@ -135,6 +137,10 @@
 		1837C052292335E400793002 /* OMKQEmployeeLocationAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKQEmployeeLocationAnnotation.m; sourceTree = "<group>"; };
 		1837C0542923362100793002 /* OMKQEmployeeLocationAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKQEmployeeLocationAnnotationView.h; sourceTree = "<group>"; };
 		1837C0552923362100793002 /* OMKQEmployeeLocationAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKQEmployeeLocationAnnotationView.m; sourceTree = "<group>"; };
+		1837C057292337DB00793002 /* OMKAEmployeeLocationAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKAEmployeeLocationAnnotation.h; sourceTree = "<group>"; };
+		1837C058292337DB00793002 /* OMKAEmployeeLocationAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKAEmployeeLocationAnnotation.m; sourceTree = "<group>"; };
+		1837C05A2923382D00793002 /* OMKAEmployeeLocationAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKAEmployeeLocationAnnotationView.h; sourceTree = "<group>"; };
+		1837C05B2923382D00793002 /* OMKAEmployeeLocationAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKAEmployeeLocationAnnotationView.m; sourceTree = "<group>"; };
 		1846DF1D2922212200F3EC2F /* OMKBPointAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBPointAnnotationView.h; sourceTree = "<group>"; };
 		1846DF1E2922212200F3EC2F /* OMKBPointAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBPointAnnotationView.m; sourceTree = "<group>"; };
 		1846DF222922298800F3EC2F /* OMKQPointAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKQPointAnnotationView.h; sourceTree = "<group>"; };
@@ -438,6 +444,10 @@
 				1846DF3F2922417D00F3EC2F /* OMKACustomerLocationAnnotation.m */,
 				1846DF41292241BF00F3EC2F /* OMKACustomerLocationAnnotationView.h */,
 				1846DF42292241BF00F3EC2F /* OMKACustomerLocationAnnotationView.m */,
+				1837C057292337DB00793002 /* OMKAEmployeeLocationAnnotation.h */,
+				1837C058292337DB00793002 /* OMKAEmployeeLocationAnnotation.m */,
+				1837C05A2923382D00793002 /* OMKAEmployeeLocationAnnotationView.h */,
+				1837C05B2923382D00793002 /* OMKAEmployeeLocationAnnotationView.m */,
 			);
 			path = Annotation;
 			sourceTree = "<group>";
@@ -1139,6 +1149,7 @@
 				1885CBF628F900DF000552F7 /* UIKitCustomViewController.m in Sources */,
 				18D98BC02901356B003E5533 /* NSAttributedString+Extension.m in Sources */,
 				189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */,
+				1837C059292337DB00793002 /* OMKAEmployeeLocationAnnotation.m in Sources */,
 				186027712908CDFA001A3D2B /* UITableView+Extension.m in Sources */,
 				188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */,
 				30B968AE292293F0005234C0 /* OMKOverlayView.m in Sources */,
@@ -1183,6 +1194,7 @@
 				1846DF2E29223C0D00F3EC2F /* OMKBAnnotation.m in Sources */,
 				187650292915088600420786 /* OMKAMapView.m in Sources */,
 				1846DF3A29223FE700F3EC2F /* OMKQCustomerLocationAnnotationView.m in Sources */,
+				1837C05C2923382D00793002 /* OMKAEmployeeLocationAnnotationView.m in Sources */,
 				188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */,
 				18AAC2EE291F44F8009F49D1 /* OMKBPointAnnotation.m in Sources */,
 				189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */,
