@@ -10,6 +10,8 @@
 #import <BaiduMapAPI_Base/BMKBaseComponent.h>
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
 #import <BMKLocationKit/BMKLocationManager.h>
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>
+
 //OMK Support
 #import "OMKBPointAnnotationView.h"
 #import "OMKBCustomerLocationAnnotationView.h"
@@ -47,12 +49,14 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     }
 }
 
-@interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate>
+@interface OMKBaiduMapView () <BMKMapViewDelegate, BMKLocationManagerDelegate, BMKRouteSearchDelegate>
 
-@property (nonatomic, strong) BMKMapView *mapView;
+@property (nonatomic, readonly, strong) BMKMapView *mapView;
+@property (nonatomic, readonly, strong) BMKLocationManager *locationManager; //定位对象
+@property (nonatomic, readonly, strong) BMKRouteSearch *routeSearch;//路径搜索
+
 @property (nonatomic, strong) BMKUserLocation *userLocation; ///<当前位置对象
-@property (nonatomic, strong) BMKPointAnnotation *userLocationAnnotation;
-@property (nonatomic, strong) BMKLocationManager *locationManager; //定位对象
+
 @end
 
 @implementation OMKBaiduMapView
@@ -86,6 +90,9 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
          后开始计算。
          */
         _locationManager.locationTimeout = 10;
+        
+        _routeSearch = [[BMKRouteSearch alloc] init];
+        _routeSearch.delegate = self;
         
         [self configureView];
     }
@@ -196,6 +203,23 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     
 }
 
+#pragma mark - BMKMapViewDelegate - BMKRouteSearchDelegate
+
+/**
+ *返回驾乘搜索结果
+ *@param searcher 搜索对象
+ *@param result 搜索结果，类型为BMKDrivingRouteResult
+ *@param error 错误号，@see BMKSearchErrorCode
+ */
+- (void)onGetDrivingRouteResult:(BMKRouteSearch *)searcher result:(BMKDrivingRouteResult *)result errorCode:(BMKSearchErrorCode)error {
+#if DEBUG
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSLog(@"taxiInfo: %@", result.taxiInfo);
+    NSLog(@"suggestAddrResult: %@", result.suggestAddrResult);
+    NSLog(@"routes: %@", result.routes);
+#endif
+}
+
 #pragma mark - BMKMapViewDelegate - Annotation
 
 /// 根据anntation生成对应的View
@@ -277,7 +301,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
         circleView.fillColor = [[UIColor cyanColor] colorWithAlphaComponent:0.5];
         circleView.strokeColor = [[UIColor blueColor] colorWithAlphaComponent:0.5];
         circleView.lineWidth = 10.0;
-
+        
         return circleView;
     }
     return nil;
@@ -291,7 +315,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
         return;
     }
     [self.delegate mapView:self didChangeUserTrackingMode:OMKUserTrackingModeFromBMKUserTrackingMode(mode) animated:NO];
-
+    
 }
 
 #pragma mark - OMKMapProvider
@@ -339,6 +363,27 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
 
 - (void)removeOverlays:(NSArray<id <OMKOverlay, BMKOverlay>> *)overlays {
     [self.mapView removeOverlays:overlays];
+}
+
+- (void)searchDrivingRouteFrom:(CLLocationCoordinate2D)from to:(CLLocationCoordinate2D)to {
+    BMKPlanNode* start = [[BMKPlanNode alloc] init];
+//    start.name = @"天安门";
+//    start.cityName = @"北京";
+    start.pt = from;
+    BMKPlanNode* end = [[BMKPlanNode alloc] init];
+//    end.name = @"天津站";
+//    end.cityName = @"天津";
+    end.pt = to;
+    BMKDrivingRoutePlanOption *drivingRouteSearchOption = [[BMKDrivingRoutePlanOption alloc]init];
+    drivingRouteSearchOption.from = start;
+    drivingRouteSearchOption.to = end;
+    
+    BOOL flag = [_routeSearch drivingSearch: drivingRouteSearchOption];
+    if (flag) {
+        NSLog(@"百度地图 驾车规划检索发送成功");
+    } else{
+        NSLog(@"百度地图 驾车规划检索发送失败");
+    }
 }
 
 @end

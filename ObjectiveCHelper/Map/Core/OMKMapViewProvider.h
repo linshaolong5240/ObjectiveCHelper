@@ -69,6 +69,8 @@ typedef UIView<OMKMapViewProvider> OMKMapView;
 @property(nonatomic, assign) BOOL showsUserLocation;
 @property(nonatomic, assign) OMKUserTrackingMode userTrackingMode;
 
+#pragma mark - Annotation
+
 /**
  * @brief 向地图窗口添加标注，需要实现MAMapViewDelegate的-mapView:viewForAnnotation:函数来生成标注对应的View
  * @param annotation 要添加的标注
@@ -93,6 +95,8 @@ typedef UIView<OMKMapViewProvider> OMKMapView;
  */
 - (void)removeAnnotations:(NSArray<id <OMKAnnotation>> *)annotations;
 
+#pragma mark - Overlay
+
 /**
  * @brief  向地图窗口添加Overlay，需要实现QMapViewDelegate的-mapView:viewForOverlay:函数来生成标注对应的View
  * @param overlay 要添加的overlay
@@ -116,6 +120,10 @@ typedef UIView<OMKMapViewProvider> OMKMapView;
  * @param overlays 要移除的overlay列表
  */
 - (void)removeOverlays:(NSArray<id <OMKOverlay>> *)overlays;
+
+#pragma mark - Router
+
+- (void)searchDrivingRouteFrom:(CLLocationCoordinate2D)from to:(CLLocationCoordinate2D)to;
 
 @optional
 
