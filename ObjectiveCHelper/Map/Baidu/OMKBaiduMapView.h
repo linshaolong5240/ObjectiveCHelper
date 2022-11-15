@@ -8,16 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "OMKMapViewProvider.h"
+//Annotation
 #import "OMKBPointAnnotation.h"
 #import "OMKBCustomerLocationAnnotation.h"
 #import "OMKBEmployeeLocationAnnotation.h"
-#import "OMKBCircleOverlay.h"
+//Overlay
+#import "OMKBCircle.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OMKBaiduMapView : UIView <OMKMapViewProvider>
 
-@property(nonatomic, weak) id<OMKMapViewDelegate> delegate;
+@property(nonatomic, weak) id <OMKMapViewDelegate> delegate;
 
 @property (nonatomic, assign) BOOL showsUserLocation;
 @property(nonatomic, assign) OMKUserTrackingMode userTrackingMode;

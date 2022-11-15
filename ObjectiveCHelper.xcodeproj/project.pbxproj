@@ -14,6 +14,8 @@
 		182824FD28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824FC28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.m */; };
 		1828250F28FFC50400D2E4CF /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828250E28FFC50400D2E4CF /* UIColor+Extension.m */; };
 		1828251228FFC5F600D2E4CF /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828251128FFC5F600D2E4CF /* UIView+Extension.m */; };
+		1837C04C292321C600793002 /* OMKQCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837C04B292321C600793002 /* OMKQCircle.m */; };
+		1837C05029232A1C00793002 /* OMKACircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837C04F29232A1C00793002 /* OMKACircle.m */; };
 		1846DF1F2922212200F3EC2F /* OMKBPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF1E2922212200F3EC2F /* OMKBPointAnnotationView.m */; };
 		1846DF242922298800F3EC2F /* OMKQPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF232922298800F3EC2F /* OMKQPointAnnotationView.m */; };
 		1846DF2829222B9000F3EC2F /* OMKAPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF2729222B9000F3EC2F /* OMKAPointAnnotationView.m */; };
@@ -84,10 +86,9 @@
 		18FF5A752921DD7700335501 /* OMKQAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF5A742921DD7700335501 /* OMKQAnnotationView.m */; };
 		18FF5A7C2921E47600335501 /* OMKBCustomerLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FF5A7B2921E47600335501 /* OMKBCustomerLocationAnnotation.m */; };
 		3093019FEA4D19C1BB7DF45E /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9299767C1AA87BE14B447F63 /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework */; };
-		30B968A7292271A3005234C0 /* OMKBOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B968A6292271A3005234C0 /* OMKBOverlay.m */; };
+		30B968A7292271A3005234C0 /* OMKBCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B968A6292271A3005234C0 /* OMKBCircle.m */; };
 		30B968AB2922913F005234C0 /* OMKBOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B968AA2922913F005234C0 /* OMKBOverlayView.m */; };
 		30B968AE292293F0005234C0 /* OMKOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B968AD292293F0005234C0 /* OMKOverlayView.m */; };
-		30B968B1292294D4005234C0 /* OMKBCircleOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B968B0292294D4005234C0 /* OMKBCircleOverlay.m */; };
 		44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA228E8301D00C395D9 /* OCHContentViewController.m */; };
 		44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */; };
 		44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B9AB4228E835A400277DA0 /* OCHPreviewHelper.swift */; };
@@ -124,6 +125,10 @@
 		1828250E28FFC50400D2E4CF /* UIColor+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		1828251028FFC5F600D2E4CF /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		1828251128FFC5F600D2E4CF /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		1837C04A292321C600793002 /* OMKQCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKQCircle.h; sourceTree = "<group>"; };
+		1837C04B292321C600793002 /* OMKQCircle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKQCircle.m; sourceTree = "<group>"; };
+		1837C04E29232A1C00793002 /* OMKACircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKACircle.h; sourceTree = "<group>"; };
+		1837C04F29232A1C00793002 /* OMKACircle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKACircle.m; sourceTree = "<group>"; };
 		1846DF1D2922212200F3EC2F /* OMKBPointAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBPointAnnotationView.h; sourceTree = "<group>"; };
 		1846DF1E2922212200F3EC2F /* OMKBPointAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBPointAnnotationView.m; sourceTree = "<group>"; };
 		1846DF222922298800F3EC2F /* OMKQPointAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKQPointAnnotationView.h; sourceTree = "<group>"; };
@@ -265,15 +270,13 @@
 		18FF5A792921E3C500335501 /* OMKCustomerLocationmAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKCustomerLocationmAnnotation.h; sourceTree = "<group>"; };
 		18FF5A7A2921E47600335501 /* OMKBCustomerLocationAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBCustomerLocationAnnotation.h; sourceTree = "<group>"; };
 		18FF5A7B2921E47600335501 /* OMKBCustomerLocationAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBCustomerLocationAnnotation.m; sourceTree = "<group>"; };
-		30B968A5292271A3005234C0 /* OMKBOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBOverlay.h; sourceTree = "<group>"; };
-		30B968A6292271A3005234C0 /* OMKBOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBOverlay.m; sourceTree = "<group>"; };
+		30B968A5292271A3005234C0 /* OMKBCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBCircle.h; sourceTree = "<group>"; };
+		30B968A6292271A3005234C0 /* OMKBCircle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBCircle.m; sourceTree = "<group>"; };
 		30B968A829227299005234C0 /* OMKCircleOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKCircleOverlay.h; sourceTree = "<group>"; };
 		30B968A92922913F005234C0 /* OMKBOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBOverlayView.h; sourceTree = "<group>"; };
 		30B968AA2922913F005234C0 /* OMKBOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBOverlayView.m; sourceTree = "<group>"; };
 		30B968AC292293F0005234C0 /* OMKOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKOverlayView.h; sourceTree = "<group>"; };
 		30B968AD292293F0005234C0 /* OMKOverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKOverlayView.m; sourceTree = "<group>"; };
-		30B968AF292294D4005234C0 /* OMKBCircleOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBCircleOverlay.h; sourceTree = "<group>"; };
-		30B968B0292294D4005234C0 /* OMKBCircleOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBCircleOverlay.m; sourceTree = "<group>"; };
 		365375EE3E48A83C249D7C5C /* Pods-ObjectiveCHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-ObjectiveCHelperTests/Pods-ObjectiveCHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		44890BA128E8301D00C395D9 /* OCHContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHContentViewController.h; sourceTree = "<group>"; };
 		44890BA228E8301D00C395D9 /* OCHContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHContentViewController.m; sourceTree = "<group>"; };
@@ -332,6 +335,7 @@
 		181918F32918AD3400694BD1 /* Tencent */ = {
 			isa = PBXGroup;
 			children = (
+				1837C048292320D200793002 /* Overlay */,
 				1846DF212922295D00F3EC2F /* Annotation */,
 				187650242915057400420786 /* OMKTencentMapView.h */,
 				187650252915057400420786 /* OMKTencentMapView.m */,
@@ -345,8 +349,27 @@
 				1846DF2529222B6C00F3EC2F /* Annotation */,
 				187650272915088600420786 /* OMKAMapView.h */,
 				187650282915088600420786 /* OMKAMapView.m */,
+				1837C04D292329FE00793002 /* Overlay */,
 			);
 			path = AMap;
+			sourceTree = "<group>";
+		};
+		1837C048292320D200793002 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				1837C04A292321C600793002 /* OMKQCircle.h */,
+				1837C04B292321C600793002 /* OMKQCircle.m */,
+			);
+			path = Overlay;
+			sourceTree = "<group>";
+		};
+		1837C04D292329FE00793002 /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				1837C04E29232A1C00793002 /* OMKACircle.h */,
+				1837C04F29232A1C00793002 /* OMKACircle.m */,
+			);
+			path = Overlay;
 			sourceTree = "<group>";
 		};
 		1846DF1B2921EDBD00F3EC2F /* Demo */ = {
@@ -787,9 +810,9 @@
 		30B968A32922716A005234C0 /* Overlay */ = {
 			isa = PBXGroup;
 			children = (
+				30B968A5292271A3005234C0 /* OMKBCircle.h */,
+				30B968A6292271A3005234C0 /* OMKBCircle.m */,
 				30B968A429227172005234C0 /* Base */,
-				30B968AF292294D4005234C0 /* OMKBCircleOverlay.h */,
-				30B968B0292294D4005234C0 /* OMKBCircleOverlay.m */,
 			);
 			path = Overlay;
 			sourceTree = "<group>";
@@ -797,8 +820,6 @@
 		30B968A429227172005234C0 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				30B968A5292271A3005234C0 /* OMKBOverlay.h */,
-				30B968A6292271A3005234C0 /* OMKBOverlay.m */,
 				30B968A92922913F005234C0 /* OMKBOverlayView.h */,
 				30B968AA2922913F005234C0 /* OMKBOverlayView.m */,
 			);
@@ -1116,8 +1137,9 @@
 				1846DF4E2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.m in Sources */,
 				18FF5A702921DB8800335501 /* OMKAAnnotationView.m in Sources */,
 				1876AD3628E452A100DA0387 /* UICollectionViewDemoController.m in Sources */,
+				1837C04C292321C600793002 /* OMKQCircle.m in Sources */,
 				1846DF3729223EFC00F3EC2F /* OMKQCustomerLocationAnnotation.m in Sources */,
-				30B968A7292271A3005234C0 /* OMKBOverlay.m in Sources */,
+				30B968A7292271A3005234C0 /* OMKBCircle.m in Sources */,
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
 				1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */,
 				18FF5A6B2921D2FB00335501 /* OMKBAnnotationView.m in Sources */,
@@ -1155,11 +1177,11 @@
 				189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+Extension.m in Sources */,
+				1837C05029232A1C00793002 /* OMKACircle.m in Sources */,
 				188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */,
 				188CA46328F112EF00EF106E /* OCHDVPieChartDemoViewController.m in Sources */,
 				1846DF3D2922407800F3EC2F /* OMKAAnnotation.m in Sources */,
 				18E221C42913DF0500660A7F /* OMKManager.m in Sources */,
-				30B968B1292294D4005234C0 /* OMKBCircleOverlay.m in Sources */,
 				188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */,
 				188CD576291F97E400E05D19 /* OMKOverlay.m in Sources */,
 				18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */,

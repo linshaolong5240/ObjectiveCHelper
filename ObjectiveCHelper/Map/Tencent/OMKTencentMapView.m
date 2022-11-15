@@ -121,7 +121,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
  * @param annotation 指定的标注
  * @return 生成的标注View
  */
-- (QAnnotationView *)mapView:(QMapView *)mapView viewForAnnotation:(id<QAnnotation>)annotation {
+- (QAnnotationView *)mapView:(QMapView *)mapView viewForAnnotation:(id <QAnnotation>)annotation {
     if ([annotation isKindOfClass:[OMKQPointAnnotation class]]) {
         OMKQPointAnnotation *omkAnnotation = (OMKQPointAnnotation *)annotation;
         OMKQAnnotationView *annotationView = (OMKQAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
@@ -131,7 +131,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
         return annotationView;
     }
     else if ([annotation isKindOfClass:[OMKQCustomerLocationAnnotation class]]) {
-        OMKQPointAnnotation *omkAnnotation = (OMKQPointAnnotation *)annotation;
+        OMKQCustomerLocationAnnotation *omkAnnotation = (OMKQCustomerLocationAnnotation *)annotation;
         OMKQAnnotationView *annotationView = (OMKQAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
             annotationView = [[OMKQCustomerLocationAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
@@ -154,7 +154,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
     if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
         return;
     }
-    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    id <OMKAnnotationView> omkAnnotationView = (id <OMKAnnotationView>)view;
     [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
     
     //OMKTencentPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
@@ -175,8 +175,24 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
     if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
         return;
     }
-    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    id <OMKAnnotationView> omkAnnotationView = (id <OMKAnnotationView>)view;
     [self.delegate mapView:self didDeselectAnnotationView:omkAnnotationView];
+}
+
+#pragma mark - QMapViewDelegate - Overlay
+
+- (QOverlayView *)mapView:(QMapView *)mapView viewForOverlay:(id <QOverlay>)overlay {
+    if ([overlay isKindOfClass:[OMKQCircle class]])
+    {
+        QCircleView *circleView = [[QCircleView alloc] initWithCircle:overlay];
+        circleView.lineWidth   = 3;
+        circleView.strokeColor = [UIColor colorWithRed:.2 green:.1 blue:.1 alpha:.8];
+        circleView.fillColor   = [[UIColor blueColor] colorWithAlphaComponent:0.2];
+        
+        return circleView;
+    }
+    
+    return nil;
 }
 
 /**
@@ -217,28 +233,36 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
     }
 }
 
-- (void)addAnnotation:(id<OMKAnnotation, QAnnotation>)annotation {
+- (void)addAnnotation:(id <OMKAnnotation, QAnnotation>)annotation {
     [self.mapView addAnnotation:annotation];
 }
 
-- (void)removeAnnotation:(id<OMKAnnotation, QAnnotation>)annotation {
-    NSUInteger index;
-    
-    index = [self.mapView.annotations indexOfObjectPassingTest:^BOOL(id<QAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (obj == annotation) {
-#if DEBUG
-            NSLog(@"%@", @(idx));
-#endif
-            *stop = YES;
-            return YES;
-        }
-        return NO;
-    }];
-    
-    if (index != NSNotFound) {
-        id<QAnnotation> tencentAnnotation = self.mapView.annotations[index];
-        [self.mapView removeAnnotation:tencentAnnotation];
-    }
+- (void)addAnnotations:(NSArray<id <OMKAnnotation, QAnnotation>> *)annotations {
+    [self.mapView addAnnotations:annotations];
+}
+
+- (void)removeAnnotation:(id <OMKAnnotation, QAnnotation>)annotation {
+    [self.mapView removeAnnotation:annotation];
+}
+
+- (void)removeAnnotations:(NSArray<id <OMKAnnotation, QAnnotation>> *)annotations {
+    [self.mapView removeAnnotations:annotations];
+}
+
+- (void)addOverlay:(id <OMKOverlay, QOverlay>)overlay {
+    [self.mapView addOverlay:overlay];
+}
+
+- (void)addOverlays:(NSArray<id <OMKOverlay, QOverlay>> *)overlays {
+    [self.mapView addOverlays:overlays];
+}
+
+- (void)removeOverlay:(id <OMKOverlay, QOverlay>)overlay {
+    [self.mapView removeOverlay:overlay];
+}
+
+- (void)removeOverlays:(NSArray<id <OMKOverlay, QOverlay>> *)overlays {
+    [self.mapView removeOverlays:overlays];
 }
 
 @end

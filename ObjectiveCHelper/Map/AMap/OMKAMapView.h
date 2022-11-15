@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OMKAMapView : UIView <OMKMapViewProvider>
 
-@property(nonatomic, weak) id<OMKMapViewDelegate> delegate;
+@property(nonatomic, weak) id <OMKMapViewDelegate> delegate;
 
 @property (nonatomic, assign) BOOL showsUserLocation;
 @property(nonatomic, assign) OMKUserTrackingMode userTrackingMode;

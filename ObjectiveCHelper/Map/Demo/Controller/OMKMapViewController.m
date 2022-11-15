@@ -11,9 +11,9 @@
 @interface OMKMapViewController () <OMKMapViewDelegate>
 
 @property(nonatomic, strong) UIView<OMKMapViewProvider> *mapView;
-@property(nonatomic, strong) id<OMKAnnotation> pointAnnotation;
-@property(nonatomic, strong) id<OMKCustomerLocationmAnnotation> customerLocationAnnotation;
-@property(nonatomic, strong) id<OMKCircleOverlay> circleOverlay;
+@property(nonatomic, strong) id <OMKAnnotation> pointAnnotation;
+@property(nonatomic, strong) id <OMKCustomerLocationmAnnotation> customerLocationAnnotation;
+@property(nonatomic, strong) id <OMKCircleOverlay> circleOverlay;
 
 @end
 
@@ -40,12 +40,13 @@
             self.mapView = [[OMKBaiduMapView alloc] initWithFrame:self.view.bounds];
             self.pointAnnotation = [[OMKBPointAnnotation alloc] init];
             self.customerLocationAnnotation = [[OMKBCustomerLocationAnnotation alloc] init];
-            self.circleOverlay = [[OMKBCircleOverlay alloc] init];
+            self.circleOverlay = [[OMKBCircle alloc] init];
             break;
         case OMKMapTypeTencent:
             self.mapView = [[OMKTencentMapView alloc] initWithFrame:self.view.bounds];
             self.pointAnnotation = [[OMKQPointAnnotation alloc] init];
             self.customerLocationAnnotation = [[OMKQCustomerLocationAnnotation alloc] init];
+            self.circleOverlay = [[OMKQCircle alloc] init];
             break;
         case OMKMapTypeNumber:
             break;;
@@ -81,13 +82,13 @@
 
 #pragma mark - OMKMapViewDelegate
 
-- (void)mapView:(OMKMapView *)mapView didSelectAnnotationView:(id<OMKAnnotationView>)view {
+- (void)mapView:(OMKMapView *)mapView didSelectAnnotationView:(id <OMKAnnotationView>)view {
 #if DEBUG
     NSLog(@"%s", __PRETTY_FUNCTION__);
 #endif
 }
 
--(void)mapView:(OMKMapView *)mapView didDeselectAnnotationView:(id<OMKAnnotationView>)view {
+-(void)mapView:(OMKMapView *)mapView didDeselectAnnotationView:(id <OMKAnnotationView>)view {
 #if DEBUG
     NSLog(@"%s", __PRETTY_FUNCTION__);
 #endif

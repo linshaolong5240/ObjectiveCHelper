@@ -13,7 +13,8 @@
 //OMK Support
 #import "OMKBPointAnnotationView.h"
 #import "OMKBCustomerLocationAnnotationView.h"
-
+#import "OMKBEmployeeLocationAnnotationView.h"
+#import "OMKBOverlayView.h"
 
 BMKUserTrackingMode BMKUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
@@ -196,6 +197,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
 }
 
 #pragma mark - BMKMapViewDelegate - Annotation
+
 /// 根据anntation生成对应的View
 /// @param mapView 地图View
 /// @param annotation 指定的标注
@@ -233,7 +235,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
         return;
     }
-    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    id <OMKAnnotationView> omkAnnotationView = (id <OMKAnnotationView>)view;
     [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
     
     //OMKBaiduPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
@@ -252,13 +254,18 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
         return;
     }
-    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    id <OMKAnnotationView> omkAnnotationView = (id <OMKAnnotationView>)view;
     [self.delegate mapView:self didDeselectAnnotationView:omkAnnotationView];
 }
 
-- (__kindof BMKOverlayView *)mapView:(BMKMapView *)mapView viewForOverlay:(id<BMKOverlay>)overlay {
-    if ([overlay isKindOfClass:[BMKCircle class]]){
-        BMKCircleView* circleView = [[BMKCircleView alloc] initWithOverlay:overlay];
+#pragma mark - BMKMapViewDelegate - Overlay
+/// 根据overlay生成对应的View
+/// @param mapView 地图View
+/// @param overlay 指定的overlay
+/// @return 生成的覆盖物View
+- (__kindof BMKOverlayView *)mapView:(BMKMapView *)mapView viewForOverlay:(id <BMKOverlay>)overlay {
+    if ([overlay isKindOfClass:[OMKBCircle class]]) {
+        BMKCircleView *circleView = [[BMKCircleView alloc] initWithOverlay:overlay];
         circleView.fillColor = [[UIColor cyanColor] colorWithAlphaComponent:0.5];
         circleView.strokeColor = [[UIColor blueColor] colorWithAlphaComponent:0.5];
         circleView.lineWidth = 10.0;
@@ -294,36 +301,36 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     self.mapView.userTrackingMode = BMKUserTrackingModeFromOMKUserTrackingMode(userTrackingMode);
 }
 
-- (void)addAnnotation:(id<OMKAnnotation, BMKAnnotation>)annotation {
+- (void)addAnnotation:(id <OMKAnnotation, BMKAnnotation>)annotation {
     [self.mapView addAnnotation:annotation];
 }
 
-- (void)removeAnnotation:(id<OMKAnnotation, BMKAnnotation>)annotation {
-    NSUInteger index;
-    
-    index = [self.mapView.annotations indexOfObjectPassingTest:^BOOL(id<BMKAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (obj == annotation) {
-#if DEBUG
-            NSLog(@"%@", @(idx));
-#endif
-            *stop = YES;
-            return YES;
-        }
-        return NO;
-    }];
-    
-    if (index != NSNotFound) {
-        id<BMKAnnotation> baiduAnnotation = self.mapView.annotations[index];
-        [self.mapView removeAnnotation:baiduAnnotation];
-    }
+- (void)addAnnotations:(NSArray *)annotations {
+    [self.mapView addAnnotations:annotations];
+}
+
+- (void)removeAnnotation:(id <OMKAnnotation, BMKAnnotation>)annotation {
+    [self.mapView removeAnnotation:annotation];
+}
+
+- (void)removeAnnotations:(NSArray *)annotations {
+    [self.mapView removeAnnotations:annotations];
 }
 
 - (void)addOverlay:(id <OMKOverlay, BMKOverlay>)overlay {
     [self.mapView addOverlay:overlay];
 }
 
+- (void)addOverlays:(NSArray<id <OMKOverlay, BMKOverlay>> *)overlays {
+    [self.mapView addOverlays:overlays];
+}
+
 - (void)removeOverlay:(id <OMKOverlay, BMKOverlay>)overlay {
     [self.mapView removeOverlay:overlay];
+}
+
+- (void)removeOverlays:(NSArray<id <OMKOverlay, BMKOverlay>> *)overlays {
+    [self.mapView removeOverlays:overlays];
 }
 
 @end

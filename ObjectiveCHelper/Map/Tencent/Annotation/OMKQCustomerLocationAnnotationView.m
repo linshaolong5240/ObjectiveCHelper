@@ -10,7 +10,7 @@
 
 @implementation OMKQCustomerLocationAnnotationView
 
-- (instancetype)initWithAnnotation:(id<QAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
+- (instancetype)initWithAnnotation:(id <QAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self) {
         self.canShowCallout = NO;
@@ -20,8 +20,8 @@
 }
 
 - (void)configureView {
-    self.image = [UIImage imageNamed:@"omk_customer_annotation_location"];
-    UIImageView *bubbleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"omk_customer_annotation_bubble"]];
+    self.image = [UIImage imageNamed:@"omk_customer_location_annotation_location"];
+    UIImageView *bubbleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"omk_customer_location_annotation_bubble"]];
     [self addSubview:bubbleImageView];
 
     [bubbleImageView mas_makeConstraints:^(MASConstraintMaker *make) {

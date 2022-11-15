@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
-@property (nonatomic, readonly,copy) NSString *reuseViewIdentifier;
 
 @optional
+@property (nonatomic, readonly,copy) NSString *reuseViewIdentifier;
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subtitle;

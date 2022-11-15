@@ -42,14 +42,14 @@ typedef UIView<OMKMapViewProvider> OMKMapView;
  * @param mapView 地图View
  * @param view 选中的annotation view
  */
-- (void)mapView:(OMKMapView *)mapView didSelectAnnotationView:(id<OMKAnnotationView>)view;
+- (void)mapView:(OMKMapView *)mapView didSelectAnnotationView:(id <OMKAnnotationView>)view;
 
 /**
  * @brief  当取消选中一个annotation view时，调用此接口
  * @param mapView 地图View
  * @param view 取消选中的annotation view
  */
-- (void)mapView:(OMKMapView *)mapView didDeselectAnnotationView:(id<OMKAnnotationView>)view;
+- (void)mapView:(OMKMapView *)mapView didDeselectAnnotationView:(id <OMKAnnotationView>)view;
 
 /**
  *  @brief 定位时的userTrackingMode 改变时delegate调用此函数
@@ -64,7 +64,7 @@ typedef UIView<OMKMapViewProvider> OMKMapView;
 @protocol OMKMapViewProvider <NSObject>
 
 @required
-@property(nonatomic, weak) id<OMKMapViewDelegate> delegate;
+@property(nonatomic, weak) id <OMKMapViewDelegate> delegate;
 
 @property(nonatomic, assign) BOOL showsUserLocation;
 @property(nonatomic, assign) OMKUserTrackingMode userTrackingMode;
@@ -73,13 +73,49 @@ typedef UIView<OMKMapViewProvider> OMKMapView;
  * @brief 向地图窗口添加标注，需要实现MAMapViewDelegate的-mapView:viewForAnnotation:函数来生成标注对应的View
  * @param annotation 要添加的标注
  */
-- (void) addAnnotation:(id<OMKAnnotation>)annotation;
+- (void) addAnnotation:(id <OMKAnnotation>)annotation;
 
-- (void) removeAnnotation:(id<OMKAnnotation>)annotation;
+/**
+ * @brief  向地图窗口添加一组标注，需要实现QMapViewDelegate的-mapView:viewForAnnotation:函数来生成标注对应的View
+ * @param annotations 要添加的标注数组
+ */
+- (void)addAnnotations:(NSArray<id <OMKAnnotation>> *)annotations;
 
+/**
+ * @brief  移除标注
+ * @param annotation 要移除的标注
+ */
+- (void) removeAnnotation:(id <OMKAnnotation>)annotation;
+
+/**
+ * @brief  移除一组标注
+ * @param annotations 要移除的标注数组
+ */
+- (void)removeAnnotations:(NSArray<id <OMKAnnotation>> *)annotations;
+
+/**
+ * @brief  向地图窗口添加Overlay，需要实现QMapViewDelegate的-mapView:viewForOverlay:函数来生成标注对应的View
+ * @param overlay 要添加的overlay
+ */
 - (void)addOverlay:(id <OMKOverlay>)overlay;
 
+/**
+ * @brief  批量向地图窗口添加Overlay，需要实现QMapViewDelegate的-mapView:viewForOverlay:函数来生成标注对应的View
+ * @param overlays 要添加的overlay列表
+ */
+- (void)addOverlays:(NSArray<id <OMKOverlay>> *)overlays;
+
+/**
+ * @brief  移除Overlay
+ * @param overlay 要移除的overlay
+ */
 - (void)removeOverlay:(id <OMKOverlay>)overlay;
+
+/**
+ * @brief  移除Overlay
+ * @param overlays 要移除的overlay列表
+ */
+- (void)removeOverlays:(NSArray<id <OMKOverlay>> *)overlays;
 
 @optional
 

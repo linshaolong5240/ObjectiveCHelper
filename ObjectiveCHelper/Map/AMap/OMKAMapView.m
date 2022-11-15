@@ -170,7 +170,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
     if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
         return;
     }
-    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    id <OMKAnnotationView> omkAnnotationView = (id <OMKAnnotationView>)view;
     [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
     
     //OMKAMapPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
@@ -192,8 +192,20 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
     if (![view conformsToProtocol:@protocol(OMKAnnotationView)]) {
         return;
     }
-    id<OMKAnnotationView> omkAnnotationView = (id<OMKAnnotationView>)view;
+    id <OMKAnnotationView> omkAnnotationView = (id <OMKAnnotationView>)view;
     [self.delegate mapView:self didDeselectAnnotationView:omkAnnotationView];
+}
+
+- (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id <MAOverlay>)overlay {
+    if ([overlay isKindOfClass:[MACircle class]]) {
+        MACircleRenderer *circleRenderer = [[MACircleRenderer alloc] initWithCircle:overlay];
+        
+        circleRenderer.lineWidth    = 5.f;
+        circleRenderer.strokeColor  = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.8];
+        circleRenderer.fillColor    = [UIColor colorWithRed:1.0 green:0.8 blue:0.0 alpha:0.8];
+        return circleRenderer;
+    }
+    return nil;
 }
 
 /**
@@ -223,28 +235,37 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
     self.mapView.userTrackingMode = MAUserTrackingModeFromOMKUserTrackingMode(userTrackingMode);
 }
 
-- (void)addAnnotation:(id<OMKAnnotation, MAAnnotation>)annotation {
+- (void)addAnnotation:(id <OMKAnnotation, MAAnnotation>)annotation {
     [self.mapView addAnnotation:annotation];
 }
 
-- (void)removeAnnotation:(id<OMKAnnotation, MAAnnotation>)annotation {
-    NSUInteger index;
-    
-    index = [self.mapView.annotations indexOfObjectPassingTest:^BOOL(id<MAAnnotation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (obj == annotation) {
-#if DEBUG
-            NSLog(@"%@", @(idx));
-#endif
-            *stop = YES;
-            return YES;
-        }
-        return NO;
-    }];
-    
-    if (index != NSNotFound) {
-        id<MAAnnotation> amapAnnotation = self.mapView.annotations[index];
-        [self.mapView removeAnnotation:amapAnnotation];
-    }
+- (void)addAnnotations:(NSArray<id <OMKAnnotation, MAAnnotation>> *)annotations {
+    [self.mapView addAnnotations:annotations];
 }
+
+- (void)removeAnnotation:(id <OMKAnnotation, MAAnnotation>)annotation {
+    [self.mapView removeAnnotation:annotation];
+}
+
+- (void)removeAnnotations:(NSArray *)annotations {
+    [self.mapView removeAnnotations:annotations];
+}
+
+- (void)addOverlay:(id <OMKOverlay, MAOverlay>)overlay {
+    [self.mapView addOverlay:overlay];
+}
+
+- (void)addOverlays:(NSArray<id <OMKOverlay, MAOverlay>> *)overlays {
+    [self.mapView addOverlays:overlays];
+}
+
+- (void)removeOverlay:(id <OMKOverlay, MAOverlay>)overlay {
+    [self.mapView  removeOverlay:overlay];
+}
+
+- (void)removeOverlays:(NSArray<id <OMKOverlay, MAOverlay>> *)overlays {
+    [self.mapView  removeOverlays:overlays];
+}
+
 
 @end
