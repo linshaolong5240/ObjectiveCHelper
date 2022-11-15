@@ -20,13 +20,13 @@
 
 BMKUserTrackingMode BMKUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
-        case OCHMapUserTrackingModeNone:
+        case OMKMapUserTrackingModeNone:
             return BMKUserTrackingModeNone;
             break;
-        case OCHMapUserTrackingModeFollow:
+        case OMKMapUserTrackingModeFollow:
             return BMKUserTrackingModeFollow;
             break;
-        case OCHMapUserTrackingModeFollowWithHeading:
+        case OMKMapUserTrackingModeFollowWithHeading:
             return BMKUserTrackingModeFollowWithHeading;
             break;
     }
@@ -35,16 +35,16 @@ BMKUserTrackingMode BMKUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMo
 OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMode mode) {
     switch (mode) {
         case BMKUserTrackingModeNone:
-            return OCHMapUserTrackingModeNone;
+            return OMKMapUserTrackingModeNone;
             break;
         case BMKUserTrackingModeHeading:
-            return OCHMapUserTrackingModeNone;
+            return OMKMapUserTrackingModeNone;
             break;
         case BMKUserTrackingModeFollow:
-            return OCHMapUserTrackingModeFollow;
+            return OMKMapUserTrackingModeFollow;
             break;
         case BMKUserTrackingModeFollowWithHeading:
-            return OCHMapUserTrackingModeFollowWithHeading;
+            return OMKMapUserTrackingModeFollowWithHeading;
             break;
     }
 }

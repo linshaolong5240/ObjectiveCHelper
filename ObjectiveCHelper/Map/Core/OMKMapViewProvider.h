@@ -19,9 +19,9 @@ typedef NS_ENUM(NSUInteger, OMKMapType) {
 };
 
 typedef NS_ENUM(NSUInteger, OMKUserTrackingMode) {
-    OCHMapUserTrackingModeNone,                 ///< 不追踪用户的location更新
-    OCHMapUserTrackingModeFollow,               ///< 追踪用户的location更新
-    OCHMapUserTrackingModeFollowWithHeading,    ///< 追踪用户的location与heading更新
+    OMKMapUserTrackingModeNone,                 ///< 不追踪用户的location更新
+    OMKMapUserTrackingModeFollow,               ///< 追踪用户的location更新
+    OMKMapUserTrackingModeFollowWithHeading,    ///< 追踪用户的location与heading更新
 };
 
 NSString *NSStringFromOMKMapType(OMKMapType type);

@@ -26,14 +26,14 @@ NSString *NSStringFromOMKMapType(OMKMapType type) {
 
 NSString *NSStringFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
-        case OCHMapUserTrackingModeNone:                 ///< 不追踪用户的location更新
-            return @"OCHMapUserTrackingModeNone";
+        case OMKMapUserTrackingModeNone:                 ///< 不追踪用户的location更新
+            return @"OMKMapUserTrackingModeNone";
             break;
-        case OCHMapUserTrackingModeFollow:               ///< 追踪用户的location更新
-            return @"OCHMapUserTrackingModeFollow";
+        case OMKMapUserTrackingModeFollow:               ///< 追踪用户的location更新
+            return @"OMKMapUserTrackingModeFollow";
             break;
-        case OCHMapUserTrackingModeFollowWithHeading:    ///< 追踪用户的location与heading更新
-            return @"OCHMapUserTrackingModeFollowWithHeading";
+        case OMKMapUserTrackingModeFollowWithHeading:    ///< 追踪用户的location与heading更新
+            return @"OMKMapUserTrackingModeFollowWithHeading";
             break;
     }
 }

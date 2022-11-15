@@ -15,13 +15,13 @@
 
 QUserTrackingMode QUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
-        case OCHMapUserTrackingModeNone:
+        case OMKMapUserTrackingModeNone:
             return QUserTrackingModeNone;
             break;
-        case OCHMapUserTrackingModeFollow:
+        case OMKMapUserTrackingModeFollow:
             return QUserTrackingModeFollow;
             break;
-        case OCHMapUserTrackingModeFollowWithHeading:
+        case OMKMapUserTrackingModeFollowWithHeading:
             return QUserTrackingModeFollowWithHeading;
             break;
     }
@@ -30,13 +30,13 @@ QUserTrackingMode QUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode m
 OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode mode) {
     switch (mode) {
         case QUserTrackingModeNone:
-            return OCHMapUserTrackingModeNone;
+            return OMKMapUserTrackingModeNone;
             break;
         case QUserTrackingModeFollow:
-            return OCHMapUserTrackingModeFollow;
+            return OMKMapUserTrackingModeFollow;
             break;
         case QUserTrackingModeFollowWithHeading:
-            return OCHMapUserTrackingModeFollowWithHeading;
+            return OMKMapUserTrackingModeFollowWithHeading;
             break;
     }
 }
@@ -230,13 +230,13 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
 - (void)setUserTrackingMode:(OMKUserTrackingMode)userTrackingMode {
     _userTrackingMode = userTrackingMode;
     switch (userTrackingMode) {
-        case OCHMapUserTrackingModeNone:
+        case OMKMapUserTrackingModeNone:
             self.mapView.userTrackingMode = QUserTrackingModeNone;
             break;
-        case OCHMapUserTrackingModeFollow:
+        case OMKMapUserTrackingModeFollow:
             self.mapView.userTrackingMode = QUserTrackingModeFollow;
             break;
-        case OCHMapUserTrackingModeFollowWithHeading:
+        case OMKMapUserTrackingModeFollowWithHeading:
             self.mapView.userTrackingMode = QUserTrackingModeFollowWithHeading;
             break;
     }

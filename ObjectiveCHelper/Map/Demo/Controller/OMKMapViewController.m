@@ -59,7 +59,7 @@
     
     self.mapView.delegate = self;
     self.mapView.showsUserLocation = YES;
-    self.mapView.userTrackingMode = OCHMapUserTrackingModeFollowWithHeading;
+    self.mapView.userTrackingMode = OMKMapUserTrackingModeFollowWithHeading;
     
     [self.view addSubview:self.mapView];
     
