@@ -205,6 +205,14 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
     [self.delegate mapView:self didDeselectAnnotationView:omkAnnotationView];
 }
 
+#pragma mark - QMapViewDelegate - Overlay
+
+/**
+ * @brief 根据overlay生成对应的Renderer
+ * @param mapView 地图View
+ * @param overlay 指定的overlay
+ * @return 生成的覆盖物Renderer
+ */
 - (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id <MAOverlay>)overlay {
     if ([overlay isKindOfClass:[MACircle class]]) {
         MACircleRenderer *circleRenderer = [[MACircleRenderer alloc] initWithCircle:overlay];
@@ -213,6 +221,16 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
         circleRenderer.strokeColor  = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.8];
         circleRenderer.fillColor    = [UIColor colorWithRed:1.0 green:0.8 blue:0.0 alpha:0.8];
         return circleRenderer;
+    }
+    else if ([overlay isKindOfClass:[MAPolyline class]]) {
+        MAPolylineRenderer *polylineRenderer = [[MAPolylineRenderer alloc] initWithPolyline:overlay];
+        
+        polylineRenderer.lineWidth    = 8.f;
+        polylineRenderer.strokeColor  = [UIColor colorWithRed:0 green:1 blue:0 alpha:0.6];
+        polylineRenderer.lineJoinType = kMALineJoinRound;
+        polylineRenderer.lineCapType  = kMALineCapRound;
+        
+        return polylineRenderer;
     }
     return nil;
 }

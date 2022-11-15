@@ -191,14 +191,26 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
 #pragma mark - QMapViewDelegate - Overlay
 
 - (QOverlayView *)mapView:(QMapView *)mapView viewForOverlay:(id <QOverlay>)overlay {
-    if ([overlay isKindOfClass:[OMKQCircle class]])
-    {
+    if ([overlay isKindOfClass:[OMKQCircle class]]) {
         QCircleView *circleView = [[QCircleView alloc] initWithCircle:overlay];
         circleView.lineWidth   = 3;
         circleView.strokeColor = [UIColor colorWithRed:.2 green:.1 blue:.1 alpha:.8];
         circleView.fillColor   = [[UIColor blueColor] colorWithAlphaComponent:0.2];
         
         return circleView;
+    }
+    else if ([overlay isKindOfClass:[QPolyline class]]) {
+            QPolylineView *polylineRender = [[QPolylineView alloc] initWithPolyline:overlay];
+            // 设置线宽
+            polylineRender.lineWidth   = 8;
+            // 设置线段颜色
+            polylineRender.strokeColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.2];
+            // 设置边框宽度
+            polylineRender.borderWidth = 2;
+            // 设置边框颜色
+            polylineRender.borderColor = [UIColor grayColor];
+            
+            return polylineRender;
     }
     
     return nil;

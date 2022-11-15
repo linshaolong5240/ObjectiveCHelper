@@ -16,7 +16,6 @@
 #import "OMKBPointAnnotationView.h"
 #import "OMKBCustomerLocationAnnotationView.h"
 #import "OMKBEmployeeLocationAnnotationView.h"
-#import "OMKBOverlayView.h"
 
 BMKUserTrackingMode BMKUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
@@ -303,6 +302,18 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
         circleView.lineWidth = 10.0;
         
         return circleView;
+    }
+    else if ([overlay isKindOfClass:[OMKBPolyline class]]) {
+        BMKPolylineView *polylineView = [[BMKPolylineView alloc] initWithPolyline:overlay];
+        //设置polylineView的画笔颜色为蓝色
+        polylineView.strokeColor = [[UIColor alloc] initWithRed:19/255.0 green:107/255.0 blue:251/255.0 alpha:1.0];
+        //设置polylineView的画笔宽度为8
+        polylineView.lineWidth = 8;
+        //圆点虚线，V5.0.0新增
+//        polylineView.lineDashType = kBMKLineDashTypeDot;
+        //方块虚线，V5.0.0新增
+//       polylineView.lineDashType = kBMKLineDashTypeSquare;
+        return polylineView;
     }
     return nil;
 }
