@@ -211,12 +211,44 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
  *@param error 错误号，@see BMKSearchErrorCode
  */
 - (void)onGetDrivingRouteResult:(BMKRouteSearch *)searcher result:(BMKDrivingRouteResult *)result errorCode:(BMKSearchErrorCode)error {
+    BMKMapPoint *points;
 #if DEBUG
     NSLog(@"%s", __PRETTY_FUNCTION__);
     NSLog(@"taxiInfo: %@", result.taxiInfo);
     NSLog(@"suggestAddrResult: %@", result.suggestAddrResult);
     NSLog(@"routes: %@", result.routes);
 #endif
+    if (error != BMK_SEARCH_NO_ERROR) {
+        return;
+    }
+    
+    BMKDrivingRouteLine *routeLine = [result.routes firstObject];
+    
+    if (routeLine == nil) {
+        return;
+    }
+    
+    NSInteger pointsCount = 0;
+    
+    for(BMKDrivingStep *step in routeLine.steps) {
+        pointsCount += step.pointsCount;
+    }
+    
+    points = (BMKMapPoint *)malloc(pointsCount * sizeof(BMKMapPoint));
+    
+    NSInteger index = 0;
+
+    for(BMKDrivingStep *step in routeLine.steps) {
+        for(NSInteger i = 0; i < step.pointsCount; i++) {
+            points[index].x = step.points[i].x;
+            points[index].y = step.points[i].y;
+            index++;
+        }
+    }
+    
+    OMKBPolyline *polyline = [OMKBPolyline polylineWithPoints:points count:pointsCount];
+    [self addOverlay:polyline];
+    free(points);
 }
 
 #pragma mark - BMKMapViewDelegate - Annotation

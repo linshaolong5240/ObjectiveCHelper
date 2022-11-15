@@ -80,19 +80,22 @@
     self.pointAnnotation.subtitle = @"subtittle";
     [self.mapView addAnnotation:self.pointAnnotation];
     
+    //客户位置
     self.customerLocationAnnotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.2911);
     [self.mapView addAnnotation:self.customerLocationAnnotation];
+    //员工位置
     self.employeeLocationAnnotation.coordinate = CLLocationCoordinate2DMake(26.1533, 119.2911);
     [self.mapView addAnnotation:self.employeeLocationAnnotation];
     
     // 添加圆形覆盖物
     CLLocationCoordinate2D coor = CLLocationCoordinate2DMake(26.0533, 119.3911);
-    
     [self.circleOverlay setCircleWithCenterCoordinate:coor radius:5000];
     [self.mapView addOverlay:self.circleOverlay];
     
+    // 折线
+//    [self.mapView addOverlay:self.polylineOverlay];
     
-    [self.mapView addOverlay:self.polylineOverlay];
+    [self.mapView searchDrivingRouteFrom:CLLocationCoordinate2DMake(26.0533, 119.1911) to:CLLocationCoordinate2DMake(26.0533, 119.2911)];
     
 //    @weakify(self)
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
