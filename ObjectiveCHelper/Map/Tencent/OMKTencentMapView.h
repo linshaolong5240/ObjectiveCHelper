@@ -11,6 +11,7 @@
 //Annotation
 #import "OMKQPointAnnotation.h"
 #import "OMKQCustomerLocationAnnotation.h"
+#import "OMKQEmployeeLocationAnnotation.h"
 //Overlay
 #import "OMKQCircle.h"
 

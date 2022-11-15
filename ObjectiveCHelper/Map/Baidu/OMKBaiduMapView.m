@@ -219,6 +219,14 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
         }
         return annotationView;
     }
+    else if ([annotation isKindOfClass:[OMKBEmployeeLocationAnnotation class]]) {
+        OMKBEmployeeLocationAnnotation *omkAnnotation = (OMKBEmployeeLocationAnnotation *)annotation;
+        OMKBAnnotationView *annotationView = (OMKBAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        if (annotationView == nil) {
+            annotationView = [[OMKBEmployeeLocationAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+        }
+        return annotationView;
+    }
     
     return nil;
 }

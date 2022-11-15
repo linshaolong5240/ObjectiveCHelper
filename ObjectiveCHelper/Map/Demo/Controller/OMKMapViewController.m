@@ -13,6 +13,7 @@
 @property(nonatomic, strong) UIView<OMKMapViewProvider> *mapView;
 @property(nonatomic, strong) id <OMKAnnotation> pointAnnotation;
 @property(nonatomic, strong) id <OMKCustomerLocationmAnnotation> customerLocationAnnotation;
+@property(nonatomic, strong) id <OMKEmployeeLocationmAnnotation> employeeLocationAnnotation;
 @property(nonatomic, strong) id <OMKCircleOverlay> circleOverlay;
 
 @end
@@ -41,12 +42,14 @@
             self.mapView = [[OMKBaiduMapView alloc] initWithFrame:self.view.bounds];
             self.pointAnnotation = [[OMKBPointAnnotation alloc] init];
             self.customerLocationAnnotation = [[OMKBCustomerLocationAnnotation alloc] init];
+            self.employeeLocationAnnotation = [[OMKBEmployeeLocationAnnotation alloc] init];
             self.circleOverlay = [[OMKBCircle alloc] init];
             break;
         case OMKMapTypeTencent:
             self.mapView = [[OMKTencentMapView alloc] initWithFrame:self.view.bounds];
             self.pointAnnotation = [[OMKQPointAnnotation alloc] init];
             self.customerLocationAnnotation = [[OMKQCustomerLocationAnnotation alloc] init];
+            self.employeeLocationAnnotation = [[OMKQEmployeeLocationAnnotation alloc] init];
             self.circleOverlay = [[OMKQCircle alloc] init];
             break;
         case OMKMapTypeNumber:
@@ -66,6 +69,8 @@
     
     self.customerLocationAnnotation.coordinate = CLLocationCoordinate2DMake(26.0533, 119.2911);
     [self.mapView addAnnotation:self.customerLocationAnnotation];
+    self.employeeLocationAnnotation.coordinate = CLLocationCoordinate2DMake(26.1533, 119.2911);
+    [self.mapView addAnnotation:self.employeeLocationAnnotation];
     
     // 添加圆形覆盖物
     CLLocationCoordinate2D coor = CLLocationCoordinate2DMake(26.0533, 119.3911);

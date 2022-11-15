@@ -8,9 +8,10 @@
 
 #import "OMKTencentMapView.h"
 #import <QMapKit/QMapKit.h>
-//OMK Support
+//Annotation
 #import "OMKQPointAnnotationView.h"
 #import "OMKQCustomerLocationAnnotationView.h"
+#import "OMKQEmployeeLocationAnnotationView.h"
 
 QUserTrackingMode QUserTrackingModeFromOMKUserTrackingMode(OMKUserTrackingMode mode) {
     switch (mode) {
@@ -135,6 +136,14 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
         OMKQAnnotationView *annotationView = (OMKQAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
             annotationView = [[OMKQCustomerLocationAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+        }
+        return annotationView;
+    }
+    else if ([annotation isKindOfClass:[OMKQEmployeeLocationAnnotation class]]) {
+        OMKQEmployeeLocationAnnotation *omkAnnotation = (OMKQEmployeeLocationAnnotation *)annotation;
+        OMKQAnnotationView *annotationView = (OMKQAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+        if (annotationView == nil) {
+            annotationView = [[OMKQEmployeeLocationAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
         }
         return annotationView;
     }
