@@ -31,7 +31,7 @@ target 'ObjectiveCHelper' do
   #高德地图
   pod 'AMap3DMap', '~> 9.5.0'
 #  pod 'AMap2DMap', '~> 5.6.1'
-  # pod 'AMapSearch', '~> 9.4.5'
+   pod 'AMapSearch', '~> 9.5.0'
   # pod 'AMapLocation', '~> 2.9.0'
   # pod 'AMap2DMap-NO-IDFA', '~> 5.6.1'
   # pod 'AMapSearch-NO-IDFA', '~> 9.4.5'

@@ -8,6 +8,8 @@
 
 #import "OMKAMapView.h"
 #import <MAMapKit/MAMapKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+
 //Annotation
 #import "OMKAPointAnnotationView.h"
 #import "OMKACustomerLocationAnnotationView.h"
@@ -42,10 +44,10 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
 }
 
 
-@interface OMKAMapView () <MAMapViewDelegate>
+@interface OMKAMapView () <MAMapViewDelegate, AMapSearchDelegate>
 
 @property(nonatomic, strong) MAMapView *mapView;
-@property(nonatomic, strong) MAPointAnnotation *userLocationAnnotation;
+@property(nonatomic, strong) AMapSearchAPI *search;
 
 @end
 
@@ -56,6 +58,8 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
     if (self) {
         _mapView = [[MAMapView alloc] initWithFrame:self.bounds];
         _mapView.delegate = self;
+        _search = [[AMapSearchAPI alloc] init];
+        _search.delegate = self;
         
         [self setupView];
     }
@@ -117,6 +121,71 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
 - (void)mapView:(MAMapView *)mapView didFailToLocateUserWithError:(NSError *)error {
     
 }
+
+#pragma mark - AMapSearchDelegate
+
+
+/**
+ * @brief 当请求发生错误时，会调用代理的此方法.
+ * @param request 发生错误的请求.
+ * @param error   返回的错误.
+ */
+- (void)AMapSearchRequest:(id)request didFailWithError:(NSError *)error {
+#if DEBUG
+    NSLog(@"%s %@", __PRETTY_FUNCTION__, error);
+#endif
+}
+
+/**
+ * @brief 路径规划查询回调
+ * @param request  发起的请求，具体字段参考 AMapRouteSearchBaseRequest 及其子类。
+ * @param response 响应结果，具体字段参考 AMapRouteSearchResponse 。
+ */
+- (void)onRouteSearchDone:(AMapRouteSearchBaseRequest *)request response:(AMapRouteSearchResponse *)response {
+#if DEBUG
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+#endif
+    if (response.route == nil) {
+        return;
+    }
+    
+    if (response.count <= 0) {
+        return;
+    }
+    
+    AMapPath *path = response.route.paths.firstObject;
+    
+    if (path == nil) {
+        return;
+    }
+    
+    NSInteger pointsCount = 0;
+    
+    for(AMapStep *step in path.steps) {
+        NSLog(@"%@", step.polyline);
+        NSArray<NSString *> *coordinates = [step.polyline componentsSeparatedByString:@";"];
+        pointsCount += coordinates.count;
+    }
+    
+    CLLocationCoordinate2D *coordinates = (CLLocationCoordinate2D*)malloc(pointsCount * sizeof(CLLocationCoordinate2D));
+    
+    NSInteger index = 0;
+    for(AMapStep *step in path.steps) {
+        NSLog(@"%@", step.polyline);
+        NSArray<NSString *> *coordinatesString = [step.polyline componentsSeparatedByString:@";"];
+        for(NSString *coordinateString in coordinatesString) {
+            NSArray<NSString *> *coor= [coordinateString componentsSeparatedByString:@","];
+            coordinates[index].longitude = [coor[0] doubleValue];
+            coordinates[index].latitude = [coor[1] doubleValue];
+            index++;
+        }
+    }
+    
+    OMKAPolyline *polyline = [OMKAPolyline polylineWithCoordinates:coordinates count:pointsCount];
+    [self addOverlay:polyline];
+    free(coordinates);
+}
+
 
 #pragma mark - QMapViewDelegate - Annotation
 
@@ -294,5 +363,17 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
     [self.mapView  removeOverlays:overlays];
 }
 
+- (void)searchDrivingRouteFrom:(CLLocationCoordinate2D)from to:(CLLocationCoordinate2D)to {
+    AMapDrivingCalRouteSearchRequest *navi = [[AMapDrivingCalRouteSearchRequest alloc] init];
+    
+    navi.showFieldType = AMapDrivingRouteShowFieldTypeCost|AMapDrivingRouteShowFieldTypeTmcs|AMapDrivingRouteShowFieldTypeNavi|AMapDrivingRouteShowFieldTypeCities|AMapDrivingRouteShowFieldTypePolyline;
+    /* 出发点. */
+    navi.origin = [AMapGeoPoint locationWithLatitude:from.latitude
+                                           longitude:from.longitude];
+    /* 目的地. */
+    navi.destination = [AMapGeoPoint locationWithLatitude:to.latitude
+                                                longitude:to.longitude];
+    [self.search AMapDrivingV2RouteSearch:navi];
+}
 
 @end

@@ -214,7 +214,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     BMKMapPoint *points;
 #if DEBUG
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    NSLog(@"taxiInfo: %@", result.taxiInfo);
+//    NSLog(@"taxiInfo: %@", result.taxiInfo);
     NSLog(@"suggestAddrResult: %@", result.suggestAddrResult);
     NSLog(@"routes: %@", result.routes);
 #endif
