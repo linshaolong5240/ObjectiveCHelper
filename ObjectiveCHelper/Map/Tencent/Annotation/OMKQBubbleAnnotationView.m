@@ -1,18 +1,19 @@
 //
-//  OMKAPointAnnotationView.m
+//  OMKQBubbleAnnotationView.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKAPointAnnotationView.h"
+#import "OMKQBubbleAnnotationView.h"
 
-@implementation OMKAPointAnnotationView
+@implementation OMKQBubbleAnnotationView
 
-- (id)initWithAnnotation:(id <MAAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
+- (id)initWithAnnotation:(id <QAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.canShowCallout = NO;
         [self configureView];
     }
     return self;

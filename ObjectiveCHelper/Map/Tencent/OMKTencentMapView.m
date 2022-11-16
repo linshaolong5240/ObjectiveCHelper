@@ -10,7 +10,7 @@
 #import <QMapKit/QMapKit.h>
 #import <QMapKit/QMSSearchKit.h>
 //Annotation
-#import "OMKQPointAnnotationView.h"
+#import "OMKQBubbleAnnotationView.h"
 #import "OMKQCustomerLocationAnnotationView.h"
 #import "OMKQEmployeeLocationAnnotationView.h"
 
@@ -126,11 +126,11 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
  * @return 生成的标注View
  */
 - (QAnnotationView *)mapView:(QMapView *)mapView viewForAnnotation:(id <QAnnotation>)annotation {
-    if ([annotation isKindOfClass:[OMKQPointAnnotation class]]) {
-        OMKQPointAnnotation *omkAnnotation = (OMKQPointAnnotation *)annotation;
+    if ([annotation isKindOfClass:[OMKQBubbleAnnotation class]]) {
+        OMKQBubbleAnnotation *omkAnnotation = (OMKQBubbleAnnotation *)annotation;
         OMKQAnnotationView *annotationView = (OMKQAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
-            annotationView = [[OMKQPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+            annotationView = [[OMKQBubbleAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
         }
         return annotationView;
     }
@@ -170,7 +170,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
     [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
     
     //OMKTencentPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
-    if ([view isKindOfClass:[OMKQPointAnnotationView class]]) {
+    if ([view isKindOfClass:[OMKQBubbleAnnotationView class]]) {
         [self.mapView deselectAnnotation:view.annotation animated:NO];
     }
 }

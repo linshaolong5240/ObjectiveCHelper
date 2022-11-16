@@ -43,7 +43,7 @@
     switch (self.mapType) {
         case OMKMapTypeAMap:
             self.mapView = [[OMKAMapView alloc] initWithFrame:self.view.bounds];
-            self.pointAnnotation = [[OMKAPointAnnotation alloc] init];
+            self.pointAnnotation = [[OMKABubbleAnnotation alloc] init];
             self.customerLocationAnnotation = [[OMKACustomerLocationAnnotation alloc] init];
             self.employeeLocationAnnotation = [[OMKAEmployeeLocationAnnotation alloc] init];
             self.circleOverlay = [[OMKACircle alloc] init];
@@ -51,7 +51,7 @@
             break;
         case OMKMapTypeBaidu:
             self.mapView = [[OMKBaiduMapView alloc] initWithFrame:self.view.bounds];
-            self.pointAnnotation = [[OMKBPointAnnotation alloc] init];
+            self.pointAnnotation = [[OMKBBubbleAnnotation alloc] init];
             self.customerLocationAnnotation = [[OMKBCustomerLocationAnnotation alloc] init];
             self.employeeLocationAnnotation = [[OMKBEmployeeLocationAnnotation alloc] init];
             self.circleOverlay = [[OMKBCircle alloc] init];
@@ -59,7 +59,7 @@
             break;
         case OMKMapTypeTencent:
             self.mapView = [[OMKTencentMapView alloc] initWithFrame:self.view.bounds];
-            self.pointAnnotation = [[OMKQPointAnnotation alloc] init];
+            self.pointAnnotation = [[OMKQBubbleAnnotation alloc] init];
             self.customerLocationAnnotation = [[OMKQCustomerLocationAnnotation alloc] init];
             self.employeeLocationAnnotation = [[OMKQEmployeeLocationAnnotation alloc] init];
             self.circleOverlay = [[OMKQCircle alloc] init];

@@ -1,17 +1,17 @@
 //
-//  OMKBPointAnnotation.h
+//  OMKQBubbleAnnotation.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/12.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKBAnnotation.h"
-#import "OMKPointAnnotation.h"
+#import "OMKQAnnotation.h"
+#import "OMKBubbleAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKBPointAnnotation : OMKBAnnotation <OMKPointAnnotation>
+@interface OMKQBubbleAnnotation : OMKQAnnotation <OMKBubbleAnnotation>
 
 @end
 

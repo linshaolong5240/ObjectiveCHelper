@@ -13,7 +13,7 @@
 #import <BaiduMapAPI_Search/BMKSearchComponent.h>
 
 //OMK Support
-#import "OMKBPointAnnotationView.h"
+#import "OMKBBubbleAnnotationView.h"
 #import "OMKBCustomerLocationAnnotationView.h"
 #import "OMKBEmployeeLocationAnnotationView.h"
 
@@ -258,11 +258,11 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
 /// @param annotation 指定的标注
 /// @return 生成的标注View
 - (nullable __kindof BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation {
-    if ([annotation isKindOfClass:[OMKBPointAnnotation class]]) {
-        OMKBPointAnnotation *omkAnnotation = (OMKBPointAnnotation *)annotation;
+    if ([annotation isKindOfClass:[OMKBBubbleAnnotation class]]) {
+        OMKBBubbleAnnotation *omkAnnotation = (OMKBBubbleAnnotation *)annotation;
         OMKBAnnotationView *annotationView = (OMKBAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
-            annotationView = [[OMKBPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+            annotationView = [[OMKBBubbleAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
         }
         return annotationView;
     }
@@ -302,7 +302,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromBMKUserTrackingMode(BMKUserTrackingMo
     [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
     
     //OMKBaiduPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
-    if ([view isKindOfClass:[OMKBPointAnnotationView class]]) {
+    if ([view isKindOfClass:[OMKBBubbleAnnotationView class]]) {
         [self.mapView deselectAnnotation:view.annotation animated:NO];
     }
 }

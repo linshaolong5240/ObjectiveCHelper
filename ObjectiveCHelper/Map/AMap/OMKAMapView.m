@@ -11,7 +11,7 @@
 #import <AMapSearchKit/AMapSearchKit.h>
 
 //Annotation
-#import "OMKAPointAnnotationView.h"
+#import "OMKABubbleAnnotationView.h"
 #import "OMKACustomerLocationAnnotationView.h"
 #import "OMKAEmployeeLocationAnnotationView.h"
 
@@ -208,11 +208,11 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
     if ([annotation isKindOfClass:[MAUserLocation class]]) {
         return nil;
     }
-    else if ([annotation isKindOfClass:[OMKAPointAnnotation class]]) {
-        OMKAPointAnnotation *omkAnnotation = (OMKAPointAnnotation *)annotation;
-        OMKAPointAnnotationView *annotationView = (OMKAPointAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
+    else if ([annotation isKindOfClass:[OMKABubbleAnnotation class]]) {
+        OMKABubbleAnnotation *omkAnnotation = (OMKABubbleAnnotation *)annotation;
+        OMKABubbleAnnotationView *annotationView = (OMKABubbleAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:omkAnnotation.reuseIdentifier];
         if (annotationView == nil) {
-            annotationView = [[OMKAPointAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
+            annotationView = [[OMKABubbleAnnotationView alloc] initWithAnnotation:omkAnnotation reuseIdentifier:omkAnnotation.reuseIdentifier];
         }
         return annotationView;
     }
@@ -252,7 +252,7 @@ OMKUserTrackingMode OMKUserTrackingModeFromMAUserTrackingMode(MAUserTrackingMode
     [self.delegate mapView:self didSelectAnnotationView:omkAnnotationView];
     
     //OMKAMapPointAnnotationView一直响应 @selector(mapView:didSelectAnnotationView:)
-    if ([view isKindOfClass:[OMKAPointAnnotationView class]]) {
+    if ([view isKindOfClass:[OMKABubbleAnnotationView class]]) {
         [self.mapView deselectAnnotation:view.annotation animated:NO];
     }
 

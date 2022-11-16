@@ -23,9 +23,9 @@
 		1837C0602923605A00793002 /* OMKBPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837C05F2923605900793002 /* OMKBPolyline.m */; };
 		1837C0632923610800793002 /* OMKAPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837C0622923610800793002 /* OMKAPolyline.m */; };
 		1837C0662923616300793002 /* OMKQPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837C0652923616300793002 /* OMKQPolyline.m */; };
-		1846DF1F2922212200F3EC2F /* OMKBPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF1E2922212200F3EC2F /* OMKBPointAnnotationView.m */; };
-		1846DF242922298800F3EC2F /* OMKQPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF232922298800F3EC2F /* OMKQPointAnnotationView.m */; };
-		1846DF2829222B9000F3EC2F /* OMKAPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF2729222B9000F3EC2F /* OMKAPointAnnotationView.m */; };
+		1846DF1F2922212200F3EC2F /* OMKBBubbleAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF1E2922212200F3EC2F /* OMKBBubbleAnnotationView.m */; };
+		1846DF242922298800F3EC2F /* OMKQBubbleAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF232922298800F3EC2F /* OMKQBubbleAnnotationView.m */; };
+		1846DF2829222B9000F3EC2F /* OMKABubbleAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF2729222B9000F3EC2F /* OMKABubbleAnnotationView.m */; };
 		1846DF2B2922325500F3EC2F /* OMKBCustomerLocationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF2A2922325500F3EC2F /* OMKBCustomerLocationAnnotationView.m */; };
 		1846DF2E29223C0D00F3EC2F /* OMKBAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF2D29223C0D00F3EC2F /* OMKBAnnotation.m */; };
 		1846DF3429223E0B00F3EC2F /* OMKQAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846DF3329223E0B00F3EC2F /* OMKQAnnotation.m */; };
@@ -55,8 +55,8 @@
 		188CA48128F1500E00EF106E /* OCHJXCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */; };
 		188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */; };
 		188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */; };
-		188CD569291F711600E05D19 /* OMKQPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CD568291F711600E05D19 /* OMKQPointAnnotation.m */; };
-		188CD56C291F80C800E05D19 /* OMKAPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CD56B291F80C800E05D19 /* OMKAPointAnnotation.m */; };
+		188CD569291F711600E05D19 /* OMKQBubbleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CD568291F711600E05D19 /* OMKQBubbleAnnotation.m */; };
+		188CD56C291F80C800E05D19 /* OMKABubbleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CD56B291F80C800E05D19 /* OMKABubbleAnnotation.m */; };
 		188CD576291F97E400E05D19 /* OMKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CD575291F97E400E05D19 /* OMKOverlay.m */; };
 		188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */; };
 		188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */; };
@@ -68,7 +68,7 @@
 		189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */; };
 		18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2E1291F3B76009F49D1 /* TestA.m */; };
 		18AAC2E5291F3B89009F49D1 /* TestB.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2E4291F3B89009F49D1 /* TestB.m */; };
-		18AAC2EE291F44F8009F49D1 /* OMKBPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2ED291F44F8009F49D1 /* OMKBPointAnnotation.m */; };
+		18AAC2EE291F44F8009F49D1 /* OMKBBubbleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2ED291F44F8009F49D1 /* OMKBBubbleAnnotation.m */; };
 		18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */; };
 		18CF77EC291B807D0068CCC7 /* MJRefreshDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EB291B807D0068CCC7 /* MJRefreshDemoViewController.m */; };
 		18CF77F0291B85980068CCC7 /* OCHRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EF291B85980068CCC7 /* OCHRefreshHeader.m */; };
@@ -150,12 +150,12 @@
 		1837C0622923610800793002 /* OMKAPolyline.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKAPolyline.m; sourceTree = "<group>"; };
 		1837C0642923616300793002 /* OMKQPolyline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKQPolyline.h; sourceTree = "<group>"; };
 		1837C0652923616300793002 /* OMKQPolyline.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKQPolyline.m; sourceTree = "<group>"; };
-		1846DF1D2922212200F3EC2F /* OMKBPointAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBPointAnnotationView.h; sourceTree = "<group>"; };
-		1846DF1E2922212200F3EC2F /* OMKBPointAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBPointAnnotationView.m; sourceTree = "<group>"; };
-		1846DF222922298800F3EC2F /* OMKQPointAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKQPointAnnotationView.h; sourceTree = "<group>"; };
-		1846DF232922298800F3EC2F /* OMKQPointAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKQPointAnnotationView.m; sourceTree = "<group>"; };
-		1846DF2629222B9000F3EC2F /* OMKAPointAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKAPointAnnotationView.h; sourceTree = "<group>"; };
-		1846DF2729222B9000F3EC2F /* OMKAPointAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKAPointAnnotationView.m; sourceTree = "<group>"; };
+		1846DF1D2922212200F3EC2F /* OMKBBubbleAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBBubbleAnnotationView.h; sourceTree = "<group>"; };
+		1846DF1E2922212200F3EC2F /* OMKBBubbleAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBBubbleAnnotationView.m; sourceTree = "<group>"; };
+		1846DF222922298800F3EC2F /* OMKQBubbleAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKQBubbleAnnotationView.h; sourceTree = "<group>"; };
+		1846DF232922298800F3EC2F /* OMKQBubbleAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKQBubbleAnnotationView.m; sourceTree = "<group>"; };
+		1846DF2629222B9000F3EC2F /* OMKABubbleAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKABubbleAnnotationView.h; sourceTree = "<group>"; };
+		1846DF2729222B9000F3EC2F /* OMKABubbleAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKABubbleAnnotationView.m; sourceTree = "<group>"; };
 		1846DF292922325500F3EC2F /* OMKBCustomerLocationAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBCustomerLocationAnnotationView.h; sourceTree = "<group>"; };
 		1846DF2A2922325500F3EC2F /* OMKBCustomerLocationAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBCustomerLocationAnnotationView.m; sourceTree = "<group>"; };
 		1846DF2C29223C0C00F3EC2F /* OMKBAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBAnnotation.h; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		1846DF4A2922450900F3EC2F /* OMKBEmployeeLocationAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBEmployeeLocationAnnotation.m; sourceTree = "<group>"; };
 		1846DF4C2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBEmployeeLocationAnnotationView.h; sourceTree = "<group>"; };
 		1846DF4D2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBEmployeeLocationAnnotationView.m; sourceTree = "<group>"; };
-		1846DF4F2922475A00F3EC2F /* OMKPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKPointAnnotation.h; sourceTree = "<group>"; };
+		1846DF4F2922475A00F3EC2F /* OMKBubbleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBubbleAnnotation.h; sourceTree = "<group>"; };
 		1853C4EF28F3EE6C00245003 /* UIKitUISearchbarDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitUISearchbarDemoViewController.h; sourceTree = "<group>"; };
 		1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitUISearchbarDemoViewController.m; sourceTree = "<group>"; };
 		1860276F2908CDFA001A3D2B /* UITableView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+Extension.h"; sourceTree = "<group>"; };
@@ -218,10 +218,10 @@
 		188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHThirdPartyViewController.m; sourceTree = "<group>"; };
 		188CA49428F262D800EF106E /* OCHJXCategoryListContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHJXCategoryListContentView.h; sourceTree = "<group>"; };
 		188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHJXCategoryListContentView.m; sourceTree = "<group>"; };
-		188CD567291F711600E05D19 /* OMKQPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKQPointAnnotation.h; sourceTree = "<group>"; };
-		188CD568291F711600E05D19 /* OMKQPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKQPointAnnotation.m; sourceTree = "<group>"; };
-		188CD56A291F80C800E05D19 /* OMKAPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKAPointAnnotation.h; sourceTree = "<group>"; };
-		188CD56B291F80C800E05D19 /* OMKAPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKAPointAnnotation.m; sourceTree = "<group>"; };
+		188CD567291F711600E05D19 /* OMKQBubbleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKQBubbleAnnotation.h; sourceTree = "<group>"; };
+		188CD568291F711600E05D19 /* OMKQBubbleAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKQBubbleAnnotation.m; sourceTree = "<group>"; };
+		188CD56A291F80C800E05D19 /* OMKABubbleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKABubbleAnnotation.h; sourceTree = "<group>"; };
+		188CD56B291F80C800E05D19 /* OMKABubbleAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKABubbleAnnotation.m; sourceTree = "<group>"; };
 		188CD574291F97E400E05D19 /* OMKOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKOverlay.h; sourceTree = "<group>"; };
 		188CD575291F97E400E05D19 /* OMKOverlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKOverlay.m; sourceTree = "<group>"; };
 		188F2AA9290BDE740046FB65 /* OCHValueStepperDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHValueStepperDemoController.h; sourceTree = "<group>"; };
@@ -244,8 +244,8 @@
 		18AAC2E1291F3B76009F49D1 /* TestA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestA.m; sourceTree = "<group>"; };
 		18AAC2E3291F3B89009F49D1 /* TestB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestB.h; sourceTree = "<group>"; };
 		18AAC2E4291F3B89009F49D1 /* TestB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestB.m; sourceTree = "<group>"; };
-		18AAC2EC291F44F8009F49D1 /* OMKBPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBPointAnnotation.h; sourceTree = "<group>"; };
-		18AAC2ED291F44F8009F49D1 /* OMKBPointAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBPointAnnotation.m; sourceTree = "<group>"; };
+		18AAC2EC291F44F8009F49D1 /* OMKBBubbleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKBBubbleAnnotation.h; sourceTree = "<group>"; };
+		18AAC2ED291F44F8009F49D1 /* OMKBBubbleAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKBBubbleAnnotation.m; sourceTree = "<group>"; };
 		18CE4054290268590075C1A6 /* UIButtonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIButtonDemoViewController.h; sourceTree = "<group>"; };
 		18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonDemoViewController.m; sourceTree = "<group>"; };
 		18CF77EA291B807D0068CCC7 /* MJRefreshDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshDemoViewController.h; sourceTree = "<group>"; };
@@ -407,6 +407,10 @@
 			isa = PBXGroup;
 			children = (
 				18FF5A6C2921DAD200335501 /* Base */,
+				18AAC2EC291F44F8009F49D1 /* OMKBBubbleAnnotation.h */,
+				18AAC2ED291F44F8009F49D1 /* OMKBBubbleAnnotation.m */,
+				1846DF1D2922212200F3EC2F /* OMKBBubbleAnnotationView.h */,
+				1846DF1E2922212200F3EC2F /* OMKBBubbleAnnotationView.m */,
 				18FF5A7A2921E47600335501 /* OMKBCustomerLocationAnnotation.h */,
 				18FF5A7B2921E47600335501 /* OMKBCustomerLocationAnnotation.m */,
 				1846DF292922325500F3EC2F /* OMKBCustomerLocationAnnotationView.h */,
@@ -415,10 +419,6 @@
 				1846DF4A2922450900F3EC2F /* OMKBEmployeeLocationAnnotation.m */,
 				1846DF4C2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.h */,
 				1846DF4D2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.m */,
-				18AAC2EC291F44F8009F49D1 /* OMKBPointAnnotation.h */,
-				18AAC2ED291F44F8009F49D1 /* OMKBPointAnnotation.m */,
-				1846DF1D2922212200F3EC2F /* OMKBPointAnnotationView.h */,
-				1846DF1E2922212200F3EC2F /* OMKBPointAnnotationView.m */,
 			);
 			path = Annotation;
 			sourceTree = "<group>";
@@ -427,6 +427,10 @@
 			isa = PBXGroup;
 			children = (
 				18FF5A722921DCB500335501 /* Base */,
+				188CD567291F711600E05D19 /* OMKQBubbleAnnotation.h */,
+				188CD568291F711600E05D19 /* OMKQBubbleAnnotation.m */,
+				1846DF222922298800F3EC2F /* OMKQBubbleAnnotationView.h */,
+				1846DF232922298800F3EC2F /* OMKQBubbleAnnotationView.m */,
 				1846DF3529223EFB00F3EC2F /* OMKQCustomerLocationAnnotation.h */,
 				1846DF3629223EFC00F3EC2F /* OMKQCustomerLocationAnnotation.m */,
 				1846DF3829223FE700F3EC2F /* OMKQCustomerLocationAnnotationView.h */,
@@ -435,10 +439,6 @@
 				1837C052292335E400793002 /* OMKQEmployeeLocationAnnotation.m */,
 				1837C0542923362100793002 /* OMKQEmployeeLocationAnnotationView.h */,
 				1837C0552923362100793002 /* OMKQEmployeeLocationAnnotationView.m */,
-				188CD567291F711600E05D19 /* OMKQPointAnnotation.h */,
-				188CD568291F711600E05D19 /* OMKQPointAnnotation.m */,
-				1846DF222922298800F3EC2F /* OMKQPointAnnotationView.h */,
-				1846DF232922298800F3EC2F /* OMKQPointAnnotationView.m */,
 			);
 			path = Annotation;
 			sourceTree = "<group>";
@@ -447,10 +447,10 @@
 			isa = PBXGroup;
 			children = (
 				18FF5A6D2921DAEB00335501 /* Base */,
-				188CD56A291F80C800E05D19 /* OMKAPointAnnotation.h */,
-				188CD56B291F80C800E05D19 /* OMKAPointAnnotation.m */,
-				1846DF2629222B9000F3EC2F /* OMKAPointAnnotationView.h */,
-				1846DF2729222B9000F3EC2F /* OMKAPointAnnotationView.m */,
+				188CD56A291F80C800E05D19 /* OMKABubbleAnnotation.h */,
+				188CD56B291F80C800E05D19 /* OMKABubbleAnnotation.m */,
+				1846DF2629222B9000F3EC2F /* OMKABubbleAnnotationView.h */,
+				1846DF2729222B9000F3EC2F /* OMKABubbleAnnotationView.m */,
 				1846DF3E2922417C00F3EC2F /* OMKACustomerLocationAnnotation.h */,
 				1846DF3F2922417D00F3EC2F /* OMKACustomerLocationAnnotation.m */,
 				1846DF41292241BF00F3EC2F /* OMKACustomerLocationAnnotationView.h */,
@@ -469,7 +469,7 @@
 				1846DF462922446F00F3EC2F /* Base */,
 				18FF5A792921E3C500335501 /* OMKCustomerLocationmAnnotation.h */,
 				1846DF48292244CD00F3EC2F /* OMKEmployeeLocationmAnnotation.h */,
-				1846DF4F2922475A00F3EC2F /* OMKPointAnnotation.h */,
+				1846DF4F2922475A00F3EC2F /* OMKBubbleAnnotation.h */,
 			);
 			path = Annotation;
 			sourceTree = "<group>";
@@ -1157,7 +1157,7 @@
 				186027712908CDFA001A3D2B /* UITableView+Extension.m in Sources */,
 				188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */,
 				30B968AE292293F0005234C0 /* OMKOverlayView.m in Sources */,
-				188CD569291F711600E05D19 /* OMKQPointAnnotation.m in Sources */,
+				188CD569291F711600E05D19 /* OMKQBubbleAnnotation.m in Sources */,
 				1896D645291C97EE00B03CC0 /* OMKAnnotationView.m in Sources */,
 				1846DF4E2922455D00F3EC2F /* OMKBEmployeeLocationAnnotationView.m in Sources */,
 				18FF5A702921DB8800335501 /* OMKAAnnotationView.m in Sources */,
@@ -1201,7 +1201,7 @@
 				1846DF3A29223FE700F3EC2F /* OMKQCustomerLocationAnnotationView.m in Sources */,
 				1837C05C2923382D00793002 /* OMKAEmployeeLocationAnnotationView.m in Sources */,
 				188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */,
-				18AAC2EE291F44F8009F49D1 /* OMKBPointAnnotation.m in Sources */,
+				18AAC2EE291F44F8009F49D1 /* OMKBBubbleAnnotation.m in Sources */,
 				189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+Extension.m in Sources */,
@@ -1221,16 +1221,16 @@
 				18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */,
 				18E221C72913DF6200660A7F /* OMKConfig.m in Sources */,
 				18E9AAFB2914B98C00D9D614 /* OCHAppConfig.m in Sources */,
-				188CD56C291F80C800E05D19 /* OMKAPointAnnotation.m in Sources */,
+				188CD56C291F80C800E05D19 /* OMKABubbleAnnotation.m in Sources */,
 				1837C0562923362200793002 /* OMKQEmployeeLocationAnnotationView.m in Sources */,
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
-				1846DF2829222B9000F3EC2F /* OMKAPointAnnotationView.m in Sources */,
+				1846DF2829222B9000F3EC2F /* OMKABubbleAnnotationView.m in Sources */,
 				1811B83828F423DD0074418B /* OCHScrollContentViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,
 				1846DF2B2922325500F3EC2F /* OMKBCustomerLocationAnnotationView.m in Sources */,
-				1846DF1F2922212200F3EC2F /* OMKBPointAnnotationView.m in Sources */,
+				1846DF1F2922212200F3EC2F /* OMKBBubbleAnnotationView.m in Sources */,
 				18E221B22913D9F300660A7F /* OMKDemoViewController.m in Sources */,
-				1846DF242922298800F3EC2F /* OMKQPointAnnotationView.m in Sources */,
+				1846DF242922298800F3EC2F /* OMKQBubbleAnnotationView.m in Sources */,
 				44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

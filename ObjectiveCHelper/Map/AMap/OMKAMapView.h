@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "OMKMapViewProvider.h"
 //Annotation
-#import "OMKAPointAnnotation.h"
+#import "OMKABubbleAnnotation.h"
 #import "OMKACustomerLocationAnnotation.h"
 #import "OMKAEmployeeLocationAnnotation.h"
 //Overlay

@@ -1,16 +1,16 @@
 //
-//  OMKAPointAnnotationView.h
+//  OMKBBubbleAnnotationView.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/14.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKAAnnotationView.h"
+#import "OMKBAnnotationView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OMKAPointAnnotationView : OMKAAnnotationView
+@interface OMKBBubbleAnnotationView : OMKBAnnotationView
 
 @end
 
