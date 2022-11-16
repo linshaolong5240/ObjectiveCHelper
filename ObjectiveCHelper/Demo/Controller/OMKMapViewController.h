@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OMKMapView.h"
+#import <OneMapKit/OneMapKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
