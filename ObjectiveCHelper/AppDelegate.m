@@ -7,32 +7,32 @@
 
 #import "AppDelegate.h"
 #import "OCHTabbarViewController.h"
-#import "OMKConfig.h"
-#import "OMKManager.h"
 #import "TestA.h"
 #import "TestB.h"
-
-#import <AMapFoundationKit/AMapFoundationKit.h>
-#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
-#import <QMapKit/QMapKit.h>
-
-#import <BMKLocationkit/BMKLocationComponent.h>
-
-@interface AppDelegate () <BMKLocationAuthDelegate, BMKGeneralDelegate>
-@property (nonatomic, strong) BMKMapManager *mapManager; //主引擎类
-@end
+#import <OneMapKit/OneMapKit.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    OMKConfig *mapConfig = [[OMKConfig alloc] init];
-    mapConfig.aMapKey = OCHAppConfig.aMapKey;
-    mapConfig.baiduMapKey = OCHAppConfig.baiduMapKey;
-    mapConfig.tencentMapKey = OCHAppConfig.tencentMapKey;
+#ifdef __HAS_AMap_FRAMEWORK__
+    //高德地图
+    [[OMKAManager sharesInstance] setPrivacyAgreement:YES];
+    [[OMKAManager sharesInstance] setApiKey:@"6b84213157c7640fd007c800ac20ecf4"];
+#endif
     
-    [[OMKManager sharesInstance] initWithConfig:mapConfig];
-    
+#ifdef __HAS_BaiduMap_FRAMEWORK__
+    //百度地图
+    [[OMKBManager sharesInstance] setPrivacyAgreement:YES];
+    [[OMKBManager sharesInstance] setApiKey:@"qCfINkbXjt4D2PwngcczywFRHjvqcM7b"];
+#endif
+
+#ifdef __HAS_TencentMap_FRAMEWORK__
+    //腾讯地图
+    [[OMKQManager sharesInstance] setPrivacyAgreement:YES];
+    [[OMKQManager sharesInstance] setApiKey:@"6LDBZ-OG3C6-7GGSW-EPAJH-NN6S5-3JFVQ"];
+#endif
+
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     self.window.backgroundColor = UIColor.whiteColor;
     UIViewController *rootViewController = OCHTabbarViewController.new;
