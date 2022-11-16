@@ -13,6 +13,7 @@ target 'ObjectiveCHelper' do
   pod 'ReactiveObjC', '~> 3.1.1'
   pod 'SDWebImage', '~> 5.0'
   
+  pod 'OneMapKit/AMap', :git =>'https://github.com/linshaolong5240/OneMapKit', :branch => 'main'
   pod 'OneMapKit/Baidu', :git =>'https://github.com/linshaolong5240/OneMapKit', :branch => 'main'
   pod 'OneMapKit/Tencent', :git =>'https://github.com/linshaolong5240/OneMapKit', :branch => 'main'
 
