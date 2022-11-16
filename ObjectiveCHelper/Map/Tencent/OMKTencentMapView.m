@@ -353,10 +353,12 @@ OMKUserTrackingMode OMKUserTrackingModeFromQUserTrackingMode(QUserTrackingMode m
 }
 
 - (void)searchDrivingRouteFrom:(CLLocationCoordinate2D)from to:(CLLocationCoordinate2D)to {
+    NSString *fromString = [NSString stringWithFormat:@"%f,%f",from.latitude, from.longitude];
+    NSString *toString = [NSString stringWithFormat:@"%f,%f",to.latitude, to.longitude];
     QMSDrivingRouteSearchOption *drivingOpt = [[QMSDrivingRouteSearchOption alloc] init];
     [drivingOpt setPolicyWithType:QMSDrivingRoutePolicyTypeLeastTime];
-    [drivingOpt setFrom:@"39.983906,116.307999"];
-    [drivingOpt setTo:@"39.979381,116.314128"];
+    [drivingOpt setFrom:fromString];
+    [drivingOpt setTo:toString];
     [self.searcher searchWithDrivingRouteSearchOption:drivingOpt];
 }
 
