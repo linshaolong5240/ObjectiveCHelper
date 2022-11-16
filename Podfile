@@ -8,8 +8,10 @@ target 'ObjectiveCHelper' do
   # Pods for ObjectiveCHelper
   pod 'Masonry', '~> 1.1.0'
   pod 'MJRefresh', '~> 3.7.5'
+  pod 'AFNetworking', '~> 4.0'
   pod 'JXCategoryView'
   pod 'ReactiveObjC', '~> 3.1.1'
+  pod 'SDWebImage', '~> 5.0'
   
   #百度地图
   pod 'BMKLocationKit', '~> 2.0.5'

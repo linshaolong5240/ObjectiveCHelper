@@ -1,5 +1,7 @@
-#XCode
+# macOS
 .DS_Store
+
+#XCode
 project.xcworkspace
 xcshareddata
 xcuserdata/
