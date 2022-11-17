@@ -43,7 +43,7 @@
 		18CF77F0291B85980068CCC7 /* OCHRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EF291B85980068CCC7 /* OCHRefreshHeader.m */; };
 		18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBC29013453003E5533 /* UILabelDemoViewController.m */; };
 		18D98BC02901356B003E5533 /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */; };
-		18E221B22913D9F300660A7F /* OMKDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221B12913D9F300660A7F /* OMKDemoViewController.m */; };
+		18E221B22913D9F300660A7F /* OneMapKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221B12913D9F300660A7F /* OneMapKitDemoViewController.m */; };
 		18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4174228E44E720035BDA7 /* AppDelegate.m */; };
 		18E4174E28E44E740035BDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174D28E44E740035BDA7 /* Assets.xcassets */; };
 		18E4175128E44E740035BDA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */; };
@@ -150,8 +150,8 @@
 		18D98BBC29013453003E5533 /* UILabelDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelDemoViewController.m; sourceTree = "<group>"; };
 		18D98BBE2901356B003E5533 /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
 		18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
-		18E221B02913D9F300660A7F /* OMKDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKDemoViewController.h; sourceTree = "<group>"; };
-		18E221B12913D9F300660A7F /* OMKDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKDemoViewController.m; sourceTree = "<group>"; };
+		18E221B02913D9F300660A7F /* OneMapKitDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneMapKitDemoViewController.h; sourceTree = "<group>"; };
+		18E221B12913D9F300660A7F /* OneMapKitDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneMapKitDemoViewController.m; sourceTree = "<group>"; };
 		18E4173E28E44E720035BDA7 /* ObjectiveCHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4174128E44E720035BDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E4174228E44E720035BDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -411,8 +411,8 @@
 		18E221B32913DB5600660A7F /* OneMapKit */ = {
 			isa = PBXGroup;
 			children = (
-				18E221B02913D9F300660A7F /* OMKDemoViewController.h */,
-				18E221B12913D9F300660A7F /* OMKDemoViewController.m */,
+				18E221B02913D9F300660A7F /* OneMapKitDemoViewController.h */,
+				18E221B12913D9F300660A7F /* OneMapKitDemoViewController.m */,
 				18FCF2FA29164595004A0CD7 /* OMKMapViewController.h */,
 				18FCF2FB29164595004A0CD7 /* OMKMapViewController.m */,
 			);
@@ -822,7 +822,7 @@
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
 				1811B83828F423DD0074418B /* OCHScrollContentViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,
-				18E221B22913D9F300660A7F /* OMKDemoViewController.m in Sources */,
+				18E221B22913D9F300660A7F /* OneMapKitDemoViewController.m in Sources */,
 				44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

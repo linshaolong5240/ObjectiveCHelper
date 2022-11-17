@@ -10,6 +10,7 @@
 #import "OCHJXCategoryViewController.h"
 #import "OCHDVPieChartDemoViewController.h"
 #import "MJRefreshDemoViewController.h"
+#import "OneMapKitDemoViewController.h"
 #import "ReactiveObjCViewController.h"
 
 @interface OCHThirdPartyViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -91,13 +92,16 @@ NSArray<NSNumber *> * OCHTirdPartyItemAllItems(void) {
 
 NSString * NSStringFromOCHTirdPartyItem(OCHThirdPartyItem item) {
     switch (item) {
+        case OCHTirdPartyItemDVPieChart:
+            return @"OCHTirdPartyItemDVPieChart";
         case OCHTirdPartyItemJXCategoryView:
             return @"OCHTirdPartyItemJXCategoryView";
             break;
-        case OCHTirdPartyItemDVPieChart:
-            return @"OCHTirdPartyItemDVPieChart";
         case OCHTirdPartyItemMJRefresh:
             return @"OCHTirdPartyItemMJRefresh";
+            break;
+        case OCHTirdPartyItemOneMapKit:
+            return @"OCHTirdPartyItemOneMapKit";
             break;
         case OCHTirdPartyItemReactiveObjC:
             return @"OCHTirdPartyItemReactiveObjC";
@@ -119,10 +123,13 @@ UIViewController * UIViewControllerFromOCHTirdPartyItem(OCHThirdPartyItem item) 
         case OCHTirdPartyItemMJRefresh:
             return [[MJRefreshDemoViewController alloc] init];
             break;
+        case OCHTirdPartyItemOneMapKit:
+            return [[OneMapKitDemoViewController alloc] init];
+            break;
         case OCHTirdPartyItemReactiveObjC:
             return [[ReactiveObjCViewController alloc] init];
             break;
         case OCHTirdPartyItemEnd:
-            return nil;
+            return [[UIViewController alloc] init];
     }
 }

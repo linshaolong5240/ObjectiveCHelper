@@ -1,19 +1,19 @@
 //
-//  OMKDemoViewController.m
+//  OneMapKitDemoViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/3.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OMKDemoViewController.h"
+#import "OneMapKitDemoViewController.h"
 #import "OMKMapViewController.h"
 
-@interface OMKDemoViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface OneMapKitDemoViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation OMKDemoViewController
+@implementation OneMapKitDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

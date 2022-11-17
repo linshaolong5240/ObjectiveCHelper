@@ -10,9 +10,10 @@
 
 typedef NS_ENUM(NSUInteger, OCHThirdPartyItem) {
     OCHTirdPartyItemBeg,
-    OCHTirdPartyItemJXCategoryView = OCHTirdPartyItemBeg,
+    OCHTirdPartyItemDVPieChart = OCHTirdPartyItemBeg,
+    OCHTirdPartyItemJXCategoryView,
     OCHTirdPartyItemMJRefresh,
-    OCHTirdPartyItemDVPieChart,
+    OCHTirdPartyItemOneMapKit,
     OCHTirdPartyItemReactiveObjC,
     OCHTirdPartyItemEnd,
 };
