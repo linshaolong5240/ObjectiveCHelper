@@ -6,6 +6,7 @@ target 'ObjectiveCHelper' do
   use_frameworks!
 
   # Pods for ObjectiveCHelper
+  pod 'CYLTabBarController', '~> 1.29.2'
   pod 'Masonry', '~> 1.1.0'
   pod 'MJRefresh', '~> 3.7.5'
   pod 'AFNetworking', '~> 4.0'
