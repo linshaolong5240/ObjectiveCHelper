@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OCHAppState.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,10 +23,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSHashTable *listeners;
 
+@property (nonatomic, readonly, strong) OCHAppState *appState;
+
 + (instancetype)sharedInstance;
 
 - (void)addListener:(id<OCHStoreDelegate>)listener;
 - (void)removeListener:(id<OCHStoreDelegate>)listener;
+
+- (void)didFinishLaunch;
 
 @end
 

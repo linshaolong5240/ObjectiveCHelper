@@ -16,6 +16,7 @@ static OCHStore *_sharedInstance = nil;
     self = [super init];
     if (self) {
         _listeners = [NSHashTable weakObjectsHashTable];
+        _appState = [[OCHAppState alloc] init];
     }
     return self;
 }
@@ -41,6 +42,10 @@ static OCHStore *_sharedInstance = nil;
     if ([self.listeners containsObject:listener]) {
         [self.listeners removeObject:listener];
     }
+}
+
+- (void)didFinishLaunch {
+    self.appState.launchCount += 1;
 }
 
 @end

@@ -6,6 +6,7 @@
 //
 
 #import "OCHUIKitDemoViewController.h"
+#import "OCHStore.h"
 #import "OCHTableSection.h"
 
 #import "UIButtonDemoViewController.h"
@@ -130,6 +131,12 @@ typedef NS_ENUM(NSUInteger, SectionType) {
         [[OCHTableSection alloc] initWithLabel:@"UIKitDemo" value:OCHUIKitDemoAllItems()],
     ];
     [self configureTableView];
+    if (OCHStore.sharedInstance.appState.isFirstLaunch) {
+        [self showAlertWithTitle:@"is first launch" message:@"YES"];
+    }
+    else {
+        [self showAlertWithTitle:@"is first launch" message:@"NO"];
+    }
 }
 
 - (void)configureTableView {

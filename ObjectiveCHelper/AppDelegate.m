@@ -10,6 +10,7 @@
 #import "TestA.h"
 #import "TestB.h"
 #import <OneMapKit/OneMapKit.h>
+#import "OCHStore.h"
 
 @implementation AppDelegate
 
@@ -47,7 +48,7 @@
     NSLog(@"TestB resuseIdentifier: %@", testB.reuseIdentifier);
     NSLog(@"TestC resuseIdentifier: %@", testC.reuseIdentifier);
 #endif
-
+    [OCHStore.sharedInstance didFinishLaunch];
     return YES;
 }
 

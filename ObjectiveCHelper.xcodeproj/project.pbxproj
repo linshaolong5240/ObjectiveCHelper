@@ -34,6 +34,9 @@
 		188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */; };
 		188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */; };
 		1898F4B5291A3E4400F13718 /* ReactiveObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F4B4291A3E4400F13718 /* ReactiveObjCViewController.m */; };
+		189AE7102927AB140095466B /* OCHAppState.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AE70F2927AB140095466B /* OCHAppState.m */; };
+		189AE7152927AC2B0095466B /* OCHSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AE7142927AC2B0095466B /* OCHSetting.m */; };
+		189AE7182927B1550095466B /* UIViewController+OCHAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AE7172927B1550095466B /* UIViewController+OCHAlert.m */; };
 		189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */; };
 		189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */; };
 		189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */; };
@@ -133,6 +136,12 @@
 		188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHValueStepper.m; sourceTree = "<group>"; };
 		1898F4B3291A3E4400F13718 /* ReactiveObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveObjCViewController.h; sourceTree = "<group>"; };
 		1898F4B4291A3E4400F13718 /* ReactiveObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveObjCViewController.m; sourceTree = "<group>"; };
+		189AE70E2927AB140095466B /* OCHAppState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHAppState.h; sourceTree = "<group>"; };
+		189AE70F2927AB140095466B /* OCHAppState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHAppState.m; sourceTree = "<group>"; };
+		189AE7132927AC2B0095466B /* OCHSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHSetting.h; sourceTree = "<group>"; };
+		189AE7142927AC2B0095466B /* OCHSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHSetting.m; sourceTree = "<group>"; };
+		189AE7162927B1550095466B /* UIViewController+OCHAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+OCHAlert.h"; sourceTree = "<group>"; };
+		189AE7172927B1550095466B /* UIViewController+OCHAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+OCHAlert.m"; sourceTree = "<group>"; };
 		189BB85C28F543C300F2B287 /* UICollectionViewDemoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoCell.h; sourceTree = "<group>"; };
 		189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoCell.m; sourceTree = "<group>"; };
 		189BB87428F5920D00F2B287 /* UICollectionViewDemoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoHeaderView.h; sourceTree = "<group>"; };
@@ -246,10 +255,12 @@
 				18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */,
 				1828250D28FFC50400D2E4CF /* UIColor+Extension.h */,
 				1828250E28FFC50400D2E4CF /* UIColor+Extension.m */,
-				1828251028FFC5F600D2E4CF /* UIView+Extension.h */,
-				1828251128FFC5F600D2E4CF /* UIView+Extension.m */,
 				1860276F2908CDFA001A3D2B /* UITableView+Extension.h */,
 				186027702908CDFA001A3D2B /* UITableView+Extension.m */,
+				1828251028FFC5F600D2E4CF /* UIView+Extension.h */,
+				1828251128FFC5F600D2E4CF /* UIView+Extension.m */,
+				189AE7162927B1550095466B /* UIViewController+OCHAlert.h */,
+				189AE7172927B1550095466B /* UIViewController+OCHAlert.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -257,6 +268,7 @@
 		187C8FB82927395B006E2389 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				189AE7112927AC030095466B /* AppState */,
 				187C8FB929273987006E2389 /* OCHStore.h */,
 				187C8FBA29273987006E2389 /* OCHStore.m */,
 			);
@@ -366,6 +378,17 @@
 				1898F4B4291A3E4400F13718 /* ReactiveObjCViewController.m */,
 			);
 			path = ReactiveObjC;
+			sourceTree = "<group>";
+		};
+		189AE7112927AC030095466B /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				189AE70E2927AB140095466B /* OCHAppState.h */,
+				189AE70F2927AB140095466B /* OCHAppState.m */,
+				189AE7132927AC2B0095466B /* OCHSetting.h */,
+				189AE7142927AC2B0095466B /* OCHSetting.m */,
+			);
+			path = AppState;
 			sourceTree = "<group>";
 		};
 		189BB85B28F543A200F2B287 /* View */ = {
@@ -807,6 +830,7 @@
 				18CF77EC291B807D0068CCC7 /* MJRefreshDemoViewController.m in Sources */,
 				18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */,
 				1811B83528F423100074418B /* OCHBaseViewController.m in Sources */,
+				189AE7152927AC2B0095466B /* OCHSetting.m in Sources */,
 				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
 				1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */,
 				18AAC2E5291F3B89009F49D1 /* TestB.m in Sources */,
@@ -814,6 +838,7 @@
 				18FCF2FC29164595004A0CD7 /* OMKMapViewController.m in Sources */,
 				18CF77F0291B85980068CCC7 /* OCHRefreshHeader.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHTableSection.m in Sources */,
+				189AE7102927AB140095466B /* OCHAppState.m in Sources */,
 				1898F4B5291A3E4400F13718 /* ReactiveObjCViewController.m in Sources */,
 				1828250F28FFC50400D2E4CF /* UIColor+Extension.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
@@ -831,6 +856,7 @@
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,
 				188CA46D28F1147000EF106E /* DVPieChart.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
+				189AE7182927B1550095466B /* UIViewController+OCHAlert.m in Sources */,
 				18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */,
 				18E9AAFB2914B98C00D9D614 /* OCHAppConfig.m in Sources */,
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
