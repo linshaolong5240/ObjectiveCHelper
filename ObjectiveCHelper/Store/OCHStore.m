@@ -10,14 +10,37 @@
 
 @implementation OCHStore
 
-+ (instancetype)sharesInstance {
-    static OCHStore *shared = nil;
+static OCHStore *_sharedInstance = nil;
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _listeners = [NSHashTable weakObjectsHashTable];
+    }
+    return self;
+}
+
++ (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shared = [[OCHStore alloc] init];
+        _sharedInstance = [[OCHStore alloc] init];
     });
     
-    return shared;
+    return _sharedInstance;
+}
+
+- (void)addListener:(id<OCHStoreDelegate>)listener
+{
+    if (![self.listeners containsObject:listener]) {
+        [self.listeners addObject:listener];
+    }
+}
+
+- (void)removeListener:(id<OCHStoreDelegate>)listener
+{
+    if ([self.listeners containsObject:listener]) {
+        [self.listeners removeObject:listener];
+    }
 }
 
 @end

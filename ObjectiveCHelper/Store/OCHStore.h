@@ -10,9 +10,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class OCHStore;
+
+@protocol OCHStoreDelegate <NSObject>
+
+@optional
+
+@end
+
 @interface OCHStore : NSObject
 
-+ (instancetype)sharesInstance;
+@property (nonatomic, strong) NSHashTable *listeners;
+
++ (instancetype)sharedInstance;
+
+- (void)addListener:(id<OCHStoreDelegate>)listener;
+- (void)removeListener:(id<OCHStoreDelegate>)listener;
 
 @end
 
