@@ -28,9 +28,9 @@
 		188CA46D28F1147000EF106E /* DVPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46828F1147000EF106E /* DVPieChart.m */; };
 		188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46B28F1147000EF106E /* DVFoodPieModel.m */; };
 		188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46C28F1147000EF106E /* DVPieCenterView.m */; };
-		188CA48128F1500E00EF106E /* OCHJXCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */; };
+		188CA48128F1500E00EF106E /* JXCategoryViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48028F1500E00EF106E /* JXCategoryViewDemoViewController.m */; };
 		188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */; };
-		188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */; };
+		188CA49628F262D800EF106E /* JXCategoryListContentViewDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49528F262D800EF106E /* JXCategoryListContentViewDemoView.m */; };
 		188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */; };
 		188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */; };
 		1898F4B5291A3E4400F13718 /* ReactiveObjCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F4B4291A3E4400F13718 /* ReactiveObjCDemoViewController.m */; };
@@ -124,12 +124,12 @@
 		188CA46A28F1147000EF106E /* DVPieCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVPieCenterView.h; sourceTree = "<group>"; };
 		188CA46B28F1147000EF106E /* DVFoodPieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVFoodPieModel.m; sourceTree = "<group>"; };
 		188CA46C28F1147000EF106E /* DVPieCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVPieCenterView.m; sourceTree = "<group>"; };
-		188CA47F28F1500E00EF106E /* OCHJXCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHJXCategoryViewController.h; sourceTree = "<group>"; };
-		188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHJXCategoryViewController.m; sourceTree = "<group>"; };
+		188CA47F28F1500E00EF106E /* JXCategoryViewDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXCategoryViewDemoViewController.h; sourceTree = "<group>"; };
+		188CA48028F1500E00EF106E /* JXCategoryViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXCategoryViewDemoViewController.m; sourceTree = "<group>"; };
 		188CA48228F1502C00EF106E /* OCHThirdPartyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHThirdPartyViewController.h; sourceTree = "<group>"; };
 		188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHThirdPartyViewController.m; sourceTree = "<group>"; };
-		188CA49428F262D800EF106E /* OCHJXCategoryListContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHJXCategoryListContentView.h; sourceTree = "<group>"; };
-		188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHJXCategoryListContentView.m; sourceTree = "<group>"; };
+		188CA49428F262D800EF106E /* JXCategoryListContentViewDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXCategoryListContentViewDemoView.h; sourceTree = "<group>"; };
+		188CA49528F262D800EF106E /* JXCategoryListContentViewDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXCategoryListContentViewDemoView.m; sourceTree = "<group>"; };
 		188F2AA9290BDE740046FB65 /* OCHValueStepperDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHValueStepperDemoController.h; sourceTree = "<group>"; };
 		188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHValueStepperDemoController.m; sourceTree = "<group>"; };
 		188F2AAC290BDEE70046FB65 /* OCHValueStepper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHValueStepper.h; sourceTree = "<group>"; };
@@ -354,10 +354,10 @@
 		188CA49328F262AC00EF106E /* JXCategoryView */ = {
 			isa = PBXGroup;
 			children = (
-				188CA49428F262D800EF106E /* OCHJXCategoryListContentView.h */,
-				188CA49528F262D800EF106E /* OCHJXCategoryListContentView.m */,
-				188CA47F28F1500E00EF106E /* OCHJXCategoryViewController.h */,
-				188CA48028F1500E00EF106E /* OCHJXCategoryViewController.m */,
+				188CA49428F262D800EF106E /* JXCategoryListContentViewDemoView.h */,
+				188CA49528F262D800EF106E /* JXCategoryListContentViewDemoView.m */,
+				188CA47F28F1500E00EF106E /* JXCategoryViewDemoViewController.h */,
+				188CA48028F1500E00EF106E /* JXCategoryViewDemoViewController.m */,
 			);
 			path = JXCategoryView;
 			sourceTree = "<group>";
@@ -843,9 +843,9 @@
 				1828250F28FFC50400D2E4CF /* UIColor+Extension.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
 				182824FD28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.m in Sources */,
-				188CA48128F1500E00EF106E /* OCHJXCategoryViewController.m in Sources */,
+				188CA48128F1500E00EF106E /* JXCategoryViewDemoViewController.m in Sources */,
 				1876AD5D28E6BEF500DA0387 /* OCHPreview.m in Sources */,
-				188CA49628F262D800EF106E /* OCHJXCategoryListContentView.m in Sources */,
+				188CA49628F262D800EF106E /* JXCategoryListContentViewDemoView.m in Sources */,
 				189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+Extension.m in Sources */,

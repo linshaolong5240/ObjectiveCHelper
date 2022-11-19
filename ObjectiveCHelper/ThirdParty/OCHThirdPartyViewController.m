@@ -7,11 +7,11 @@
 
 #import "OCHThirdPartyViewController.h"
 #import "OCHTableSection.h"
-#import "OCHJXCategoryViewController.h"
+#import "JXCategoryViewDemoViewController.h"
 #import "OCHDVPieChartDemoViewController.h"
 #import "MJRefreshDemoViewController.h"
 #import "OneMapKitDemoViewController.h"
-#import "ReactiveObjCViewController.h"
+#import "ReactiveObjCDemoViewController.h"
 
 @interface OCHThirdPartyViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -115,7 +115,7 @@ NSString * NSStringFromOCHTirdPartyItem(OCHThirdPartyItem item) {
 UIViewController * UIViewControllerFromOCHTirdPartyItem(OCHThirdPartyItem item) {
     switch (item) {
         case OCHTirdPartyItemJXCategoryView:
-            return [[OCHJXCategoryViewController alloc] init];
+            return [[JXCategoryViewDemoViewController alloc] init];
             break;
         case OCHTirdPartyItemDVPieChart:
             return [[OCHDVPieChartDemoViewController alloc] init];

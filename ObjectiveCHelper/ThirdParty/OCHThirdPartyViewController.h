@@ -6,7 +6,7 @@
 //
 
 #import "OCHContentViewController.h"
-#import "OCHJXCategoryViewController.h"
+#import "JXCategoryViewDemoViewController.h"
 
 typedef NS_ENUM(NSUInteger, OCHThirdPartyItem) {
     OCHTirdPartyItemBeg,

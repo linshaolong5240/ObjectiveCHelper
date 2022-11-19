@@ -1,15 +1,15 @@
 //
-//  OCHJXCategoryViewController.m
+//  JXCategoryViewDemoViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/8.
 //
 
-#import "OCHJXCategoryViewController.h"
+#import "JXCategoryViewDemoViewController.h"
 #import <JXCategoryView.h>
-#import "OCHJXCategoryListContentView.h"
+#import "JXCategoryListContentViewDemoView.h"
 
-@interface OCHJXCategoryViewController () <JXCategoryViewDelegate, JXCategoryListContainerViewDelegate>
+@interface JXCategoryViewDemoViewController () <JXCategoryViewDelegate, JXCategoryListContainerViewDelegate>
 
 @property(nonatomic, copy) NSArray<NSString *> *items;
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation OCHJXCategoryViewController
+@implementation JXCategoryViewDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,7 +51,7 @@
     self.views = [NSMutableArray array];
     NSArray<UIColor *> *colors = @[UIColor.redColor, UIColor.greenColor, UIColor.blueColor];
     for(NSInteger i = 0; i < self.items.count; i++) {
-        OCHJXCategoryListContentView * v = [OCHJXCategoryListContentView new];
+        JXCategoryListContentViewDemoView * v = [JXCategoryListContentViewDemoView new];
         v.backgroundColor = colors[i];
         [self.views addObject:v];
     }

@@ -1,18 +1,18 @@
 //
-//  OCHJXCategoryListContentView.m
+//  JXCategoryListContentViewDemoView.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/9.
 //
 
-#import "OCHJXCategoryListContentView.h"
+#import "JXCategoryListContentViewDemoView.h"
 #import "JXCategoryView.h"
 
-@interface OCHJXCategoryListContentView () <JXCategoryListContentViewDelegate>
+@interface JXCategoryListContentViewDemoView () <JXCategoryListContentViewDelegate>
 
 @end
 
-@implementation OCHJXCategoryListContentView
+@implementation JXCategoryListContentViewDemoView
 
 // MARK: - JXCategoryListContentViewDelegate
 

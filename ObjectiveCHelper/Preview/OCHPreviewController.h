@@ -8,7 +8,7 @@
 #import "OCHContentViewController.h"
 
 //ThirdParty
-#import "OCHJXCategoryViewController.h"
+#import "JXCategoryViewDemoViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

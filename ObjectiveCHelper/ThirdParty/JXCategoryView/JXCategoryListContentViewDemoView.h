@@ -1,5 +1,5 @@
 //
-//  OCHJXCategoryListContentView.h
+//  JXCategoryListContentViewDemoView.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/9.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHJXCategoryListContentView : UIView
+@interface JXCategoryListContentViewDemoView : UIView
 
 @end
 
