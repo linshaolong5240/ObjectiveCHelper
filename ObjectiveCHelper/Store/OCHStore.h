@@ -13,23 +13,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class OCHStore;
 
-@protocol OCHStoreDelegate <NSObject>
+@protocol OCHStoreListener <NSObject>
 
 @optional
+
+- (void)store:(OCHStore*)store didChangeAppState:(OCHAppState *)state;
 
 @end
 
 @interface OCHStore : NSObject
 
-@property (nonatomic, strong) NSHashTable *listeners;
-
 @property (nonatomic, readonly, strong) OCHAppState *appState;
 
 + (instancetype)sharedInstance;
 
-- (void)addListener:(id<OCHStoreDelegate>)listener;
-- (void)removeListener:(id<OCHStoreDelegate>)listener;
-
+- (void)addListener:(id<OCHStoreListener>)listener;
+- (void)removeListener:(id<OCHStoreListener>)listener;
 - (void)didFinishLaunch;
 
 @end

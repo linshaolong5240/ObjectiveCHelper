@@ -8,9 +8,17 @@
 
 #import "OCHStore.h"
 
+@interface OCHStore ()
+
+@property (nonatomic, strong) NSHashTable *listeners;
+
+@end
+
 @implementation OCHStore
 
 static OCHStore *_sharedInstance = nil;
+
+// MARK: - Public
 
 - (instancetype)init {
     self = [super init];
@@ -30,15 +38,13 @@ static OCHStore *_sharedInstance = nil;
     return _sharedInstance;
 }
 
-- (void)addListener:(id<OCHStoreDelegate>)listener
-{
+- (void)addListener:(id <OCHStoreListener>)listener {
     if (![self.listeners containsObject:listener]) {
         [self.listeners addObject:listener];
     }
 }
 
-- (void)removeListener:(id<OCHStoreDelegate>)listener
-{
+- (void)removeListener:(id <OCHStoreListener>)listener {
     if ([self.listeners containsObject:listener]) {
         [self.listeners removeObject:listener];
     }
@@ -46,6 +52,17 @@ static OCHStore *_sharedInstance = nil;
 
 - (void)didFinishLaunch {
     self.appState.launchCount += 1;
+    [self listenrsDidChangeAppState:self.appState.copy];
+}
+
+// MARK: - Private
+
+- (void)listenrsDidChangeAppState:(OCHAppState *)state {
+    for (id <OCHStoreListener> listener in self.listeners) {
+        if ([listener respondsToSelector:@selector(store:didChangeAppState:)]) {
+            [listener store:self didChangeAppState:state];
+        }
+    }
 }
 
 @end
