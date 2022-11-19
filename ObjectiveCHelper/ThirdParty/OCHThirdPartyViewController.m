@@ -127,7 +127,7 @@ UIViewController * UIViewControllerFromOCHTirdPartyItem(OCHThirdPartyItem item) 
             return [[OneMapKitDemoViewController alloc] init];
             break;
         case OCHTirdPartyItemReactiveObjC:
-            return [[ReactiveObjCViewController alloc] init];
+            return [[ReactiveObjCDemoViewController alloc] init];
             break;
         case OCHTirdPartyItemEnd:
             return [[UIViewController alloc] init];

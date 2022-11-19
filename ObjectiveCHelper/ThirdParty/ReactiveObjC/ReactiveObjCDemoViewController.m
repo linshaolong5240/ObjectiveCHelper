@@ -1,18 +1,18 @@
 //
-//  ReactiveObjCViewController.m
+//  ReactiveObjCDemoViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron 2022/11/8.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "ReactiveObjCViewController.h"
+#import "ReactiveObjCDemoViewController.h"
 
-@interface ReactiveObjCViewController ()
+@interface ReactiveObjCDemoViewController ()
 
 @end
 
-@implementation ReactiveObjCViewController
+@implementation ReactiveObjCDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
