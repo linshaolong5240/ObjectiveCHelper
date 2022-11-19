@@ -10,6 +10,8 @@
 
 @interface ReactiveObjCDemoViewController ()
 
+@property(nonatomic, assign) NSInteger number;
+
 @end
 
 @implementation ReactiveObjCDemoViewController
@@ -18,13 +20,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"ReactiveObjC";
+    self.number = 0;
+    
     [self configureContentView];
     //数组遍历
     NSArray *array = @[@1, @2, @3];
     [array.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
-#if DEBUG
         NSLog(@"rac sequence %@", x);
-#endif
     }];
     //快速替换数组中内容
     NSArray *newArray = [[array.rac_sequence mapReplace:@"99"] array];
@@ -41,6 +43,57 @@
         RACTupleUnpack(NSString *key, NSString * value) = x;//X为为一个元祖，RACTupleUnpack能够将key和value区分开
         NSLog(@"数组内容：%@--%@",key,value);
     }];
+    //通过定值创建RACTuple
+    RACTuple *tuple = [RACTuple tupleWithObjects:@"1", @"2", @"3", nil];
+    //利用 RAC 宏快速封装
+    RACTuple *tuple2 = RACTuplePack(@"1", @"2", @"3");
+    //从别的数组中获取内容
+    RACTuple *tuple3 = [RACTuple tupleWithObjectsFromArray:@[@"1", @"2", @"3"]];
+    
+    NSLog(@"元组-->%@", tuple3[0]);
+    NSLog(@"第一个元素-->%@", [tuple3 first]);
+    NSLog(@"最后一个元素-->%@", [tuple3 last]);
+    [RACObserve(self, number) subscribeNext:^(id  _Nullable x) {
+        NSLog(@"number %@", x);
+    }];
+    
+    //RACSignal
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        NSLog(@"signal sendNext: 🍺🍺🍺🍺🍺🍺🍺");
+        [subscriber sendNext:@"🍺🍺🍺🍺🍺🍺🍺"];
+        [subscriber sendCompleted];
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"signal 销毁了: 🍺🍺🍺🍺🍺🍺🍺");
+        }];
+    }];
+    [signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"signal subscribeNext %@",x);
+    }];
+    [signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"signal subscribeNext %@",x);
+    }];
+    //RACMulticastConnection -- 用于当一个信号，被多次订阅时，为了保证创建信号时，避免多次调用创建信号中的block
+    RACSignal *signal1 = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+           NSLog(@"signal1 sendNext: 🍎🍎🍎🍎🍎🍎");
+           [subscriber sendNext:@"🍎🍎🍎🍎🍎🍎"];
+           [subscriber sendCompleted];
+           return [RACDisposable disposableWithBlock:^{
+               NSLog(@"signal1销毁了: 🍎🍎🍎🍎🍎🍎");
+           }];
+       }];
+        
+       RACMulticastConnection *connection = [signal1 publish];
+        
+       [connection.signal subscribeNext:^(id  _Nullable x) {
+           NSLog(@"subscribeNext-->1");
+       }];
+       [connection.signal subscribeNext:^(id  _Nullable x) {
+           NSLog(@"subscribeNext-->2");
+       }];
+       [connection.signal subscribeNext:^(id  _Nullable x) {
+           NSLog(@"subscribeNext-->3");
+       }];
+       [connection connect];
 }
 
 - (void)configureContentView {
@@ -54,14 +107,10 @@
     [racButton setTitle:@"RAC Button" forState:UIControlStateNormal];
     [self.contentView addArrangedSubview:racButton];
     [[racButton rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(__kindof UIControl * _Nullable x) {
-#if DEBUG
         NSLog(@"Button clicked");
-#endif
     }];
     racButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-#if DEBUG
         NSLog(@"rac_command Button clicked");
-#endif
         return [RACSignal empty];
     }];
 }
@@ -71,14 +120,10 @@
     textField.placeholder = @"placeholder";
     [self.contentView addArrangedSubview:textField];
     [textField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
-#if DEBUG
         NSLog(@"text field: %@", x);
-#endif
     }];
     [[textField rac_signalForControlEvents:(UIControlEventEditingChanged)] subscribeNext:^(__kindof UIControl * _Nullable x) {
-    #if DEBUG
-            NSLog(@"text fiedl editing changed: %@", x);
-    #endif
+        NSLog(@"text fiedl editing changed: %@", x);
     }];
 }
 
