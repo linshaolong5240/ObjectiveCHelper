@@ -1,5 +1,5 @@
 //
-//  OCHRefreshHeader.h
+//  MJRefreshHeaderDemo.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron 2022/11/9.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHRefreshHeader : MJRefreshHeader
+@interface MJRefreshHeaderDemo : MJRefreshHeader
 
 @end
 

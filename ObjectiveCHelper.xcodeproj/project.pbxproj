@@ -44,7 +44,7 @@
 		18AAC2E5291F3B89009F49D1 /* TestB.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2E4291F3B89009F49D1 /* TestB.m */; };
 		18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */; };
 		18CF77EC291B807D0068CCC7 /* MJRefreshDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EB291B807D0068CCC7 /* MJRefreshDemoViewController.m */; };
-		18CF77F0291B85980068CCC7 /* OCHRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EF291B85980068CCC7 /* OCHRefreshHeader.m */; };
+		18CF77F0291B85980068CCC7 /* MJRefreshHeaderDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EF291B85980068CCC7 /* MJRefreshHeaderDemo.m */; };
 		18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBC29013453003E5533 /* UILabelDemoViewController.m */; };
 		18D98BC02901356B003E5533 /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBF2901356B003E5533 /* NSAttributedString+Extension.m */; };
 		18E221B22913D9F300660A7F /* OneMapKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221B12913D9F300660A7F /* OneMapKitDemoViewController.m */; };
@@ -156,8 +156,8 @@
 		18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonDemoViewController.m; sourceTree = "<group>"; };
 		18CF77EA291B807D0068CCC7 /* MJRefreshDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshDemoViewController.h; sourceTree = "<group>"; };
 		18CF77EB291B807D0068CCC7 /* MJRefreshDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshDemoViewController.m; sourceTree = "<group>"; };
-		18CF77EE291B85980068CCC7 /* OCHRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHRefreshHeader.h; sourceTree = "<group>"; };
-		18CF77EF291B85980068CCC7 /* OCHRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHRefreshHeader.m; sourceTree = "<group>"; };
+		18CF77EE291B85980068CCC7 /* MJRefreshHeaderDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderDemo.h; sourceTree = "<group>"; };
+		18CF77EF291B85980068CCC7 /* MJRefreshHeaderDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderDemo.m; sourceTree = "<group>"; };
 		18D98BBB29013453003E5533 /* UILabelDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelDemoViewController.h; sourceTree = "<group>"; };
 		18D98BBC29013453003E5533 /* UILabelDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelDemoViewController.m; sourceTree = "<group>"; };
 		18D98BBE2901356B003E5533 /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
@@ -422,8 +422,8 @@
 			children = (
 				18CF77EA291B807D0068CCC7 /* MJRefreshDemoViewController.h */,
 				18CF77EB291B807D0068CCC7 /* MJRefreshDemoViewController.m */,
-				18CF77EE291B85980068CCC7 /* OCHRefreshHeader.h */,
-				18CF77EF291B85980068CCC7 /* OCHRefreshHeader.m */,
+				18CF77EE291B85980068CCC7 /* MJRefreshHeaderDemo.h */,
+				18CF77EF291B85980068CCC7 /* MJRefreshHeaderDemo.m */,
 			);
 			path = MJRefresh;
 			sourceTree = "<group>";
@@ -836,7 +836,7 @@
 				18AAC2E5291F3B89009F49D1 /* TestB.m in Sources */,
 				189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */,
 				18FCF2FC29164595004A0CD7 /* OMKMapViewController.m in Sources */,
-				18CF77F0291B85980068CCC7 /* OCHRefreshHeader.m in Sources */,
+				18CF77F0291B85980068CCC7 /* MJRefreshHeaderDemo.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHTableSection.m in Sources */,
 				189AE7102927AB140095466B /* OCHAppState.m in Sources */,
 				1898F4B5291A3E4400F13718 /* ReactiveObjCDemoViewController.m in Sources */,

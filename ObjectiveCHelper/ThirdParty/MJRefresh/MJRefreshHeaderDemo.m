@@ -1,14 +1,14 @@
 //
-//  OCHRefreshHeader.m
+//  MJRefreshHeaderDemo.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/11/9.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "OCHRefreshHeader.h"
+#import "MJRefreshHeaderDemo.h"
 
-@implementation OCHRefreshHeader
+@implementation MJRefreshHeaderDemo
 
 /*
 // Only override drawRect: if you perform custom drawing.
