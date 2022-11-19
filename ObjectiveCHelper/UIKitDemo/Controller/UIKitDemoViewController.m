@@ -1,11 +1,11 @@
 //
-//  OCHUIKitDemoViewController.m
+//  UIKitDemoViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/1.
 //
 
-#import "OCHUIKitDemoViewController.h"
+#import "UIKitDemoViewController.h"
 #import "OCHStore.h"
 #import "OCHTableSection.h"
 
@@ -19,88 +19,88 @@
 //Custom
 #import "OCHValueStepperDemoController.h"
 
-NSArray<NSNumber *> * OCHUIKitDemoAllItems(void) {
+NSArray<NSNumber *> * UIKitDemoItemAllCases(void) {
     NSMutableArray<NSNumber *> *items = [NSMutableArray array];
-    for(NSInteger i = OCHUIKitDemoBeg; i < OCHUIKitDemoEnd; i++) {
+    for(NSInteger i = UIKitDemoItemBeg; i < UIKitDemoItemEnd; i++) {
         [items addObject:@(i)];
     }
-
+    
     return items.copy;
 }
 
-NSString * NSStringFromOCHUIKitDemo(OCHUIKitDemo item) {
+NSString * NSStringFromUIKitDemo(UIKitDemoItem item) {
     switch (item) {
-        case OCHUIKitDemoUIButton:
-            return @"OCHUIKitDemoUIButton";
-        case OCHUIKitDemoUILabel:
-            return @"OCHUIKitDemoUILabel";
+        case UIKitDemoItemUIButton:
+            return @"UIKitDemoItemUIButton";
+        case UIKitDemoItemUILabel:
+            return @"UIKitDemoItemUILabel";
             break;
-        case OCHUIKitDemoUICollectionView:
-            return @"OCHUIKitDemoItemUICollectionView";
+        case UIKitDemoItemUICollectionView:
+            return @"UIKitDemoItemUICollectionView";
             break;
-        case OCHUIKitDemoUISearchbar:
-            return @"OCHUIKitDemoItemUISearchbar";
+        case UIKitDemoItemUISearchbar:
+            return @"UIKitDemoItemUISearchbar";
             break;
-        case OCHUIKitDemoUIScrollView:
-            return @"OCHUIKitDemoItemUIScrollView";
+        case UIKitDemoItemUIScrollView:
+            return @"UIKitDemoItemUIScrollView";
             break;
-        case OCHUIKitDemoUITableView:
-            return @"OCHUIKitDemoUITableView";
+        case UIKitDemoItemUITableView:
+            return @"UIKitDemoItemUITableView";
             break;
-        default:
+        case UIKitDemoItemEnd:
             return @"";
             break;
     }
 }
 
-UIViewController * UIViewControllerFromOCHUIKitDemo(OCHUIKitDemo item) {
+UIViewController * UIViewControllerFromUIKitDemo(UIKitDemoItem item) {
     switch (item) {
-        case OCHUIKitDemoUIButton:
+        case UIKitDemoItemUIButton:
             return [UIButtonDemoViewController new];
             break;
-        case OCHUIKitDemoUILabel:
+        case UIKitDemoItemUILabel:
             return [UILabelDemoViewController new];
             break;
-        case OCHUIKitDemoUICollectionView:
+        case UIKitDemoItemUICollectionView:
             return [UICollectionViewDemoController new];
             break;;
-        case OCHUIKitDemoUISearchbar:
+        case UIKitDemoItemUISearchbar:
             return [UIKitUISearchbarDemoViewController new];
             break;
-        case OCHUIKitDemoUIScrollView:
+        case UIKitDemoItemUIScrollView:
             return [[UIScrollViewDemoController alloc] init];
             break;
-        case OCHUIKitDemoUITableView:
+        case UIKitDemoItemUITableView:
             return [[UITableViewDemoViewController alloc] init];
             break;
-        default:
-            return nil;
+        case UIKitDemoItemEnd:
+            return [[UIViewController alloc] init];
             break;
     }
 }
 
-NSArray<NSNumber *> * OCHUIKitCustomAllItems(void) {
+NSArray<NSNumber *> * UIKitCustomItemAllCases(void) {
     NSMutableArray<NSNumber *> *items = [NSMutableArray array];
-    for(NSInteger i = OCHUIKitCustomBeg; i < OCHUIKitCustomEnd; i++) {
+    for(NSInteger i =     UIKitCustomItemBeg; i <     UIKitCustomItemEnd; i++) {
         [items addObject:@(i)];
     }
-
+    
     return items.copy;
 }
 
-NSString *NSStringFromOCHUIKitCustom(OCHUIKitCustom item) {
+NSString *NSStringFromUIKitCustomItem(UIKitCustomItem item) {
     switch (item) {
-        case OCHUIKitCustomValueStepper:
+        case UIKitCustomItemValueStepper:
             return @"OCHUIKitCustomValueStepper";
-        default:
+        case UIKitCustomItemEnd:
             return @"";
             break;
     }
 }
 
-UIViewController * UIViewControllerFromOCHUIKitCustom(OCHUIKitCustom item) {
+UIViewController * UIViewControllerFromUIKitCustomItem(UIKitCustomItem item) {
     switch (item) {
-        case OCHUIKitCustomValueStepper:
+        case UIKitCustomItemValueStepper:
             return [OCHValueStepperDemoController new];
             break;
         default:
@@ -114,21 +114,21 @@ typedef NS_ENUM(NSUInteger, SectionType) {
     SectionTypeUIKitDemo,
 };
 
-@interface OCHUIKitDemoViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface UIKitDemoViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, copy) NSArray<OCHTableSection<NSString *, NSArray<NSNumber *> *> *> *sections;
 @property(nonatomic, strong) UITableView *tableView;
 
 @end
 
-@implementation OCHUIKitDemoViewController
+@implementation UIKitDemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.sections = @[
-        [[OCHTableSection alloc] initWithLabel:@"UIKitCustom" value:OCHUIKitCustomAllItems()],
-        [[OCHTableSection alloc] initWithLabel:@"UIKitDemo" value:OCHUIKitDemoAllItems()],
+        [[OCHTableSection alloc] initWithLabel:@"UIKitCustom" value:UIKitCustomItemAllCases()],
+        [[OCHTableSection alloc] initWithLabel:@"UIKitDemo" value:UIKitDemoItemAllCases()],
     ];
     [self configureTableView];
     if (OCHStore.sharedInstance.appState.isFirstLaunch) {
@@ -147,7 +147,7 @@ typedef NS_ENUM(NSUInteger, SectionType) {
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
+        make.edges.equalTo(self.view);
     }];
 }
 
@@ -165,9 +165,9 @@ typedef NS_ENUM(NSUInteger, SectionType) {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(UITableViewCell.class) forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (SectionTypeUIKitCustom == indexPath.section) {
-        cell.textLabel.text = NSStringFromOCHUIKitCustom(self.sections[indexPath.section].value[indexPath.row].unsignedIntegerValue);
+        cell.textLabel.text = NSStringFromUIKitCustomItem(self.sections[indexPath.section].value[indexPath.row].unsignedIntegerValue);
     } else {
-        cell.textLabel.text = NSStringFromOCHUIKitDemo(self.sections[indexPath.section].value[indexPath.row].unsignedIntegerValue);
+        cell.textLabel.text = NSStringFromUIKitDemo(self.sections[indexPath.section].value[indexPath.row].unsignedIntegerValue);
     }
     return cell;
 }
@@ -179,22 +179,22 @@ typedef NS_ENUM(NSUInteger, SectionType) {
 // MARK: - UITableViewDataDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (SectionTypeUIKitCustom == indexPath.section) {
-        UIViewController *vc = UIViewControllerFromOCHUIKitCustom(indexPath.row);
+        UIViewController *vc = UIViewControllerFromUIKitCustomItem(indexPath.row);
         [self.navigationController pushViewController:vc animated:YES];
     } else {
-        UIViewController *vc = UIViewControllerFromOCHUIKitDemo(indexPath.row);
+        UIViewController *vc = UIViewControllerFromUIKitDemo(indexPath.row);
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

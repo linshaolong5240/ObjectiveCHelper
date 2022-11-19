@@ -59,7 +59,7 @@
 		18FCF2FC29164595004A0CD7 /* OMKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF2FB29164595004A0CD7 /* OMKMapViewController.m */; };
 		3093019FEA4D19C1BB7DF45E /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9299767C1AA87BE14B447F63 /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework */; };
 		44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA228E8301D00C395D9 /* OCHContentViewController.m */; };
-		44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */; };
+		44890BA728E831C300C395D9 /* UIKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA628E831C300C395D9 /* UIKitDemoViewController.m */; };
 		44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B9AB4228E835A400277DA0 /* OCHPreviewHelper.swift */; };
 		9164520C4FA8147686A4074F /* Pods_ObjectiveCHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72160D0D716E20EEB2158EE7 /* Pods_ObjectiveCHelper.framework */; };
 /* End PBXBuildFile section */
@@ -183,8 +183,8 @@
 		365375EE3E48A83C249D7C5C /* Pods-ObjectiveCHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-ObjectiveCHelperTests/Pods-ObjectiveCHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		44890BA128E8301D00C395D9 /* OCHContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHContentViewController.h; sourceTree = "<group>"; };
 		44890BA228E8301D00C395D9 /* OCHContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHContentViewController.m; sourceTree = "<group>"; };
-		44890BA528E831C300C395D9 /* OCHUIKitDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHUIKitDemoViewController.h; sourceTree = "<group>"; };
-		44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHUIKitDemoViewController.m; sourceTree = "<group>"; };
+		44890BA528E831C300C395D9 /* UIKitDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitDemoViewController.h; sourceTree = "<group>"; };
+		44890BA628E831C300C395D9 /* UIKitDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitDemoViewController.m; sourceTree = "<group>"; };
 		44B9AB4228E835A400277DA0 /* OCHPreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCHPreviewHelper.swift; sourceTree = "<group>"; };
 		6688CD4700FD6598AE22AFDC /* Pods_ObjectiveCHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72160D0D716E20EEB2158EE7 /* Pods_ObjectiveCHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveCHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,8 +307,8 @@
 		188CA46028F1129B00EF106E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				44890BA528E831C300C395D9 /* OCHUIKitDemoViewController.h */,
-				44890BA628E831C300C395D9 /* OCHUIKitDemoViewController.m */,
+				44890BA528E831C300C395D9 /* UIKitDemoViewController.h */,
+				44890BA628E831C300C395D9 /* UIKitDemoViewController.m */,
 				18CE4054290268590075C1A6 /* UIButtonDemoViewController.h */,
 				18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */,
 				1876AD3428E452A100DA0387 /* UICollectionViewDemoController.h */,
@@ -863,7 +863,7 @@
 				1811B83828F423DD0074418B /* OCHScrollContentViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,
 				18E221B22913D9F300660A7F /* OneMapKitDemoViewController.m in Sources */,
-				44890BA728E831C300C395D9 /* OCHUIKitDemoViewController.m in Sources */,
+				44890BA728E831C300C395D9 /* UIKitDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

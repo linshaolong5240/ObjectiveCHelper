@@ -7,7 +7,7 @@
 
 #import "OCHTabbarViewController.h"
 #import "OCHPreviewController.h"
-#import "OCHUIKitDemoViewController.h"
+#import "UIKitDemoViewController.h"
 #import "OCHThirdPartyViewController.h"
 #import "OneMapKitDemoViewController.h"
 
@@ -27,7 +27,7 @@
 - (void)configureTabBar {
     UIViewController *mapvc = [self makeTabBarViewController:[OneMapKitDemoViewController new] title:@"Map" image:nil selectedImage:nil];
     UIViewController *vc0 = [self makeTabBarViewController:[OCHPreviewController new] title:@"Preview" image:nil selectedImage:nil];
-    UIViewController *vc1 = [self makeTabBarViewController:[OCHUIKitDemoViewController new] title:@"UIKitDemo" image:nil selectedImage:nil];
+    UIViewController *vc1 = [self makeTabBarViewController:[UIKitDemoViewController new] title:@"UIKitDemo" image:nil selectedImage:nil];
     UIViewController *vc2 = [self makeTabBarViewController:[OCHThirdPartyViewController new] title:@"OCHThirdPartyViewController" image:nil selectedImage:nil];
     self.viewControllers = @[mapvc, vc0, vc1, vc2];
 }
