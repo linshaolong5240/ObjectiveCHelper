@@ -8,7 +8,7 @@
 #import "OCHThirdPartyViewController.h"
 #import "OCHTableSection.h"
 #import "JXCategoryViewDemoViewController.h"
-#import "OCHDVPieChartDemoViewController.h"
+#import "DVPieChartDemoViewController.h"
 #import "MJRefreshDemoViewController.h"
 #import "OneMapKitDemoViewController.h"
 #import "ReactiveObjCDemoViewController.h"
@@ -118,7 +118,7 @@ UIViewController * UIViewControllerFromOCHTirdPartyItem(OCHThirdPartyItem item) 
             return [[JXCategoryViewDemoViewController alloc] init];
             break;
         case OCHTirdPartyItemDVPieChart:
-            return [[OCHDVPieChartDemoViewController alloc] init];
+            return [[DVPieChartDemoViewController alloc] init];
             break;
         case OCHTirdPartyItemMJRefresh:
             return [[MJRefreshDemoViewController alloc] init];

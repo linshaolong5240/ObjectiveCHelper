@@ -24,7 +24,7 @@
 		1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */; };
 		187C8FBB29273987006E2389 /* OCHStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C8FBA29273987006E2389 /* OCHStore.m */; };
 		1885CBF628F900DF000552F7 /* UIKitCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885CBF528F900DF000552F7 /* UIKitCustomViewController.m */; };
-		188CA46328F112EF00EF106E /* OCHDVPieChartDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46228F112EF00EF106E /* OCHDVPieChartDemoViewController.m */; };
+		188CA46328F112EF00EF106E /* DVPieChartDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46228F112EF00EF106E /* DVPieChartDemoViewController.m */; };
 		188CA46D28F1147000EF106E /* DVPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46828F1147000EF106E /* DVPieChart.m */; };
 		188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46B28F1147000EF106E /* DVFoodPieModel.m */; };
 		188CA46F28F1147000EF106E /* DVPieCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46C28F1147000EF106E /* DVPieCenterView.m */; };
@@ -116,8 +116,8 @@
 		187C8FBA29273987006E2389 /* OCHStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHStore.m; sourceTree = "<group>"; };
 		1885CBF428F900DF000552F7 /* UIKitCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitCustomViewController.h; sourceTree = "<group>"; };
 		1885CBF528F900DF000552F7 /* UIKitCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitCustomViewController.m; sourceTree = "<group>"; };
-		188CA46128F112EF00EF106E /* OCHDVPieChartDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHDVPieChartDemoViewController.h; sourceTree = "<group>"; };
-		188CA46228F112EF00EF106E /* OCHDVPieChartDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHDVPieChartDemoViewController.m; sourceTree = "<group>"; };
+		188CA46128F112EF00EF106E /* DVPieChartDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVPieChartDemoViewController.h; sourceTree = "<group>"; };
+		188CA46228F112EF00EF106E /* DVPieChartDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DVPieChartDemoViewController.m; sourceTree = "<group>"; };
 		188CA46728F1147000EF106E /* DVPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVPieChart.h; sourceTree = "<group>"; };
 		188CA46828F1147000EF106E /* DVPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVPieChart.m; sourceTree = "<group>"; };
 		188CA46928F1147000EF106E /* DVFoodPieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVFoodPieModel.h; sourceTree = "<group>"; };
@@ -437,8 +437,8 @@
 				188CA46C28F1147000EF106E /* DVPieCenterView.m */,
 				188CA46728F1147000EF106E /* DVPieChart.h */,
 				188CA46828F1147000EF106E /* DVPieChart.m */,
-				188CA46128F112EF00EF106E /* OCHDVPieChartDemoViewController.h */,
-				188CA46228F112EF00EF106E /* OCHDVPieChartDemoViewController.m */,
+				188CA46128F112EF00EF106E /* DVPieChartDemoViewController.h */,
+				188CA46228F112EF00EF106E /* DVPieChartDemoViewController.m */,
 			);
 			path = DVPieChart;
 			sourceTree = "<group>";
@@ -850,7 +850,7 @@
 				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+Extension.m in Sources */,
 				188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */,
-				188CA46328F112EF00EF106E /* OCHDVPieChartDemoViewController.m in Sources */,
+				188CA46328F112EF00EF106E /* DVPieChartDemoViewController.m in Sources */,
 				188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */,
 				18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */,
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,
