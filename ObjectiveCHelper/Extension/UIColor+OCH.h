@@ -9,12 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIColor (Extension)
+@interface UIColor (OCH)
 
-+(NSArray<UIColor *> *)colorItems;
+@property(class, nonatomic, readonly) UIColor *accentColor;
+@property(class, nonatomic, readonly) NSArray<UIColor*> *colorItems;
 
 // MARK: - Background Color
-+ (UIColor *)backgroundColor;
+@property(class, nonatomic, readonly) UIColor *backgroundColor;
 + (UIColor *)panelColor;
 
 // MARK: - Text Color

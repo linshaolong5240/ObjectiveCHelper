@@ -1,17 +1,17 @@
 //
-//  OCHScrollContentViewController.m
+//  OCHScrollViewController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/10.
 //
 
-#import "OCHScrollContentViewController.h"
+#import "OCHScrollViewController.h"
 
-@interface OCHScrollContentViewController ()
+@interface OCHScrollViewController ()
 
 @end
 
-@implementation OCHScrollContentViewController
+@implementation OCHScrollViewController
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

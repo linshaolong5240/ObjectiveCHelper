@@ -5,11 +5,11 @@
 //  Created by Sauron on 2022/9/30.
 //
 
-#import "OCHScrollContentViewController.h"
+#import "OCHScrollViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIScrollViewDemoController : OCHScrollContentViewController
+@interface UIScrollViewDemoController : OCHScrollViewController
 
 @end
 

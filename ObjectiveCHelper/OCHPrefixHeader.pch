@@ -18,9 +18,11 @@
 #import "OCHAppConfig.h"
 
 //Category Extension
-#import "NSAttributedString+Extension.h"
-#import "UIColor+Extension.h"
-#import "UIView+Extension.h"
+#import "NSAttributedString+OCH.h"
+#import "UIButton+OCH.h"
+#import "UIColor+OCH.h"
+#import "UIView+OCH.h"
+#import "UIViewController+OCH.h"
 
 //Pod
 #import <Masonry.h>

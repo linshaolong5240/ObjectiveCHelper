@@ -5,9 +5,9 @@
 //  Created by Sauron on 2022/10/19.
 //
 
-#import "UIView+Extension.h"
+#import "UIView+OCH.h"
 
-@implementation UIView (Extension)
+@implementation UIView (OCH)
 
 - (void)removeAllSubviews {
     for(UIView *v in self.subviews) {

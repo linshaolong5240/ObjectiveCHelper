@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSAttributedString (Extension)
+@interface NSAttributedString (OCH)
 
 + (NSAttributedString *)attributedStringWithLabel:(NSString *)label labelFont:(UIFont *)labelFont labelColor:(UIColor *)labelColor value:(NSString *)value valueFont:(UIFont *)valueFont valueColor:(UIColor *)valueColor;
 

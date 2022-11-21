@@ -5,11 +5,11 @@
 //  Created by Sauron on 2022/10/21.
 //
 
-#import "OCHScrollContentViewController.h"
+#import "OCHScrollViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIButtonDemoViewController : OCHScrollContentViewController
+@interface UIButtonDemoViewController : OCHScrollViewController
 
 @end
 

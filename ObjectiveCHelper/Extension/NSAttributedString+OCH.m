@@ -5,9 +5,9 @@
 //  Created by Sauron on 2022/10/20.
 //
 
-#import "NSAttributedString+Extension.h"
+#import "NSAttributedString+OCH.h"
 
-@implementation NSAttributedString (Extension)
+@implementation NSAttributedString (OCH)
 
 
 + (NSAttributedString *)attributedStringWithLabel:(NSString *)label labelFont:(UIFont *)labelFont labelColor:(UIColor *)labelColor value:(NSString *)value valueFont:(UIFont *)valueFont valueColor:(UIColor *)valueColor {

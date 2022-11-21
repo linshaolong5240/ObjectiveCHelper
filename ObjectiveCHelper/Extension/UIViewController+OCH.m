@@ -6,9 +6,9 @@
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "UIViewController+OCHAlert.h"
+#import "UIViewController+OCH.h"
 
-@implementation UIViewController (OCHAlert)
+@implementation UIViewController (OCH)
 
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
     UIAlertController *alerController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:(UIAlertControllerStyleAlert)];

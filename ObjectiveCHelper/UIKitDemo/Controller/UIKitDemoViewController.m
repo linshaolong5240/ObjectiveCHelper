@@ -131,12 +131,12 @@ typedef NS_ENUM(NSUInteger, SectionType) {
         [[OCHTableSection alloc] initWithLabel:@"UIKitDemo" value:UIKitDemoItemAllCases()],
     ];
     [self configureTableView];
-    if (OCHStore.sharedInstance.appState.isFirstLaunch) {
-        [self showAlertWithTitle:@"is first launch" message:@"YES"];
-    }
-    else {
-        [self showAlertWithTitle:@"is first launch" message:@"NO"];
-    }
+//    if (OCHStore.sharedInstance.appState.isFirstLaunch) {
+//        [self showAlertWithTitle:@"is first launch" message:@"YES"];
+//    }
+//    else {
+//        [self showAlertWithTitle:@"is first launch" message:@"NO"];
+//    }
 }
 
 - (void)configureTableView {

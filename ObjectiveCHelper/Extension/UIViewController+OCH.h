@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIViewController (OCHAlert)
+@interface UIViewController (OCH)
 
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
 

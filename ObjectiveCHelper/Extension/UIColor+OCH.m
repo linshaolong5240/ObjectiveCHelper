@@ -5,17 +5,21 @@
 //  Created by Sauron on 2022/10/19.
 //
 
-#import "UIColor+Extension.h"
+#import "UIColor+OCH.h"
 
-@implementation UIColor (Extension)
+@implementation UIColor (OCH)
 
-+(NSArray<UIColor *> *)colorItems {
++ (UIColor *)accentColor {
+    return [UIColor colorNamed:@"AccentColor"];
+}
+
++ (NSArray<UIColor *> *)colorItems {
     return @[UIColor.blackColor, UIColor.darkGrayColor, UIColor.lightGrayColor, UIColor.whiteColor, UIColor.grayColor, UIColor.redColor, UIColor.greenColor, UIColor.blueColor, UIColor.cyanColor, UIColor.yellowColor, UIColor.magentaColor, UIColor.orangeColor, UIColor.purpleColor, UIColor.brownColor, UIColor.clearColor, UIColor.systemRedColor];
 }
 
 // MARK: - Background Color
 + (UIColor *)backgroundColor {
-    return [UIColor colorWithRed:246/255.0 green:247/255.0 blue:249/255.0 alpha:1.0];
+    return [UIColor colorNamed:@"BackgroundColor"];
 }
 
 + (UIColor *)panelColor {

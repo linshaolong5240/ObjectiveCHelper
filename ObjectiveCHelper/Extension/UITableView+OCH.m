@@ -5,9 +5,9 @@
 //  Created by Sauron on 2022/10/26.
 //
 
-#import "UITableView+Extension.h"
+#import "UITableView+OCH.h"
 
-@implementation UITableView (Extension)
+@implementation UITableView (OCH)
 
 - (void)selectAllRowsWithAnimated:(BOOL)animated scrollPosition:(UITableViewScrollPosition)scrollPosition {
     NSInteger sections = [self numberOfSections];
