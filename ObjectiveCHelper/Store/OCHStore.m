@@ -52,7 +52,6 @@ static OCHStore *_sharedInstance = nil;
 
 - (void)didFinishLaunch {
     self.appState.launchCount += 1;
-    [self listenrsDidChangeAppState:self.appState.copy];
 }
 
 // MARK: - Private

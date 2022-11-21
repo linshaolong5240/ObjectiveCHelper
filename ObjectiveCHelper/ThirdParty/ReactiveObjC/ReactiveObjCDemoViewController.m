@@ -11,6 +11,7 @@
 @interface ReactiveObjCDemoViewController ()
 
 @property(nonatomic, assign) NSInteger number;
+@property(nonatomic, assign) NSInteger valueCount;
 
 @end
 
@@ -97,25 +98,50 @@
 }
 
 - (void)configureContentView {
-    [self configureRACButton];
-    [self configureRACTextField];
+    [self configureValueCountLabel];
+    [self configureButton];
+    
+    [self configureTextField];
 }
 
-- (void)configureRACButton {
+- (void)configureValueCountLabel {
+    UILabel *valueCountLabel = [[UILabel alloc] init];
+    [self.contentView addArrangedSubview:valueCountLabel];
+    RAC(valueCountLabel, text) = [RACObserve(self, valueCount) map:^id _Nullable(id  _Nullable value) {
+        return [NSString stringWithFormat:@"%@", value];
+    }];
+}
+
+- (void)configureButton {
     UIButton *racButton = [[UIButton alloc] init];
     racButton.backgroundColor = UIColor.blueColor;
     [racButton setTitle:@"RAC Button" forState:UIControlStateNormal];
     [self.contentView addArrangedSubview:racButton];
+    UISwitch *s = [[UISwitch alloc] init];
+    [self.contentView addArrangedSubview:s];
+    RACSignal *buttonValid = [[s rac_signalForControlEvents:(UIControlEventValueChanged)] map:^id _Nullable(__kindof UISwitch * _Nullable value) {
+        return [[NSNumber alloc] initWithBool:value.isOn];
+    }];
+
+    @weakify(self)
     [[racButton rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self)
         NSLog(@"Button clicked");
+        self.valueCount += 1;
     }];
     racButton.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         NSLog(@"rac_command Button clicked");
         return [RACSignal empty];
     }];
+    racButton.rac_command = [[RACCommand alloc] initWithEnabled:buttonValid signalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        return [RACSignal empty];
+    }];
 }
 
-- (void)configureRACTextField {
+- (void)configureSwitch {
+}
+
+- (void)configureTextField {
     UITextField *textField = [[UITextField alloc] init];
     textField.placeholder = @"placeholder";
     [self.contentView addArrangedSubview:textField];
@@ -126,15 +152,5 @@
         NSLog(@"text fiedl editing changed: %@", x);
     }];
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
