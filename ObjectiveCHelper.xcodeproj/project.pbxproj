@@ -15,6 +15,7 @@
 		1828250F28FFC50400D2E4CF /* UIColor+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828250E28FFC50400D2E4CF /* UIColor+OCH.m */; };
 		1828251228FFC5F600D2E4CF /* UIView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828251128FFC5F600D2E4CF /* UIView+OCH.m */; };
 		18457C1B292DB91400C34991 /* UIImage+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457C1A292DB91400C34991 /* UIImage+OCH.m */; };
+		18457C27292DF6C400C34991 /* OCHImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457C26292DF6C400C34991 /* OCHImage.m */; };
 		1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */; };
 		186027712908CDFA001A3D2B /* UITableView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+OCH.m */; };
 		18705AB4292B5E8C00AA1116 /* UIButton+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 18705AB3292B5E8C00AA1116 /* UIButton+OCH.m */; };
@@ -98,6 +99,8 @@
 		1828251128FFC5F600D2E4CF /* UIView+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+OCH.m"; sourceTree = "<group>"; };
 		18457C19292DB91400C34991 /* UIImage+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+OCH.h"; sourceTree = "<group>"; };
 		18457C1A292DB91400C34991 /* UIImage+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OCH.m"; sourceTree = "<group>"; };
+		18457C25292DF6C400C34991 /* OCHImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHImage.h; sourceTree = "<group>"; };
+		18457C26292DF6C400C34991 /* OCHImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHImage.m; sourceTree = "<group>"; };
 		1853C4EF28F3EE6C00245003 /* UIKitUISearchbarDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitUISearchbarDemoViewController.h; sourceTree = "<group>"; };
 		1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitUISearchbarDemoViewController.m; sourceTree = "<group>"; };
 		1860276F2908CDFA001A3D2B /* UITableView+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+OCH.h"; sourceTree = "<group>"; };
@@ -230,6 +233,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18457C28292DF6DC00C34991 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				18457C25292DF6C400C34991 /* OCHImage.h */,
+				18457C26292DF6C400C34991 /* OCHImage.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		1876AD2F28E450A200DA0387 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -494,6 +506,7 @@
 				18E4174D28E44E740035BDA7 /* Assets.xcassets */,
 				1876AD2F28E450A200DA0387 /* Base */,
 				1876AD4128E472A200DA0387 /* Extension */,
+				18457C28292DF6DC00C34991 /* Helper */,
 				18E4175228E44E740035BDA7 /* Info.plist */,
 				18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */,
 				18E4175328E44E740035BDA7 /* main.m */,
@@ -859,6 +872,7 @@
 				188CA49628F262D800EF106E /* JXCategoryListContentViewDemoView.m in Sources */,
 				189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
+				18457C27292DF6C400C34991 /* OCHImage.m in Sources */,
 				18457C1B292DB91400C34991 /* UIImage+OCH.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+OCH.m in Sources */,
 				188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */,

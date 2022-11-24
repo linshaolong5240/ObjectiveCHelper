@@ -25,18 +25,24 @@
     
     [self configureContentView];
     //数组遍历
-    NSArray *array = @[@1, @2, @3];
-    [array.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
+    NSArray<NSNumber *> *numberArray = @[@1, @2, @3];
+    [numberArray.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"rac sequence %@", x);
     }];
     //快速替换数组中内容
-    NSArray *newArray = [[array.rac_sequence mapReplace:@"99"] array];
+    NSArray *newArray = [[numberArray.rac_sequence mapReplace:@"99"] array];
     NSLog(@"%@",newArray);
-    NSArray *newArray2 = [[array.rac_sequence map:^id _Nullable(id  _Nullable value) {
+    NSArray *newArray2 = [[numberArray.rac_sequence map:^id _Nullable(id  _Nullable value) {
         NSLog(@"原数组内容%@",value);
         return @"99";
     }] array];
     NSLog(@"%@",newArray2);
+    
+    //收敛
+    NSNumber *sum = [numberArray.rac_sequence foldLeftWithStart:@(0) reduce:^id _Nullable(NSNumber *  _Nullable accumulator, NSNumber * _Nullable value) {
+        return @(accumulator.doubleValue + value.doubleValue);
+    }];
+    NSLog(@"foldLeftWithStart: %@", sum);
     
     //NSDictionary 字典遍历
     NSDictionary * dic = @{@"name":@"Tom",@"age":@"20"};
