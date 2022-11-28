@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString *NStringFromUIControlEvent(UIControlEvents event);
+
 @interface UIButtonDemoViewController : OCHScrollViewController
 
 @end

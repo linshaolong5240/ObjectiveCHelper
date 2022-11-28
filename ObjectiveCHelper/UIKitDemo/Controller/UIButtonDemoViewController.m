@@ -27,8 +27,33 @@
     //            make.edges.equalTo(self.scrollView).insets(UIEdgeInsetsMake(0, 16, 0, 16));
     //    }];
     //
+    [self configureUIControlEventsButton];
     [self configureTextSymbolButton];
     [self configureButtonWithVerticalImageText];
+}
+
+- (void)configureUIControlEventsButton {
+    UIButton *controlEventsButton = [UIButton new];
+    controlEventsButton.backgroundColor = UIColor.orangeColor;
+    [controlEventsButton setTitle:@"Hold To Talk" forState:(UIControlStateNormal)];
+    [controlEventsButton setTitleColor:UIColor.accentColor forState:(UIControlStateNormal)];
+    [controlEventsButton addTarget:self action:@selector(buttonAction:event:) forControlEvents:(UIControlEventTouchUpInside)];
+    
+    UIView *container = [UIView new];
+    [container addSubview:controlEventsButton];
+    [controlEventsButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(container);
+        make.width.equalTo(@(100));
+        make.height.equalTo(@(50));
+    }];
+    [self.contentView addArrangedSubview:container];
+    [container mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(@(200));
+    }];
+}
+
+- (void)buttonAction:(UIButton *)button event:(UIControlEvents)event {
+    NSLog(@"%s even:%@", __PRETTY_FUNCTION__, NStringFromUIControlEvent(event));
 }
 
 - (void)configureTextSymbolButton {
