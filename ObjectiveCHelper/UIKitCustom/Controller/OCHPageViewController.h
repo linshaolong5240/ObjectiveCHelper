@@ -10,12 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCHPageViewController : UIPageViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface OCHPageViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property(nonatomic, assign) NSInteger currentPage;
 @property(nonatomic, strong) NSArray<__kindof UIViewController *> *controllers;
 @property(nonatomic, assign) BOOL cycleScrollEnabled;
 @property(nonatomic, strong, readonly) UIPageControl *pageControl;
+
+- (void)setViewControllers:(NSArray<UIViewController *> *)viewControllers direction:(UIPageViewControllerNavigationDirection)direction animated:(BOOL)animated completion:(void (^)(BOOL))completion;
 
 @end
 

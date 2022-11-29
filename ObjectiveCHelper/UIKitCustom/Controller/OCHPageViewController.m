@@ -10,18 +10,21 @@
 
 @interface OCHPageViewController ()
 
+@property(nonatomic, strong) UIPageViewController *pageViewController;
+
 @end
 
 @implementation OCHPageViewController
 
 #pragma mark - Override
 
-- (instancetype)initWithTransitionStyle:(UIPageViewControllerTransitionStyle)style navigationOrientation:(UIPageViewControllerNavigationOrientation)navigationOrientation options:(NSDictionary<UIPageViewControllerOptionsKey,id> *)options {
-    self = [super initWithTransitionStyle:style navigationOrientation:navigationOrientation options:options];
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
         _currentPage = 0;
         _controllers = [NSArray array];
         _cycleScrollEnabled = false;
+        _pageViewController = [[UIPageViewController alloc] init];
         _pageControl = [[UIPageControl alloc] init];
     }
     return self;
@@ -30,19 +33,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.dataSource = self;
-    self.delegate = self;
+    [self configurePageViewController];
     [self configurePageControl];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    self.pageViewController.view.frame = self.view.frame;
     self.pageControl.frame = CGRectMake(0, 100, self.view.frame.size.width, 44);
 }
 
+- (void)configurePageViewController {
+    self.pageViewController.dataSource = self;
+    self.pageViewController.delegate = self;
+    [self.view addSubview:self.pageViewController.view];
+}
+
 - (void)configurePageControl {
-    self.pageControl.currentPage = 10;//self.currentPage;
-    self.pageControl.numberOfPages = 5;//self.controllers.count;
     [self.pageControl addTarget:self action:@selector(pageControlValueDidChanged:event:) forControlEvents:(UIControlEventValueChanged)];
     [self.view addSubview:self.pageControl];
     [self pageControlValueDidChanged:self.pageControl event:(UIControlEventValueChanged)];
@@ -55,7 +62,7 @@
 }
 
 - (void)setViewControllers:(NSArray<UIViewController *> *)viewControllers direction:(UIPageViewControllerNavigationDirection)direction animated:(BOOL)animated completion:(void (^)(BOOL))completion {
-    [super setViewControllers:viewControllers direction:direction animated:animated completion:completion];
+    [self.pageViewController setViewControllers:viewControllers direction:direction animated:animated completion:completion];
     
     UIViewController *vc = viewControllers.firstObject;
     if (!vc) {
@@ -118,7 +125,7 @@
     if (!completed) {
         return;
     }
-    UIViewController *vc = self.viewControllers.firstObject;
+    UIViewController *vc = self.pageViewController.viewControllers.firstObject;
     if (!vc) {
         return;
     }
