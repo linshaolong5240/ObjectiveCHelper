@@ -13,11 +13,13 @@
 #import "UILabelDemoViewController.h"
 #import "UICollectionViewDemoController.h"
 #import "UIKitUISearchbarDemoViewController.h"
+#import "UIPageControlDemoViewController.h"
 #import "UIScrollViewDemoController.h"
 #import "UITableViewDemoViewController.h"
 
 //Custom
 #import "OCHValueStepperDemoController.h"
+#import "OCHPageViewControllerDemoController.h"
 
 NSArray<NSNumber *> * UIKitDemoItemAllCases(void) {
     NSMutableArray<NSNumber *> *items = [NSMutableArray array];
@@ -37,6 +39,9 @@ NSString * NSStringFromUIKitDemo(UIKitDemoItem item) {
             break;
         case UIKitDemoItemUICollectionView:
             return @"UIKitDemoItemUICollectionView";
+            break;
+        case UIKitDemoItemUIPageControl:
+            return @"UIKitDemoItemUIPageControl";
             break;
         case UIKitDemoItemUISearchbar:
             return @"UIKitDemoItemUISearchbar";
@@ -64,6 +69,9 @@ UIViewController * UIViewControllerFromUIKitDemo(UIKitDemoItem item) {
         case UIKitDemoItemUICollectionView:
             return [UICollectionViewDemoController new];
             break;;
+        case UIKitDemoItemUIPageControl:
+            return [UIPageControlDemoViewController new];
+            break;
         case UIKitDemoItemUISearchbar:
             return [UIKitUISearchbarDemoViewController new];
             break;
@@ -91,7 +99,9 @@ NSArray<NSNumber *> * UIKitCustomItemAllCases(void) {
 NSString *NSStringFromUIKitCustomItem(UIKitCustomItem item) {
     switch (item) {
         case UIKitCustomItemValueStepper:
-            return @"OCHUIKitCustomValueStepper";
+            return @"OCHValueStepper";
+        case UIKitCustomItemPageViewController:
+            return @"OCHPageViewControllerDemoController";
         case UIKitCustomItemEnd:
             return @"";
             break;
@@ -103,7 +113,9 @@ UIViewController * UIViewControllerFromUIKitCustomItem(UIKitCustomItem item) {
         case UIKitCustomItemValueStepper:
             return [OCHValueStepperDemoController new];
             break;
-        default:
+        case UIKitCustomItemPageViewController:
+            return [OCHPageViewControllerDemoController new];
+        case UIKitCustomItemEnd:
             return nil;
             break;
     }
@@ -177,6 +189,7 @@ typedef NS_ENUM(NSUInteger, SectionType) {
 }
 
 // MARK: - UITableViewDataDelegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (SectionTypeUIKitCustom == indexPath.section) {
         UIViewController *vc = UIViewControllerFromUIKitCustomItem(indexPath.row);
@@ -186,15 +199,5 @@ typedef NS_ENUM(NSUInteger, SectionType) {
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

@@ -25,11 +25,11 @@
 }
 
 - (void)configureTabBar {
-    UIViewController *mapvc = [self makeTabBarViewController:[OneMapKitDemoViewController new] title:@"Map" image:nil selectedImage:nil];
+//    UIViewController *mapvc = [self makeTabBarViewController:[OneMapKitDemoViewController new] title:@"Map" image:nil selectedImage:nil];
     UIViewController *vc0 = [self makeTabBarViewController:[OCHPreviewController new] title:@"Preview" image:nil selectedImage:nil];
     UIViewController *vc1 = [self makeTabBarViewController:[UIKitDemoViewController new] title:@"UIKitDemo" image:nil selectedImage:nil];
     UIViewController *vc2 = [self makeTabBarViewController:[OCHThirdPartyViewController new] title:@"OCHThirdPartyViewController" image:nil selectedImage:nil];
-    self.viewControllers = @[mapvc, vc0, vc1, vc2];
+    self.viewControllers = @[vc0, vc1, vc2];
 }
 
 - (UIViewController *)makeTabBarViewController:(UIViewController *)viewController title:(nullable NSString *)title image:(nullable UIImage *)image selectedImage:(nullable UIImage *)selectedImage {

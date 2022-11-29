@@ -7,11 +7,14 @@
 
 #import "OCHContentViewController.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSUInteger, UIKitDemoItem) {
     UIKitDemoItemBeg,
     UIKitDemoItemUIButton = UIKitDemoItemBeg,
     UIKitDemoItemUILabel,
     UIKitDemoItemUICollectionView,
+    UIKitDemoItemUIPageControl,
     UIKitDemoItemUISearchbar,
     UIKitDemoItemUIScrollView,
     UIKitDemoItemUITableView,
@@ -25,14 +28,13 @@ UIViewController *UIViewControllerFromUIKitDemo(UIKitDemoItem item);
 typedef NS_ENUM(NSUInteger, UIKitCustomItem) {
     UIKitCustomItemBeg,
     UIKitCustomItemValueStepper = UIKitCustomItemBeg,
+    UIKitCustomItemPageViewController,
     UIKitCustomItemEnd,
 };
 
 NSArray<NSNumber *> *UIKitCustomItemAllCases(void);
 NSString *NSStringFromUIKitCustomItem(UIKitCustomItem item);
 UIViewController *UIViewControllerFromUIKitCustomItem(UIKitCustomItem item);
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface UIKitDemoViewController : OCHContentViewController
 
