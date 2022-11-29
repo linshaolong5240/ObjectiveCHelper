@@ -21,7 +21,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _currentPage = 0;
+        _curentPage = 0;
         _controllers = [NSArray array];
         _cycleScrollEnabled = false;
         _pageViewController = [[UIPageViewController alloc] init];
@@ -70,16 +70,15 @@
     if (page < 0 || page > self.controllers.count - 1) {
         return;
     }
-    [self.pageViewController setViewControllers:@[self.controllers[page]] direction:(page > self.currentPage ? UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse) animated:animated completion:completion];
+    [self.pageViewController setViewControllers:@[self.controllers[page]] direction:(page > self.curentPage ? UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse) animated:animated completion:completion];
+    self.curentPage = page;
 }
 
 - (void)pageControlValueDidChanged:(UIPageControl *)pageControl event:(UIControlEvents)event {
 #if DEBUG
     NSLog(@"%s, currentPage: %ld", __PRETTY_FUNCTION__, (long)pageControl.currentPage);
 #endif
-    [self setPage:pageControl.currentPage animated:YES completion:^(BOOL finished) {
-            
-    }];
+    [self setPage:pageControl.currentPage animated:YES completion:nil];
 }
 
 - (void)updateCurrentPage {
@@ -91,10 +90,10 @@
     if (index == NSNotFound) {
         return;
     }
-    self.currentPage = index;
+    self.curentPage = index;
     self.pageControl.currentPage = index;
 #if DEBUG
-    NSLog(@"current page: %@", @(self.currentPage));
+    NSLog(@"current page: %@", @(self.curentPage));
 #endif
 }
 
