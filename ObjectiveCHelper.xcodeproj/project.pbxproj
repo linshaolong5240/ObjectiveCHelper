@@ -21,6 +21,7 @@
 		18457C27292DF6C400C34991 /* OCHImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457C26292DF6C400C34991 /* OCHImage.m */; };
 		1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */; };
 		186027712908CDFA001A3D2B /* UITableView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+OCH.m */; };
+		1862D00C293851C400037DB2 /* ReactiveObjCDemoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862D00B293851C400037DB2 /* ReactiveObjCDemoViewModel.m */; };
 		18705AB4292B5E8C00AA1116 /* UIButton+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 18705AB3292B5E8C00AA1116 /* UIButton+OCH.m */; };
 		1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */; };
 		1876AD3628E452A100DA0387 /* UICollectionViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD3528E452A100DA0387 /* UICollectionViewDemoController.m */; };
@@ -114,6 +115,8 @@
 		1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitUISearchbarDemoViewController.m; sourceTree = "<group>"; };
 		1860276F2908CDFA001A3D2B /* UITableView+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+OCH.h"; sourceTree = "<group>"; };
 		186027702908CDFA001A3D2B /* UITableView+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+OCH.m"; sourceTree = "<group>"; };
+		1862D00A293851C400037DB2 /* ReactiveObjCDemoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveObjCDemoViewModel.h; sourceTree = "<group>"; };
+		1862D00B293851C400037DB2 /* ReactiveObjCDemoViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveObjCDemoViewModel.m; sourceTree = "<group>"; };
 		18705AB2292B5E8C00AA1116 /* UIButton+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+OCH.h"; sourceTree = "<group>"; };
 		18705AB3292B5E8C00AA1116 /* UIButton+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+OCH.m"; sourceTree = "<group>"; };
 		1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHTabbarViewController.h; sourceTree = "<group>"; };
@@ -428,6 +431,8 @@
 			children = (
 				1898F4B3291A3E4400F13718 /* ReactiveObjCDemoViewController.h */,
 				1898F4B4291A3E4400F13718 /* ReactiveObjCDemoViewController.m */,
+				1862D00A293851C400037DB2 /* ReactiveObjCDemoViewModel.h */,
+				1862D00B293851C400037DB2 /* ReactiveObjCDemoViewModel.m */,
 			);
 			path = ReactiveObjC;
 			sourceTree = "<group>";
@@ -907,6 +912,7 @@
 				183C5A0F2935D5BE00D27DF8 /* UIPageControlDemoViewController.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+OCH.m in Sources */,
 				188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */,
+				1862D00C293851C400037DB2 /* ReactiveObjCDemoViewModel.m in Sources */,
 				183C5A082935963400D27DF8 /* OCHPageViewController.m in Sources */,
 				188CA46328F112EF00EF106E /* DVPieChartDemoViewController.m in Sources */,
 				188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */,

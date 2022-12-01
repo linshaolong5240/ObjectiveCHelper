@@ -13,6 +13,10 @@
 
 @implementation OCHBaseViewController
 
+- (void)dealloc {
+    NSLog(@"dealloc: %@", NSStringFromClass([self class]));
+}
+
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (!self) return nil;

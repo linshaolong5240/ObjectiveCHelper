@@ -10,6 +10,7 @@
 #import "UIButtonDemoViewController.h"
 #import "OCHValueStepper.h"
 #import "OCHPageViewController.h"
+#import "ReactiveObjCDemoViewController.h"
 
 @interface OCHPreviewController ()
 
@@ -27,24 +28,32 @@
     //            make.edges.equalTo(self.contentView);
     //    }];
     
-    OCHPageViewController *vc = [OCHPageViewController new];
-    vc.cycleScrollEnabled = true;
+//    OCHPageViewController *vc = [OCHPageViewController new];
+//    vc.cycleScrollEnabled = true;
+//
+//    [self addChildViewController:vc];
+//    [self.contentView addSubview:vc.view];
+//    [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.contentView);
+//    }];
+//
+//    UIViewController *vc1 = [UIViewController new];
+//    vc1.view.backgroundColor = UIColor.redColor;
+//    UIViewController *vc2 = [UIViewController new];
+//    vc2.view.backgroundColor = UIColor.orangeColor;
+//    UIViewController *vc3 = [UIViewController new];
+//    vc3.view.backgroundColor = UIColor.blueColor;
+//    vc.controllers = @[vc1, vc2, vc3];
+//    [vc setViewControllers:@[vc1] direction:(UIPageViewControllerNavigationDirectionForward) animated:NO completion:^(BOOL finished) {
+//
+//    }];
     
+    ReactiveObjCDemoViewController *vc = [ReactiveObjCDemoViewController new];
+
     [self addChildViewController:vc];
     [self.contentView addSubview:vc.view];
     [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.contentView);
-    }];
-    
-    UIViewController *vc1 = [UIViewController new];
-    vc1.view.backgroundColor = UIColor.redColor;
-    UIViewController *vc2 = [UIViewController new];
-    vc2.view.backgroundColor = UIColor.orangeColor;
-    UIViewController *vc3 = [UIViewController new];
-    vc3.view.backgroundColor = UIColor.blueColor;
-    vc.controllers = @[vc1, vc2, vc3];
-    [vc setViewControllers:@[vc1] direction:(UIPageViewControllerNavigationDirectionForward) animated:NO completion:^(BOOL finished) {
-            
     }];
         
 //    OCHValueStepper *v = [OCHValueStepper new];

@@ -7,11 +7,19 @@
 //
 
 #import "ReactiveObjCDemoViewController.h"
+#import "ReactiveObjCDemoViewModel.h"
 
 @interface ReactiveObjCDemoViewController ()
 
 @property(nonatomic, assign) NSInteger number;
 @property(nonatomic, assign) NSInteger valueCount;
+
+@property(nonatomic, strong) ReactiveObjCDemoViewModel *viewModel;
+
+@property(nonatomic, strong) UITextView *textView;
+@property(nonatomic, strong) UITextField *usernameField;
+@property(nonatomic, strong) UITextField *emailField;
+@property(nonatomic, strong) UITextField *passwordField;
 
 @end
 
@@ -20,8 +28,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.contentView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.scrollView).insets(UIEdgeInsetsMake(20, 20, 20, 20));
+        make.width.equalTo(@(UIScreen.mainScreen.bounds.size.width - 20 * 2));
+    }];
     self.title = @"ReactiveObjC";
     self.number = 0;
+    self.viewModel = [[ReactiveObjCDemoViewModel alloc] init];
     
     [self configureContentView];
     //数组遍历
@@ -104,10 +117,62 @@
 }
 
 - (void)configureContentView {
+    [self configureTextView];
+    [self configureLoginView];
     [self configureValueCountLabel];
     [self configureButton];
-    
     [self configureTextField];
+}
+
+- (void)configureTextView {
+    self.textView = [[UITextView alloc] init];
+    self.textView.backgroundColor = UIColor.yellowColor;
+    [self.contentView addArrangedSubview:self.textView];
+    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.height.equalTo(@200);
+    }];
+}
+
+- (void)configureLoginView {
+    UITextField *usernameField = [[UITextField alloc] init];
+    usernameField.borderStyle = UITextBorderStyleRoundedRect;
+    usernameField.placeholder = @"user name";
+    [self.contentView addArrangedSubview:usernameField];
+    self.usernameField = usernameField;
+    
+    UITextField *emailField = [[UITextField alloc] init];
+    emailField.borderStyle = UITextBorderStyleRoundedRect;
+    emailField.placeholder = @"email";
+    [self.contentView addArrangedSubview:emailField];
+    self.emailField = emailField;
+
+    UITextField *passwordField = [[UITextField alloc] init];
+    passwordField.borderStyle = UITextBorderStyleRoundedRect;
+    passwordField.placeholder = @"password";
+    [self.contentView addArrangedSubview:passwordField];
+    self.passwordField = passwordField;
+    
+    UIAction *loginAction = [UIAction actionWithTitle:@"Login" image:nil identifier:nil handler:^(__kindof UIAction * _Nonnull action) {
+        NSLog(@"Login Action");
+        self.valueCount += 1;
+    }];
+    UIButton *loginButton = [UIButton systemButtonWithPrimaryAction:loginAction];
+    loginButton.backgroundColor = UIColor.cyanColor;
+    [self.contentView addArrangedSubview:loginButton];
+    
+    RAC(self.viewModel, username) = usernameField.rac_textSignal;
+    RAC(self.viewModel, email) = emailField.rac_textSignal;
+    RAC(self.viewModel, password) = passwordField.rac_textSignal;
+    
+    RAC(loginButton, enabled) = [self.viewModel rac_loginValidSignal];
+    RAC(loginButton, backgroundColor) = [[self.viewModel rac_loginValidSignal] map:^id _Nullable(NSNumber * _Nullable value) {
+        return value.boolValue ? UIColor.cyanColor : UIColor.grayColor;
+    }];
+
+}
+
+- (void)loginButtonOnClicked:(UIButton *)button event:(UIControlEvents)event {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 - (void)configureValueCountLabel {
