@@ -13,9 +13,9 @@
 
 - (RACSignal *)rac_loginValidSignal {
     return [RACSignal
-        combineLatest:@[ RACObserve(self, username), RACObserve(self, email) ]
-        reduce:^(NSString *username, NSString *email) {
-            return @(username.length > 0 || email.length > 0);
+        combineLatest:@[ RACObserve(self, username), RACObserve(self, email), RACObserve(self, password) ]
+        reduce:^(NSString *username, NSString *email,  NSString *password) {
+            return @((username.length > 0 || email.length > 0) && password.length > 0);
         }];
 }
 
