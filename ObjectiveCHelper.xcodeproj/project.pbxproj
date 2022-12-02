@@ -47,6 +47,7 @@
 		189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */; };
 		189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */; };
 		189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */; };
+		18A2026F2938C01E00C5B7EC /* UISearchControllerDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2026E2938C01E00C5B7EC /* UISearchControllerDemoController.m */; };
 		18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2E1291F3B76009F49D1 /* TestA.m */; };
 		18AAC2E5291F3B89009F49D1 /* TestB.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2E4291F3B89009F49D1 /* TestB.m */; };
 		18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */; };
@@ -169,6 +170,8 @@
 		189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoHeaderView.m; sourceTree = "<group>"; };
 		189BB87728F595D400F2B287 /* UICollectionViewDemoFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoFooterView.h; sourceTree = "<group>"; };
 		189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoFooterView.m; sourceTree = "<group>"; };
+		18A2026D2938C01E00C5B7EC /* UISearchControllerDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UISearchControllerDemoController.h; sourceTree = "<group>"; };
+		18A2026E2938C01E00C5B7EC /* UISearchControllerDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISearchControllerDemoController.m; sourceTree = "<group>"; };
 		18AAC2E0291F3B76009F49D1 /* TestA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestA.h; sourceTree = "<group>"; };
 		18AAC2E1291F3B76009F49D1 /* TestA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestA.m; sourceTree = "<group>"; };
 		18AAC2E3291F3B89009F49D1 /* TestB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestB.h; sourceTree = "<group>"; };
@@ -376,6 +379,8 @@
 				1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */,
 				182824F828FF8BA400D2E4CF /* UITableViewDemoViewController.h */,
 				182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */,
+				18A2026D2938C01E00C5B7EC /* UISearchControllerDemoController.h */,
+				18A2026E2938C01E00C5B7EC /* UISearchControllerDemoController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -927,6 +932,7 @@
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
 				1811B83828F423DD0074418B /* OCHScrollViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,
+				18A2026F2938C01E00C5B7EC /* UISearchControllerDemoController.m in Sources */,
 				18E221B22913D9F300660A7F /* OneMapKitDemoViewController.m in Sources */,
 				44890BA728E831C300C395D9 /* UIKitDemoViewController.m in Sources */,
 				1891138F2934B55A008B4D7F /* UIControlEvents+OCH.m in Sources */,

@@ -11,6 +11,7 @@
 #import "OCHValueStepper.h"
 #import "OCHPageViewController.h"
 #import "ReactiveObjCDemoViewController.h"
+#import "UISearchControllerDemoController.h"
 
 @interface OCHPreviewController ()
 
@@ -48,7 +49,7 @@
 //
 //    }];
     
-    ReactiveObjCDemoViewController *vc = [ReactiveObjCDemoViewController new];
+    UISearchControllerDemoController *vc = [UISearchControllerDemoController new];
 
     [self addChildViewController:vc];
     [self.contentView addSubview:vc.view];
