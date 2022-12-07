@@ -8,7 +8,7 @@
 
 #import "OneMapKitDemoViewController.h"
 #import "OMKMapViewController.h"
-
+/*
 @interface OneMapKitDemoViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
@@ -50,14 +50,5 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
+*/

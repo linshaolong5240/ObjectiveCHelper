@@ -7,7 +7,7 @@
 //
 
 #import "OMKMapViewController.h"
-
+/*
 @interface OMKMapViewController () <OMKMapViewDelegate>
 
 @property(nonatomic, strong) UIView<OMKMapViewProvider> *mapView;
@@ -133,3 +133,4 @@
 }
 
 @end
+*/

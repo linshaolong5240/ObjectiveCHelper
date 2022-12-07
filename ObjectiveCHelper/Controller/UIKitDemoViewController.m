@@ -21,6 +21,7 @@
 //Custom
 #import "OCHValueStepperDemoController.h"
 #import "OCHPageViewControllerDemoController.h"
+#import "OCHWebViewController.h"
 
 NSArray<NSNumber *> * UIKitDemoItemAllCases(void) {
     NSMutableArray<NSNumber *> *items = [NSMutableArray array];
@@ -109,6 +110,8 @@ NSString *NSStringFromUIKitCustomItem(UIKitCustomItem item) {
             return @"OCHValueStepper";
         case UIKitCustomItemPageViewController:
             return @"OCHPageViewControllerDemoController";
+        case UIKitCustomItemWebViewController:
+            return @"OCHWebViewController";
         case UIKitCustomItemEnd:
             return @"";
             break;
@@ -122,6 +125,8 @@ UIViewController * UIViewControllerFromUIKitCustomItem(UIKitCustomItem item) {
             break;
         case UIKitCustomItemPageViewController:
             return [OCHPageViewControllerDemoController new];
+        case UIKitCustomItemWebViewController:
+            return [OCHWebViewController new];
         case UIKitCustomItemEnd:
             return nil;
             break;

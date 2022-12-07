@@ -12,6 +12,7 @@
 #import "OCHPageViewController.h"
 #import "ReactiveObjCDemoViewController.h"
 #import "UISearchControllerDemoController.h"
+#import "OCHWebViewController.h"
 
 @interface OCHPreviewController ()
 
@@ -49,7 +50,7 @@
 //
 //    }];
     
-    UISearchControllerDemoController *vc = [UISearchControllerDemoController new];
+    OCHWebViewController *vc = [OCHWebViewController new];
 
     [self addChildViewController:vc];
     [self.contentView addSubview:vc.view];

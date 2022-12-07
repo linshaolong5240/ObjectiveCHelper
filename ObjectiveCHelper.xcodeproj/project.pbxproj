@@ -50,6 +50,7 @@
 		18A2026F2938C01E00C5B7EC /* UISearchControllerDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2026E2938C01E00C5B7EC /* UISearchControllerDemoController.m */; };
 		18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2E1291F3B76009F49D1 /* TestA.m */; };
 		18AAC2E5291F3B89009F49D1 /* TestB.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2E4291F3B89009F49D1 /* TestB.m */; };
+		18BB4051294076BB001983AD /* OCHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BB4050294076BB001983AD /* OCHWebViewController.m */; };
 		18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */; };
 		18CF77EC291B807D0068CCC7 /* MJRefreshDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EB291B807D0068CCC7 /* MJRefreshDemoViewController.m */; };
 		18CF77F0291B85980068CCC7 /* MJRefreshHeaderDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EF291B85980068CCC7 /* MJRefreshHeaderDemo.m */; };
@@ -176,6 +177,8 @@
 		18AAC2E1291F3B76009F49D1 /* TestA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestA.m; sourceTree = "<group>"; };
 		18AAC2E3291F3B89009F49D1 /* TestB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestB.h; sourceTree = "<group>"; };
 		18AAC2E4291F3B89009F49D1 /* TestB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestB.m; sourceTree = "<group>"; };
+		18BB404F294076BB001983AD /* OCHWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHWebViewController.h; sourceTree = "<group>"; };
+		18BB4050294076BB001983AD /* OCHWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHWebViewController.m; sourceTree = "<group>"; };
 		18CE4054290268590075C1A6 /* UIButtonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIButtonDemoViewController.h; sourceTree = "<group>"; };
 		18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonDemoViewController.m; sourceTree = "<group>"; };
 		18CF77EA291B807D0068CCC7 /* MJRefreshDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshDemoViewController.h; sourceTree = "<group>"; };
@@ -349,6 +352,8 @@
 			children = (
 				183C5A062935963400D27DF8 /* OCHPageViewController.h */,
 				183C5A072935963400D27DF8 /* OCHPageViewController.m */,
+				18BB404F294076BB001983AD /* OCHWebViewController.h */,
+				18BB4050294076BB001983AD /* OCHWebViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -618,7 +623,6 @@
 				18E4173B28E44E720035BDA7 /* Frameworks */,
 				18E4173C28E44E720035BDA7 /* Resources */,
 				700C0499FAB83BCBE009FFDA /* [CP] Embed Pods Frameworks */,
-				ED70FCE10D67FD6C2EFB04BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -657,7 +661,6 @@
 				18E4176028E44E740035BDA7 /* Frameworks */,
 				18E4176128E44E740035BDA7 /* Resources */,
 				E7C993F03AD7E61ACB44E18E /* [CP] Embed Pods Frameworks */,
-				332A7168429E38F740DA04EC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -762,23 +765,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		332A7168429E38F740DA04EC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper-ObjectiveCHelperUITests/Pods-ObjectiveCHelper-ObjectiveCHelperUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper-ObjectiveCHelperUITests/Pods-ObjectiveCHelper-ObjectiveCHelperUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper-ObjectiveCHelperUITests/Pods-ObjectiveCHelper-ObjectiveCHelperUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		46BCB4F7B269BC799CCAE405 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -833,23 +819,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper-ObjectiveCHelperUITests/Pods-ObjectiveCHelper-ObjectiveCHelperUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ED70FCE10D67FD6C2EFB04BE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper/Pods-ObjectiveCHelper-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper/Pods-ObjectiveCHelper-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectiveCHelper/Pods-ObjectiveCHelper-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FB5CD7D1040917A88EE349E2 /* [CP] Check Pods Manifest.lock */ = {
@@ -921,6 +890,7 @@
 				183C5A082935963400D27DF8 /* OCHPageViewController.m in Sources */,
 				188CA46328F112EF00EF106E /* DVPieChartDemoViewController.m in Sources */,
 				188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */,
+				18BB4051294076BB001983AD /* OCHWebViewController.m in Sources */,
 				18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */,
 				183C5A0C2935A93600D27DF8 /* OCHPageViewControllerDemoController.m in Sources */,
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,

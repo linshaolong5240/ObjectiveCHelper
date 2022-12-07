@@ -30,6 +30,7 @@ typedef NS_ENUM(NSUInteger, UIKitCustomItem) {
     UIKitCustomItemBeg,
     UIKitCustomItemValueStepper = UIKitCustomItemBeg,
     UIKitCustomItemPageViewController,
+    UIKitCustomItemWebViewController,
     UIKitCustomItemEnd,
 };
 

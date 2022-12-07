@@ -9,7 +9,7 @@
 #import "OCHTabbarViewController.h"
 #import "TestA.h"
 #import "TestB.h"
-#import <OneMapKit/OneMapKit.h>
+//#import <OneMapKit/OneMapKit.h>
 #import "OCHStore.h"
 
 @implementation AppDelegate
