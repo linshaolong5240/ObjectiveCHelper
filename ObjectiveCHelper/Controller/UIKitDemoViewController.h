@@ -15,6 +15,7 @@ typedef NS_ENUM(NSUInteger, UIKitDemoItem) {
     UIKitDemoItemUILabel,
     UIKitDemoItemUICollectionView,
     UIKitDemoItemUIPageControl,
+    UIKitDemoItemUINavigationBar,
     UIKitDemoItemUISearchbar,
     UIKitDemoItemUISearchController,
     UIKitDemoItemUIScrollView,

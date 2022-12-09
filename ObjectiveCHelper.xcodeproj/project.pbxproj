@@ -64,6 +64,7 @@
 		18E4175E28E44E740035BDA7 /* ObjectiveCHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4175D28E44E740035BDA7 /* ObjectiveCHelperTests.m */; };
 		18E4176828E44E740035BDA7 /* ObjectiveCHelperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4176728E44E740035BDA7 /* ObjectiveCHelperUITests.m */; };
 		18E4176A28E44E740035BDA7 /* ObjectiveCHelperUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4176928E44E740035BDA7 /* ObjectiveCHelperUITestsLaunchTests.m */; };
+		18E94E1A29431F9A000C2523 /* UINavigationBarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E94E1929431F9A000C2523 /* UINavigationBarDemoController.m */; };
 		18E9AAFB2914B98C00D9D614 /* OCHAppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E9AAFA2914B98C00D9D614 /* OCHAppConfig.m */; };
 		18FCF2FC29164595004A0CD7 /* OMKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF2FB29164595004A0CD7 /* OMKMapViewController.m */; };
 		3093019FEA4D19C1BB7DF45E /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9299767C1AA87BE14B447F63 /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework */; };
@@ -203,6 +204,8 @@
 		18E4176328E44E740035BDA7 /* ObjectiveCHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E4176728E44E740035BDA7 /* ObjectiveCHelperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCHelperUITests.m; sourceTree = "<group>"; };
 		18E4176928E44E740035BDA7 /* ObjectiveCHelperUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCHelperUITestsLaunchTests.m; sourceTree = "<group>"; };
+		18E94E1829431F9A000C2523 /* UINavigationBarDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UINavigationBarDemoController.h; sourceTree = "<group>"; };
+		18E94E1929431F9A000C2523 /* UINavigationBarDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UINavigationBarDemoController.m; sourceTree = "<group>"; };
 		18E9AAF92914B98C00D9D614 /* OCHAppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHAppConfig.h; sourceTree = "<group>"; };
 		18E9AAFA2914B98C00D9D614 /* OCHAppConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHAppConfig.m; sourceTree = "<group>"; };
 		18FCF2FA29164595004A0CD7 /* OMKMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKMapViewController.h; sourceTree = "<group>"; };
@@ -378,14 +381,16 @@
 				1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */,
 				18D98BBB29013453003E5533 /* UILabelDemoViewController.h */,
 				18D98BBC29013453003E5533 /* UILabelDemoViewController.m */,
+				18E94E1829431F9A000C2523 /* UINavigationBarDemoController.h */,
+				18E94E1929431F9A000C2523 /* UINavigationBarDemoController.m */,
 				183C5A0D2935D5BE00D27DF8 /* UIPageControlDemoViewController.h */,
 				183C5A0E2935D5BE00D27DF8 /* UIPageControlDemoViewController.m */,
 				1876AD6428E6E2E300DA0387 /* UIScrollViewDemoController.h */,
 				1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */,
-				182824F828FF8BA400D2E4CF /* UITableViewDemoViewController.h */,
-				182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */,
 				18A2026D2938C01E00C5B7EC /* UISearchControllerDemoController.h */,
 				18A2026E2938C01E00C5B7EC /* UISearchControllerDemoController.m */,
+				182824F828FF8BA400D2E4CF /* UITableViewDemoViewController.h */,
+				182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -892,6 +897,7 @@
 				188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */,
 				18BB4051294076BB001983AD /* OCHWebViewController.m in Sources */,
 				18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */,
+				18E94E1A29431F9A000C2523 /* UINavigationBarDemoController.m in Sources */,
 				183C5A0C2935A93600D27DF8 /* OCHPageViewControllerDemoController.m in Sources */,
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,
 				188CA46D28F1147000EF106E /* DVPieChart.m in Sources */,
