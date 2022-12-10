@@ -32,6 +32,29 @@
     self.view.backgroundColor = UIColor.backgroundColor;
 }
 
+- (void)addSafeAreaBottomView:(UIView *)contentView backgroundColor:(UIColor *)backgroundColor height:(CGFloat)height {
+    UIView *container = [[UIView alloc] init];
+    [self.view addSubview:container];
+    [container mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.mas_bottomLayoutGuideTop);
+            make.left.right.equalTo(self.view);
+            make.height.equalTo(@(height));
+    }];
+    
+    UIView *backgroundView = [[UIView alloc] init];
+    backgroundView.backgroundColor = backgroundColor;
+    [container addSubview:backgroundView];
+    [backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.equalTo(container);
+        make.bottom.equalTo(self.view);
+    }];
+    
+    [container addSubview:contentView];
+    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(container);
+    }];
+}
+
 /*
 #pragma mark - Navigation
 

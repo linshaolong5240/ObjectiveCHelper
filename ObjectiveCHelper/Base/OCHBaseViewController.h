@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong, readonly) UIStackView *contentView;
 
+- (void)addSafeAreaBottomView:(UIView *)contentView backgroundColor:(UIColor *)backgroundColor height:(CGFloat)height;
+
 @end
 
 NS_ASSUME_NONNULL_END
