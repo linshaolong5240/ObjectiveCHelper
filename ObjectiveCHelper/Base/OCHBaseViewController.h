@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong, readonly) UIStackView *contentView;
 
+-(void)setNavigationBarLight;
+-(void)setNavigationBarDark;
+
 - (void)addSafeAreaBottomView:(UIView *)contentView backgroundColor:(UIColor *)backgroundColor height:(CGFloat)height;
 
 @end

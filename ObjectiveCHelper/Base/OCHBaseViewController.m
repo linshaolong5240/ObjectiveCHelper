@@ -32,6 +32,37 @@
     self.view.backgroundColor = UIColor.backgroundColor;
 }
 
+-(void)setNavigationBarLight {
+//    [self setNavigationBarColor:TUICoreDynamicColor(@"head_bg_gradient_start_color", @"#EBF0F6")];
+//    self.navgationTitleLabel.textColor = TUICoreDynamicColor(@"nav_title_text_color", @"#000000");
+}
+
+- (void)setNavigationBarDark {
+//    [self setNavigationBarColor:YIMColor.controllerBackgroundDarkColor];
+//    self.navgationTitleLabel.textColor = YIMColor.mainTextDarkColor;
+}
+
+- (void)setNavigationBarColor:(UIColor *)barColor {
+    if (@available(iOS 15.0, *)) {
+        UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
+        [appearance configureWithDefaultBackground];
+        appearance.shadowColor = nil;
+        appearance.backgroundEffect = nil;
+        appearance.backgroundColor =  barColor;
+        self.navigationController.navigationBar.backgroundColor = barColor;
+        self.navigationController.navigationBar.barTintColor = barColor;
+        self.navigationController.navigationBar.shadowImage = [UIImage new];
+        self.navigationController.navigationBar.standardAppearance = appearance;
+        self.navigationController.navigationBar.scrollEdgeAppearance= appearance;
+    }
+    else {
+        self.navigationController.navigationBar.backgroundColor = barColor;
+        self.navigationController.navigationBar.barTintColor = barColor;
+        self.navigationController.navigationBar.shadowImage = [UIImage new];
+        [[UINavigationBar appearance] setTranslucent:NO];
+    }
+}
+
 - (void)addSafeAreaBottomView:(UIView *)contentView backgroundColor:(UIColor *)backgroundColor height:(CGFloat)height {
     UIView *container = [[UIView alloc] init];
     [self.view addSubview:container];
