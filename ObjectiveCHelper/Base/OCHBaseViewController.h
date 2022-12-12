@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)setNavigationBarLight;
 -(void)setNavigationBarDark;
 
-- (void)addSafeAreaBottomView:(UIView *)contentView backgroundColor:(UIColor *)backgroundColor height:(CGFloat)height;
+- (void)addSafeAreaBottomView:(UIView *)contentView height:(CGFloat)height backgroundColor:(UIColor *)backgroundColor;
 
 @end
 

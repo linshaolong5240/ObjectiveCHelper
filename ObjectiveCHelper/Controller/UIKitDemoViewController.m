@@ -14,6 +14,7 @@
 #import "UICollectionViewDemoController.h"
 #import "UIKitUISearchbarDemoViewController.h"
 #import "UIPageControlDemoViewController.h"
+#import "UIModalPresentationStyleDemoViewController.h"
 #import "UINavigationBarDemoController.h"
 #import "UISearchControllerDemoController.h"
 #import "UIScrollViewDemoController.h"
@@ -46,6 +47,8 @@ NSString * NSStringFromUIKitDemo(UIKitDemoItem item) {
         case UIKitDemoItemUIPageControl:
             return @"UIKitDemoItemUIPageControl";
             break;
+        case UIKitDemoItemUIModalPresentationStyle:
+            return @"UIModalPresentationStyle";
         case UIKitDemoItemUINavigationBar:
             return @"UINavigationBar";
             break;
@@ -81,6 +84,8 @@ UIViewController * UIViewControllerFromUIKitDemo(UIKitDemoItem item) {
         case UIKitDemoItemUIPageControl:
             return [UIPageControlDemoViewController new];
             break;
+        case UIKitDemoItemUIModalPresentationStyle:
+            return [UIModalPresentationStyleDemoViewController new];
         case UIKitDemoItemUINavigationBar:
             return [UINavigationBarDemoController new];
             break;

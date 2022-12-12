@@ -20,6 +20,8 @@
 		18457C1B292DB91400C34991 /* UIImage+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457C1A292DB91400C34991 /* UIImage+OCH.m */; };
 		18457C27292DF6C400C34991 /* OCHImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457C26292DF6C400C34991 /* OCHImage.m */; };
 		1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */; };
+		185D9C352946C47F005B29CB /* UIModalPresentationStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */; };
+		185D9C382946C489005B29CB /* UIModalPresentationStyleDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C372946C489005B29CB /* UIModalPresentationStyleDemoViewController.m */; };
 		186027712908CDFA001A3D2B /* UITableView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+OCH.m */; };
 		1862D00C293851C400037DB2 /* ReactiveObjCDemoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862D00B293851C400037DB2 /* ReactiveObjCDemoViewModel.m */; };
 		18705AB4292B5E8C00AA1116 /* UIButton+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 18705AB3292B5E8C00AA1116 /* UIButton+OCH.m */; };
@@ -116,6 +118,10 @@
 		18457C26292DF6C400C34991 /* OCHImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHImage.m; sourceTree = "<group>"; };
 		1853C4EF28F3EE6C00245003 /* UIKitUISearchbarDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitUISearchbarDemoViewController.h; sourceTree = "<group>"; };
 		1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitUISearchbarDemoViewController.m; sourceTree = "<group>"; };
+		185D9C332946C47F005B29CB /* UIModalPresentationStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleViewController.h; sourceTree = "<group>"; };
+		185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIModalPresentationStyleViewController.m; sourceTree = "<group>"; };
+		185D9C362946C489005B29CB /* UIModalPresentationStyleDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleDemoViewController.h; sourceTree = "<group>"; };
+		185D9C372946C489005B29CB /* UIModalPresentationStyleDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIModalPresentationStyleDemoViewController.m; sourceTree = "<group>"; };
 		1860276F2908CDFA001A3D2B /* UITableView+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+OCH.h"; sourceTree = "<group>"; };
 		186027702908CDFA001A3D2B /* UITableView+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+OCH.m"; sourceTree = "<group>"; };
 		1862D00A293851C400037DB2 /* ReactiveObjCDemoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveObjCDemoViewModel.h; sourceTree = "<group>"; };
@@ -283,6 +289,17 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		185D9C322946C452005B29CB /* UIModalPresentationStyle */ = {
+			isa = PBXGroup;
+			children = (
+				185D9C362946C489005B29CB /* UIModalPresentationStyleDemoViewController.h */,
+				185D9C372946C489005B29CB /* UIModalPresentationStyleDemoViewController.m */,
+				185D9C332946C47F005B29CB /* UIModalPresentationStyleViewController.h */,
+				185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */,
+			);
+			path = UIModalPresentationStyle;
+			sourceTree = "<group>";
+		};
 		1876AD2F28E450A200DA0387 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,6 +390,7 @@
 		188CA46028F1129B00EF106E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				185D9C322946C452005B29CB /* UIModalPresentationStyle */,
 				18CE4054290268590075C1A6 /* UIButtonDemoViewController.h */,
 				18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */,
 				1876AD3428E452A100DA0387 /* UICollectionViewDemoController.h */,
@@ -876,6 +894,7 @@
 				18CF77F0291B85980068CCC7 /* MJRefreshHeaderDemo.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHTableSection.m in Sources */,
 				189AE7102927AB140095466B /* OCHAppState.m in Sources */,
+				185D9C382946C489005B29CB /* UIModalPresentationStyleDemoViewController.m in Sources */,
 				1898F4B5291A3E4400F13718 /* ReactiveObjCDemoViewController.m in Sources */,
 				1828250F28FFC50400D2E4CF /* UIColor+OCH.m in Sources */,
 				18705AB4292B5E8C00AA1116 /* UIButton+OCH.m in Sources */,
@@ -901,6 +920,7 @@
 				183C5A0C2935A93600D27DF8 /* OCHPageViewControllerDemoController.m in Sources */,
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,
 				188CA46D28F1147000EF106E /* DVPieChart.m in Sources */,
+				185D9C352946C47F005B29CB /* UIModalPresentationStyleViewController.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
 				189AE7182927B1550095466B /* UIViewController+OCH.m in Sources */,
 				18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */,

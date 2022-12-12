@@ -63,7 +63,7 @@
     }
 }
 
-- (void)addSafeAreaBottomView:(UIView *)contentView backgroundColor:(UIColor *)backgroundColor height:(CGFloat)height {
+- (void)addSafeAreaBottomView:(UIView *)contentView height:(CGFloat)height backgroundColor:(UIColor *)backgroundColor {
     UIView *container = [[UIView alloc] init];
     [self.view addSubview:container];
     [container mas_makeConstraints:^(MASConstraintMaker *make) {
