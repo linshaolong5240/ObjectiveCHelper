@@ -30,7 +30,8 @@ UIViewController *UIViewControllerFromUIKitDemo(UIKitDemoItem item);
 
 typedef NS_ENUM(NSUInteger, UIKitCustomItem) {
     UIKitCustomItemBeg,
-    UIKitCustomItemValueStepper = UIKitCustomItemBeg,
+    UIKitCustomItemLinearGradientView = UIKitCustomItemBeg,
+    UIKitCustomItemValueStepper,
     UIKitCustomItemPageViewController,
     UIKitCustomItemWebViewController,
     UIKitCustomItemEnd,

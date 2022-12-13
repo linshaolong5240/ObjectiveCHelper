@@ -21,9 +21,53 @@
 #import "UITableViewDemoViewController.h"
 
 //Custom
+#import "OCHLinearGradientViewController.h"
 #import "OCHValueStepperDemoController.h"
 #import "OCHPageViewControllerDemoController.h"
 #import "OCHWebViewController.h"
+
+NSArray<NSNumber *> * UIKitCustomItemAllCases(void) {
+    NSMutableArray<NSNumber *> *items = [NSMutableArray array];
+    for(NSInteger i =     UIKitCustomItemBeg; i <     UIKitCustomItemEnd; i++) {
+        [items addObject:@(i)];
+    }
+    
+    return items.copy;
+}
+
+NSString *NSStringFromUIKitCustomItem(UIKitCustomItem item) {
+    switch (item) {
+        case UIKitCustomItemLinearGradientView:
+            return @"OCHLinearGradientView";
+        case UIKitCustomItemValueStepper:
+            return @"OCHValueStepper";
+        case UIKitCustomItemPageViewController:
+            return @"OCHPageViewControllerDemoController";
+        case UIKitCustomItemWebViewController:
+            return @"OCHWebViewController";
+        case UIKitCustomItemEnd:
+            return @"";
+            break;
+    }
+}
+
+UIViewController * UIViewControllerFromUIKitCustomItem(UIKitCustomItem item) {
+    switch (item) {
+        case UIKitCustomItemLinearGradientView:
+            return [[OCHLinearGradientViewController alloc] init];
+        case UIKitCustomItemValueStepper:
+            return [OCHValueStepperDemoController new];
+            break;
+        case UIKitCustomItemPageViewController:
+            return [OCHPageViewControllerDemoController new];
+        case UIKitCustomItemWebViewController:
+            return [OCHWebViewController new];
+        case UIKitCustomItemEnd:
+            return nil;
+            break;
+    }
+}
+
 
 NSArray<NSNumber *> * UIKitDemoItemAllCases(void) {
     NSMutableArray<NSNumber *> *items = [NSMutableArray array];
@@ -103,44 +147,6 @@ UIViewController * UIViewControllerFromUIKitDemo(UIKitDemoItem item) {
             break;
         case UIKitDemoItemEnd:
             return [[UIViewController alloc] init];
-            break;
-    }
-}
-
-NSArray<NSNumber *> * UIKitCustomItemAllCases(void) {
-    NSMutableArray<NSNumber *> *items = [NSMutableArray array];
-    for(NSInteger i =     UIKitCustomItemBeg; i <     UIKitCustomItemEnd; i++) {
-        [items addObject:@(i)];
-    }
-    
-    return items.copy;
-}
-
-NSString *NSStringFromUIKitCustomItem(UIKitCustomItem item) {
-    switch (item) {
-        case UIKitCustomItemValueStepper:
-            return @"OCHValueStepper";
-        case UIKitCustomItemPageViewController:
-            return @"OCHPageViewControllerDemoController";
-        case UIKitCustomItemWebViewController:
-            return @"OCHWebViewController";
-        case UIKitCustomItemEnd:
-            return @"";
-            break;
-    }
-}
-
-UIViewController * UIViewControllerFromUIKitCustomItem(UIKitCustomItem item) {
-    switch (item) {
-        case UIKitCustomItemValueStepper:
-            return [OCHValueStepperDemoController new];
-            break;
-        case UIKitCustomItemPageViewController:
-            return [OCHPageViewControllerDemoController new];
-        case UIKitCustomItemWebViewController:
-            return [OCHWebViewController new];
-        case UIKitCustomItemEnd:
-            return nil;
             break;
     }
 }

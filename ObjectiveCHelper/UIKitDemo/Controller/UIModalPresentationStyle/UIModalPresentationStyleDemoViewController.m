@@ -12,21 +12,39 @@
 #import "UIModalPresentationStyleViewController.h"
 
 NSArray<NSNumber *> *UIModalPresentationStyleAllCases(void) {
-    return @[
-        @(UIModalPresentationFullScreen),
-        @(UIModalPresentationPageSheet),
-        @(UIModalPresentationFormSheet),
-        @(UIModalPresentationCurrentContext),
-        @(UIModalPresentationCustom),
-        @(UIModalPresentationOverFullScreen),
-        @(UIModalPresentationOverCurrentContext),
-        @(UIModalPresentationPopover),
+    if (@available(iOS 13.0, *)) {
+        return @[
+            @(UIModalPresentationFullScreen),
+            @(UIModalPresentationPageSheet),
+            @(UIModalPresentationFormSheet),
+            @(UIModalPresentationCurrentContext),
+            @(UIModalPresentationCustom),
+            @(UIModalPresentationOverFullScreen),
+            @(UIModalPresentationOverCurrentContext),
+            @(UIModalPresentationPopover),
 #if TARGET_OS_TV
-        @(UIModalPresentationBlurOverFullScreen),
+            @(UIModalPresentationBlurOverFullScreen),
 #endif
-        @(UIModalPresentationNone),
-        @(UIModalPresentationAutomatic),
-    ];
+            @(UIModalPresentationNone),
+            @(UIModalPresentationAutomatic),
+        ];
+    } else {
+        // Fallback on earlier versions
+        return @[
+            @(UIModalPresentationFullScreen),
+            @(UIModalPresentationPageSheet),
+            @(UIModalPresentationFormSheet),
+            @(UIModalPresentationCurrentContext),
+            @(UIModalPresentationCustom),
+            @(UIModalPresentationOverFullScreen),
+            @(UIModalPresentationOverCurrentContext),
+            @(UIModalPresentationPopover),
+#if TARGET_OS_TV
+            @(UIModalPresentationBlurOverFullScreen),
+#endif
+            @(UIModalPresentationNone),
+        ];
+    }
 }
 
 @interface UIModalPresentationStyleDemoViewController () <UITableViewDataSource, UITableViewDelegate>
