@@ -11,7 +11,7 @@
 		1811B83528F423100074418B /* OCHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811B83428F423100074418B /* OCHBaseViewController.m */; };
 		1811B83828F423DD0074418B /* OCHScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811B83728F423DD0074418B /* OCHScrollViewController.m */; };
 		182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */; };
-		182824FD28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824FC28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.m */; };
+		182824FD28FF8D6000D2E4CF /* UITableViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824FC28FF8D6000D2E4CF /* UITableViewDemoCell.m */; };
 		1828250F28FFC50400D2E4CF /* UIColor+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828250E28FFC50400D2E4CF /* UIColor+OCH.m */; };
 		1828251228FFC5F600D2E4CF /* UIView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828251128FFC5F600D2E4CF /* UIView+OCH.m */; };
 		183C5A082935963400D27DF8 /* OCHPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C5A072935963400D27DF8 /* OCHPageViewController.m */; };
@@ -102,8 +102,8 @@
 		1811B83728F423DD0074418B /* OCHScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHScrollViewController.m; sourceTree = "<group>"; };
 		182824F828FF8BA400D2E4CF /* UITableViewDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoViewController.h; sourceTree = "<group>"; };
 		182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewDemoViewController.m; sourceTree = "<group>"; };
-		182824FB28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoTableViewCell.h; sourceTree = "<group>"; };
-		182824FC28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewDemoTableViewCell.m; sourceTree = "<group>"; };
+		182824FB28FF8D6000D2E4CF /* UITableViewDemoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoCell.h; sourceTree = "<group>"; };
+		182824FC28FF8D6000D2E4CF /* UITableViewDemoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewDemoCell.m; sourceTree = "<group>"; };
 		1828250D28FFC50400D2E4CF /* UIColor+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+OCH.h"; sourceTree = "<group>"; };
 		1828250E28FFC50400D2E4CF /* UIColor+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OCH.m"; sourceTree = "<group>"; };
 		1828251028FFC5F600D2E4CF /* UIView+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+OCH.h"; sourceTree = "<group>"; };
@@ -500,8 +500,8 @@
 				189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */,
 				189BB87428F5920D00F2B287 /* UICollectionViewDemoHeaderView.h */,
 				189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */,
-				182824FB28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.h */,
-				182824FC28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.m */,
+				182824FB28FF8D6000D2E4CF /* UITableViewDemoCell.h */,
+				182824FC28FF8D6000D2E4CF /* UITableViewDemoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -910,7 +910,7 @@
 				1828250F28FFC50400D2E4CF /* UIColor+OCH.m in Sources */,
 				18705AB4292B5E8C00AA1116 /* UIButton+OCH.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
-				182824FD28FF8D6000D2E4CF /* UITableViewDemoTableViewCell.m in Sources */,
+				182824FD28FF8D6000D2E4CF /* UITableViewDemoCell.m in Sources */,
 				188CA48128F1500E00EF106E /* JXCategoryViewDemoViewController.m in Sources */,
 				18EFE4D629485C4D00E80B20 /* OCHLinearGradientView.m in Sources */,
 				1876AD5D28E6BEF500DA0387 /* OCHPreview.m in Sources */,

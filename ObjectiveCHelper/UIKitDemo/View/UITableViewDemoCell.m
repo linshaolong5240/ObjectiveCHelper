@@ -1,13 +1,13 @@
 //
-//  UITableViewDemoTableViewCell.m
+//  UITableViewDemoCell.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/19.
 //
 
-#import "UITableViewDemoTableViewCell.h"
+#import "UITableViewDemoCell.h"
 
-@implementation UITableViewDemoTableViewCell
+@implementation UITableViewDemoCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

@@ -6,7 +6,7 @@
 //
 
 #import "UITableViewDemoViewController.h"
-#import "UITableViewDemoTableViewCell.h"
+#import "UITableViewDemoCell.h"
 
 @interface UITableViewDemoViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -34,7 +34,7 @@
     if (@available(iOS 15.0, *)) {
         tableView.sectionHeaderTopPadding = 100;
     }
-    [tableView registerClass:[UITableViewDemoTableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewDemoTableViewCell class])];
+    [tableView registerClass:[UITableViewDemoCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewDemoCell class])];
     tableView.dataSource = self;
     tableView.delegate = self;
     
@@ -55,7 +55,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewDemoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewDemoTableViewCell class]) forIndexPath:indexPath];
+    UITableViewDemoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewDemoCell class]) forIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"section:%ld, row: %ld", indexPath.section, indexPath.row];
     cell.backgroundColor = self.sections[indexPath.section].value[indexPath.row];
     return cell;

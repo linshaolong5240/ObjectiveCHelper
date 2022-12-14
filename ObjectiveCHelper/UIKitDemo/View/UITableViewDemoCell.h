@@ -1,5 +1,5 @@
 //
-//  UITableViewDemoTableViewCell.h
+//  UITableViewDemoCell.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/10/19.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UITableViewDemoTableViewCell : UITableViewCell
+@interface UITableViewDemoCell : UITableViewCell
 
 @end
 
