@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addSafeAreaBottomView:(UIView *)contentView height:(CGFloat)height backgroundColor:(UIColor *)backgroundColor;
 
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message;
+
 @end
 
 NS_ASSUME_NONNULL_END

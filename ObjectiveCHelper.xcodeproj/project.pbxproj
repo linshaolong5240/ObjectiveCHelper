@@ -45,7 +45,6 @@
 		1898F4B5291A3E4400F13718 /* ReactiveObjCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898F4B4291A3E4400F13718 /* ReactiveObjCDemoViewController.m */; };
 		189AE7102927AB140095466B /* OCHAppState.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AE70F2927AB140095466B /* OCHAppState.m */; };
 		189AE7152927AC2B0095466B /* OCHSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AE7142927AC2B0095466B /* OCHSetting.m */; };
-		189AE7182927B1550095466B /* UIViewController+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AE7172927B1550095466B /* UIViewController+OCH.m */; };
 		189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */; };
 		189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */; };
 		189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */; };
@@ -172,8 +171,6 @@
 		189AE70F2927AB140095466B /* OCHAppState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHAppState.m; sourceTree = "<group>"; };
 		189AE7132927AC2B0095466B /* OCHSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHSetting.h; sourceTree = "<group>"; };
 		189AE7142927AC2B0095466B /* OCHSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHSetting.m; sourceTree = "<group>"; };
-		189AE7162927B1550095466B /* UIViewController+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+OCH.h"; sourceTree = "<group>"; };
-		189AE7172927B1550095466B /* UIViewController+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+OCH.m"; sourceTree = "<group>"; };
 		189BB85C28F543C300F2B287 /* UICollectionViewDemoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoCell.h; sourceTree = "<group>"; };
 		189BB85D28F543C300F2B287 /* UICollectionViewDemoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UICollectionViewDemoCell.m; sourceTree = "<group>"; };
 		189BB87428F5920D00F2B287 /* UICollectionViewDemoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionViewDemoHeaderView.h; sourceTree = "<group>"; };
@@ -349,8 +346,6 @@
 				186027702908CDFA001A3D2B /* UITableView+OCH.m */,
 				1828251028FFC5F600D2E4CF /* UIView+OCH.h */,
 				1828251128FFC5F600D2E4CF /* UIView+OCH.m */,
-				189AE7162927B1550095466B /* UIViewController+OCH.h */,
-				189AE7172927B1550095466B /* UIViewController+OCH.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -934,7 +929,6 @@
 				188CA46D28F1147000EF106E /* DVPieChart.m in Sources */,
 				185D9C352946C47F005B29CB /* UIModalPresentationStyleViewController.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
-				189AE7182927B1550095466B /* UIViewController+OCH.m in Sources */,
 				18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */,
 				18E9AAFB2914B98C00D9D614 /* OCHAppConfig.m in Sources */,
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,

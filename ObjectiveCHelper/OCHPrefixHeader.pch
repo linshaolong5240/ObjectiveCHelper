@@ -22,7 +22,6 @@
 #import "UIButton+OCH.h"
 #import "UIColor+OCH.h"
 #import "UIView+OCH.h"
-#import "UIViewController+OCH.h"
 
 //Pod
 #import <Masonry.h>

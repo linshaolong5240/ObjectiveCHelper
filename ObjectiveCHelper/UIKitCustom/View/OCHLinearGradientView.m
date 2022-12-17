@@ -8,7 +8,7 @@
 
 #import "OCHLinearGradientView.h"
 
-CGPoint CGPointFrom(OCHLinearGradientPostion position) {
+CGPoint CGPointFromOCHLinearGradientPostion(OCHLinearGradientPostion position) {
     switch (position) {
         case OCHLinearGradientPostionTop:
             return CGPointMake(0.5, 0);
@@ -69,8 +69,8 @@ CGPoint CGPointFrom(OCHLinearGradientPostion position) {
         return (id)value.CGColor;
     }] array];
     self.gradientLayer.locations = self.locations;
-    self.gradientLayer.startPoint = CGPointFrom(self.start);
-    self.gradientLayer.endPoint = CGPointFrom(self.end);
+    self.gradientLayer.startPoint = CGPointFromOCHLinearGradientPostion(self.start);
+    self.gradientLayer.endPoint = CGPointFromOCHLinearGradientPostion(self.end);
     [self.layer addSublayer:self.gradientLayer];
 }
 
