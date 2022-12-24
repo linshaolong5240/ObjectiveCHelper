@@ -23,6 +23,8 @@
 		18457C1B292DB91400C34991 /* UIImage+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457C1A292DB91400C34991 /* UIImage+OCH.m */; };
 		18457C27292DF6C400C34991 /* OCHImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457C26292DF6C400C34991 /* OCHImage.m */; };
 		1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */; };
+		1854A2A629570014001CC50A /* AppServicesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2A529570014001CC50A /* AppServicesController.m */; };
+		1854A2AB2957029A001CC50A /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2AA2957029A001CC50A /* ContactsViewController.m */; };
 		185D9C352946C47F005B29CB /* UIModalPresentationStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */; };
 		185D9C382946C489005B29CB /* UIModalPresentationStyleDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C372946C489005B29CB /* UIModalPresentationStyleDemoViewController.m */; };
 		186027712908CDFA001A3D2B /* UITableView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+OCH.m */; };
@@ -128,6 +130,10 @@
 		18457C26292DF6C400C34991 /* OCHImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHImage.m; sourceTree = "<group>"; };
 		1853C4EF28F3EE6C00245003 /* UIKitUISearchbarDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitUISearchbarDemoViewController.h; sourceTree = "<group>"; };
 		1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitUISearchbarDemoViewController.m; sourceTree = "<group>"; };
+		1854A2A429570014001CC50A /* AppServicesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppServicesController.h; sourceTree = "<group>"; };
+		1854A2A529570014001CC50A /* AppServicesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppServicesController.m; sourceTree = "<group>"; };
+		1854A2A92957029A001CC50A /* ContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		1854A2AA2957029A001CC50A /* ContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		185D9C332946C47F005B29CB /* UIModalPresentationStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleViewController.h; sourceTree = "<group>"; };
 		185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIModalPresentationStyleViewController.m; sourceTree = "<group>"; };
 		185D9C362946C489005B29CB /* UIModalPresentationStyleDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleDemoViewController.h; sourceTree = "<group>"; };
@@ -314,6 +320,25 @@
 				18380C202956CFEF00106BA8 /* QRCodeViewController.m */,
 			);
 			path = QRCode;
+			sourceTree = "<group>";
+		};
+		1854A2A72957026D001CC50A /* AppServices */ = {
+			isa = PBXGroup;
+			children = (
+				1854A2A429570014001CC50A /* AppServicesController.h */,
+				1854A2A529570014001CC50A /* AppServicesController.m */,
+				1854A2A829570279001CC50A /* Contacts */,
+			);
+			path = AppServices;
+			sourceTree = "<group>";
+		};
+		1854A2A829570279001CC50A /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				1854A2A92957029A001CC50A /* ContactsViewController.h */,
+				1854A2AA2957029A001CC50A /* ContactsViewController.m */,
+			);
+			path = Contacts;
 			sourceTree = "<group>";
 		};
 		185D9C322946C452005B29CB /* UIModalPresentationStyle */ = {
@@ -597,6 +622,7 @@
 		18E4174028E44E720035BDA7 /* ObjectiveCHelper */ = {
 			isa = PBXGroup;
 			children = (
+				1854A2A72957026D001CC50A /* AppServices */,
 				18E4174128E44E720035BDA7 /* AppDelegate.h */,
 				18E4174228E44E720035BDA7 /* AppDelegate.m */,
 				18E4174D28E44E740035BDA7 /* Assets.xcassets */,
@@ -918,6 +944,7 @@
 				189AE7152927AC2B0095466B /* OCHSetting.m in Sources */,
 				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
 				18380C1B2956ACC200106BA8 /* OCHQRCodeView.m in Sources */,
+				1854A2AB2957029A001CC50A /* ContactsViewController.m in Sources */,
 				1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */,
 				18AAC2E5291F3B89009F49D1 /* TestB.m in Sources */,
 				189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */,
@@ -960,6 +987,7 @@
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
 				1811B83828F423DD0074418B /* OCHScrollViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,
+				1854A2A629570014001CC50A /* AppServicesController.m in Sources */,
 				18A2026F2938C01E00C5B7EC /* UISearchControllerDemoController.m in Sources */,
 				18E221B22913D9F300660A7F /* OneMapKitDemoViewController.m in Sources */,
 				44890BA728E831C300C395D9 /* UIKitDemoViewController.m in Sources */,
@@ -1136,6 +1164,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectiveCHelper/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ObjectiveCHelper;
+				INFOPLIST_KEY_NSContactsUsageDescription = "通讯录权限";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location Always Usage Description";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location When In Use Usage Description";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1173,6 +1202,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectiveCHelper/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ObjectiveCHelper;
+				INFOPLIST_KEY_NSContactsUsageDescription = "通讯录权限";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location Always Usage Description";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location When In Use Usage Description";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

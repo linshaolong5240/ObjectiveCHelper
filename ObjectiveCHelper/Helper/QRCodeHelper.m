@@ -29,12 +29,6 @@ NSString *NSStringFormQRCodeInputCorrectionLevel(QRCodeInputCorrectionLevel leve
 
 @implementation QRCodeHelper
 
-/// generateQRCode
-/// - Parameters:
-///   - data: inputMessage: The data to be encoded as a QR code. An Data object whose display name is Message.
-///   - level: A single letter specifying the error correction format. An String whose display name is CorrectionLevel. Default value: M.
-///   - scale: Image transform scale. Default value: 1.0.
-/// - Returns: A Quartz 2D image. You are responsible for releasing the returned image when you no longer need it.
 + (nullable CGImageRef)generateQRCodeWithInputMessage:(NSData *)data inputCorrection:(QRCodeInputCorrectionLevel)level scale:(CGFloat)scale {
     NSDictionary<NSString *, id> *inputParameters = @{@"inputMessage": data, @"inputCorrectionLevel": NSStringFormQRCodeInputCorrectionLevel(level)};
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator" withInputParameters:inputParameters];
