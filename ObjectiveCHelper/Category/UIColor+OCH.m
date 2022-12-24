@@ -18,7 +18,7 @@
 }
 
 // MARK: - Background Color
-+ (UIColor *)backgroundColor {
++ (UIColor *)controllerBackgroundColor {
     return [UIColor colorNamed:@"BackgroundColor"];
 }
 

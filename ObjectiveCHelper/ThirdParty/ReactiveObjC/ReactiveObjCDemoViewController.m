@@ -7,6 +7,7 @@
 //
 
 #import "ReactiveObjCDemoViewController.h"
+@import Masonry;
 #import "ReactiveObjCDemoViewModel.h"
 
 @interface ReactiveObjCDemoViewController ()

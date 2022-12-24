@@ -6,6 +6,8 @@
 //
 
 #import "OCHValueStepperDemoController.h"
+@import Masonry;
+
 #import "OCHValueStepper.h"
 
 @interface OCHValueStepperDemoController ()

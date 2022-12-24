@@ -6,6 +6,7 @@
 //
 
 #import "UIKitUISearchbarDemoViewController.h"
+@import Masonry;
 
 @interface UIKitUISearchbarDemoViewController ()
 

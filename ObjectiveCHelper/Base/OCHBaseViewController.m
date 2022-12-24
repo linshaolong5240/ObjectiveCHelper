@@ -6,6 +6,7 @@
 //
 
 #import "OCHBaseViewController.h"
+@import Masonry;
 
 @interface OCHBaseViewController ()
 
@@ -14,22 +15,13 @@
 @implementation OCHBaseViewController
 
 - (void)dealloc {
-    NSLog(@"dealloc: %@", NSStringFromClass([self class]));
-}
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (!self) return nil;
-    
-    _contentView = [UIStackView new];
-    
-    return self;
+    NSLog(@"🟢dealloc: %@", NSStringFromClass([self class]));
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = UIColor.backgroundColor;
+    self.view.backgroundColor = UIColor.controllerBackgroundColor;
 }
 
 -(void)setNavigationBarLight {

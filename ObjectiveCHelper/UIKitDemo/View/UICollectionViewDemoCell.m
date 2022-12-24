@@ -6,6 +6,7 @@
 //
 
 #import "UICollectionViewDemoCell.h"
+#import <Masonry.h>
 
 @implementation UICollectionViewDemoCell
 

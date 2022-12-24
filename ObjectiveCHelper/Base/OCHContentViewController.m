@@ -6,6 +6,7 @@
 //
 
 #import "OCHContentViewController.h"
+#import <Masonry.h>
 
 @interface OCHContentViewController ()
 
@@ -16,7 +17,7 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (!self) return nil;
-    
+    _contentView = [[UIStackView alloc] init];
     return self;
 }
 
@@ -24,17 +25,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.contentView.axis = UILayoutConstraintAxisVertical;
+    self.contentView.spacing = 10;
     [self.view addSubview:self.contentView];
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         if (@available(iOS 11.0, *)) {
-            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
-            make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);
-            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
-            make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
+            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop).inset(10);
+            make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft).inset(10);
+            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom).inset(10);
+            make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight).inset(10);
         } else {
-            make.top.equalTo(self.mas_topLayoutGuideBottom);
-            make.left.right.equalTo(self.view);
-            make.bottom.equalTo(self.mas_bottomLayoutGuideTop);
+            make.top.equalTo(self.mas_topLayoutGuideBottom).inset(10);
+            make.left.right.equalTo(self.view).inset(10);
+            make.bottom.equalTo(self.mas_bottomLayoutGuideTop).inset(10);
         }
     }];
 }

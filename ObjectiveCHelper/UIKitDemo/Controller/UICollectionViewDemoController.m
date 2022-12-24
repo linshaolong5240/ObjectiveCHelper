@@ -6,6 +6,8 @@
 //
 
 #import "UICollectionViewDemoController.h"
+@import Masonry;
+
 #import "OCHTableSection.h"
 #import "UICollectionViewDemoCell.h"
 #import "UICollectionViewDemoHeaderView.h"

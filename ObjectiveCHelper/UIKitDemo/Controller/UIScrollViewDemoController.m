@@ -6,6 +6,7 @@
 //
 
 #import "UIScrollViewDemoController.h"
+@import Masonry;
 
 @interface UIScrollViewDemoController ()
 
@@ -20,7 +21,6 @@
 }
 
 - (void)configureContentView {
-    
     for (NSInteger i = 0; i < 100; i++) {
         UILabel *label = UILabel.new;
         label.text = [NSString stringWithFormat:@"%ld", i];

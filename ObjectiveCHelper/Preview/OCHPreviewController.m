@@ -6,6 +6,8 @@
 //
 
 #import "OCHPreviewController.h"
+@import Masonry;
+
 #import "OCHPreview.h"
 #import "UIButtonDemoViewController.h"
 #import "OCHValueStepper.h"
@@ -13,6 +15,7 @@
 #import "ReactiveObjCDemoViewController.h"
 #import "UISearchControllerDemoController.h"
 #import "OCHWebViewController.h"
+#import "QRCodeViewController.h"
 
 @interface OCHPreviewController ()
 
@@ -50,8 +53,7 @@
 //
 //    }];
     
-    OCHWebViewController *vc = [OCHWebViewController new];
-
+    QRCodeViewController *vc = [QRCodeViewController new];
     [self addChildViewController:vc];
     [self.contentView addSubview:vc.view];
     [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -6,6 +6,7 @@
 //
 
 #import "OCHScrollViewController.h"
+@import Masonry;
 
 @interface OCHScrollViewController ()
 
@@ -16,7 +17,8 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        _scrollView = [UIScrollView new];
+        _contentView = [[UIStackView alloc] init];
+        _scrollView = [[UIScrollView alloc] init];
     }
     
     return  self;

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(class, nonatomic, readonly) NSArray<UIColor*> *colorItems;
 
 // MARK: - Background Color
-@property(class, nonatomic, readonly) UIColor *backgroundColor;
+@property(class, nonatomic, readonly) UIColor *controllerBackgroundColor;
 + (UIColor *)panelColor;
 
 // MARK: - Text Color

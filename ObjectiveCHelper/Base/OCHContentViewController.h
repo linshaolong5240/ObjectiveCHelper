@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHContentViewController : OCHBaseViewController
 
+@property(nonatomic, strong, readonly) UIStackView *contentView;
+
 @end
 
 NS_ASSUME_NONNULL_END

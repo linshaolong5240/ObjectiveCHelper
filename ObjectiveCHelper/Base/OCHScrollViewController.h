@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHScrollViewController : OCHBaseViewController
 
+@property(nonatomic, strong, readonly) UIStackView *contentView;
+
 @property(nonatomic, strong, readonly) UIScrollView* scrollView;
 
 @end

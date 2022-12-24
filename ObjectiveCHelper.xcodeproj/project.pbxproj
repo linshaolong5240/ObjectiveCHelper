@@ -14,6 +14,9 @@
 		182824FD28FF8D6000D2E4CF /* UITableViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824FC28FF8D6000D2E4CF /* UITableViewDemoCell.m */; };
 		1828250F28FFC50400D2E4CF /* UIColor+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828250E28FFC50400D2E4CF /* UIColor+OCH.m */; };
 		1828251228FFC5F600D2E4CF /* UIView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828251128FFC5F600D2E4CF /* UIView+OCH.m */; };
+		18380C1B2956ACC200106BA8 /* OCHQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18380C1A2956ACC200106BA8 /* OCHQRCodeView.m */; };
+		18380C1E2956B05700106BA8 /* QRCodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18380C1D2956B05700106BA8 /* QRCodeHelper.m */; };
+		18380C212956CFEF00106BA8 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18380C202956CFEF00106BA8 /* QRCodeViewController.m */; };
 		183C5A082935963400D27DF8 /* OCHPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C5A072935963400D27DF8 /* OCHPageViewController.m */; };
 		183C5A0C2935A93600D27DF8 /* OCHPageViewControllerDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C5A0B2935A93600D27DF8 /* OCHPageViewControllerDemoController.m */; };
 		183C5A0F2935D5BE00D27DF8 /* UIPageControlDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C5A0E2935D5BE00D27DF8 /* UIPageControlDemoViewController.m */; };
@@ -107,6 +110,12 @@
 		1828250E28FFC50400D2E4CF /* UIColor+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+OCH.m"; sourceTree = "<group>"; };
 		1828251028FFC5F600D2E4CF /* UIView+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+OCH.h"; sourceTree = "<group>"; };
 		1828251128FFC5F600D2E4CF /* UIView+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+OCH.m"; sourceTree = "<group>"; };
+		18380C192956ACC200106BA8 /* OCHQRCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHQRCodeView.h; sourceTree = "<group>"; };
+		18380C1A2956ACC200106BA8 /* OCHQRCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHQRCodeView.m; sourceTree = "<group>"; };
+		18380C1C2956B05700106BA8 /* QRCodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeHelper.h; sourceTree = "<group>"; };
+		18380C1D2956B05700106BA8 /* QRCodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeHelper.m; sourceTree = "<group>"; };
+		18380C1F2956CFEF00106BA8 /* QRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		18380C202956CFEF00106BA8 /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		183C5A062935963400D27DF8 /* OCHPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHPageViewController.h; sourceTree = "<group>"; };
 		183C5A072935963400D27DF8 /* OCHPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHPageViewController.m; sourceTree = "<group>"; };
 		183C5A0A2935A93600D27DF8 /* OCHPageViewControllerDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHPageViewControllerDemoController.h; sourceTree = "<group>"; };
@@ -290,8 +299,21 @@
 			children = (
 				18457C25292DF6C400C34991 /* OCHImage.h */,
 				18457C26292DF6C400C34991 /* OCHImage.m */,
+				18380C1C2956B05700106BA8 /* QRCodeHelper.h */,
+				18380C1D2956B05700106BA8 /* QRCodeHelper.m */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		1854A29B2956E32A001CC50A /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				18380C192956ACC200106BA8 /* OCHQRCodeView.h */,
+				18380C1A2956ACC200106BA8 /* OCHQRCodeView.m */,
+				18380C1F2956CFEF00106BA8 /* QRCodeViewController.h */,
+				18380C202956CFEF00106BA8 /* QRCodeViewController.m */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		185D9C322946C452005B29CB /* UIModalPresentationStyle */ = {
@@ -363,6 +385,7 @@
 		1885CBF228F900AB000552F7 /* UIKitCustom */ = {
 			isa = PBXGroup;
 			children = (
+				1854A29B2956E32A001CC50A /* QRCode */,
 				183C5A092935A8F400D27DF8 /* Demo */,
 				188F2AA8290BDE3E0046FB65 /* View */,
 				1885CBF328F900BA000552F7 /* Controller */,
@@ -891,8 +914,10 @@
 				18EFE4D9294862AC00E80B20 /* OCHLinearGradientViewController.m in Sources */,
 				18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */,
 				1811B83528F423100074418B /* OCHBaseViewController.m in Sources */,
+				18380C1E2956B05700106BA8 /* QRCodeHelper.m in Sources */,
 				189AE7152927AC2B0095466B /* OCHSetting.m in Sources */,
 				44B9AB4328E835A400277DA0 /* OCHPreviewHelper.swift in Sources */,
+				18380C1B2956ACC200106BA8 /* OCHQRCodeView.m in Sources */,
 				1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */,
 				18AAC2E5291F3B89009F49D1 /* TestB.m in Sources */,
 				189BB87628F5920D00F2B287 /* UICollectionViewDemoHeaderView.m in Sources */,
@@ -917,6 +942,7 @@
 				183C5A0F2935D5BE00D27DF8 /* UIPageControlDemoViewController.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+OCH.m in Sources */,
 				188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */,
+				18380C212956CFEF00106BA8 /* QRCodeViewController.m in Sources */,
 				1862D00C293851C400037DB2 /* ReactiveObjCDemoViewModel.m in Sources */,
 				183C5A082935963400D27DF8 /* OCHPageViewController.m in Sources */,
 				188CA46328F112EF00EF106E /* DVPieChartDemoViewController.m in Sources */,

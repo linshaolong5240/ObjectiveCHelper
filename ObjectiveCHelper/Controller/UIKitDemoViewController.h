@@ -32,6 +32,7 @@ typedef NS_ENUM(NSUInteger, UIKitCustomItem) {
     UIKitCustomItemBeg,
     UIKitCustomItemLinearGradientView = UIKitCustomItemBeg,
     UIKitCustomItemValueStepper,
+    UIKitCustomItemQRCodeView,
     UIKitCustomItemPageViewController,
     UIKitCustomItemWebViewController,
     UIKitCustomItemEnd,

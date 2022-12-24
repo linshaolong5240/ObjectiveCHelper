@@ -7,6 +7,8 @@
 //
 
 #import "OCHPageViewControllerDemoController.h"
+@import Masonry;
+
 #import "OCHPageViewController.h"
 
 @interface OCHPageViewControllerDemoController ()

@@ -6,6 +6,8 @@
 //
 
 #import "OCHThirdPartyViewController.h"
+@import Masonry;
+
 #import "OCHTableSection.h"
 #import "JXCategoryViewDemoViewController.h"
 #import "DVPieChartDemoViewController.h"

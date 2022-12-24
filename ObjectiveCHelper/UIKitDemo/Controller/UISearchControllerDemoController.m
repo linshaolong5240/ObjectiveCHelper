@@ -7,6 +7,7 @@
 //
 
 #import "UISearchControllerDemoController.h"
+@import Masonry;
 
 @interface UISearchControllerDemoController () <UITableViewDataSource, UITableViewDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
 

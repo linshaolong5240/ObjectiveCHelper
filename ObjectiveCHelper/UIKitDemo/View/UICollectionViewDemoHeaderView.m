@@ -6,6 +6,7 @@
 //
 
 #import "UICollectionViewDemoHeaderView.h"
+@import Masonry;
 
 @implementation UICollectionViewDemoHeaderView
 

@@ -24,6 +24,5 @@
 #import "UIView+OCH.h"
 
 //Pod
-#import <Masonry.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #endif /* OCHPrefixHeader_pch */

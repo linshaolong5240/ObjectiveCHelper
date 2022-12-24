@@ -6,6 +6,8 @@
 //
 
 #import "UIKitDemoViewController.h"
+@import Masonry;
+
 #import "OCHStore.h"
 #import "OCHTableSection.h"
 
@@ -23,6 +25,7 @@
 //Custom
 #import "OCHLinearGradientViewController.h"
 #import "OCHValueStepperDemoController.h"
+#import "QRCodeViewController.h"
 #import "OCHPageViewControllerDemoController.h"
 #import "OCHWebViewController.h"
 
@@ -39,12 +42,19 @@ NSString *NSStringFromUIKitCustomItem(UIKitCustomItem item) {
     switch (item) {
         case UIKitCustomItemLinearGradientView:
             return @"OCHLinearGradientView";
+            break;
         case UIKitCustomItemValueStepper:
             return @"OCHValueStepper";
+            break;
+        case UIKitCustomItemQRCodeView:
+            return @"QRCodeView";
+            break;
         case UIKitCustomItemPageViewController:
             return @"OCHPageViewControllerDemoController";
+            break;
         case UIKitCustomItemWebViewController:
             return @"OCHWebViewController";
+            break;
         case UIKitCustomItemEnd:
             return @"";
             break;
@@ -57,6 +67,9 @@ UIViewController * UIViewControllerFromUIKitCustomItem(UIKitCustomItem item) {
             return [[OCHLinearGradientViewController alloc] init];
         case UIKitCustomItemValueStepper:
             return [OCHValueStepperDemoController new];
+            break;
+        case UIKitCustomItemQRCodeView:
+            return [QRCodeViewController new];
             break;
         case UIKitCustomItemPageViewController:
             return [OCHPageViewControllerDemoController new];

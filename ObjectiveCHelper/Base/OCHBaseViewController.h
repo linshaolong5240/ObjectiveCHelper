@@ -11,8 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OCHBaseViewController : UIViewController
 
-@property(nonatomic, strong, readonly) UIStackView *contentView;
-
 -(void)setNavigationBarLight;
 -(void)setNavigationBarDark;
 

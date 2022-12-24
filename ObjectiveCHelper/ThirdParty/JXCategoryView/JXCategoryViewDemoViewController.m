@@ -6,6 +6,8 @@
 //
 
 #import "JXCategoryViewDemoViewController.h"
+@import Masonry;
+
 #import <JXCategoryView.h>
 #import "JXCategoryListContentViewDemoView.h"
 
