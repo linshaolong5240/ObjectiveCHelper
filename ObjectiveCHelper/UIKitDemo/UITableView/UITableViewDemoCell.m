@@ -26,11 +26,6 @@
         _actionButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
         _data = [[UITableViewDemoCellData alloc] init];
         [self configureView];
-        @weakify(self)
-        [[RACObserve(self.data, state) takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(NSNumber *value) {
-            @strongify(self)
-            [self setState:[value integerValue]];
-        }];
     }
     return self;
 }
@@ -73,6 +68,11 @@
 
 - (void)fillWithData:(UITableViewDemoCellData *)data {
     self.data = data;
+    @weakify(self)
+    [[RACObserve(self.data, state) takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(NSNumber *value) {
+        @strongify(self)
+        [self setState:[value integerValue]];
+    }];
 }
 
 @end
