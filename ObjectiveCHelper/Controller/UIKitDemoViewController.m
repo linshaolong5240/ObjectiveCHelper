@@ -119,7 +119,7 @@ NSString * NSStringFromUIKitDemo(UIKitDemoItem item) {
             return @"UIKitDemoItemUIScrollView";
             break;
         case UIKitDemoItemUITableView:
-            return @"UIKitDemoItemUITableView";
+            return @"UITableView";
             break;
         case UIKitDemoItemEnd:
             return @"";

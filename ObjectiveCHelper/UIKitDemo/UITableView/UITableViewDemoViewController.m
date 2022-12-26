@@ -10,7 +10,9 @@
 
 #import "UITableViewDemoCell.h"
 
-@interface UITableViewDemoViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface UITableViewDemoViewController () <UITableViewDataSource, UITableViewDelegate, UITableViewDemoCellDelegate>
+
+@property(nonatomic, strong) NSMutableArray<OCHTableSection<NSString *, NSArray<UIColor *> *> *> *sections;
 
 @end
 
@@ -60,6 +62,7 @@
     UITableViewDemoCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewDemoCell class]) forIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"section:%ld, row: %ld", indexPath.section, indexPath.row];
     cell.backgroundColor = self.sections[indexPath.section].value[indexPath.row];
+    cell.delegate = self;
     return cell;
 }
 
@@ -93,14 +96,10 @@
     return  50;
 }
 
-/*
-#pragma mark - Navigation
+// MARK: - UITableViewDemoCellDelegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tableViewDemoCellActionButtonOnClicked:(UITableViewDemoCell *)cell {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
-*/
 
 @end

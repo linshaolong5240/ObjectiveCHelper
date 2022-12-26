@@ -44,6 +44,7 @@
 		188CA48128F1500E00EF106E /* JXCategoryViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48028F1500E00EF106E /* JXCategoryViewDemoViewController.m */; };
 		188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */; };
 		188CA49628F262D800EF106E /* JXCategoryListContentViewDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA49528F262D800EF106E /* JXCategoryListContentViewDemoView.m */; };
+		188CE54829597487005CC741 /* UITableViewDemoCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CE54729597487005CC741 /* UITableViewDemoCellData.m */; };
 		188F2AAB290BDE740046FB65 /* OCHValueStepperDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */; };
 		188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F2AAD290BDEE70046FB65 /* OCHValueStepper.m */; };
 		1891138F2934B55A008B4D7F /* UIControlEvents+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1891138D2934B559008B4D7F /* UIControlEvents+OCH.m */; };
@@ -174,6 +175,8 @@
 		188CA48328F1502C00EF106E /* OCHThirdPartyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHThirdPartyViewController.m; sourceTree = "<group>"; };
 		188CA49428F262D800EF106E /* JXCategoryListContentViewDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXCategoryListContentViewDemoView.h; sourceTree = "<group>"; };
 		188CA49528F262D800EF106E /* JXCategoryListContentViewDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXCategoryListContentViewDemoView.m; sourceTree = "<group>"; };
+		188CE54629597487005CC741 /* UITableViewDemoCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoCellData.h; sourceTree = "<group>"; };
+		188CE54729597487005CC741 /* UITableViewDemoCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewDemoCellData.m; sourceTree = "<group>"; };
 		188F2AA9290BDE740046FB65 /* OCHValueStepperDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHValueStepperDemoController.h; sourceTree = "<group>"; };
 		188F2AAA290BDE740046FB65 /* OCHValueStepperDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHValueStepperDemoController.m; sourceTree = "<group>"; };
 		188F2AAC290BDEE70046FB65 /* OCHValueStepper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHValueStepper.h; sourceTree = "<group>"; };
@@ -432,6 +435,7 @@
 		188CA45F28F1125E00EF106E /* UIKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				188CE5452959745A005CC741 /* UITableView */,
 				188CA46028F1129B00EF106E /* Controller */,
 				189BB85B28F543A200F2B287 /* View */,
 			);
@@ -458,8 +462,6 @@
 				1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */,
 				18A2026D2938C01E00C5B7EC /* UISearchControllerDemoController.h */,
 				18A2026E2938C01E00C5B7EC /* UISearchControllerDemoController.m */,
-				182824F828FF8BA400D2E4CF /* UITableViewDemoViewController.h */,
-				182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -499,6 +501,19 @@
 				188CA48028F1500E00EF106E /* JXCategoryViewDemoViewController.m */,
 			);
 			path = JXCategoryView;
+			sourceTree = "<group>";
+		};
+		188CE5452959745A005CC741 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				182824FB28FF8D6000D2E4CF /* UITableViewDemoCell.h */,
+				182824FC28FF8D6000D2E4CF /* UITableViewDemoCell.m */,
+				188CE54629597487005CC741 /* UITableViewDemoCellData.h */,
+				188CE54729597487005CC741 /* UITableViewDemoCellData.m */,
+				182824F828FF8BA400D2E4CF /* UITableViewDemoViewController.h */,
+				182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 		188F2AA8290BDE3E0046FB65 /* View */ = {
@@ -543,8 +558,6 @@
 				189BB87828F595D400F2B287 /* UICollectionViewDemoFooterView.m */,
 				189BB87428F5920D00F2B287 /* UICollectionViewDemoHeaderView.h */,
 				189BB87528F5920D00F2B287 /* UICollectionViewDemoHeaderView.m */,
-				182824FB28FF8D6000D2E4CF /* UITableViewDemoCell.h */,
-				182824FC28FF8D6000D2E4CF /* UITableViewDemoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -983,6 +996,7 @@
 				185D9C352946C47F005B29CB /* UIModalPresentationStyleViewController.m in Sources */,
 				18E4175428E44E740035BDA7 /* main.m in Sources */,
 				18AAC2E2291F3B76009F49D1 /* TestA.m in Sources */,
+				188CE54829597487005CC741 /* UITableViewDemoCellData.m in Sources */,
 				18E9AAFB2914B98C00D9D614 /* OCHAppConfig.m in Sources */,
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
 				1811B83828F423DD0074418B /* OCHScrollViewController.m in Sources */,

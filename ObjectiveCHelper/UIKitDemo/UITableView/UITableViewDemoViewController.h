@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableViewDemoViewController : OCHBaseViewController
 
-@property(nonatomic, strong) NSMutableArray<OCHTableSection<NSString *, NSArray<UIColor *> *> *> *sections;
-
 @end
 
 NS_ASSUME_NONNULL_END
