@@ -1,12 +1,12 @@
 //
-//  AppServicesController.m
+//  FrameworkAppServicesController.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/12/24.
 //  Copyright © 2022 com.sauronpi. All rights reserved.
 //
 
-#import "AppServicesController.h"
+#import "FrameworkAppServicesController.h"
 #import "ContactsViewController.h"
 
 NSString *NSStringFromAppServicesItem(AppServicesItem item) {
@@ -20,11 +20,11 @@ NSString *NSStringFromAppServicesItem(AppServicesItem item) {
     }
 }
 
-@interface AppServicesController () <UITableViewDataSource, UITableViewDelegate>
+@interface FrameworkAppServicesController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation AppServicesController
+@implementation FrameworkAppServicesController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

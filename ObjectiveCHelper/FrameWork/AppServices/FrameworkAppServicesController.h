@@ -1,5 +1,5 @@
 //
-//  AppServicesController.h
+//  FrameworkAppServicesController.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/12/24.
@@ -15,7 +15,7 @@ typedef NS_ENUM(NSInteger, AppServicesItem) {
     AppServicesItemNumber,
 };
 
-@interface AppServicesController : OCHBaseViewController
+@interface FrameworkAppServicesController : OCHBaseViewController
 
 @end
 

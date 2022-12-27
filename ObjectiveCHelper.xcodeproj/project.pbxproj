@@ -10,6 +10,9 @@
 		0E50B35EF309D9DD368ECEEA /* Pods_ObjectiveCHelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6688CD4700FD6598AE22AFDC /* Pods_ObjectiveCHelperTests.framework */; };
 		1811B83528F423100074418B /* OCHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811B83428F423100074418B /* OCHBaseViewController.m */; };
 		1811B83828F423DD0074418B /* OCHScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811B83728F423DD0074418B /* OCHScrollViewController.m */; };
+		181D3F0F295AD67F00FC45A3 /* FrameworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D3F0E295AD67F00FC45A3 /* FrameworkViewController.m */; };
+		181D3F12295AD8D500FC45A3 /* FrameworkSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D3F11295AD8D500FC45A3 /* FrameworkSystemViewController.m */; };
+		181D3F17295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D3F16295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.m */; };
 		182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */; };
 		182824FD28FF8D6000D2E4CF /* UITableViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824FC28FF8D6000D2E4CF /* UITableViewDemoCell.m */; };
 		1828250F28FFC50400D2E4CF /* UIColor+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828250E28FFC50400D2E4CF /* UIColor+OCH.m */; };
@@ -23,7 +26,7 @@
 		18457C1B292DB91400C34991 /* UIImage+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457C1A292DB91400C34991 /* UIImage+OCH.m */; };
 		18457C27292DF6C400C34991 /* OCHImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18457C26292DF6C400C34991 /* OCHImage.m */; };
 		1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */; };
-		1854A2A629570014001CC50A /* AppServicesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2A529570014001CC50A /* AppServicesController.m */; };
+		1854A2A629570014001CC50A /* FrameworkAppServicesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2A529570014001CC50A /* FrameworkAppServicesController.m */; };
 		1854A2AB2957029A001CC50A /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2AA2957029A001CC50A /* ContactsViewController.m */; };
 		185D9C352946C47F005B29CB /* UIModalPresentationStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */; };
 		185D9C382946C489005B29CB /* UIModalPresentationStyleDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C372946C489005B29CB /* UIModalPresentationStyleDemoViewController.m */; };
@@ -105,6 +108,12 @@
 		1811B83428F423100074418B /* OCHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHBaseViewController.m; sourceTree = "<group>"; };
 		1811B83628F423DD0074418B /* OCHScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHScrollViewController.h; sourceTree = "<group>"; };
 		1811B83728F423DD0074418B /* OCHScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHScrollViewController.m; sourceTree = "<group>"; };
+		181D3F0D295AD67F00FC45A3 /* FrameworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkViewController.h; sourceTree = "<group>"; };
+		181D3F0E295AD67F00FC45A3 /* FrameworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkViewController.m; sourceTree = "<group>"; };
+		181D3F10295AD8D500FC45A3 /* FrameworkSystemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkSystemViewController.h; sourceTree = "<group>"; };
+		181D3F11295AD8D500FC45A3 /* FrameworkSystemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkSystemViewController.m; sourceTree = "<group>"; };
+		181D3F15295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkSystemDispatchViewController.h; sourceTree = "<group>"; };
+		181D3F16295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkSystemDispatchViewController.m; sourceTree = "<group>"; };
 		182824F828FF8BA400D2E4CF /* UITableViewDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoViewController.h; sourceTree = "<group>"; };
 		182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewDemoViewController.m; sourceTree = "<group>"; };
 		182824FB28FF8D6000D2E4CF /* UITableViewDemoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoCell.h; sourceTree = "<group>"; };
@@ -131,8 +140,8 @@
 		18457C26292DF6C400C34991 /* OCHImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHImage.m; sourceTree = "<group>"; };
 		1853C4EF28F3EE6C00245003 /* UIKitUISearchbarDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitUISearchbarDemoViewController.h; sourceTree = "<group>"; };
 		1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitUISearchbarDemoViewController.m; sourceTree = "<group>"; };
-		1854A2A429570014001CC50A /* AppServicesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppServicesController.h; sourceTree = "<group>"; };
-		1854A2A529570014001CC50A /* AppServicesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppServicesController.m; sourceTree = "<group>"; };
+		1854A2A429570014001CC50A /* FrameworkAppServicesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkAppServicesController.h; sourceTree = "<group>"; };
+		1854A2A529570014001CC50A /* FrameworkAppServicesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkAppServicesController.m; sourceTree = "<group>"; };
 		1854A2A92957029A001CC50A /* ContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
 		1854A2AA2957029A001CC50A /* ContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
 		185D9C332946C47F005B29CB /* UIModalPresentationStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleViewController.h; sourceTree = "<group>"; };
@@ -281,6 +290,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181D3F0B295AD61F00FC45A3 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				181D3F13295AD9EE00FC45A3 /* Home */,
+				188CA45F28F1125E00EF106E /* UIKit */,
+				1854A2A72957026D001CC50A /* AppServices */,
+				181D3F0C295AD62D00FC45A3 /* System */,
+				181D3F0D295AD67F00FC45A3 /* FrameworkViewController.h */,
+				181D3F0E295AD67F00FC45A3 /* FrameworkViewController.m */,
+			);
+			path = FrameWork;
+			sourceTree = "<group>";
+		};
+		181D3F0C295AD62D00FC45A3 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				181D3F14295ADAD300FC45A3 /* Dispatch */,
+				181D3F10295AD8D500FC45A3 /* FrameworkSystemViewController.h */,
+				181D3F11295AD8D500FC45A3 /* FrameworkSystemViewController.m */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		181D3F13295AD9EE00FC45A3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */,
+				1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		181D3F14295ADAD300FC45A3 /* Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				181D3F15295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.h */,
+				181D3F16295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.m */,
+			);
+			path = Dispatch;
+			sourceTree = "<group>";
+		};
 		183C5A052935961300D27DF8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,8 +378,8 @@
 		1854A2A72957026D001CC50A /* AppServices */ = {
 			isa = PBXGroup;
 			children = (
-				1854A2A429570014001CC50A /* AppServicesController.h */,
-				1854A2A529570014001CC50A /* AppServicesController.m */,
+				1854A2A429570014001CC50A /* FrameworkAppServicesController.h */,
+				1854A2A529570014001CC50A /* FrameworkAppServicesController.m */,
 				1854A2A829570279001CC50A /* Contacts */,
 			);
 			path = AppServices;
@@ -364,8 +414,6 @@
 				44890BA228E8301D00C395D9 /* OCHContentViewController.m */,
 				1811B83628F423DD0074418B /* OCHScrollViewController.h */,
 				1811B83728F423DD0074418B /* OCHScrollViewController.m */,
-				1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */,
-				1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -432,14 +480,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		188CA45F28F1125E00EF106E /* UIKitDemo */ = {
+		188CA45F28F1125E00EF106E /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				188CE5452959745A005CC741 /* UITableView */,
 				188CA46028F1129B00EF106E /* Controller */,
 				189BB85B28F543A200F2B287 /* View */,
 			);
-			path = UIKitDemo;
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		188CA46028F1129B00EF106E /* Controller */ = {
@@ -635,7 +683,7 @@
 		18E4174028E44E720035BDA7 /* ObjectiveCHelper */ = {
 			isa = PBXGroup;
 			children = (
-				1854A2A72957026D001CC50A /* AppServices */,
+				181D3F0B295AD61F00FC45A3 /* FrameWork */,
 				18E4174128E44E720035BDA7 /* AppDelegate.h */,
 				18E4174228E44E720035BDA7 /* AppDelegate.m */,
 				18E4174D28E44E740035BDA7 /* Assets.xcassets */,
@@ -656,7 +704,6 @@
 				18AAC2DF291F3B64009F49D1 /* TestClass */,
 				188CA47E28F14F9100EF106E /* ThirdParty */,
 				1885CBF228F900AB000552F7 /* UIKitCustom */,
-				188CA45F28F1125E00EF106E /* UIKitDemo */,
 			);
 			path = ObjectiveCHelper;
 			sourceTree = "<group>";
@@ -940,6 +987,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181D3F12295AD8D500FC45A3 /* FrameworkSystemViewController.m in Sources */,
 				188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */,
 				18D98BC02901356B003E5533 /* NSAttributedString+OCH.m in Sources */,
 				189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */,
@@ -965,6 +1013,7 @@
 				18CF77F0291B85980068CCC7 /* MJRefreshHeaderDemo.m in Sources */,
 				1876AD3A28E464E500DA0387 /* OCHTableSection.m in Sources */,
 				189AE7102927AB140095466B /* OCHAppState.m in Sources */,
+				181D3F17295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.m in Sources */,
 				185D9C382946C489005B29CB /* UIModalPresentationStyleDemoViewController.m in Sources */,
 				1898F4B5291A3E4400F13718 /* ReactiveObjCDemoViewController.m in Sources */,
 				1828250F28FFC50400D2E4CF /* UIColor+OCH.m in Sources */,
@@ -1001,8 +1050,9 @@
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
 				1811B83828F423DD0074418B /* OCHScrollViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,
-				1854A2A629570014001CC50A /* AppServicesController.m in Sources */,
+				1854A2A629570014001CC50A /* FrameworkAppServicesController.m in Sources */,
 				18A2026F2938C01E00C5B7EC /* UISearchControllerDemoController.m in Sources */,
+				181D3F0F295AD67F00FC45A3 /* FrameworkViewController.m in Sources */,
 				18E221B22913D9F300660A7F /* OneMapKitDemoViewController.m in Sources */,
 				44890BA728E831C300C395D9 /* UIKitDemoViewController.m in Sources */,
 				1891138F2934B55A008B4D7F /* UIControlEvents+OCH.m in Sources */,
