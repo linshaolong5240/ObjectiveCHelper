@@ -12,19 +12,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIStackView (OUIKit)
 
-+ (UIStackView *)stackWithArrangedView:(NSArray<__kindof UIView *> *)views axis:(UILayoutConstraintAxis)axis spacing:(CGFloat)spacing distribution:(UIStackViewDistribution)distribution;
++ (instancetype)stackWithArrangedView:(NSArray<__kindof UIView *> *)views axis:(UILayoutConstraintAxis)axis spacing:(CGFloat)spacing distribution:(UIStackViewDistribution)distribution;
 
-+ (UIStackView *)hstackWithArrangedView:(NSArray<__kindof UIView *> *)views spacing:(CGFloat)spacing distribution:(UIStackViewDistribution)distribution;
++ (instancetype)hstackWithArrangedView:(NSArray<__kindof UIView *> *)views spacing:(CGFloat)spacing distribution:(UIStackViewDistribution)distribution;
 
-+ (UIStackView *)hstackWithArrangedView:(NSArray<__kindof UIView *> *)views spacing:(CGFloat)spacing;
++ (instancetype)hstackWithArrangedView:(NSArray<__kindof UIView *> *)views spacing:(CGFloat)spacing;
 
-+ (UIStackView *)hstackWithArrangedView:(NSArray<__kindof UIView *> *)views;
++ (instancetype)hstackWithArrangedView:(NSArray<__kindof UIView *> *)views;
 
-+ (UIStackView *)vstackWithArrangedView:(NSArray<__kindof UIView *> *)views spacing:(CGFloat)spacing distribution:(UIStackViewDistribution)distribution;
++ (instancetype)vstackWithArrangedView:(NSArray<__kindof UIView *> *)views spacing:(CGFloat)spacing distribution:(UIStackViewDistribution)distribution;
 
-+ (UIStackView *)vstackWithArrangedView:(NSArray<__kindof UIView *> *)views spacing:(CGFloat)spacing;
++ (instancetype)vstackWithArrangedView:(NSArray<__kindof UIView *> *)views spacing:(CGFloat)spacing;
 
-+ (UIStackView *)vstackWithArrangedView:(NSArray<__kindof UIView *> *)views;
++ (instancetype)vstackWithArrangedView:(NSArray<__kindof UIView *> *)views;
 
 @end
 
