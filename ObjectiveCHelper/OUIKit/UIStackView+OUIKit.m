@@ -19,7 +19,7 @@
 }
 
 + (instancetype)hstackWithArrangedView:(NSArray<__kindof UIView *> *)views spacing:(CGFloat)spacing distribution:(UIStackViewDistribution)distribution {
-    return [UIStackView stackWithArrangedView:views axis:UILayoutConstraintAxisVertical spacing:spacing distribution:distribution];
+    return [UIStackView stackWithArrangedView:views axis:UILayoutConstraintAxisHorizontal spacing:spacing distribution:distribution];
 }
 
 + (instancetype)hstackWithArrangedView:(NSArray<__kindof UIView *> *)views spacing:(CGFloat)spacing {
