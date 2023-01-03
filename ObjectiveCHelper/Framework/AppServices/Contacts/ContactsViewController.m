@@ -20,6 +20,10 @@
 
 @property(nonatomic, copy) NSArray<NSArray<CNContact *> *> *sections;
 
+@property(nonatomic, copy) NSArray<NSString *> *sectionTitles;
+
+@property(nonatomic, copy) NSArray<NSString *> *sectionIndexTitles;
+
 @property(nonatomic, strong) UITableView *tableView;
 
 
@@ -142,6 +146,9 @@
         newSectionsArray[index] = sortedPersonArrayForSection;
     }
     self.sections = newSectionsArray;
+    self.sectionTitles = collation.sectionTitles;
+    self.sectionIndexTitles = collation.sectionIndexTitles;
+
     self.items = contacts;
     [self.tableView reloadData];
     
@@ -176,6 +183,18 @@
     }
     cell.textLabel.text = name;//[NSString stringWithFormat:@"%@ %@ %@", item.givenName, item.middleName, item.familyName];
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return self.sectionTitles[section];
+}
+
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return self.sectionIndexTitles;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return index;
 }
 
 // MARK: - UITableViewDelegate
