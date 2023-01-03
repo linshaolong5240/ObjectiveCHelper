@@ -40,6 +40,7 @@
 		1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5F28E6C27D00DA0387 /* OCHPreviewController.m */; };
 		1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */; };
 		187C8FBB29273987006E2389 /* OCHStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C8FBA29273987006E2389 /* OCHStore.m */; };
+		188BB3232963DD5F00E193A0 /* OCHFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188BB3222963DD5F00E193A0 /* OCHFeatureViewController.m */; };
 		188CA46328F112EF00EF106E /* DVPieChartDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46228F112EF00EF106E /* DVPieChartDemoViewController.m */; };
 		188CA46D28F1147000EF106E /* DVPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46828F1147000EF106E /* DVPieChart.m */; };
 		188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46B28F1147000EF106E /* DVFoodPieModel.m */; };
@@ -172,6 +173,8 @@
 		1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewDemoController.m; sourceTree = "<group>"; };
 		187C8FB929273987006E2389 /* OCHStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHStore.h; sourceTree = "<group>"; };
 		187C8FBA29273987006E2389 /* OCHStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHStore.m; sourceTree = "<group>"; };
+		188BB3212963DD5F00E193A0 /* OCHFeatureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHFeatureViewController.h; sourceTree = "<group>"; };
+		188BB3222963DD5F00E193A0 /* OCHFeatureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHFeatureViewController.m; sourceTree = "<group>"; };
 		188CA46128F112EF00EF106E /* DVPieChartDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVPieChartDemoViewController.h; sourceTree = "<group>"; };
 		188CA46228F112EF00EF106E /* DVPieChartDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DVPieChartDemoViewController.m; sourceTree = "<group>"; };
 		188CA46728F1147000EF106E /* DVPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVPieChart.h; sourceTree = "<group>"; };
@@ -296,17 +299,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		181D3F0B295AD61F00FC45A3 /* FrameWork */ = {
+		181D3F0B295AD61F00FC45A3 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				181D3F13295AD9EE00FC45A3 /* Home */,
 				188CA45F28F1125E00EF106E /* UIKit */,
 				1854A2A72957026D001CC50A /* AppServices */,
 				181D3F0C295AD62D00FC45A3 /* System */,
 				181D3F0D295AD67F00FC45A3 /* FrameworkViewController.h */,
 				181D3F0E295AD67F00FC45A3 /* FrameworkViewController.m */,
 			);
-			path = FrameWork;
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		181D3F0C295AD62D00FC45A3 /* System */ = {
@@ -322,6 +324,7 @@
 		181D3F13295AD9EE00FC45A3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				188BB3202963DD3E00E193A0 /* Tool */,
 				1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */,
 				1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */,
 			);
@@ -484,6 +487,15 @@
 				18BB4050294076BB001983AD /* OCHWebViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		188BB3202963DD3E00E193A0 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				188BB3212963DD5F00E193A0 /* OCHFeatureViewController.h */,
+				188BB3222963DD5F00E193A0 /* OCHFeatureViewController.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		188CA45F28F1125E00EF106E /* UIKit */ = {
@@ -706,8 +718,9 @@
 				1876AD2F28E450A200DA0387 /* Base */,
 				1876AD4128E472A200DA0387 /* Category */,
 				183C5A052935961300D27DF8 /* Controller */,
-				181D3F0B295AD61F00FC45A3 /* FrameWork */,
+				181D3F0B295AD61F00FC45A3 /* Framework */,
 				18457C28292DF6DC00C34991 /* Helper */,
+				181D3F13295AD9EE00FC45A3 /* Home */,
 				18E4175228E44E740035BDA7 /* Info.plist */,
 				18E4174F28E44E740035BDA7 /* LaunchScreen.storyboard */,
 				18E4175328E44E740035BDA7 /* main.m */,
@@ -1070,6 +1083,7 @@
 				182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */,
 				1811B83828F423DD0074418B /* OCHScrollViewController.m in Sources */,
 				1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */,
+				188BB3232963DD5F00E193A0 /* OCHFeatureViewController.m in Sources */,
 				1854A2A629570014001CC50A /* FrameworkAppServicesController.m in Sources */,
 				18A2026F2938C01E00C5B7EC /* UISearchControllerDemoController.m in Sources */,
 				181D3F0F295AD67F00FC45A3 /* FrameworkViewController.m in Sources */,

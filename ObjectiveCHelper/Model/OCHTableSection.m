@@ -38,3 +38,61 @@ typedef id Value;
 }
 
 @end
+
+typedef id Element;
+
+@implementation OCHStringArraySection
+
+- (instancetype)initWithLabel:(NSString *)title items:(NSArray<Element> *)items {
+    self = [super init];
+    if (self) {
+        _title = title;
+        _items = items;
+    }
+    return self;
+}
+
+- (instancetype)init {
+    self = [self initWithLabel:@"" items:@[]];
+    if (self) {
+        
+    }
+    return self;
+}
+
++ (instancetype)sectionWith:(NSString *)title items:(NSArray<Element> *)items {
+    OCHStringArraySection *section = [[OCHStringArraySection alloc] init];
+    section.title = title;
+    section.items = items;
+    return section;
+}
+
+@end
+
+@implementation OCHStringMutableArraySection
+
+- (instancetype)initWithLabel:(NSString *)title items:(NSMutableArray<Element> *)items {
+    self = [super init];
+    if (self) {
+        _title = title;
+        _items = items;
+    }
+    return self;
+}
+
+- (instancetype)init {
+    self = [self initWithLabel:@"" items:[NSMutableArray array]];
+    if (self) {
+        
+    }
+    return self;
+}
+
++ (instancetype)sectionWith:(NSString *)title items:(NSMutableArray<Element> *)items {
+    OCHStringMutableArraySection *section = [[OCHStringMutableArraySection alloc] init];
+    section.title = title;
+    section.items = items;
+    return section;
+}
+
+@end
