@@ -82,6 +82,7 @@
 		18EFE4D629485C4D00E80B20 /* OCHLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EFE4D529485C4D00E80B20 /* OCHLinearGradientView.m */; };
 		18EFE4D9294862AC00E80B20 /* OCHLinearGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EFE4D8294862AC00E80B20 /* OCHLinearGradientViewController.m */; };
 		18FCF2FC29164595004A0CD7 /* OMKMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF2FB29164595004A0CD7 /* OMKMapViewController.m */; };
+		302CB80129645D5B000F8CC4 /* QRCodeScanerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302CB80029645D5B000F8CC4 /* QRCodeScanerViewController.m */; };
 		3093019FEA4D19C1BB7DF45E /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9299767C1AA87BE14B447F63 /* Pods_ObjectiveCHelper_ObjectiveCHelperUITests.framework */; };
 		44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA228E8301D00C395D9 /* OCHContentViewController.m */; };
 		44890BA728E831C300C395D9 /* UIKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44890BA628E831C300C395D9 /* UIKitDemoViewController.m */; };
@@ -255,6 +256,8 @@
 		18EFE4D8294862AC00E80B20 /* OCHLinearGradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHLinearGradientViewController.m; sourceTree = "<group>"; };
 		18FCF2FA29164595004A0CD7 /* OMKMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMKMapViewController.h; sourceTree = "<group>"; };
 		18FCF2FB29164595004A0CD7 /* OMKMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMKMapViewController.m; sourceTree = "<group>"; };
+		302CB7FF29645D5B000F8CC4 /* QRCodeScanerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeScanerViewController.h; sourceTree = "<group>"; };
+		302CB80029645D5B000F8CC4 /* QRCodeScanerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanerViewController.m; sourceTree = "<group>"; };
 		365375EE3E48A83C249D7C5C /* Pods-ObjectiveCHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveCHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-ObjectiveCHelperTests/Pods-ObjectiveCHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		44890BA128E8301D00C395D9 /* OCHContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHContentViewController.h; sourceTree = "<group>"; };
 		44890BA228E8301D00C395D9 /* OCHContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHContentViewController.m; sourceTree = "<group>"; };
@@ -492,8 +495,6 @@
 		188BB3202963DD3E00E193A0 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				188BB3212963DD5F00E193A0 /* OCHFeatureViewController.h */,
-				188BB3222963DD5F00E193A0 /* OCHFeatureViewController.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -718,6 +719,7 @@
 				1876AD2F28E450A200DA0387 /* Base */,
 				1876AD4128E472A200DA0387 /* Category */,
 				183C5A052935961300D27DF8 /* Controller */,
+				302CB7FD29645D0E000F8CC4 /* Feature */,
 				181D3F0B295AD61F00FC45A3 /* Framework */,
 				18457C28292DF6DC00C34991 /* Helper */,
 				181D3F13295AD9EE00FC45A3 /* Home */,
@@ -754,6 +756,25 @@
 				18E4176928E44E740035BDA7 /* ObjectiveCHelperUITestsLaunchTests.m */,
 			);
 			path = ObjectiveCHelperUITests;
+			sourceTree = "<group>";
+		};
+		302CB7FD29645D0E000F8CC4 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				302CB7FE29645D36000F8CC4 /* QRCodeScaner */,
+				188BB3212963DD5F00E193A0 /* OCHFeatureViewController.h */,
+				188BB3222963DD5F00E193A0 /* OCHFeatureViewController.m */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		302CB7FE29645D36000F8CC4 /* QRCodeScaner */ = {
+			isa = PBXGroup;
+			children = (
+				302CB7FF29645D5B000F8CC4 /* QRCodeScanerViewController.h */,
+				302CB80029645D5B000F8CC4 /* QRCodeScanerViewController.m */,
+			);
+			path = QRCodeScaner;
 			sourceTree = "<group>";
 		};
 		6FFA460ECB5EF60DB9783B94 /* Pods */ = {
@@ -1063,6 +1084,7 @@
 				183C5A0F2935D5BE00D27DF8 /* UIPageControlDemoViewController.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+OCH.m in Sources */,
 				188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */,
+				302CB80129645D5B000F8CC4 /* QRCodeScanerViewController.m in Sources */,
 				18380C212956CFEF00106BA8 /* QRCodeViewController.m in Sources */,
 				1862D00C293851C400037DB2 /* ReactiveObjCDemoViewModel.m in Sources */,
 				183C5A082935963400D27DF8 /* OCHPageViewController.m in Sources */,
@@ -1262,9 +1284,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectiveCHelper/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ObjectiveCHelper;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Privacy - Camera Usage Description";
 				INFOPLIST_KEY_NSContactsUsageDescription = "通讯录权限";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location Always Usage Description";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location When In Use Usage Description";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Privacy - Photo Library Usage Description";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1300,9 +1324,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ObjectiveCHelper/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ObjectiveCHelper;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Privacy - Camera Usage Description";
 				INFOPLIST_KEY_NSContactsUsageDescription = "通讯录权限";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location Always Usage Description";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location When In Use Usage Description";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Privacy - Photo Library Usage Description";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

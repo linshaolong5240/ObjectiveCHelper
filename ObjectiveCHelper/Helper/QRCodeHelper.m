@@ -27,6 +27,17 @@ NSString *NSStringFormQRCodeInputCorrectionLevel(QRCodeInputCorrectionLevel leve
     }
 }
 
+NSString *CIDetectorAccuracyFromQRCodeDetectorAccuracy(QRCodeDetectorAccuracy accuracy) {
+    switch (accuracy) {
+        case QRCodeDetectorAccuracyLow:
+            return CIDetectorAccuracyLow;
+            break;
+        case QRCodeDetectorAccuracyHigh:
+            return CIDetectorAccuracyHigh;
+            break;
+    }
+}
+
 @implementation QRCodeHelper
 
 + (nullable CGImageRef)generateQRCodeWithInputMessage:(NSData *)data inputCorrection:(QRCodeInputCorrectionLevel)level scale:(CGFloat)scale {
@@ -72,6 +83,18 @@ NSString *NSStringFormQRCodeInputCorrectionLevel(QRCodeInputCorrectionLevel leve
 
 + (nullable CGImageRef)generateQRCodeWithString:(NSString *)string {
     return [[self class] generateQRCodeWithString:string inputCorrection:(QRCodeInputCorrectionLevelM) scale:1.0];
+}
+
+
++ (nullable NSString *)detectQRCodeWithCGImage:(CGImageRef)cgImage accuracy:(QRCodeDetectorAccuracy)accuracy {
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeQRCode context:[CIContext contextWithOptions:nil] options:@{CIDetectorAccuracy: CIDetectorAccuracyFromQRCodeDetectorAccuracy(accuracy)}];
+    if (!detector) {
+        return nil;
+    }
+    
+    NSArray<CIQRCodeFeature *> *features = (NSArray<CIQRCodeFeature *> *)[detector featuresInImage:[CIImage imageWithCGImage:cgImage] options:nil];
+    
+    return features.firstObject.messageString;
 }
 
 @end

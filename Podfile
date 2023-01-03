@@ -13,6 +13,7 @@ target 'ObjectiveCHelper' do
   pod 'JXCategoryView'
   pod 'ReactiveObjC', '~> 3.1.1'
   pod 'SDWebImage', '~> 5.0'
+  pod 'SVProgressHUD'
   
   pod 'IQKeyboardManager', '~> 6.5.10'
   pod 'OpenCV', '~> 3.4.2'

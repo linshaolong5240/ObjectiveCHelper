@@ -28,6 +28,11 @@ typedef NS_ENUM(NSInteger, QRCodeInputCorrectionLevel) {
     QRCodeInputCorrectionLevelH,
 };
 
+typedef NS_ENUM(NSInteger, QRCodeDetectorAccuracy) {
+    QRCodeDetectorAccuracyLow,
+    QRCodeDetectorAccuracyHigh,
+};
+
 @interface QRCodeHelper : NSObject
 
 
@@ -78,6 +83,8 @@ typedef NS_ENUM(NSInteger, QRCodeInputCorrectionLevel) {
 ///   - scale: Image transform scale.
 /// - Returns: CGImageRef. A Quartz 2D image. You are responsible for releasing the returned image when you no longer need it.
 + (nullable CGImageRef)generateQRCodeWithString:(NSString *)string;
+
++ (nullable NSString *)detectQRCodeWithCGImage:(CGImageRef)cgImage accuracy:(QRCodeDetectorAccuracy)accuracy;
 
 @end
 

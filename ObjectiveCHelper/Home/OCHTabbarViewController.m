@@ -7,6 +7,7 @@
 
 #import "OCHTabbarViewController.h"
 #import "OCHPreviewController.h"
+#import "OCHFeatureViewController.h"
 #import "FrameworkViewController.h"
 #import "OCHThirdPartyViewController.h"
 
@@ -25,9 +26,10 @@
 
 - (void)configureTabBar {
     UIViewController *vc0 = [self makeTabBarViewController:[OCHPreviewController new] title:@"Preview" image:nil selectedImage:nil];
-    UIViewController *vc1 = [self makeTabBarViewController:[FrameworkViewController new] title:@"Framework" image:nil selectedImage:nil];
-    UIViewController *vc2 = [self makeTabBarViewController:[OCHThirdPartyViewController new] title:@"OCHThirdPartyViewController" image:nil selectedImage:nil];
-    self.viewControllers = @[vc0, vc1, vc2];
+    UIViewController *vc1 = [self makeTabBarViewController:[OCHFeatureViewController new] title:@"Feature" image:nil selectedImage:nil];
+    UIViewController *vc2 = [self makeTabBarViewController:[FrameworkViewController new] title:@"Framework" image:nil selectedImage:nil];
+    UIViewController *vc3 = [self makeTabBarViewController:[OCHThirdPartyViewController new] title:@"OCHThirdPartyViewController" image:nil selectedImage:nil];
+    self.viewControllers = @[vc0, vc1, vc2, vc3];
 }
 
 - (UIViewController *)makeTabBarViewController:(UIViewController *)viewController title:(nullable NSString *)title image:(nullable UIImage *)image selectedImage:(nullable UIImage *)selectedImage {

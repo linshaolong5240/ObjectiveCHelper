@@ -7,9 +7,12 @@
 //
 
 #import "OCHFeatureViewController.h"
+#import "QRCodeViewController.h"
+#import "QRCodeScanerViewController.h"
 
 typedef NS_ENUM(NSInteger, OCHFeatureItem) {
     OCHToolQRCode,
+    OCHToolQRCodeScaner,
     OCHToolNumber
 };
 
@@ -19,7 +22,7 @@ NSString *NSStringFromFeatureItem(OCHFeatureItem item) {
             return @"QRCode";
             break;
         case OCHToolQRCodeScaner:
-            return @"QRCode";
+            return @"QRCode Scaner";
             break;
         case OCHToolNumber:
             return @"OCHToolNumber";
@@ -60,6 +63,7 @@ NSString *NSStringFromFeatureItem(OCHFeatureItem item) {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
     cell.textLabel.text = NSStringFromFeatureItem(indexPath.row);
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -71,13 +75,20 @@ NSString *NSStringFromFeatureItem(OCHFeatureItem item) {
     switch (item) {
         case OCHToolQRCode:
         {
-            
+            vc = [QRCodeViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case OCHToolQRCodeScaner:
+        {
+            vc = [QRCodeScanerViewController new];
+            vc.modalPresentationStyle = UIModalPresentationOverFullScreen;
+            [self presentViewController:vc animated:YES completion:nil];
         }
             break;
         case OCHToolNumber:
             break;;
     }
-    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
