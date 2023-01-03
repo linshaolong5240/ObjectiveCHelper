@@ -18,6 +18,8 @@
 
 @property(nonatomic, copy) NSArray<CNContact *> *items;
 
+@property(nonatomic, copy) NSArray<NSArray<CNContact *> *> *sections;
+
 @property(nonatomic, strong) UITableView *tableView;
 
 
@@ -116,32 +118,59 @@
 }
 
 - (void)fecthContactsDone:(NSArray<CNContact *> *)contacts {
+    UILocalizedIndexedCollation *collation = [UILocalizedIndexedCollation currentCollation];
+    //标题数组
+    NSInteger sectionTitlesCount = [[collation sectionTitles] count];
+    //设置sections数组初始化：元素包含userObjs数据的空数据
+    NSMutableArray *newSectionsArray = [[NSMutableArray alloc] initWithCapacity:sectionTitlesCount];
+    for (NSInteger index = 0; index < sectionTitlesCount; index++) {
+        NSMutableArray *array = [[NSMutableArray alloc] init];
+        [newSectionsArray addObject:array];
+    }
+    
+//    2、分类 - 将用户数据进行分类，存储到对应的sesion数组中
+    for (CNContact *p in contacts) {
+        NSInteger sectionNumber = [collation sectionForObject:p collationStringSelector:@selector(familyName)];
+        NSMutableArray *sectionNames = newSectionsArray[sectionNumber];
+        [sectionNames addObject:p];
+   }
+    
+//    3、排序 - 对每个已经分类的数组中的数据进行排序
+    for (NSInteger index = 0; index < sectionTitlesCount; index++) {
+         NSMutableArray *personArrayForSection = newSectionsArray[index];
+         NSArray *sortedPersonArrayForSection = [collation sortedArrayFromArray:personArrayForSection collationStringSelector:@selector(givenName)];
+        newSectionsArray[index] = sortedPersonArrayForSection;
+    }
+    self.sections = newSectionsArray;
     self.items = contacts;
     [self.tableView reloadData];
+    
 }
 
 // MARK: - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.sections.count;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.sections[section].count;
     return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
     CNContact *item = self.items[indexPath.row];
+    item = self.sections[indexPath.section][indexPath.row];
     NSMutableString *name = [NSMutableString string];
     if (item.givenName) {
-        [name appendString:item.givenName];
+        [name appendString:item.familyName];
     }
-    [name appendString:@" "];
     if (item.middleName) {
         [name appendString:item.middleName];
     }
-    [name appendString:@" "];
     if (item.familyName) {
-        [name appendString:item.familyName];
+        [name appendString:item.givenName];
     }
-    [name appendString:@" "];
     if (item.phoneNumbers.firstObject.value.stringValue) {
         [name appendString:item.phoneNumbers.firstObject.value.stringValue];
     }
