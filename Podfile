@@ -15,6 +15,12 @@ target 'ObjectiveCHelper' do
   pod 'SDWebImage', '~> 5.0'
   pod 'SVProgressHUD'
   
+  #image
+  pod 'HXPhotoPicker'
+  pod 'YBImageBrowser'
+  #  //视频功能需添加
+  pod 'YBImageBrowser/Video'
+  
   pod 'IQKeyboardManager', '~> 6.5.10'
   pod 'OpenCV', '~> 3.4.2'
   
