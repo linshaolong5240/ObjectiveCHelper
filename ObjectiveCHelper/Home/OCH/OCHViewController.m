@@ -22,9 +22,17 @@ NSString *NSStringFromOCHSection(OCHSection section) {
     }
 }
 
-typedef NS_ENUM(NSInteger, OCHUI) {
-    OCHUITableViewCell,
+typedef NS_ENUM(NSInteger, OUIItem) {
+    OUIItemTableViewCell,
 };
+
+NSString *NSStringFromOUIItem(OUIItem item) {
+    switch (item) {
+        case OUIItemTableViewCell:
+            return @"OUIItemTableViewCell";
+            break;
+    }
+}
 
 typedef NS_ENUM(NSInteger, OCHTableViewCell) {
     OCHTableViewCellText,
@@ -44,7 +52,7 @@ typedef NS_ENUM(NSInteger, OCHTableViewCell) {
     self.title = @"OCH";
     self.sections = @[
         [OCHIndexArraySection<NSNumber *> sectionWithIndex:OCHSectionOUIKit
-                                                      items:@[@(OCHUITableViewCell)]],
+                                                      items:@[@(OUIItemTableViewCell)]],
     ];
     [self configureView];
 }
