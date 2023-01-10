@@ -88,9 +88,9 @@
     }
 }
 
-- (void)fillWithData:(OUITableViewCellData *)data {
-    _data = data;
-}
+//- (void)fillWithData:(OUITableViewCellData *)data {
+//    _data = data;
+//}
 
 - (void)setCornerTypeForIndex:(NSInteger)index inNumber:(NSInteger)number {
     [self setCornerType:OUICornerTypeForIndexInNumber(index, number)];

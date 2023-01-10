@@ -3,14 +3,16 @@
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2022/9/28.
+//  Copyright © 2023 com.sauronpi. All rights reserved.
 //
 
 #import "OCHTabbarViewController.h"
 #import "OCHPreviewController.h"
-#import "OCHViewController.h"
+#import "OUIKitViewController.h"
 #import "OCHFeatureViewController.h"
 #import "FrameworkViewController.h"
 #import "OCHThirdPartyViewController.h"
+#import "OUITableViewCellViewController.h"
 
 @interface OCHTabbarViewController ()
 
@@ -27,7 +29,7 @@
 
 - (void)configureTabBar {
     UIViewController *vc0 = [self makeTabBarViewController:[OCHPreviewController new] title:@"Preview" image:nil selectedImage:nil];
-    UIViewController *vc1 = [self makeTabBarViewController:[OCHViewController new] title:@"OCH" image:nil selectedImage:nil];
+    UIViewController *vc1 = [self makeTabBarViewController:[OUITableViewCellViewController new] title:@"OUIKit" image:nil selectedImage:nil];
     UIViewController *vc2 = [self makeTabBarViewController:[OCHFeatureViewController new] title:@"Feature" image:nil selectedImage:nil];
     UIViewController *vc3 = [self makeTabBarViewController:[FrameworkViewController new] title:@"Framework" image:nil selectedImage:nil];
     UIViewController *vc4 = [self makeTabBarViewController:[OCHThirdPartyViewController new] title:@"OCHThirdPartyViewController" image:nil selectedImage:nil];

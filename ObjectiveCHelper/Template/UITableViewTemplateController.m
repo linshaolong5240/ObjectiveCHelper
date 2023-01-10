@@ -10,6 +10,8 @@
 
 @interface UITableViewTemplateController () <UITableViewDataSource, UITableViewDelegate>
 
+@property(nonatomic, strong) UITableView *tableView;
+
 @end
 
 @implementation UITableViewTemplateController
@@ -17,10 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configureView];
 }
 
 - (void)configureView {
-    UITableView *tableView = [UITableView new];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.backgroundColor = UIColor.clearColor;
     if (@available(iOS 15.0, *)) {
         tableView.sectionHeaderTopPadding = 0;
@@ -28,6 +31,8 @@
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     tableView.dataSource = self;
     tableView.delegate = self;
+    [self.view addSubview:tableView];
+    self.tableView = tableView;
 }
 
 // MARK: - UITableViewDataSource

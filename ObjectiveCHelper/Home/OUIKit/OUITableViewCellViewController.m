@@ -7,6 +7,7 @@
 //
 
 #import "OUITableViewCellViewController.h"
+#import "OUITextSwitchTableViewCell.h"
 
 typedef NS_ENUM(NSInteger, OUITableViewCellType) {
     OUITableViewCellTypeTextSwitch,
@@ -16,7 +17,7 @@ typedef NS_ENUM(NSInteger, OUITableViewCellType) {
 NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
     switch (type) {
         case OUITableViewCellTypeTextSwitch:
-            return @"OUITableViewCellTypeTextSwitch";
+            return @"OUITextSwitchTableViewCell";
             break;
         case OUITableViewCellTypeNumber:
             return @"OUITableViewCellTypeNumber";
@@ -33,18 +34,17 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"OUITableViewCell";
     [self configureView];
 }
 
 - (void)configureView {
-    UITableView *tableView = [UITableView new];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.backgroundColor = UIColor.clearColor;
-    if (@available(iOS 15.0, *)) {
-        tableView.sectionHeaderTopPadding = 0;
-    }
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    [tableView registerClass:[OUITextSwitchTableViewCell class] forCellReuseIdentifier:NSStringFromClass([OUITextSwitchTableViewCell class])];
     tableView.dataSource = self;
     tableView.delegate = self;
+    [self.view addSubview:tableView];
 }
 
 // MARK: - UITableViewDataSource
@@ -54,8 +54,20 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
-    return cell;
+    OUITableViewCellType type = indexPath.row;
+    switch (type) {
+        case OUITableViewCellTypeTextSwitch:
+        {
+            OUITextSwitchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([OUITextSwitchTableViewCell class]) forIndexPath:indexPath];
+            cell.titleLabel.text = NSStringFromOUITableViewCellType(indexPath.row);
+            return cell;
+        }
+            break;
+        case OUITableViewCellTypeNumber:
+            return [UITableViewCell new];
+            break;
+    }
+    return [UITableViewCell new];
 }
 
 // MARK: - UITableViewDelegate
@@ -63,6 +75,5 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
-
 
 @end

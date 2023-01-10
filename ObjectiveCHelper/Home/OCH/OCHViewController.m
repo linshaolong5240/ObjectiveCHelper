@@ -77,7 +77,8 @@ typedef NS_ENUM(NSInteger, OCHTableViewCell) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = NSStringFromOUIItem(self.sections[indexPath.section].items[indexPath.row].integerValue);
     return cell;
 }
 
@@ -88,7 +89,14 @@ typedef NS_ENUM(NSInteger, OCHTableViewCell) {
 // MARK: - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    OCHSection section = indexPath.section;
+    switch (section) {
+        case OCHSectionOUIKit:
+        {
+            
+        }
+            break;
+    }
 }
 
 @end

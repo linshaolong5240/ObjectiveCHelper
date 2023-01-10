@@ -28,6 +28,8 @@
 		1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */; };
 		1854A2A629570014001CC50A /* FrameworkAppServicesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2A529570014001CC50A /* FrameworkAppServicesController.m */; };
 		1854A2AB2957029A001CC50A /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2AA2957029A001CC50A /* ContactsViewController.m */; };
+		1857D201296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D200296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m */; };
+		1857D204296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D203296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m */; };
 		185D9C352946C47F005B29CB /* UIModalPresentationStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */; };
 		185D9C382946C489005B29CB /* UIModalPresentationStyleDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C372946C489005B29CB /* UIModalPresentationStyleDemoViewController.m */; };
 		186027712908CDFA001A3D2B /* UITableView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+OCH.m */; };
@@ -160,6 +162,10 @@
 		1854A2A529570014001CC50A /* FrameworkAppServicesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkAppServicesController.m; sourceTree = "<group>"; };
 		1854A2A92957029A001CC50A /* ContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
 		1854A2AA2957029A001CC50A /* ContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		1857D1FF296D0A1800C2BA75 /* OUITextSwitchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUITextSwitchTableViewCell.h; sourceTree = "<group>"; };
+		1857D200296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUITextSwitchTableViewCell.m; sourceTree = "<group>"; };
+		1857D202296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUITextSwitchTableViewCellData.h; sourceTree = "<group>"; };
+		1857D203296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUITextSwitchTableViewCellData.m; sourceTree = "<group>"; };
 		185D9C332946C47F005B29CB /* UIModalPresentationStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleViewController.h; sourceTree = "<group>"; };
 		185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIModalPresentationStyleViewController.m; sourceTree = "<group>"; };
 		185D9C362946C489005B29CB /* UIModalPresentationStyleDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleDemoViewController.h; sourceTree = "<group>"; };
@@ -363,6 +369,7 @@
 		181D3F13295AD9EE00FC45A3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1857D1FE296D06BE00C2BA75 /* OUIKit */,
 				18B196F92967AFBB0027BBEB /* OCH */,
 				1876AD3028E450BE00DA0387 /* OCHTabbarViewController.h */,
 				1876AD3128E450BE00DA0387 /* OCHTabbarViewController.m */,
@@ -442,6 +449,17 @@
 			path = Contacts;
 			sourceTree = "<group>";
 		};
+		1857D1FE296D06BE00C2BA75 /* OUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				18745DE9296C0F6B00F3E1A1 /* OUIKitViewController.h */,
+				18745DEA296C0F6B00F3E1A1 /* OUIKitViewController.m */,
+				18745DD2296BE56300F3E1A1 /* OUITableViewCellViewController.h */,
+				18745DD3296BE56300F3E1A1 /* OUITableViewCellViewController.m */,
+			);
+			path = OUIKit;
+			sourceTree = "<group>";
+		};
 		185D9C322946C452005B29CB /* UIModalPresentationStyle */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +478,10 @@
 				18745DDA296BEC4F00F3E1A1 /* OUITableViewCell.m */,
 				18745DDC296BEC6100F3E1A1 /* OUITableViewCellData.h */,
 				18745DDD296BEC6100F3E1A1 /* OUITableViewCellData.m */,
+				1857D1FF296D0A1800C2BA75 /* OUITextSwitchTableViewCell.h */,
+				1857D200296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m */,
+				1857D202296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.h */,
+				1857D203296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -700,10 +722,6 @@
 			children = (
 				18B196FA2967AFDC0027BBEB /* OCHViewController.h */,
 				18B196FB2967AFDC0027BBEB /* OCHViewController.m */,
-				18745DE9296C0F6B00F3E1A1 /* OUIKitViewController.h */,
-				18745DEA296C0F6B00F3E1A1 /* OUIKitViewController.m */,
-				18745DD2296BE56300F3E1A1 /* OUITableViewCellViewController.h */,
-				18745DD3296BE56300F3E1A1 /* OUITableViewCellViewController.m */,
 			);
 			path = OCH;
 			sourceTree = "<group>";
@@ -1135,6 +1153,7 @@
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
 				1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */,
 				18CF77EC291B807D0068CCC7 /* MJRefreshDemoViewController.m in Sources */,
+				1857D201296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m in Sources */,
 				18EFE4D9294862AC00E80B20 /* OCHLinearGradientViewController.m in Sources */,
 				18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */,
 				1811B83528F423100074418B /* OCHBaseViewController.m in Sources */,
@@ -1157,6 +1176,7 @@
 				1828250F28FFC50400D2E4CF /* UIColor+OCH.m in Sources */,
 				18745DEE296C0FD100F3E1A1 /* EnumTemplate.m in Sources */,
 				18705AB4292B5E8C00AA1116 /* UIButton+OCH.m in Sources */,
+				1857D204296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
 				182824FD28FF8D6000D2E4CF /* UITableViewDemoCell.m in Sources */,
 				188CA48128F1500E00EF106E /* JXCategoryViewDemoViewController.m in Sources */,

@@ -28,9 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, assign) OUICornerType cornerType;
 
-@property(nonatomic, strong) OUITableViewCellData *data;
-
-- (void)fillWithData:(OUITableViewCellData *)data;
+//@property(nonatomic, strong) OUITableViewCellData *data;
+//
+//- (void)fillWithData:(OUITableViewCellData *)data;
 
 - (void)setCornerTypeForIndex:(NSInteger)index inNumber:(NSInteger)number;
 
