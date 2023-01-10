@@ -12,7 +12,6 @@
 #import "OCHFeatureViewController.h"
 #import "FrameworkViewController.h"
 #import "OCHThirdPartyViewController.h"
-#import "OUITableViewCellViewController.h"
 
 @interface OCHTabbarViewController ()
 
@@ -29,7 +28,7 @@
 
 - (void)configureTabBar {
     UIViewController *vc0 = [self makeTabBarViewController:[OCHPreviewController new] title:@"Preview" image:nil selectedImage:nil];
-    UIViewController *vc1 = [self makeTabBarViewController:[OUITableViewCellViewController new] title:@"OUIKit" image:nil selectedImage:nil];
+    UIViewController *vc1 = [self makeTabBarViewController:[OUIKitViewController new] title:@"OUIKit" image:nil selectedImage:nil];
     UIViewController *vc2 = [self makeTabBarViewController:[OCHFeatureViewController new] title:@"Feature" image:nil selectedImage:nil];
     UIViewController *vc3 = [self makeTabBarViewController:[FrameworkViewController new] title:@"Framework" image:nil selectedImage:nil];
     UIViewController *vc4 = [self makeTabBarViewController:[OCHThirdPartyViewController new] title:@"OCHThirdPartyViewController" image:nil selectedImage:nil];

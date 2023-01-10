@@ -10,51 +10,32 @@
 #import "OCHStringArraySection.h"
 
 #import "OUITableViewCellViewController.h"
+#import "OUIAlertController.h"
 
-typedef NS_ENUM(NSInteger, OUISection) {
-    OUISectionTableViewCell,
-    OUISectionNumber,
+typedef NS_ENUM(NSInteger, OUIKitItem) {
+    OUIKitItemTableViewCell,
+    OUIKitItemAlertController,
+    OUIKitItemNumber,
 };
 
-NSArray<NSNumber *> *OUISectionAllCases(void) {
+NSArray<NSNumber *> *OUIKitItemAllCases(void) {
     NSMutableArray *array = [NSMutableArray array];
-    for(NSInteger i = 0; i < OUISectionNumber; i++) {
+    for(NSInteger i = 0; i < OUIKitItemNumber; i++) {
         [array addObject:@(i)];
     }
     return array;
 }
 
-NSString *NSStringFromOUISection(OUISection section) {
-    switch (section) {
-        case OUISectionTableViewCell:
-            return @"OUIKitSectionTableViewCell";
-            break;
-        case OUISectionNumber:
-            return @"OUIKitSectionNumber";
-            break;
-    }
-}
-
-typedef NS_ENUM(NSInteger, OUITableViewCellItem) {
-    OUITableViewCellItemTextSwitch,
-    OUITableViewCellItemlNumber,
-};
-
-NSArray<NSNumber *> *OUITableViewCellAllCases(void) {
-    NSMutableArray *array = [NSMutableArray array];
-    for(NSInteger i = 0; i < OUITableViewCellItemlNumber; i++) {
-        [array addObject:@(i)];
-    }
-    return array;
-}
-
-NSString *NSStringFromOUITableViewCellItem(OUITableViewCellItem item) {
+NSString *NSStringFromOUISection(OUIKitItem item) {
     switch (item) {
-        case OUITableViewCellItemTextSwitch:
-            return @"OUITableViewCellItemCellText";
+        case OUIKitItemTableViewCell:
+            return @"OUITableViewCell";
             break;
-        case OUITableViewCellItemlNumber:
-            return @"OUITableViewCellItemlNumber";
+        case OUIKitItemAlertController:
+            return @"OUIAlertController";
+            break;
+        case OUIKitItemNumber:
+            return @"OUIKitItemNumber";
             break;
     }
 }
@@ -70,19 +51,7 @@ NSString *NSStringFromOUITableViewCellItem(OUITableViewCellItem item) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.sections = [[OUISectionAllCases().rac_sequence map:^OCHStringArraySection<NSNumber *> * _Nullable(NSNumber * _Nullable value) {
-        OUISection section = value.integerValue;
-        NSArray<NSNumber *> *items = @[];
-        switch (section) {
-            case OUISectionTableViewCell:
-                items = OUITableViewCellAllCases();
-                break;
-            case OUISectionNumber:
-                break;;
-        }
-        return [OCHStringArraySection<NSNumber *> sectionWithTitle:NSStringFromOUISection(value.integerValue) items:items];
-    }] array];
-    
+    self.sections = @[[OCHStringArraySection<NSNumber *> sectionWithTitle:@"OUIKit" items:OUIKitItemAllCases()]];
     [self configureView];
 }
 
@@ -110,29 +79,44 @@ NSString *NSStringFromOUITableViewCellItem(OUITableViewCellItem item) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
-    OUISection section = indexPath.section;
-    switch (section) {
-        case OUISectionTableViewCell:
-        {
-            OUITableViewCellItem item = indexPath.row;
-            switch (item) {
-                case OUITableViewCellItemTextSwitch:
-                    break;
-                case OUITableViewCellItemlNumber:
-                    break;
-            }
-        }
-            break;
-        case OUISectionNumber:
-            break;
-    }
+    OUIKitItem item = indexPath.row;
+    cell.textLabel.text = NSStringFromOUISection(item);
     return cell;
 }
 
 // MARK: - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    OUIKitItem item = indexPath.row;
+    switch (item) {
+        case OUIKitItemTableViewCell:
+        {
+            OUITableViewCellViewController *vc = [OUITableViewCellViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case OUIKitItemAlertController:
+        {
+            OUIAlertAction *a1 = [OUIAlertAction actionWithTitle:@"Cancel" style:(UIAlertActionStyleCancel) handler:^(OUIAlertAction * _Nonnull action) {
+                
+            }];
+            OUIAlertAction *a2 = [OUIAlertAction actionWithTitle:@"OK" style:(UIAlertActionStyleDefault) handler:^(OUIAlertAction * _Nonnull action) {
+                
+            }];
+            OUIAlertAction *a3 = [OUIAlertAction actionWithTitle:@"Delete" style:(UIAlertActionStyleDestructive) handler:^(OUIAlertAction * _Nonnull action) {
+                
+            }];
+            OUIAlertController *vc = [OUIAlertController alertControllerWithTitle:@"Title" message:@"Message"];
+            [vc addAction:a1];
+            [vc addAction:a2];
+            [vc addAction:a3];
+
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+            break;
+        case OUIKitItemNumber:
+            break;
+    }
 }
 
 @end

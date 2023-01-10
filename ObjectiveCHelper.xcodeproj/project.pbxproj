@@ -30,6 +30,8 @@
 		1854A2AB2957029A001CC50A /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2AA2957029A001CC50A /* ContactsViewController.m */; };
 		1857D201296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D200296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m */; };
 		1857D204296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D203296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m */; };
+		1857D207296D198900C2BA75 /* OUIAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D206296D198900C2BA75 /* OUIAlertController.m */; };
+		1857D20D296D4A7900C2BA75 /* OUIAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D20C296D4A7900C2BA75 /* OUIAlertAction.m */; };
 		185D9C352946C47F005B29CB /* UIModalPresentationStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */; };
 		185D9C382946C489005B29CB /* UIModalPresentationStyleDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C372946C489005B29CB /* UIModalPresentationStyleDemoViewController.m */; };
 		186027712908CDFA001A3D2B /* UITableView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+OCH.m */; };
@@ -166,6 +168,10 @@
 		1857D200296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUITextSwitchTableViewCell.m; sourceTree = "<group>"; };
 		1857D202296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUITextSwitchTableViewCellData.h; sourceTree = "<group>"; };
 		1857D203296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUITextSwitchTableViewCellData.m; sourceTree = "<group>"; };
+		1857D205296D198900C2BA75 /* OUIAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUIAlertController.h; sourceTree = "<group>"; };
+		1857D206296D198900C2BA75 /* OUIAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUIAlertController.m; sourceTree = "<group>"; };
+		1857D20B296D4A7900C2BA75 /* OUIAlertAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUIAlertAction.h; sourceTree = "<group>"; };
+		1857D20C296D4A7900C2BA75 /* OUIAlertAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUIAlertAction.m; sourceTree = "<group>"; };
 		185D9C332946C47F005B29CB /* UIModalPresentationStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleViewController.h; sourceTree = "<group>"; };
 		185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIModalPresentationStyleViewController.m; sourceTree = "<group>"; };
 		185D9C362946C489005B29CB /* UIModalPresentationStyleDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleDemoViewController.h; sourceTree = "<group>"; };
@@ -680,15 +686,19 @@
 		189AF4482962DC1300CD3C2C /* OUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				1857D20B296D4A7900C2BA75 /* OUIAlertAction.h */,
+				1857D20C296D4A7900C2BA75 /* OUIAlertAction.m */,
+				1857D205296D198900C2BA75 /* OUIAlertController.h */,
+				1857D206296D198900C2BA75 /* OUIAlertController.m */,
+				18745DE2296BEE1200F3E1A1 /* OUIColor.h */,
+				18745DE3296BEE1200F3E1A1 /* OUIColor.m */,
+				18745DDF296BECAE00F3E1A1 /* OUICornerType.h */,
+				18745DE0296BECAE00F3E1A1 /* OUICornerType.m */,
+				189AF44C2962DCCF00CD3C2C /* OUIKIt.h */,
+				189AF44D2962DCCF00CD3C2C /* OUIKIt.m */,
 				18745DD8296BEC2A00F3E1A1 /* TableViewCell */,
 				189AF4492962DC8E00CD3C2C /* UIStackView+OUIKit.h */,
 				189AF44A2962DC8E00CD3C2C /* UIStackView+OUIKit.m */,
-				189AF44C2962DCCF00CD3C2C /* OUIKIt.h */,
-				189AF44D2962DCCF00CD3C2C /* OUIKIt.m */,
-				18745DDF296BECAE00F3E1A1 /* OUICornerType.h */,
-				18745DE0296BECAE00F3E1A1 /* OUICornerType.m */,
-				18745DE2296BEE1200F3E1A1 /* OUIColor.h */,
-				18745DE3296BEE1200F3E1A1 /* OUIColor.m */,
 			);
 			path = OUIKit;
 			sourceTree = "<group>";
@@ -1174,6 +1184,7 @@
 				185D9C382946C489005B29CB /* UIModalPresentationStyleDemoViewController.m in Sources */,
 				1898F4B5291A3E4400F13718 /* ReactiveObjCDemoViewController.m in Sources */,
 				1828250F28FFC50400D2E4CF /* UIColor+OCH.m in Sources */,
+				1857D20D296D4A7900C2BA75 /* OUIAlertAction.m in Sources */,
 				18745DEE296C0FD100F3E1A1 /* EnumTemplate.m in Sources */,
 				18705AB4292B5E8C00AA1116 /* UIButton+OCH.m in Sources */,
 				1857D204296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m in Sources */,
@@ -1181,6 +1192,7 @@
 				182824FD28FF8D6000D2E4CF /* UITableViewDemoCell.m in Sources */,
 				188CA48128F1500E00EF106E /* JXCategoryViewDemoViewController.m in Sources */,
 				18EFE4D629485C4D00E80B20 /* OCHLinearGradientView.m in Sources */,
+				1857D207296D198900C2BA75 /* OUIAlertController.m in Sources */,
 				1876AD5D28E6BEF500DA0387 /* OCHPreview.m in Sources */,
 				188CA49628F262D800EF106E /* JXCategoryListContentViewDemoView.m in Sources */,
 				189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */,
