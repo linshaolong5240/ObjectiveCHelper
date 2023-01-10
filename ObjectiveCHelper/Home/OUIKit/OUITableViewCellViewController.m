@@ -49,6 +49,15 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
 
 - (void)switcherValueOnChanged:(OUITextSwitchTableViewCell *)cell {
     NSLog(@"%s", __PRETTY_FUNCTION__);
+    if (cell.switcher.on) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            cell.data.on = NO;
+        });
+    } else {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            cell.data.on = YES;
+        });
+    }
 }
 
 // MARK: - UITableViewDataSource

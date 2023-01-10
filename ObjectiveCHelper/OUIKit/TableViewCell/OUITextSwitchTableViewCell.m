@@ -56,10 +56,19 @@
     }
 }
 
+- (void)setSwitcherOn:(BOOL)on {
+    self.switcher.on = on;
+}
+
 - (void)fillWithData:(OUITextSwitchTableViewCellData *)data {
     _data = data;
     self.titleLabel.text = data.title;
     self.switcher.on = data.on;
+    @weakify(self)
+    [[RACObserve(self.data, on) takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(NSNumber *value) {
+        @strongify(self)
+        [self setSwitcherOn:self.data.on];
+    }];
 }
 
 @end
