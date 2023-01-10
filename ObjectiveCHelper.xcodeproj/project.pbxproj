@@ -32,6 +32,7 @@
 		1857D204296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D203296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m */; };
 		1857D207296D198900C2BA75 /* OUIAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D206296D198900C2BA75 /* OUIAlertController.m */; };
 		1857D20D296D4A7900C2BA75 /* OUIAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D20C296D4A7900C2BA75 /* OUIAlertAction.m */; };
+		1857D211296D5A7500C2BA75 /* OUIAlertControllerExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D210296D5A7500C2BA75 /* OUIAlertControllerExample.m */; };
 		185D9C352946C47F005B29CB /* UIModalPresentationStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */; };
 		185D9C382946C489005B29CB /* UIModalPresentationStyleDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C372946C489005B29CB /* UIModalPresentationStyleDemoViewController.m */; };
 		186027712908CDFA001A3D2B /* UITableView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+OCH.m */; };
@@ -172,6 +173,8 @@
 		1857D206296D198900C2BA75 /* OUIAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUIAlertController.m; sourceTree = "<group>"; };
 		1857D20B296D4A7900C2BA75 /* OUIAlertAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUIAlertAction.h; sourceTree = "<group>"; };
 		1857D20C296D4A7900C2BA75 /* OUIAlertAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUIAlertAction.m; sourceTree = "<group>"; };
+		1857D20F296D5A7500C2BA75 /* OUIAlertControllerExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUIAlertControllerExample.h; sourceTree = "<group>"; };
+		1857D210296D5A7500C2BA75 /* OUIAlertControllerExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUIAlertControllerExample.m; sourceTree = "<group>"; };
 		185D9C332946C47F005B29CB /* UIModalPresentationStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleViewController.h; sourceTree = "<group>"; };
 		185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIModalPresentationStyleViewController.m; sourceTree = "<group>"; };
 		185D9C362946C489005B29CB /* UIModalPresentationStyleDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleDemoViewController.h; sourceTree = "<group>"; };
@@ -462,6 +465,8 @@
 				18745DEA296C0F6B00F3E1A1 /* OUIKitViewController.m */,
 				18745DD2296BE56300F3E1A1 /* OUITableViewCellViewController.h */,
 				18745DD3296BE56300F3E1A1 /* OUITableViewCellViewController.m */,
+				1857D20F296D5A7500C2BA75 /* OUIAlertControllerExample.h */,
+				1857D210296D5A7500C2BA75 /* OUIAlertControllerExample.m */,
 			);
 			path = OUIKit;
 			sourceTree = "<group>";
@@ -1198,6 +1203,7 @@
 				189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */,
 				18745DDE296BEC6100F3E1A1 /* OUITableViewCellData.m in Sources */,
 				18745DEB296C0F6B00F3E1A1 /* OUIKitViewController.m in Sources */,
+				1857D211296D5A7500C2BA75 /* OUIAlertControllerExample.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
 				18457C27292DF6C400C34991 /* OCHImage.m in Sources */,
 				18457C1B292DB91400C34991 /* UIImage+OCH.m in Sources */,

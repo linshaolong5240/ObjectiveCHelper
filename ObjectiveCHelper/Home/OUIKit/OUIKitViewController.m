@@ -10,7 +10,7 @@
 #import "OCHStringArraySection.h"
 
 #import "OUITableViewCellViewController.h"
-#import "OUIAlertController.h"
+#import "OUIAlertControllerExample.h"
 
 typedef NS_ENUM(NSInteger, OUIKitItem) {
     OUIKitItemTableViewCell,
@@ -79,6 +79,7 @@ NSString *NSStringFromOUISection(OUIKitItem item) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     OUIKitItem item = indexPath.row;
     cell.textLabel.text = NSStringFromOUISection(item);
     return cell;
@@ -97,21 +98,8 @@ NSString *NSStringFromOUISection(OUIKitItem item) {
             break;
         case OUIKitItemAlertController:
         {
-            OUIAlertAction *a1 = [OUIAlertAction actionWithTitle:@"Cancel" style:(UIAlertActionStyleCancel) handler:^(OUIAlertAction * _Nonnull action) {
-                
-            }];
-            OUIAlertAction *a2 = [OUIAlertAction actionWithTitle:@"OK" style:(UIAlertActionStyleDefault) handler:^(OUIAlertAction * _Nonnull action) {
-                
-            }];
-            OUIAlertAction *a3 = [OUIAlertAction actionWithTitle:@"Delete" style:(UIAlertActionStyleDestructive) handler:^(OUIAlertAction * _Nonnull action) {
-                
-            }];
-            OUIAlertController *vc = [OUIAlertController alertControllerWithTitle:@"Title" message:@"Message"];
-            [vc addAction:a1];
-            [vc addAction:a2];
-            [vc addAction:a3];
-
-            [self presentViewController:vc animated:YES completion:nil];
+            OUIAlertControllerExample *vc = [OUIAlertControllerExample new];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case OUIKitItemNumber:

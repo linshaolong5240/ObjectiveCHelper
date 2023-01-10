@@ -35,7 +35,16 @@
     if (self) {
         _actions = [NSMutableArray array];
         _titleLabel = [UILabel new];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.textColor = OUIColor.mainTextColor;
+        _titleLabel.font = [UIFont systemFontOfSize:16 weight:(UIFontWeightMedium)];
+
         _messageLabel = [UILabel new];
+        _messageLabel.textAlignment = NSTextAlignmentCenter;
+        _messageLabel.textColor = OUIColor.secondaryTextColor;
+        _messageLabel.font = [UIFont systemFontOfSize:14 weight:(UIFontWeightRegular)];
+        _messageLabel.numberOfLines = 0;
+
         _textFields = [NSMutableArray array];
     }
     return self;
@@ -51,15 +60,6 @@
 }
 
 - (void)configureView {
-    self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.titleLabel.textColor = OUIColor.mainTextColor;
-    self.titleLabel.font = [UIFont systemFontOfSize:16 weight:(UIFontWeightMedium)];
-    
-    self.messageLabel.textAlignment = NSTextAlignmentCenter;
-    self.messageLabel.textColor = OUIColor.secondaryTextColor;
-    self.messageLabel.font = [UIFont systemFontOfSize:14 weight:(UIFontWeightRegular)];
-    self.messageLabel.numberOfLines = 0;
-    
     UIView *actionView = [self makeActionView:self.actions];
     UIView *divider = [self makeDivider];
     [actionView addSubview:divider];
