@@ -12,6 +12,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OUITextSwitchTableViewCellData : OUITableViewCellData
 
+@property(nonatomic, copy) NSString *title;
+
+@property(nonatomic, getter=isOn) BOOL on;
+
+- (instancetype)initWithTitle:(NSString *)title on:(BOOL)on selector:(SEL)selector;
+
+- (instancetype)initWithTitle:(NSString *)title on:(BOOL)on;
+
++ (instancetype)dataWithTitle:(NSString *)title on:(BOOL)on selector:(SEL)selector;
+
++ (instancetype)dataWithTitle:(NSString *)title on:(BOOL)on;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,4 +10,12 @@
 
 @implementation OUITableViewCellData
 
+- (instancetype)initWithSelector:(SEL)selector {
+    self = [super init];
+    if (self) {
+        _selector = selector;
+    }
+    return self;
+}
+
 @end

@@ -41,6 +41,7 @@
 }
 
 - (void)setupView {
+    self.divider.hidden = YES;
     self.divider.backgroundColor = OUIColor.dividerColor;
     
     self.containerView.backgroundColor = OUIColor.panelColor;

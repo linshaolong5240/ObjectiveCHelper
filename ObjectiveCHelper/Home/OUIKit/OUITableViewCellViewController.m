@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, OUITableViewCellType) {
 NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
     switch (type) {
         case OUITableViewCellTypeTextSwitch:
-            return @"OUITextSwitchTableViewCell";
+            return @"Text Switch";
             break;
         case OUITableViewCellTypeNumber:
             return @"OUITableViewCellTypeNumber";
@@ -47,6 +47,10 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
     [self.view addSubview:tableView];
 }
 
+- (void)switcherValueOnChanged:(OUITextSwitchTableViewCell *)cell {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
 // MARK: - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -59,7 +63,8 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
         case OUITableViewCellTypeTextSwitch:
         {
             OUITextSwitchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([OUITextSwitchTableViewCell class]) forIndexPath:indexPath];
-            cell.titleLabel.text = NSStringFromOUITableViewCellType(indexPath.row);
+            cell.selectorDelegate = self;
+            [cell fillWithData:[OUITextSwitchTableViewCellData dataWithTitle:@"Text Switch" on:YES selector:@selector(switcherValueOnChanged:)]];
             return cell;
         }
             break;

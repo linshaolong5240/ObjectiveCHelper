@@ -8,6 +8,7 @@
 
 #import "OUITextSwitchTableViewCell.h"
 #import <Masonry/Masonry.h>
+#import "OUIColor.h"
 #import "UIStackView+OUIKit.h"
 
 @implementation OUITextSwitchTableViewCell
@@ -34,6 +35,10 @@
 }
 
 - (void)configureView {
+    self.switcher.transform = CGAffineTransformMakeScale(0.75, 0.75);
+    self.switcher.onTintColor = OUIColor.accentColor;
+    
+    [self.switcher addTarget:self action:@selector(switcherValueOnChanged:event:) forControlEvents:(UIControlEventValueChanged)];
     UIStackView *hstack = [UIStackView hstackWithArrangedView:@[self.titleLabel, self.switcher]];
     
     [self.containerView addSubview:hstack];
@@ -42,8 +47,19 @@
     }];
 }
 
+- (void)switcherValueOnChanged:(UISwitch *)sender event:(UIControlEvents)event {
+    if (self.data.selector && self.selectorDelegate && [self.selectorDelegate respondsToSelector:self.data.selector]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [self.selectorDelegate performSelector:self.data.selector withObject:self];
+#pragma clang diagnostic pop
+    }
+}
+
 - (void)fillWithData:(OUITextSwitchTableViewCellData *)data {
     _data = data;
+    self.titleLabel.text = data.title;
+    self.switcher.on = data.on;
 }
 
 @end
