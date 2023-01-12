@@ -46,6 +46,12 @@
 
 - (void)stepperOnValueChanged:(UIStepper *)sender event:(UIControlEvents)event {
     [self updateValueLabelWithValue:sender.value];
+    if (self.data.selector && self.selectorDelegate && [self.selectorDelegate respondsToSelector:self.data.selector]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [self.selectorDelegate performSelector:self.data.selector withObject:self];
+#pragma clang diagnostic pop
+    }
 }
 
 - (void)updateValueLabelWithValue:(double)value {
