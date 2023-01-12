@@ -10,6 +10,8 @@
 
 @interface UITableViewTemplateController () <UITableViewDataSource, UITableViewDelegate>
 
+@property(nonatomic, copy) NSArray *items;
+
 @property(nonatomic, strong) UITableView *tableView;
 
 @end
@@ -38,7 +40,7 @@
 // MARK: - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

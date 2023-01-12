@@ -8,9 +8,12 @@
 
 #import "OUITableViewCellViewController.h"
 #import "OUITextSwitchTableViewCell.h"
+#import "OUILabelCheckmarkTableViewCell.h"
+#import "OUILabelCheckmarkTableViewController.h"
 
 typedef NS_ENUM(NSInteger, OUITableViewCellType) {
     OUITableViewCellTypeTextSwitch,
+    OUITableViewCellTypeLabelCheckmark,
     OUITableViewCellTypeNumber,
 };
 
@@ -18,6 +21,9 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
     switch (type) {
         case OUITableViewCellTypeTextSwitch:
             return @"Text Switch";
+            break;
+        case OUITableViewCellTypeLabelCheckmark:
+            return @"Label Checkmark";
             break;
         case OUITableViewCellTypeNumber:
             return @"OUITableViewCellTypeNumber";
@@ -41,7 +47,9 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
 - (void)configureView {
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.backgroundColor = UIColor.clearColor;
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     [tableView registerClass:[OUITextSwitchTableViewCell class] forCellReuseIdentifier:NSStringFromClass([OUITextSwitchTableViewCell class])];
+    [tableView registerClass:[OUILabelCheckmarkTableViewCell class] forCellReuseIdentifier:NSStringFromClass([OUILabelCheckmarkTableViewCell class])];
     tableView.dataSource = self;
     tableView.delegate = self;
     [self.view addSubview:tableView];
@@ -73,7 +81,14 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
         {
             OUITextSwitchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([OUITextSwitchTableViewCell class]) forIndexPath:indexPath];
             cell.selectorDelegate = self;
-            [cell fillWithData:[OUITextSwitchTableViewCellData dataWithTitle:@"Text Switch" on:YES selector:@selector(switcherValueOnChanged:)]];
+            [cell fillWithData:[OUITextSwitchTableViewCellData dataWithTitle:NSStringFromOUITableViewCellType(type) on:YES selector:@selector(switcherValueOnChanged:)]];
+            return cell;
+        }
+            break;
+        case OUITableViewCellTypeLabelCheckmark:
+        {
+            OUILabelCheckmarkTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([OUILabelCheckmarkTableViewCell class]) forIndexPath:indexPath];
+            [cell fillWithData:[OUILabelCheckmarkTableViewCellData dataWithText:NSStringFromOUITableViewCellType(type) selected:YES]];
             return cell;
         }
             break;
@@ -87,7 +102,26 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
 // MARK: - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    OUITableViewCellType type = indexPath.row;
+    switch (type) {
+        case OUITableViewCellTypeTextSwitch:
+        {
+        }
+            break;
+        case OUITableViewCellTypeLabelCheckmark:
+        {
+            OUILabelCheckmarkTableViewController *vc = [OUILabelCheckmarkTableViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case OUITableViewCellTypeNumber:
+            break;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 @end

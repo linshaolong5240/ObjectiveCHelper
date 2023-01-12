@@ -13,6 +13,8 @@
 		181D3F0F295AD67F00FC45A3 /* FrameworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D3F0E295AD67F00FC45A3 /* FrameworkViewController.m */; };
 		181D3F12295AD8D500FC45A3 /* FrameworkSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D3F11295AD8D500FC45A3 /* FrameworkSystemViewController.m */; };
 		181D3F17295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181D3F16295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.m */; };
+		18273944296E5CF600363617 /* OUILabelCheckmarkTableViewCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 18273943296E5CF600363617 /* OUILabelCheckmarkTableViewCellData.m */; };
+		18273947296E5EBF00363617 /* OUILabelCheckmarkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18273946296E5EBF00363617 /* OUILabelCheckmarkTableViewCell.m */; };
 		182824FA28FF8BA400D2E4CF /* UITableViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */; };
 		182824FD28FF8D6000D2E4CF /* UITableViewDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182824FC28FF8D6000D2E4CF /* UITableViewDemoCell.m */; };
 		1828250F28FFC50400D2E4CF /* UIColor+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828250E28FFC50400D2E4CF /* UIColor+OCH.m */; };
@@ -52,6 +54,7 @@
 		1876AD5D28E6BEF500DA0387 /* OCHPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5C28E6BEF500DA0387 /* OCHPreview.m */; };
 		1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5F28E6C27D00DA0387 /* OCHPreviewController.m */; };
 		1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */; };
+		1876FE6B296F9CC600806C8D /* OUILabelCheckmarkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876FE6A296F9CC600806C8D /* OUILabelCheckmarkTableViewController.m */; };
 		187C8FBB29273987006E2389 /* OCHStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C8FBA29273987006E2389 /* OCHStore.m */; };
 		188BB3232963DD5F00E193A0 /* OCHFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188BB3222963DD5F00E193A0 /* OCHFeatureViewController.m */; };
 		188CA46328F112EF00EF106E /* DVPieChartDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46228F112EF00EF106E /* DVPieChartDemoViewController.m */; };
@@ -135,6 +138,10 @@
 		181D3F11295AD8D500FC45A3 /* FrameworkSystemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkSystemViewController.m; sourceTree = "<group>"; };
 		181D3F15295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkSystemDispatchViewController.h; sourceTree = "<group>"; };
 		181D3F16295ADAE700FC45A3 /* FrameworkSystemDispatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkSystemDispatchViewController.m; sourceTree = "<group>"; };
+		18273942296E5CF600363617 /* OUILabelCheckmarkTableViewCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUILabelCheckmarkTableViewCellData.h; sourceTree = "<group>"; };
+		18273943296E5CF600363617 /* OUILabelCheckmarkTableViewCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUILabelCheckmarkTableViewCellData.m; sourceTree = "<group>"; };
+		18273945296E5EBF00363617 /* OUILabelCheckmarkTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUILabelCheckmarkTableViewCell.h; sourceTree = "<group>"; };
+		18273946296E5EBF00363617 /* OUILabelCheckmarkTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUILabelCheckmarkTableViewCell.m; sourceTree = "<group>"; };
 		182824F828FF8BA400D2E4CF /* UITableViewDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoViewController.h; sourceTree = "<group>"; };
 		182824F928FF8BA400D2E4CF /* UITableViewDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITableViewDemoViewController.m; sourceTree = "<group>"; };
 		182824FB28FF8D6000D2E4CF /* UITableViewDemoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITableViewDemoCell.h; sourceTree = "<group>"; };
@@ -215,6 +222,8 @@
 		1876AD5F28E6C27D00DA0387 /* OCHPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHPreviewController.m; sourceTree = "<group>"; };
 		1876AD6428E6E2E300DA0387 /* UIScrollViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIScrollViewDemoController.h; sourceTree = "<group>"; };
 		1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewDemoController.m; sourceTree = "<group>"; };
+		1876FE69296F9CC600806C8D /* OUILabelCheckmarkTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUILabelCheckmarkTableViewController.h; sourceTree = "<group>"; };
+		1876FE6A296F9CC600806C8D /* OUILabelCheckmarkTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUILabelCheckmarkTableViewController.m; sourceTree = "<group>"; };
 		187C8FB929273987006E2389 /* OCHStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHStore.h; sourceTree = "<group>"; };
 		187C8FBA29273987006E2389 /* OCHStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHStore.m; sourceTree = "<group>"; };
 		188BB3212963DD5F00E193A0 /* OCHFeatureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHFeatureViewController.h; sourceTree = "<group>"; };
@@ -461,10 +470,9 @@
 		1857D1FE296D06BE00C2BA75 /* OUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				1876FE6C296FA49D00806C8D /* OUITableViewCell */,
 				18745DE9296C0F6B00F3E1A1 /* OUIKitViewController.h */,
 				18745DEA296C0F6B00F3E1A1 /* OUIKitViewController.m */,
-				18745DD2296BE56300F3E1A1 /* OUITableViewCellViewController.h */,
-				18745DD3296BE56300F3E1A1 /* OUITableViewCellViewController.m */,
 				1857D20F296D5A7500C2BA75 /* OUIAlertControllerExample.h */,
 				1857D210296D5A7500C2BA75 /* OUIAlertControllerExample.m */,
 			);
@@ -489,6 +497,10 @@
 				18745DDA296BEC4F00F3E1A1 /* OUITableViewCell.m */,
 				18745DDC296BEC6100F3E1A1 /* OUITableViewCellData.h */,
 				18745DDD296BEC6100F3E1A1 /* OUITableViewCellData.m */,
+				18273945296E5EBF00363617 /* OUILabelCheckmarkTableViewCell.h */,
+				18273946296E5EBF00363617 /* OUILabelCheckmarkTableViewCell.m */,
+				18273942296E5CF600363617 /* OUILabelCheckmarkTableViewCellData.h */,
+				18273943296E5CF600363617 /* OUILabelCheckmarkTableViewCellData.m */,
 				1857D1FF296D0A1800C2BA75 /* OUITextSwitchTableViewCell.h */,
 				1857D200296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m */,
 				1857D202296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.h */,
@@ -537,6 +549,17 @@
 				1828251128FFC5F600D2E4CF /* UIView+OCH.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		1876FE6C296FA49D00806C8D /* OUITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18745DD2296BE56300F3E1A1 /* OUITableViewCellViewController.h */,
+				18745DD3296BE56300F3E1A1 /* OUITableViewCellViewController.m */,
+				1876FE69296F9CC600806C8D /* OUILabelCheckmarkTableViewController.h */,
+				1876FE6A296F9CC600806C8D /* OUILabelCheckmarkTableViewController.m */,
+			);
+			path = OUITableViewCell;
 			sourceTree = "<group>";
 		};
 		187C8FB82927395B006E2389 /* Store */ = {
@@ -1158,6 +1181,7 @@
 			files = (
 				181D3F12295AD8D500FC45A3 /* FrameworkSystemViewController.m in Sources */,
 				188CA48428F1502C00EF106E /* OCHThirdPartyViewController.m in Sources */,
+				1876FE6B296F9CC600806C8D /* OUILabelCheckmarkTableViewController.m in Sources */,
 				18D98BC02901356B003E5533 /* NSAttributedString+OCH.m in Sources */,
 				189BB85E28F543C300F2B287 /* UICollectionViewDemoCell.m in Sources */,
 				189AF44B2962DC8E00CD3C2C /* UIStackView+OUIKit.m in Sources */,
@@ -1204,6 +1228,7 @@
 				18745DDE296BEC6100F3E1A1 /* OUITableViewCellData.m in Sources */,
 				18745DEB296C0F6B00F3E1A1 /* OUIKitViewController.m in Sources */,
 				1857D211296D5A7500C2BA75 /* OUIAlertControllerExample.m in Sources */,
+				18273947296E5EBF00363617 /* OUILabelCheckmarkTableViewCell.m in Sources */,
 				44890BA328E8301D00C395D9 /* OCHContentViewController.m in Sources */,
 				18457C27292DF6C400C34991 /* OCHImage.m in Sources */,
 				18457C1B292DB91400C34991 /* UIImage+OCH.m in Sources */,
@@ -1212,6 +1237,7 @@
 				1828251228FFC5F600D2E4CF /* UIView+OCH.m in Sources */,
 				188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */,
 				302CB80129645D5B000F8CC4 /* QRCodeScanerViewController.m in Sources */,
+				18273944296E5CF600363617 /* OUILabelCheckmarkTableViewCellData.m in Sources */,
 				18380C212956CFEF00106BA8 /* QRCodeViewController.m in Sources */,
 				1862D00C293851C400037DB2 /* ReactiveObjCDemoViewModel.m in Sources */,
 				183C5A082935963400D27DF8 /* OCHPageViewController.m in Sources */,

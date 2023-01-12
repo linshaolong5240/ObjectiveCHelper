@@ -6,11 +6,11 @@
 //  Copyright © 2023 com.sauronpi. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "OCHBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OUITableViewCellViewController : UIViewController
+@interface OUITableViewCellViewController : OCHBaseViewController
 
 @end
 
