@@ -1,5 +1,5 @@
 //
-//  OUITextSwitchTableViewCellData.h
+//  OUILabelSwitchTableViewCellData.h
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2023/1/10.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OUITextSwitchTableViewCellData : OUITableViewCellData
+@interface OUILabelSwitchTableViewCellData : OUITableViewCellData
 
 @property(nonatomic, copy) NSString *title;
 

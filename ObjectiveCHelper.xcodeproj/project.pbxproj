@@ -30,8 +30,8 @@
 		1853C4F128F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1853C4F028F3EE6C00245003 /* UIKitUISearchbarDemoViewController.m */; };
 		1854A2A629570014001CC50A /* FrameworkAppServicesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2A529570014001CC50A /* FrameworkAppServicesController.m */; };
 		1854A2AB2957029A001CC50A /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1854A2AA2957029A001CC50A /* ContactsViewController.m */; };
-		1857D201296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D200296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m */; };
-		1857D204296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D203296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m */; };
+		1857D201296D0A1800C2BA75 /* OUILabelSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D200296D0A1800C2BA75 /* OUILabelSwitchTableViewCell.m */; };
+		1857D204296D0A4500C2BA75 /* OUILabelSwitchTableViewCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D203296D0A4500C2BA75 /* OUILabelSwitchTableViewCellData.m */; };
 		1857D207296D198900C2BA75 /* OUIAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D206296D198900C2BA75 /* OUIAlertController.m */; };
 		1857D20D296D4A7900C2BA75 /* OUIAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D20C296D4A7900C2BA75 /* OUIAlertAction.m */; };
 		1857D211296D5A7500C2BA75 /* OUIAlertControllerExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D210296D5A7500C2BA75 /* OUIAlertControllerExample.m */; };
@@ -55,6 +55,8 @@
 		1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD5F28E6C27D00DA0387 /* OCHPreviewController.m */; };
 		1876AD6628E6E2E300DA0387 /* UIScrollViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */; };
 		1876FE6B296F9CC600806C8D /* OUILabelCheckmarkTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876FE6A296F9CC600806C8D /* OUILabelCheckmarkTableViewController.m */; };
+		1876FE6F296FB4EA00806C8D /* OUILabelStepperTableViewCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876FE6E296FB4EA00806C8D /* OUILabelStepperTableViewCellData.m */; };
+		1876FE72296FB51300806C8D /* OUILabelStepperTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1876FE71296FB51300806C8D /* OUILabelStepperTableViewCell.m */; };
 		187C8FBB29273987006E2389 /* OCHStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 187C8FBA29273987006E2389 /* OCHStore.m */; };
 		188BB3232963DD5F00E193A0 /* OCHFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188BB3222963DD5F00E193A0 /* OCHFeatureViewController.m */; };
 		188CA46328F112EF00EF106E /* DVPieChartDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188CA46228F112EF00EF106E /* DVPieChartDemoViewController.m */; };
@@ -172,10 +174,10 @@
 		1854A2A529570014001CC50A /* FrameworkAppServicesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkAppServicesController.m; sourceTree = "<group>"; };
 		1854A2A92957029A001CC50A /* ContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
 		1854A2AA2957029A001CC50A /* ContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
-		1857D1FF296D0A1800C2BA75 /* OUITextSwitchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUITextSwitchTableViewCell.h; sourceTree = "<group>"; };
-		1857D200296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUITextSwitchTableViewCell.m; sourceTree = "<group>"; };
-		1857D202296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUITextSwitchTableViewCellData.h; sourceTree = "<group>"; };
-		1857D203296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUITextSwitchTableViewCellData.m; sourceTree = "<group>"; };
+		1857D1FF296D0A1800C2BA75 /* OUILabelSwitchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUILabelSwitchTableViewCell.h; sourceTree = "<group>"; };
+		1857D200296D0A1800C2BA75 /* OUILabelSwitchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUILabelSwitchTableViewCell.m; sourceTree = "<group>"; };
+		1857D202296D0A4500C2BA75 /* OUILabelSwitchTableViewCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUILabelSwitchTableViewCellData.h; sourceTree = "<group>"; };
+		1857D203296D0A4500C2BA75 /* OUILabelSwitchTableViewCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUILabelSwitchTableViewCellData.m; sourceTree = "<group>"; };
 		1857D205296D198900C2BA75 /* OUIAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUIAlertController.h; sourceTree = "<group>"; };
 		1857D206296D198900C2BA75 /* OUIAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUIAlertController.m; sourceTree = "<group>"; };
 		1857D20B296D4A7900C2BA75 /* OUIAlertAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUIAlertAction.h; sourceTree = "<group>"; };
@@ -224,6 +226,10 @@
 		1876AD6528E6E2E300DA0387 /* UIScrollViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewDemoController.m; sourceTree = "<group>"; };
 		1876FE69296F9CC600806C8D /* OUILabelCheckmarkTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUILabelCheckmarkTableViewController.h; sourceTree = "<group>"; };
 		1876FE6A296F9CC600806C8D /* OUILabelCheckmarkTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUILabelCheckmarkTableViewController.m; sourceTree = "<group>"; };
+		1876FE6D296FB4EA00806C8D /* OUILabelStepperTableViewCellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUILabelStepperTableViewCellData.h; sourceTree = "<group>"; };
+		1876FE6E296FB4EA00806C8D /* OUILabelStepperTableViewCellData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUILabelStepperTableViewCellData.m; sourceTree = "<group>"; };
+		1876FE70296FB51300806C8D /* OUILabelStepperTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OUILabelStepperTableViewCell.h; sourceTree = "<group>"; };
+		1876FE71296FB51300806C8D /* OUILabelStepperTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OUILabelStepperTableViewCell.m; sourceTree = "<group>"; };
 		187C8FB929273987006E2389 /* OCHStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHStore.h; sourceTree = "<group>"; };
 		187C8FBA29273987006E2389 /* OCHStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHStore.m; sourceTree = "<group>"; };
 		188BB3212963DD5F00E193A0 /* OCHFeatureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHFeatureViewController.h; sourceTree = "<group>"; };
@@ -493,18 +499,22 @@
 		18745DD8296BEC2A00F3E1A1 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				18745DD9296BEC4F00F3E1A1 /* OUITableViewCell.h */,
-				18745DDA296BEC4F00F3E1A1 /* OUITableViewCell.m */,
-				18745DDC296BEC6100F3E1A1 /* OUITableViewCellData.h */,
-				18745DDD296BEC6100F3E1A1 /* OUITableViewCellData.m */,
 				18273945296E5EBF00363617 /* OUILabelCheckmarkTableViewCell.h */,
 				18273946296E5EBF00363617 /* OUILabelCheckmarkTableViewCell.m */,
 				18273942296E5CF600363617 /* OUILabelCheckmarkTableViewCellData.h */,
 				18273943296E5CF600363617 /* OUILabelCheckmarkTableViewCellData.m */,
-				1857D1FF296D0A1800C2BA75 /* OUITextSwitchTableViewCell.h */,
-				1857D200296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m */,
-				1857D202296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.h */,
-				1857D203296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m */,
+				1876FE70296FB51300806C8D /* OUILabelStepperTableViewCell.h */,
+				1876FE71296FB51300806C8D /* OUILabelStepperTableViewCell.m */,
+				1876FE6D296FB4EA00806C8D /* OUILabelStepperTableViewCellData.h */,
+				1876FE6E296FB4EA00806C8D /* OUILabelStepperTableViewCellData.m */,
+				1857D1FF296D0A1800C2BA75 /* OUILabelSwitchTableViewCell.h */,
+				1857D200296D0A1800C2BA75 /* OUILabelSwitchTableViewCell.m */,
+				1857D202296D0A4500C2BA75 /* OUILabelSwitchTableViewCellData.h */,
+				1857D203296D0A4500C2BA75 /* OUILabelSwitchTableViewCellData.m */,
+				18745DD9296BEC4F00F3E1A1 /* OUITableViewCell.h */,
+				18745DDA296BEC4F00F3E1A1 /* OUITableViewCell.m */,
+				18745DDC296BEC6100F3E1A1 /* OUITableViewCellData.h */,
+				18745DDD296BEC6100F3E1A1 /* OUITableViewCellData.m */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -1192,7 +1202,7 @@
 				18E4174328E44E720035BDA7 /* AppDelegate.m in Sources */,
 				1876AD6028E6C27D00DA0387 /* OCHPreviewController.m in Sources */,
 				18CF77EC291B807D0068CCC7 /* MJRefreshDemoViewController.m in Sources */,
-				1857D201296D0A1800C2BA75 /* OUITextSwitchTableViewCell.m in Sources */,
+				1857D201296D0A1800C2BA75 /* OUILabelSwitchTableViewCell.m in Sources */,
 				18EFE4D9294862AC00E80B20 /* OCHLinearGradientViewController.m in Sources */,
 				18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */,
 				1811B83528F423100074418B /* OCHBaseViewController.m in Sources */,
@@ -1216,7 +1226,7 @@
 				1857D20D296D4A7900C2BA75 /* OUIAlertAction.m in Sources */,
 				18745DEE296C0FD100F3E1A1 /* EnumTemplate.m in Sources */,
 				18705AB4292B5E8C00AA1116 /* UIButton+OCH.m in Sources */,
-				1857D204296D0A4500C2BA75 /* OUITextSwitchTableViewCellData.m in Sources */,
+				1857D204296D0A4500C2BA75 /* OUILabelSwitchTableViewCellData.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
 				182824FD28FF8D6000D2E4CF /* UITableViewDemoCell.m in Sources */,
 				188CA48128F1500E00EF106E /* JXCategoryViewDemoViewController.m in Sources */,
@@ -1226,6 +1236,7 @@
 				188CA49628F262D800EF106E /* JXCategoryListContentViewDemoView.m in Sources */,
 				189BB87928F595D400F2B287 /* UICollectionViewDemoFooterView.m in Sources */,
 				18745DDE296BEC6100F3E1A1 /* OUITableViewCellData.m in Sources */,
+				1876FE72296FB51300806C8D /* OUILabelStepperTableViewCell.m in Sources */,
 				18745DEB296C0F6B00F3E1A1 /* OUIKitViewController.m in Sources */,
 				1857D211296D5A7500C2BA75 /* OUIAlertControllerExample.m in Sources */,
 				18273947296E5EBF00363617 /* OUILabelCheckmarkTableViewCell.m in Sources */,
@@ -1269,6 +1280,7 @@
 				18A2026F2938C01E00C5B7EC /* UISearchControllerDemoController.m in Sources */,
 				181D3F0F295AD67F00FC45A3 /* FrameworkViewController.m in Sources */,
 				18E221B22913D9F300660A7F /* OneMapKitDemoViewController.m in Sources */,
+				1876FE6F296FB4EA00806C8D /* OUILabelStepperTableViewCellData.m in Sources */,
 				18745DDB296BEC4F00F3E1A1 /* OUITableViewCell.m in Sources */,
 				44890BA728E831C300C395D9 /* UIKitDemoViewController.m in Sources */,
 				1891138F2934B55A008B4D7F /* UIControlEvents+OCH.m in Sources */,

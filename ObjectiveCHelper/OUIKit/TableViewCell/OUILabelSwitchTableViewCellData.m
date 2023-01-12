@@ -1,14 +1,14 @@
 //
-//  OUITextSwitchTableViewCellData.m
+//  OUILabelSwitchTableViewCellData.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2023/1/10.
 //  Copyright © 2023 com.sauronpi. All rights reserved.
 //
 
-#import "OUITextSwitchTableViewCellData.h"
+#import "OUILabelSwitchTableViewCellData.h"
 
-@implementation OUITextSwitchTableViewCellData
+@implementation OUILabelSwitchTableViewCellData
 
 - (instancetype)initWithTitle:(NSString *)title on:(BOOL)on selector:(SEL)selector {
     self = [super initWithSelector:selector];
@@ -37,12 +37,12 @@
 }
 
 + (instancetype)dataWithTitle:(NSString *)title on:(BOOL)on selector:(SEL)selector {
-    OUITextSwitchTableViewCellData *data = [[OUITextSwitchTableViewCellData alloc] initWithTitle:title on:on selector:selector];
+    OUILabelSwitchTableViewCellData *data = [[OUILabelSwitchTableViewCellData alloc] initWithTitle:title on:on selector:selector];
     return data;
 }
 
 + (instancetype)dataWithTitle:(NSString *)title on:(BOOL)on {
-    OUITextSwitchTableViewCellData *data = [[OUITextSwitchTableViewCellData alloc] initWithTitle:title on:on];
+    OUILabelSwitchTableViewCellData *data = [[OUILabelSwitchTableViewCellData alloc] initWithTitle:title on:on];
     return data;
 }
 

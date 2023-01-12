@@ -1,22 +1,22 @@
 //
-//  OUITextSwitchTableViewCell.m
+//  OUILabelSwitchTableViewCell.m
 //  ObjectiveCHelper
 //
 //  Created by Sauron on 2023/1/10.
 //  Copyright © 2023 com.sauronpi. All rights reserved.
 //
 
-#import "OUITextSwitchTableViewCell.h"
+#import "OUILabelSwitchTableViewCell.h"
 #import <Masonry/Masonry.h>
 #import "OUIColor.h"
 #import "UIStackView+OUIKit.h"
 
-@implementation OUITextSwitchTableViewCell
+@implementation OUILabelSwitchTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        _titleLabel = [UILabel new];
+        _label = [UILabel new];
         _switcher = [UISwitch new];
         [self configureView];
     }
@@ -39,7 +39,7 @@
     self.switcher.onTintColor = OUIColor.accentColor;
     
     [self.switcher addTarget:self action:@selector(switcherValueOnChanged:event:) forControlEvents:(UIControlEventValueChanged)];
-    UIStackView *hstack = [UIStackView hstackWithArrangedView:@[self.titleLabel, self.switcher]];
+    UIStackView *hstack = [UIStackView hstackWithArrangedView:@[self.label, self.switcher]];
     
     [self.containerView addSubview:hstack];
     [hstack mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -60,9 +60,9 @@
     self.switcher.on = on;
 }
 
-- (void)fillWithData:(OUITextSwitchTableViewCellData *)data {
+- (void)fillWithData:(OUILabelSwitchTableViewCellData *)data {
     _data = data;
-    self.titleLabel.text = data.title;
+    self.label.text = data.title;
     self.switcher.on = data.on;
     @weakify(self)
     [[RACObserve(self.data, on) takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(NSNumber *value) {

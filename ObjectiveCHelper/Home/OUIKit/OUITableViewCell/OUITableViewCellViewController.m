@@ -7,23 +7,28 @@
 //
 
 #import "OUITableViewCellViewController.h"
-#import "OUITextSwitchTableViewCell.h"
 #import "OUILabelCheckmarkTableViewCell.h"
 #import "OUILabelCheckmarkTableViewController.h"
+#import "OUILabelStepperTableViewCell.h"
+#import "OUILabelSwitchTableViewCell.h"
 
 typedef NS_ENUM(NSInteger, OUITableViewCellType) {
-    OUITableViewCellTypeTextSwitch,
     OUITableViewCellTypeLabelCheckmark,
+    OUITableViewCellTypeLabelStepper,
+    OUITableViewCellTypeTextSwitch,
     OUITableViewCellTypeNumber,
 };
 
 NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
     switch (type) {
-        case OUITableViewCellTypeTextSwitch:
-            return @"Text Switch";
-            break;
         case OUITableViewCellTypeLabelCheckmark:
             return @"Label Checkmark";
+            break;
+        case OUITableViewCellTypeLabelStepper:
+            return @"Label Stepper";
+            break;
+        case OUITableViewCellTypeTextSwitch:
+            return @"Text Switch";
             break;
         case OUITableViewCellTypeNumber:
             return @"OUITableViewCellTypeNumber";
@@ -48,14 +53,15 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.backgroundColor = UIColor.clearColor;
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
-    [tableView registerClass:[OUITextSwitchTableViewCell class] forCellReuseIdentifier:NSStringFromClass([OUITextSwitchTableViewCell class])];
     [tableView registerClass:[OUILabelCheckmarkTableViewCell class] forCellReuseIdentifier:NSStringFromClass([OUILabelCheckmarkTableViewCell class])];
+    [tableView registerClass:[OUILabelStepperTableViewCell class] forCellReuseIdentifier:NSStringFromClass([OUILabelStepperTableViewCell class])];
+    [tableView registerClass:[OUILabelSwitchTableViewCell class] forCellReuseIdentifier:NSStringFromClass([OUILabelSwitchTableViewCell class])];
     tableView.dataSource = self;
     tableView.delegate = self;
     [self.view addSubview:tableView];
 }
 
-- (void)switcherValueOnChanged:(OUITextSwitchTableViewCell *)cell {
+- (void)switcherValueOnChanged:(OUILabelSwitchTableViewCell *)cell {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     if (cell.switcher.on) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -77,18 +83,25 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OUITableViewCellType type = indexPath.row;
     switch (type) {
-        case OUITableViewCellTypeTextSwitch:
-        {
-            OUITextSwitchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([OUITextSwitchTableViewCell class]) forIndexPath:indexPath];
-            cell.selectorDelegate = self;
-            [cell fillWithData:[OUITextSwitchTableViewCellData dataWithTitle:NSStringFromOUITableViewCellType(type) on:YES selector:@selector(switcherValueOnChanged:)]];
-            return cell;
-        }
-            break;
         case OUITableViewCellTypeLabelCheckmark:
         {
             OUILabelCheckmarkTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([OUILabelCheckmarkTableViewCell class]) forIndexPath:indexPath];
             [cell fillWithData:[OUILabelCheckmarkTableViewCellData dataWithText:NSStringFromOUITableViewCellType(type) selected:YES]];
+            return cell;
+        }
+            break;
+        case OUITableViewCellTypeLabelStepper:
+        {
+            OUILabelStepperTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([OUILabelStepperTableViewCell class]) forIndexPath:indexPath];
+            [cell fillWithData:[OUILabelStepperTableViewCellData dataWithText:NSStringFromOUITableViewCellType(type) minimumValue:0 maximumValue:100 stepValue:1 value:1]];
+            return cell;
+        }
+            break;
+        case OUITableViewCellTypeTextSwitch:
+        {
+            OUILabelSwitchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([OUILabelSwitchTableViewCell class]) forIndexPath:indexPath];
+            cell.selectorDelegate = self;
+            [cell fillWithData:[OUILabelSwitchTableViewCellData dataWithTitle:NSStringFromOUITableViewCellType(type) on:YES selector:@selector(switcherValueOnChanged:)]];
             return cell;
         }
             break;
@@ -105,15 +118,15 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     OUITableViewCellType type = indexPath.row;
     switch (type) {
-        case OUITableViewCellTypeTextSwitch:
-        {
-        }
-            break;
         case OUITableViewCellTypeLabelCheckmark:
         {
             OUILabelCheckmarkTableViewController *vc = [OUILabelCheckmarkTableViewController new];
             [self.navigationController pushViewController:vc animated:YES];
         }
+            break;
+        case OUITableViewCellTypeLabelStepper:
+            break;
+        case OUITableViewCellTypeTextSwitch:
             break;
         case OUITableViewCellTypeNumber:
             break;

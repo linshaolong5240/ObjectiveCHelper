@@ -65,7 +65,7 @@
         [textSymbolButton setImage:[UIImage systemImageNamed:@"chevron.right"] forState:UIControlStateNormal];
     }
     textSymbolButton.semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
-    //        textSymbolButton.titleLabel.backgroundColor = UIColor.greenColor;
+    //        textSymbolButton.label.backgroundColor = UIColor.greenColor;
     
     //不加背景色 systemImageNamed 图片显示会有问题！
     textSymbolButton.imageView.backgroundColor = UIColor.clearColor;
