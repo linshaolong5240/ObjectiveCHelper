@@ -9,7 +9,6 @@
 
 @implementation NSAttributedString (OCH)
 
-
 + (NSAttributedString *)attributedStringWithLabel:(NSString *)label labelFont:(UIFont *)labelFont labelColor:(UIColor *)labelColor value:(NSString *)value valueFont:(UIFont *)valueFont valueColor:(UIColor *)valueColor {
     NSDictionary<NSAttributedStringKey, id> *prefixAttr = @{
         NSFontAttributeName:labelFont,

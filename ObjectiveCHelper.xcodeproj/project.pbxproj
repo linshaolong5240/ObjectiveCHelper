@@ -86,6 +86,7 @@
 		18B197042967B4CF0027BBEB /* OCHStringArraySection.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B197032967B4CF0027BBEB /* OCHStringArraySection.m */; };
 		18B197072967B4FD0027BBEB /* OCHStringMutableArraySection.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B197062967B4FD0027BBEB /* OCHStringMutableArraySection.m */; };
 		18BB4051294076BB001983AD /* OCHWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BB4050294076BB001983AD /* OCHWebViewController.m */; };
+		18BF8859296FEF99001EFAAF /* NSString+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BF8858296FEF99001EFAAF /* NSString+OCH.m */; };
 		18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */; };
 		18CF77EC291B807D0068CCC7 /* MJRefreshDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EB291B807D0068CCC7 /* MJRefreshDemoViewController.m */; };
 		18CF77F0291B85980068CCC7 /* MJRefreshHeaderDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EF291B85980068CCC7 /* MJRefreshHeaderDemo.m */; };
@@ -288,6 +289,8 @@
 		18B197062967B4FD0027BBEB /* OCHStringMutableArraySection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHStringMutableArraySection.m; sourceTree = "<group>"; };
 		18BB404F294076BB001983AD /* OCHWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCHWebViewController.h; sourceTree = "<group>"; };
 		18BB4050294076BB001983AD /* OCHWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCHWebViewController.m; sourceTree = "<group>"; };
+		18BF8857296FEF99001EFAAF /* NSString+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+OCH.h"; sourceTree = "<group>"; };
+		18BF8858296FEF99001EFAAF /* NSString+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+OCH.m"; sourceTree = "<group>"; };
 		18CE4054290268590075C1A6 /* UIButtonDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIButtonDemoViewController.h; sourceTree = "<group>"; };
 		18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonDemoViewController.m; sourceTree = "<group>"; };
 		18CF77EA291B807D0068CCC7 /* MJRefreshDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshDemoViewController.h; sourceTree = "<group>"; };
@@ -545,6 +548,8 @@
 			children = (
 				18D98BBE2901356B003E5533 /* NSAttributedString+OCH.h */,
 				18D98BBF2901356B003E5533 /* NSAttributedString+OCH.m */,
+				18BF8857296FEF99001EFAAF /* NSString+OCH.h */,
+				18BF8858296FEF99001EFAAF /* NSString+OCH.m */,
 				18705AB2292B5E8C00AA1116 /* UIButton+OCH.h */,
 				18705AB3292B5E8C00AA1116 /* UIButton+OCH.m */,
 				1828250D28FFC50400D2E4CF /* UIColor+OCH.h */,
@@ -1227,6 +1232,7 @@
 				18745DEE296C0FD100F3E1A1 /* EnumTemplate.m in Sources */,
 				18705AB4292B5E8C00AA1116 /* UIButton+OCH.m in Sources */,
 				1857D204296D0A4500C2BA75 /* OUILabelSwitchTableViewCellData.m in Sources */,
+				18BF8859296FEF99001EFAAF /* NSString+OCH.m in Sources */,
 				1876AD3228E450BE00DA0387 /* OCHTabbarViewController.m in Sources */,
 				182824FD28FF8D6000D2E4CF /* UITableViewDemoCell.m in Sources */,
 				188CA48128F1500E00EF106E /* JXCategoryViewDemoViewController.m in Sources */,
@@ -1465,7 +1471,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
