@@ -10,39 +10,39 @@
 
 @implementation OUILabelSwitchTableViewCellData
 
-- (instancetype)initWithTitle:(NSString *)title on:(BOOL)on selector:(SEL)selector {
+- (instancetype)initWithText:(NSString *)text on:(BOOL)on selector:(SEL)selector {
     self = [super initWithSelector:selector];
     if (self) {
-        _title = title;
+        _text = text;
         _on = on;
     }
     return self;
 }
 
-- (instancetype)initWithTitle:(NSString *)title on:(BOOL)on {
+- (instancetype)initWithText:(NSString *)text on:(BOOL)on {
     self = [super init];
     if (self) {
-        _title = title;
+        _text = text;
         _on = on;
     }
     return self;
 }
 
 - (instancetype)init {
-    self = [self initWithTitle:@"" on:NO];
+    self = [self initWithText:@"" on:NO];
     if (self) {
         
     }
     return self;
 }
 
-+ (instancetype)dataWithTitle:(NSString *)title on:(BOOL)on selector:(SEL)selector {
-    OUILabelSwitchTableViewCellData *data = [[OUILabelSwitchTableViewCellData alloc] initWithTitle:title on:on selector:selector];
++ (instancetype)dataWithText:(NSString *)text on:(BOOL)on selector:(SEL)selector {
+    OUILabelSwitchTableViewCellData *data = [[OUILabelSwitchTableViewCellData alloc] initWithText:text on:on selector:selector];
     return data;
 }
 
-+ (instancetype)dataWithTitle:(NSString *)title on:(BOOL)on {
-    OUILabelSwitchTableViewCellData *data = [[OUILabelSwitchTableViewCellData alloc] initWithTitle:title on:on];
++ (instancetype)dataWithText:(NSString *)text on:(BOOL)on {
+    OUILabelSwitchTableViewCellData *data = [[OUILabelSwitchTableViewCellData alloc] initWithText:text on:on];
     return data;
 }
 

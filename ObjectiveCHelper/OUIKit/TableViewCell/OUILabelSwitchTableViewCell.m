@@ -62,7 +62,7 @@
 
 - (void)fillWithData:(OUILabelSwitchTableViewCellData *)data {
     _data = data;
-    self.label.text = data.title;
+    self.label.text = data.text;
     self.switcher.on = data.on;
     @weakify(self)
     [[RACObserve(self.data, on) takeUntil:self.rac_prepareForReuseSignal] subscribeNext:^(NSNumber *value) {

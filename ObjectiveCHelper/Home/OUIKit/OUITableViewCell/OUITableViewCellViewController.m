@@ -101,7 +101,7 @@ NSString *NSStringFromOUITableViewCellType(OUITableViewCellType type) {
         {
             OUILabelSwitchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([OUILabelSwitchTableViewCell class]) forIndexPath:indexPath];
             cell.selectorDelegate = self;
-            [cell fillWithData:[OUILabelSwitchTableViewCellData dataWithTitle:NSStringFromOUITableViewCellType(type) on:YES selector:@selector(switcherValueOnChanged:)]];
+            [cell fillWithData:[OUILabelSwitchTableViewCellData dataWithText:NSStringFromOUITableViewCellType(type) on:YES selector:@selector(switcherValueOnChanged:)]];
             return cell;
         }
             break;

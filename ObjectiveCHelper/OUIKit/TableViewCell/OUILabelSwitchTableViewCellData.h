@@ -12,17 +12,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface OUILabelSwitchTableViewCellData : OUITableViewCellData
 
-@property(nonatomic, copy) NSString *title;
+@property(nonatomic, copy) NSString *text;
 
 @property(nonatomic, getter=isOn) BOOL on;
 
-- (instancetype)initWithTitle:(NSString *)title on:(BOOL)on selector:(SEL)selector;
+- (instancetype)initWithText:(NSString *)text on:(BOOL)on selector:(SEL)selector;
 
-- (instancetype)initWithTitle:(NSString *)title on:(BOOL)on;
+- (instancetype)initWithText:(NSString *)text on:(BOOL)on;
 
-+ (instancetype)dataWithTitle:(NSString *)title on:(BOOL)on selector:(SEL)selector;
++ (instancetype)dataWithText:(NSString *)text on:(BOOL)on selector:(SEL)selector;
 
-+ (instancetype)dataWithTitle:(NSString *)title on:(BOOL)on;
++ (instancetype)dataWithText:(NSString *)text on:(BOOL)on;
 
 @end
 
