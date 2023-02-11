@@ -8,6 +8,7 @@
 
 #import "FrameworkViewController.h"
 
+#import "AppFrameworkViewController.h"
 #import "FrameworkAppServicesController.h"
 #import "FrameworkSystemViewController.h"
 
@@ -78,7 +79,7 @@ NSString *NSStringFromFrameworkType(FrameworkType type) {
     switch (type) {
         case FrameworkTypeAppFrameworks:
         {
-            vc = [FrameworkAppServicesController new];
+            vc = [AppFrameworkViewController new];
         }
             break;
         case FrameworkTypeAppServices:

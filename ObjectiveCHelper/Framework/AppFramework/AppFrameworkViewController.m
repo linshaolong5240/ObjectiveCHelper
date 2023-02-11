@@ -1,35 +1,39 @@
 //
-//  FrameworkAppServicesController.m
+//  AppFrameworkViewController.m
 //  ObjectiveCHelper
 //
-//  Created by Sauron on 2022/12/24.
-//  Copyright © 2022 com.sauronpi. All rights reserved.
+//  Created by Sauron on 2023/2/10.
+//  Copyright © 2023 com.sauronpi. All rights reserved.
 //
 
-#import "FrameworkAppServicesController.h"
-#import "ContactsViewController.h"
+#import "AppFrameworkViewController.h"
 
-NSString *NSStringFromAppServicesItem(AppServicesItem item) {
+typedef NS_ENUM(NSInteger, AppFrameworkItem) {
+    AppFrameworkItemUIKit,
+    AppFrameworkItemNumber,
+};
+
+NSString *NSStringFromAppFrameworkItem(AppFrameworkItem item) {
     switch (item) {
-        case AppServicesItemContacts:
-            return @"Contacts";
+        case AppFrameworkItemUIKit:
+            return @"AppFrameworkItemUIKit";
             break;
-        case AppServicesItemNumber:
-            return @"AppServicesItemNumber";
+        case AppFrameworkItemNumber:
+            return @"AppFrameworkItemNumber";
             break;
     }
 }
 
-@interface FrameworkAppServicesController () <UITableViewDataSource, UITableViewDelegate>
+@interface AppFrameworkViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation FrameworkAppServicesController
+@implementation AppFrameworkViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"App Services";
+    self.title = @"App Framework";
     [self configureView];
 }
 
@@ -44,12 +48,12 @@ NSString *NSStringFromAppServicesItem(AppServicesItem item) {
 // MARK: - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return AppServicesItemNumber;
+    return AppFrameworkItemNumber;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
-    cell.textLabel.text = NSStringFromAppServicesItem(indexPath.row);
+    cell.textLabel.text = NSStringFromAppFrameworkItem(indexPath.row);
     return cell;
 }
 
@@ -59,12 +63,12 @@ NSString *NSStringFromAppServicesItem(AppServicesItem item) {
     UIViewController *vc = nil;
     
     switch (indexPath.row) {
-        case AppServicesItemContacts:
+        case AppFrameworkItemUIKit:
         {
-            vc = [[ContactsViewController alloc] init];
+//            vc = [[ContactsViewController alloc] init];
         }
             break;
-        case AppServicesItemNumber:
+        case AppFrameworkItemNumber:
             break;
     }
     [self.navigationController pushViewController:vc animated:YES];

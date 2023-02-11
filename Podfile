@@ -22,6 +22,8 @@ target 'ObjectiveCHelper' do
   pod 'YBImageBrowser/Video'
   
   pod 'IQKeyboardManager', '~> 6.5.10'
+  #JSON
+  pod 'YYModel'
   pod 'OpenCV', '~> 3.4.2'
   
 #  pod 'OneMapKit/AMap', :git =>'https://github.com/linshaolong5240/OneMapKit', :branch => 'main'

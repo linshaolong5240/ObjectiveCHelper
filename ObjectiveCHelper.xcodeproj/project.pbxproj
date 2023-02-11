@@ -37,6 +37,7 @@
 		1857D211296D5A7500C2BA75 /* OUIAlertControllerExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1857D210296D5A7500C2BA75 /* OUIAlertControllerExample.m */; };
 		185D9C352946C47F005B29CB /* UIModalPresentationStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */; };
 		185D9C382946C489005B29CB /* UIModalPresentationStyleDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185D9C372946C489005B29CB /* UIModalPresentationStyleDemoViewController.m */; };
+		185EBCB329963FF7008A08CC /* AppFrameworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185EBCB229963FF7008A08CC /* AppFrameworkViewController.m */; };
 		186027712908CDFA001A3D2B /* UITableView+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 186027702908CDFA001A3D2B /* UITableView+OCH.m */; };
 		1862D00C293851C400037DB2 /* ReactiveObjCDemoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862D00B293851C400037DB2 /* ReactiveObjCDemoViewModel.m */; };
 		18705AB4292B5E8C00AA1116 /* UIButton+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 18705AB3292B5E8C00AA1116 /* UIButton+OCH.m */; };
@@ -90,6 +91,7 @@
 		18CE4056290268590075C1A6 /* UIButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE4055290268590075C1A6 /* UIButtonDemoViewController.m */; };
 		18CF77EC291B807D0068CCC7 /* MJRefreshDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EB291B807D0068CCC7 /* MJRefreshDemoViewController.m */; };
 		18CF77F0291B85980068CCC7 /* MJRefreshHeaderDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CF77EF291B85980068CCC7 /* MJRefreshHeaderDemo.m */; };
+		18D7F5B62994D491002696B4 /* YYModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D7F5B52994D491002696B4 /* YYModelViewController.m */; };
 		18D98BBD29013453003E5533 /* UILabelDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBC29013453003E5533 /* UILabelDemoViewController.m */; };
 		18D98BC02901356B003E5533 /* NSAttributedString+OCH.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D98BBF2901356B003E5533 /* NSAttributedString+OCH.m */; };
 		18E221B22913D9F300660A7F /* OneMapKitDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E221B12913D9F300660A7F /* OneMapKitDemoViewController.m */; };
@@ -189,6 +191,8 @@
 		185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIModalPresentationStyleViewController.m; sourceTree = "<group>"; };
 		185D9C362946C489005B29CB /* UIModalPresentationStyleDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIModalPresentationStyleDemoViewController.h; sourceTree = "<group>"; };
 		185D9C372946C489005B29CB /* UIModalPresentationStyleDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIModalPresentationStyleDemoViewController.m; sourceTree = "<group>"; };
+		185EBCB129963FF7008A08CC /* AppFrameworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppFrameworkViewController.h; sourceTree = "<group>"; };
+		185EBCB229963FF7008A08CC /* AppFrameworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppFrameworkViewController.m; sourceTree = "<group>"; };
 		1860276F2908CDFA001A3D2B /* UITableView+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+OCH.h"; sourceTree = "<group>"; };
 		186027702908CDFA001A3D2B /* UITableView+OCH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+OCH.m"; sourceTree = "<group>"; };
 		1862D00A293851C400037DB2 /* ReactiveObjCDemoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactiveObjCDemoViewModel.h; sourceTree = "<group>"; };
@@ -297,6 +301,8 @@
 		18CF77EB291B807D0068CCC7 /* MJRefreshDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshDemoViewController.m; sourceTree = "<group>"; };
 		18CF77EE291B85980068CCC7 /* MJRefreshHeaderDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderDemo.h; sourceTree = "<group>"; };
 		18CF77EF291B85980068CCC7 /* MJRefreshHeaderDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderDemo.m; sourceTree = "<group>"; };
+		18D7F5B42994D491002696B4 /* YYModelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYModelViewController.h; sourceTree = "<group>"; };
+		18D7F5B52994D491002696B4 /* YYModelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYModelViewController.m; sourceTree = "<group>"; };
 		18D98BBB29013453003E5533 /* UILabelDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelDemoViewController.h; sourceTree = "<group>"; };
 		18D98BBC29013453003E5533 /* UILabelDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelDemoViewController.m; sourceTree = "<group>"; };
 		18D98BBE2901356B003E5533 /* NSAttributedString+OCH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+OCH.h"; sourceTree = "<group>"; };
@@ -374,11 +380,12 @@
 		181D3F0B295AD61F00FC45A3 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				188CA45F28F1125E00EF106E /* UIKit */,
+				185EBCB029963FB2008A08CC /* AppFramework */,
 				1854A2A72957026D001CC50A /* AppServices */,
-				181D3F0C295AD62D00FC45A3 /* System */,
 				181D3F0D295AD67F00FC45A3 /* FrameworkViewController.h */,
 				181D3F0E295AD67F00FC45A3 /* FrameworkViewController.m */,
+				181D3F0C295AD62D00FC45A3 /* System */,
+				188CA45F28F1125E00EF106E /* UIKit */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -497,6 +504,15 @@
 				185D9C342946C47F005B29CB /* UIModalPresentationStyleViewController.m */,
 			);
 			path = UIModalPresentationStyle;
+			sourceTree = "<group>";
+		};
+		185EBCB029963FB2008A08CC /* AppFramework */ = {
+			isa = PBXGroup;
+			children = (
+				185EBCB129963FF7008A08CC /* AppFrameworkViewController.h */,
+				185EBCB229963FF7008A08CC /* AppFrameworkViewController.m */,
+			);
+			path = AppFramework;
 			sourceTree = "<group>";
 		};
 		18745DD8296BEC2A00F3E1A1 /* TableViewCell */ = {
@@ -646,6 +662,7 @@
 		188CA47E28F14F9100EF106E /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				18D7F5B32994D475002696B4 /* YYModel */,
 				18CF77ED291B80980068CCC7 /* DVPieChart */,
 				188CA49328F262AC00EF106E /* JXCategoryView */,
 				18CF77E9291B80630068CCC7 /* MJRefresh */,
@@ -829,6 +846,15 @@
 				188CA46228F112EF00EF106E /* DVPieChartDemoViewController.m */,
 			);
 			path = DVPieChart;
+			sourceTree = "<group>";
+		};
+		18D7F5B32994D475002696B4 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				18D7F5B42994D491002696B4 /* YYModelViewController.h */,
+				18D7F5B52994D491002696B4 /* YYModelViewController.m */,
+			);
+			path = YYModel;
 			sourceTree = "<group>";
 		};
 		18E221B32913DB5600660A7F /* OneMapKit */ = {
@@ -1253,6 +1279,7 @@
 				183C5A0F2935D5BE00D27DF8 /* UIPageControlDemoViewController.m in Sources */,
 				1828251228FFC5F600D2E4CF /* UIView+OCH.m in Sources */,
 				188F2AAE290BDEE70046FB65 /* OCHValueStepper.m in Sources */,
+				185EBCB329963FF7008A08CC /* AppFrameworkViewController.m in Sources */,
 				302CB80129645D5B000F8CC4 /* QRCodeScanerViewController.m in Sources */,
 				18273944296E5CF600363617 /* OUILabelCheckmarkTableViewCellData.m in Sources */,
 				18380C212956CFEF00106BA8 /* QRCodeViewController.m in Sources */,
@@ -1265,6 +1292,7 @@
 				18E94E1A29431F9A000C2523 /* UINavigationBarDemoController.m in Sources */,
 				183C5A0C2935A93600D27DF8 /* OCHPageViewControllerDemoController.m in Sources */,
 				18B197012967B4440027BBEB /* OCHIndexArraySection.m in Sources */,
+				18D7F5B62994D491002696B4 /* YYModelViewController.m in Sources */,
 				18B196FC2967AFDC0027BBEB /* OCHViewController.m in Sources */,
 				189AF44E2962DCCF00CD3C2C /* OUIKIt.m in Sources */,
 				188CA46E28F1147000EF106E /* DVFoodPieModel.m in Sources */,
